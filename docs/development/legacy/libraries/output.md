@@ -176,3 +176,54 @@ Example:
         'foo' => 'bar'
     );
     ee()->output->send_ajax_response($output);
+
+### `show_message($data, $xhtml = true, $redirect_url = false, $template_name = 'generic')`
+
+| Parameter       | Type     | Description                                                                                |
+| --------------- | -------- | ------------------------------------------------------------------------------------------ |
+| \$data          | `Array`  | Data to be sent to the view. Explained below                                               |
+| \$xhtml         | `Bool`   | Parse the content as HTML                                                                  |
+| \$redirect_url  | `String` | URL to redirect to instead of showing the message                                          |
+| \$template_name | `String` | Speciatly template to use. Defaults to `generic` which is equivalent of `message_template` |
+| Returns         | `Void`   | void                                                                                       |
+
+Show user message using [system message template](control-panel/template-manager.md#system-message-templates) or [custom template](control-panel/template-manager.md#custom-system-messages). This is used on front-end, for instance, when we need to inform the user about successful form submission.
+
+When `$redirect_url` is provided, the user will be redirected to that URL instead of showing the message.
+
+The `$data` parameter is an associative array with the following keys: 
+ - `title` - HTML titles of message page
+ - `heading` - heading text
+ - `content` - main content
+ - `redirect` - URL to automatically redirect to after showing message
+ - `rate` - time in seconds after which the redirect happens
+ - `link` - the link to include in the message. Should be in the format of `array($link_url, $link_text)`
+
+Example:
+
+    $data = array(
+        'title' => 'Title',
+        'heading' => 'Heading',
+        'content' => 'Content',
+        'redirect' => 'http://example.com',
+        'rate' => 5,
+        'link' => array('http://example.com', 'Link Text')
+    );
+    ee()->output->show_message($data);
+
+### `show_user_error($type = 'submission', $errors = '', $heading = '', $redirect_url = '')`
+
+| Parameter       | Type     | Description                                                                                |
+| --------------- | -------- | ------------------------------------------------------------------------------------------ |
+| \$type          | `String` | Type of error. Defaults to `submission`, can also be `generic`                             |
+| \$errors        | `Mixed`  | Error message or array of messages to display.                                             |
+| \$heading       | `String` | Heading text. Legacy, not used, set automatically based on type.                           |
+| \$redirect_url  | `String` | URL to redirect to instead of showing the message                                          |
+| Returns         | `Void`   | void                                                                                       |
+
+Show user an error message using [system message template](control-panel/template-manager.md#system-message-templates) or [custom template](control-panel/template-manager.md#custom-system-messages). This is used on front-end, for instance, when a form is submitted without the required info.
+
+When `$redirect_url` is provided, the user will be redirected to that URL instead of showing the message. Useful when the form is set to [handle errors inline](templates/globals/single-variables.md#error-variables).
+
+    $return_error_link = ee()->functions->determine_error_return();
+    ee()->output->show_user_error('submission', $errors, '', $return_error_link);

@@ -103,6 +103,24 @@ Redirect to location.
 
 Random number/password generator.
 
+### `determine_return($go_to_index = false)`
+
+| Parameter     | Type     | Description                                       |
+| ------------- | -------- | ------------------------------------------------- |
+| \$go_to_index | `Bool`   | When `true`, redirect to homepage                 |
+| Returns       | `String` | URL to redirect to                                |
+
+Discover the redirect link to return to upon form submission.
+
+    $return_link = ee()->functions->determine_return();
+
+### `determine_error_return()`
+
+Discover the redirect link to return to upon form submission, if there have been validation errors and inline error handling was enabled in the form.
+
+    $return_error_link = ee()->functions->determine_error_return();
+    ee()->output->show_user_error('submission', $errors, '', $return_error_link);
+
 ### `form_declaration($data)`
 
 | Parameter | Type     | Description                                       |
