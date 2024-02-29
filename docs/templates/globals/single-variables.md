@@ -275,7 +275,7 @@ You can use the [environment variables](advanced-usage/env-support.md) for the v
         'show_banner' => $_ENV['SHOW_BANNER'],
     );
 
-Note that the global variables defined in `config.php` file will be overridden by the global variables defined in `index.php` file when the name conflict occurs.
+Note that the global variables defined in `config.php` file will be overridden by the global variables defined in `index.php` file when a name conflict occurs.
 
 ## Member Variables
 
