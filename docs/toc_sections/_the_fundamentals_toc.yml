@@ -142,7 +142,7 @@
       href: templates/variable.md
     - name: Global Template Variables
       items:
-        - name: Single Global Variables
+        - name: Global Variables
           href: templates/globals/single-variables.md
         - name: Linking to Stylesheets
           href: templates/globals/stylesheet.md
@@ -315,4 +315,3 @@
         href: comment/subscriptions.md
       - name: Control Panel
         href: comment/control-panel.md
-

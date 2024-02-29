@@ -7,13 +7,13 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Single Global Variables
+# Global Variables
 
 [TOC]
 
 These Global Variables can be used anywhere within your Templates. Note that they are subject to ExpressionEngine's [parsing order](templates/engine.md), which can affect their availability when used inside other tags.
 
-## Variables
+## Single Variables
 
 [TOC=3 hide]
 
@@ -330,3 +330,28 @@ The total number of forum topics made by the currently logged-in user.
 ### `{logged_in_username}`
 
 The username for the currently logged-in user.
+
+## Error Variables
+
+When submitting a form that has `error_handling="inline"` set, the error messages will be displayed in the template.
+
+By default, they will be rendered on same page that contains the form, however it is also possible to specify different page using `return_error=` parameter.
+
+### `{if errors}`
+
+Conditional check if error messages are present.
+
+### `{errors}...{error}...{/errors}`
+
+This variable pair is useful for displaying all errors at once, for example, in a fieldset at the top of the form. Inside the pair, each individual error message is available as `{error}` variable.
+
+    {if errors}
+        <p class="error">Please correct the following errors:</p>
+        <ul>
+            {errors}
+                <li>{error}</li>
+            {/errors}
+        </ul>
+    {if:else}
+        <!-- No errors, or form not submitted yet -->
+    {/if}
