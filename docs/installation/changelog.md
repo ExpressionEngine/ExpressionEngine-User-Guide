@@ -36,7 +36,7 @@
 - Resolved [#4033](https://github.com/ExpressionEngine/ExpressionEngine/issues/4033) where Menu Sets item could not have been moved to the bottom
 - Resolved issue where `:excerpt` modifier on RTE field could cause PHP notice
 - Resolved [#4072](https://github.com/ExpressionEngine/ExpressionEngine/issues/4072) where Pro Search could show PHP deprecation error when using PHP 8.2
-- Resolved [#4083](https://github.com/ExpressionEngine/ExpressionEngine/issues/4083) where `<em>` in RedaktorX was set to `display:block`
+- Resolved [#4083](https://github.com/ExpressionEngine/ExpressionEngine/issues/4083) where `<em>` in RedactorX was set to `display:block`
 
 **Developers** 💻
 
