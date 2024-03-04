@@ -33,7 +33,7 @@
 - Resolved [#4040](https://github.com/ExpressionEngine/ExpressionEngine/issues/4040) where required column indicators were missing inside Grid field
 - Resolved [#3645](https://github.com/ExpressionEngine/ExpressionEngine/issues/3645) where Autosave did not include data from Grids with Relationships 
 - Resolved issue where error message was not using custom system message template if an extension file was missing
-- Resolved [#4033](https://github.com/ExpressionEngine/ExpressionEngine/issues/4033) where Menu Sets item could not have been moved to the bottom
+- Resolved [#4033](https://github.com/ExpressionEngine/ExpressionEngine/issues/4033) where Menu Sets item could not be moved to the bottom
 - Resolved issue where `:excerpt` modifier on RTE field could cause PHP notice
 - Resolved [#4072](https://github.com/ExpressionEngine/ExpressionEngine/issues/4072) where Pro Search could show PHP deprecation error when using PHP 8.2
 - Resolved [#4083](https://github.com/ExpressionEngine/ExpressionEngine/issues/4083) where `<em>` in RedactorX was set to `display:block`
