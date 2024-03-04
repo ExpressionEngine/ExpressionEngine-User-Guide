@@ -125,3 +125,62 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
 |**6.3** |         |         |         |         |         |         |         |         |         |
 
 </div>
+
+<div class="ee-version-compatiablity">
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th><strong>EE</strong></th>
+                    <th><strong>8.2</strong></th>
+                    <th><strong>8.1</strong></th>
+                    <th><strong>8.0</strong></th>
+                    <th><strong>7.4</strong></th>
+                    <th><strong>7.3</strong></th>
+                    <th><strong>5.4</strong></th>
+                    <th><strong>5.3</strong></th>
+                    <th><strong>5.2</strong></th>
+                    <th><strong>4.0</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="background-color: #f7f8fa;"><strong>7.3</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f7f8fa;"><strong>7.1</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td style="background-color: #f7f8fa;"><strong>6.3</strong></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
