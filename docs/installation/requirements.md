@@ -115,3 +115,13 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
 - **[Devilbox](http://devilbox.org/)** - (macOS, Windows, Linux) Devilbox is another great stack which allows user to quickly get up and running with Docker environments. To install ExpressionEngine on Devilbox simply follow the [Setup ExpressionEngine Docs](https://devilbox.readthedocs.io/en/latest/examples/setup-expressionengine.html). 
 
 - **[MAMP](https://www.mamp.info/en/)** - (macOS, Windows) MAMP can be very convenient for local development, but it has some quirks. If you are using MAMP, you will need to use PHP 7+ due to outdated cURL and OpenSSL libraries that MAMP ships with its older versions of PHP.
+
+<div class="ee-version-compatiablity">
+
+| **EE** | **8.2** | **8.1** | **8.0** | **7.4** | **7.3** | **5.4** | **5.3** | **5.2** | **4.0** |
+|--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
+|**7.3** |         |         |         |         |         |         |         |         |         |
+|**7.1** |         |         |         |         |         |         |         |         |         |
+|**6.3** |         |         |         |         |         |         |         |         |         |
+
+</div>
