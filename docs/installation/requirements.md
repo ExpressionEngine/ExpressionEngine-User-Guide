@@ -146,39 +146,39 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
             <tbody>
                 <tr>
                     <td style="background-color: #f7f8fa;"><strong>7.3</strong></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #ffb40b;"></td>
+                    <td style="background-color: #ffb40b;"></td>
+                    <td style="background-color: #f80808;"></td>
+                    <td style="background-color: #f80808;"></td>
                 </tr>
                 <tr>
                     <td style="background-color: #f7f8fa;"><strong>7.1</strong></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td style="background-color: #f80808;"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #ffb40b;"></td>
+                    <td style="background-color: #ffb40b;"></td>
+                    <td style="background-color: #f80808;"></td>
+                    <td style="background-color: #f80808;"></td>
                 </tr>
                 <tr>
                     <td style="background-color: #f7f8fa;"><strong>6.3</strong></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td style="background-color: #f80808;"></td>
+                    <td style="background-color: #f80808;"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #00c571"></td>
+                    <td style="background-color: #ffb40b;"></td>
+                    <td style="background-color: #ffb40b;"></td>
+                    <td style="background-color: #f80808;"></td>
                 </tr>
             </tbody>
         </table>
