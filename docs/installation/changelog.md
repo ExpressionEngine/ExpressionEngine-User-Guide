@@ -8,6 +8,40 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.4.3
+(Release: March 4, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added fallback for PHP `tmpfile()` function when it's not enabled
+- Improved styles for Entry Status dropdown on Publish pages
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#4102](https://github.com/ExpressionEngine/ExpressionEngine/issues/4102) where template layouts could skip some variables
+- Resolved [#4040](https://github.com/ExpressionEngine/ExpressionEngine/issues/4040) where required column indicators were missing inside Grid field
+- Resolved [#3645](https://github.com/ExpressionEngine/ExpressionEngine/issues/3645) where Autosave did not include data from Grids with Relationships 
+- Resolved issue where error message was not using custom system message template if an extension file was missing
+- Resolved [#4033](https://github.com/ExpressionEngine/ExpressionEngine/issues/4033) where Menu Sets item could not be moved to the bottom
+- Resolved issue where `:excerpt` modifier on RTE field could cause PHP notice
+- Resolved [#4072](https://github.com/ExpressionEngine/ExpressionEngine/issues/4072) where Pro Search could show PHP deprecation error when using PHP 8.2
+- Resolved [#4083](https://github.com/ExpressionEngine/ExpressionEngine/issues/4083) where `<em>` in RedactorX was set to `display:block`
+
+**Developers** 💻
+
+- Resolved [#3910](https://github.com/ExpressionEngine/ExpressionEngine/issues/3910) where JavaScript to encode / decode email addresses was using deprecated function
+
 ## Version 7.4.2
 (Release: February 27, 2024)
 
