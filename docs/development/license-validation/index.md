@@ -40,3 +40,6 @@ Before enabling license validation for an add-on, developers are required to agr
 Once the application for license validation is submitted, it will be reviewed by our team. The request may be approved or denied based on adherence to the outlined terms and conditions.
 
 By adhering to the application process and terms outlined above, developers can enable license validation for their add-ons, ensuring compliance with licensing agreements and providing a seamless experience for users.
+
+## Add-on Changes
+Third-party add-ons don't need any changes to their code to participate in license validation; the ExpressionEngine core handles it! If you wish to go beyond the default core measures, you can check your add-on licenses status through the [add-on service](/development/services/addon.md#checkcachedlicenseresponse). 
