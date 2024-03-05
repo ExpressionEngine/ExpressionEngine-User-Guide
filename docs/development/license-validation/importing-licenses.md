@@ -19,7 +19,7 @@ Before importing licenses, add-on developers must contact us to request an API k
 
 ## API Endpoint
 
-Add-on developers can import licenses by making a POST request to the following API endpoint:
+Add-on developers can import licenses by making a JSON POST request to the following API endpoint:
 
 ```
 POST https://expressionengine.com/vendor-api/import-license
