@@ -116,71 +116,143 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
 
 - **[MAMP](https://www.mamp.info/en/)** - (macOS, Windows) MAMP can be very convenient for local development, but it has some quirks. If you are using MAMP, you will need to use PHP 7+ due to outdated cURL and OpenSSL libraries that MAMP ships with its older versions of PHP.
 
-<div class="ee-version-compatiablity">
+## PHP Version Requirements Across EE Versions
 
-| **EE** | **8.2** | **8.1** | **8.0** | **7.4** | **7.3** | **5.4** | **5.3** | **5.2** | **4.0** |
-|--------|---------|---------|---------|---------|---------|---------|---------|---------|---------|
-|**7.3** |         |         |         |         |         |         |         |         |         |
-|**7.1** |         |         |         |         |         |         |         |         |         |
-|**6.3** |         |         |         |         |         |         |         |         |         |
 
-</div>
-
-<div class="ee-version-compatiablity">
+<div class="ee-version-compatiblity">
     <div class="table-wrapper">
         <table>
             <thead>
                 <tr>
-                    <th><strong>EE</strong></th>
-                    <th><strong>8.2</strong></th>
-                    <th><strong>8.1</strong></th>
-                    <th><strong>8.0</strong></th>
-                    <th><strong>7.4</strong></th>
-                    <th><strong>7.3</strong></th>
-                    <th><strong>5.4</strong></th>
-                    <th><strong>5.3</strong></th>
-                    <th><strong>5.2</strong></th>
-                    <th><strong>4.0</strong></th>
+                    <th><strong></strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>4.0</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>5.6</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>7.0</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>7.2</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>7.4</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>8.0</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>8.2</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>8.3</strong></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td style="background-color: #f7f8fa;"><strong>7.3</strong></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #ffb40b;"></td>
-                    <td style="background-color: #ffb40b;"></td>
-                    <td style="background-color: #f80808;"></td>
-                    <td style="background-color: #f80808;"></td>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>7.4</strong></td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-fail"><span>PHP 5.6</span></td>
+                    <td class="ee-maybe"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-works"><span>PHP 8.2</span></td>
+                    <td class="ee-works"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td style="background-color: #f7f8fa;"><strong>7.1</strong></td>
-                    <td style="background-color: #f80808;"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #ffb40b;"></td>
-                    <td style="background-color: #ffb40b;"></td>
-                    <td style="background-color: #f80808;"></td>
-                    <td style="background-color: #f80808;"></td>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>7.2.8</strong></td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-fail"><span>PHP 5.6</span></td>
+                    <td class="ee-maybe"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-works"><span>PHP 8.2</span></td>
+                    <td class="ee-maybe"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td style="background-color: #f7f8fa;"><strong>6.3</strong></td>
-                    <td style="background-color: #f80808;"></td>
-                    <td style="background-color: #f80808;"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #00c571"></td>
-                    <td style="background-color: #ffb40b;"></td>
-                    <td style="background-color: #ffb40b;"></td>
-                    <td style="background-color: #f80808;"></td>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>7.0</strong></td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-fail"><span>PHP 5.6</span></td>
+                    <td class="ee-maybe"><span>PHP 7.0</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>6.4.15</strong></td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-maybe"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-works"><span>PHP 8.2</span></td>
+                    <td class="ee-maybe"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>6.0.0</strong></td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>5.4.3</strong></td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
+                    <td class="ee-fail"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>4.3.8</strong></td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
+                    <td class="ee-fail"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>3.5.17</strong></td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-fail"><span>PHP 7.0</span></td>
+                    <td class="ee-fail"><span>PHP 7.2</span></td>
+                    <td class="ee-fail"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>2.11.9</strong></td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-fail"><span>PHP 7.0</span></td>
+                    <td class="ee-fail"><span>PHP 7.2</span></td>
+                    <td class="ee-fail"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>1.7.3</strong></td>
+                    <td class="ee-works"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-fail"><span>PHP 7.0</span></td>
+                    <td class="ee-fail"><span>PHP 7.2</span></td>
+                    <td class="ee-fail"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
                 </tr>
             </tbody>
         </table>
     </div>
 </div>
+
+Works - the PHP version is fully supported by ExpressionEngine version
+
+Fail - the system will not work under this PHP version, or a significant part of functionality will not work
+
+Maybe - some of the functionality might work incorrectly, or comatibility has not been checked
