@@ -137,7 +137,11 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
             </thead>
             <tbody>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>7.4</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt=""><strong>7.4</strong>
+                        </span>
+                    </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-fail"><span>PHP 5.6</span></td>
                     <td class="ee-maybe"><span>PHP 7.0</span></td>
@@ -148,7 +152,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-works"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>7.2.8</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <strong>7.2.8</strong>
+                        </span>
+                    </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-fail"><span>PHP 5.6</span></td>
                     <td class="ee-maybe"><span>PHP 7.0</span></td>
@@ -159,7 +168,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-maybe"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>7.0</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <strong>7.0</strong>
+                        </span>
+                    </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-fail"><span>PHP 5.6</span></td>
                     <td class="ee-maybe"><span>PHP 7.0</span></td>
@@ -170,7 +184,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>6.4.15</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <strong>6.4.15</strong>
+                        </span>
+                    </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-maybe"><span>PHP 5.6</span></td>
                     <td class="ee-works"><span>PHP 7.0</span></td>
@@ -181,7 +200,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-maybe"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>6.0.0</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <strong>6.0.0</strong>
+                        </span>
+                    </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-works"><span>PHP 5.6</span></td>
                     <td class="ee-works"><span>PHP 7.0</span></td>
@@ -192,7 +216,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>5.4.3</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <strong>5.4.3</strong>
+                        </span>
+                    </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-works"><span>PHP 5.6</span></td>
                     <td class="ee-works"><span>PHP 7.0</span></td>
@@ -203,7 +232,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>4.3.8</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <strong>4.3.8</strong>
+                        </span>
+                    </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-works"><span>PHP 5.6</span></td>
                     <td class="ee-works"><span>PHP 7.0</span></td>
@@ -214,7 +248,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>3.5.17</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <strong>3.5.17</strong>
+                        </span>
+                    </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-works"><span>PHP 5.6</span></td>
                     <td class="ee-fail"><span>PHP 7.0</span></td>
@@ -225,7 +264,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>2.11.9</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <strong>2.11.9</strong>
+                        </span>
+                    </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-works"><span>PHP 5.6</span></td>
                     <td class="ee-fail"><span>PHP 7.0</span></td>
@@ -236,7 +280,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.3</span></td>
                 </tr>
                 <tr>
-                    <td class="ee-version"><img src="../../_assets/images/ee-logo-white.svg" alt="" style="height: 20px; float: left;"><strong>1.7.3</strong></td>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <strong>1.7.3</strong>
+                        </span>
+                    </td>
                     <td class="ee-works"><span>PHP 4.0</span></td>
                     <td class="ee-works"><span>PHP 5.6</span></td>
                     <td class="ee-fail"><span>PHP 7.0</span></td>
@@ -251,8 +300,12 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
     </div>
 </div>
 
-Works - the PHP version is fully supported by ExpressionEngine version
+<div class="ee-version-compatiblity-legend">
 
-Fail - the system will not work under this PHP version, or a significant part of functionality will not work
+<span class="ee-works"></span> - the PHP version is fully supported by ExpressionEngine version
 
-Maybe - some of the functionality might work incorrectly, or comatibility has not been checked
+<span class="ee-fail"></span> - the system will not work under this PHP version, or a significant part of functionality will not work
+
+<span class="ee-maybe"></span> - some of the functionality might work incorrectly, or comatibility has not been checked
+
+</div>
