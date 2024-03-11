@@ -8,6 +8,35 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.4.4
+(Release: March 11, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Enable setting global variables in config file; [#3015](https://github.com/ExpressionEngine/ExpressionEngine/issues/3015)
+
+**Bug Fixes** 💃🐛
+
+- Resolved issue where Enum validation was not working when using PHP8+
+- Resolved [#987](https://github.com/ExpressionEngine/ExpressionEngine/issues/987) where pagination could be wrong on Entry Manager if Categories column present
+- Resolved [#4077](https://github.com/ExpressionEngine/ExpressionEngine/issues/4077) where PHP deprecation notice could have been shown for some migrated Pro Variables
+- Resolved [#4079](https://github.com/ExpressionEngine/ExpressionEngine/issues/4079) where orphan relationship record could cause PHP notices
+- Resolved [#4116](https://github.com/ExpressionEngine/ExpressionEngine/issues/4116) where PHP warning could be shown when using template layouts
+
+**Developers** 💻
+
+- Added ability to send http status code with ajax response, [#4108](https://github.com/ExpressionEngine/ExpressionEngine/issues/4108)
+
 ## Version 7.4.3
 (Release: March 4, 2024)
 
