@@ -159,12 +159,12 @@ Example:
 
 NOTE: **Note:** Calling this method manually without aborting script execution will result in duplicated output.
 
-### `send_ajax_response($msg, [$error = false])`
+### `send_ajax_response($msg, [$statusCode = false])`
 
 | Parameter | Type     | Description          |
 | --------- | -------- | -------------------- |
 | \$msg  | `Array` | Object to be sent to the client. |
-| \$error  | `Bool` | TRUE to set header status to `500` |
+| \$error  | `Bool|Int` | HTTP status code. If `false`, status code is `200`. If `true`, status code is 500 |
 | Returns   | `Void`   | void                 |
 
 Calling this method encode the given `$msg` parameter and will set the header `Content-Type: application/json`.
@@ -176,3 +176,22 @@ Example:
         'foo' => 'bar'
     );
     ee()->output->send_ajax_response($output);
+
+With status code (401):
+
+```
+$output = array(
+    'sucess' => 'false',
+    'message' => 'not allowed',
+);
+ee()->output->send_ajax_response($output, 401);
+```
+
+As error with standard 500 error code:
+
+```
+$output = array(
+    'sucess' => 'false',
+    'message' => 'not allowed',
+);
+ee()->output->send_ajax_response($output, true);
