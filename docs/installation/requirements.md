@@ -104,7 +104,7 @@ If the [Server Compatibility Wizard](#server-compatibility-wizard) lists URL Seg
 
 ## Local Development
 
-ExpressionEngine can be ran locally on a number of local development environments. Below are just a few to help you get started. 
+ExpressionEngine can be run locally on a number of local development environments. Below are just a few to help you get started. 
 
 NOTE: **Note:** When setting up your local environment, you must make sure it still meets the requirements listed above.
 
@@ -302,10 +302,10 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
 
 <div class="ee-version-compatiblity-legend">
 
-<span class="ee-works"></span> - the PHP version is fully supported by ExpressionEngine version
+<span class="ee-works"></span> - the PHP version is fully supported by this ExpressionEngine version
 
 <span class="ee-fail"></span> - the system will not work under this PHP version, or a significant part of functionality will not work
 
-<span class="ee-maybe"></span> - some of the functionality might work incorrectly, or comatibility has not been checked
+<span class="ee-maybe"></span> - some of the functionality might work incorrectly, or compatibility has not been checked
 
 </div>
