@@ -222,18 +222,19 @@ Resize the image.
 
 ### `:crop`
 
-    {news_image:crop width="100" height="100"}
+    {news_image:crop width="100" height="100" position="center"}
 
-Crop the image.
+Crop the image. By default, cropping uses top left corner of image as starting position. You can specify `x` and `y` offset, if needed, or `position="center"` parameter to make crop happen close to image center.
 
 | Parameter | Values  | Default    | Description                           |
 | --------- | ------- | ---------- | -------------------------------------- |
 | width    | `Number` | `*required`| Width to crop to |
 | height   | `Number` | `*required`| Height to crop to |
-| quality  | `0`-`100`| `75`| Image quality, % |
-| maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
-| x        | `Number` | `0`| Horizontal offset, px |
-| y        | `Number` | `0`| Vertical offset, px |
+| quality  | `0`-`100`| `75`       | Image quality, % |
+| maintain_ratio      | `y` / `n`  | `y`| Keep image ratio (yes/no)  |
+| position | `center` |            | Crop close to image center  |
+| x        | `Number` | `0`        | Horizontal offset, px |
+| y        | `Number` | `0`        | Vertical offset, px |
 
 ### `:rotate`
 
