@@ -139,7 +139,7 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                 <tr>
                     <td class="ee-version">
                         <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt=""><strong>7.4</strong>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 7.4"><strong>7.4</strong>
                         </span>
                     </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
@@ -154,7 +154,7 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                 <tr>
                     <td class="ee-version">
                         <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 7.2.8">
                             <strong>7.2.8</strong>
                         </span>
                     </td>
@@ -170,7 +170,7 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                 <tr>
                     <td class="ee-version">
                         <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 7.0">
                             <strong>7.0</strong>
                         </span>
                     </td>
@@ -186,7 +186,7 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                 <tr>
                     <td class="ee-version">
                         <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 6.4.15">
                             <strong>6.4.15</strong>
                         </span>
                     </td>
@@ -202,7 +202,7 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                 <tr>
                     <td class="ee-version">
                         <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 6.0.0">
                             <strong>6.0.0</strong>
                         </span>
                     </td>
@@ -218,15 +218,31 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                 <tr>
                     <td class="ee-version">
                         <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 5.4.3">
                             <strong>5.4.3</strong>
                         </span>
                     </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-works"><span>PHP 5.6</span></td>
                     <td class="ee-works"><span>PHP 7.0</span></td>
-                    <td class="ee-maybe"><span>PHP 7.2</span></td>
-                    <td class="ee-fail"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 4.3.8">
+                            <strong>4.3.8</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-maybe"><span>PHP 7.4</span></td>
                     <td class="ee-fail"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
                     <td class="ee-fail"><span>PHP 8.3</span></td>
@@ -234,8 +250,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                 <tr>
                     <td class="ee-version">
                         <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
-                            <strong>4.3.8</strong>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 3.5.1">
+                            <strong>3.5.17</strong>
                         </span>
                     </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
@@ -250,30 +266,14 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                 <tr>
                     <td class="ee-version">
                         <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
-                            <strong>3.5.17</strong>
-                        </span>
-                    </td>
-                    <td class="ee-fail"><span>PHP 4.0</span></td>
-                    <td class="ee-works"><span>PHP 5.6</span></td>
-                    <td class="ee-fail"><span>PHP 7.0</span></td>
-                    <td class="ee-fail"><span>PHP 7.2</span></td>
-                    <td class="ee-fail"><span>PHP 7.4</span></td>
-                    <td class="ee-fail"><span>PHP 8.0</span></td>
-                    <td class="ee-fail"><span>PHP 8.2</span></td>
-                    <td class="ee-fail"><span>PHP 8.3</span></td>
-                </tr>
-                <tr>
-                    <td class="ee-version">
-                        <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 2.11.9">
                             <strong>2.11.9</strong>
                         </span>
                     </td>
                     <td class="ee-fail"><span>PHP 4.0</span></td>
                     <td class="ee-works"><span>PHP 5.6</span></td>
-                    <td class="ee-fail"><span>PHP 7.0</span></td>
-                    <td class="ee-fail"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
                     <td class="ee-fail"><span>PHP 7.4</span></td>
                     <td class="ee-fail"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
@@ -282,7 +282,7 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                 <tr>
                     <td class="ee-version">
                         <span>
-                            <img src="../../_assets/images/ee-logo-black.svg" alt="">
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 1.7.3">
                             <strong>1.7.3</strong>
                         </span>
                     </td>
