@@ -155,3 +155,71 @@ a.button {
 .flex-container {
 	display: flex;
 }
+
+// -------------------------------------------------------------------
+// PHP Version Compatibility table
+.docs-content-wrapper .content {
+	.ee-version-compatiblity {
+		td {
+			span {
+				display: none;
+			}
+		}
+
+		.php-logo {
+			height: 18px;
+			float: left;
+			margin: 5px 5px 0px 0px;
+		}
+
+		td.ee-version {
+			background-color: #f7f8fa;
+			min-width: 105px;
+
+			span {
+				display: flex;
+				align-items: center;
+			}
+
+			img {
+				height: 20px;
+				margin-bottom: 0;
+				border-radius: 0;
+				margin-right: 5px;
+			}
+		}
+
+		.ee-fail {
+			background-color: #f80808;
+		}
+
+		.ee-works {
+			background-color: #00c571;
+		}
+
+		.ee-maybe {
+			background-color: #ffb40b;
+		}
+	}
+
+	.ee-version-compatiblity-legend {
+		span {
+			display: inline-block;
+			width: 50px;
+			height: 25px;
+			vertical-align: middle;
+
+			&.ee-works {
+				background: #00c571;
+			}
+
+			&.ee-fail {
+				background: #f80808;
+			}
+
+			&.ee-maybe {
+				background: #ffb40b;
+			}
+		}
+	}
+}
