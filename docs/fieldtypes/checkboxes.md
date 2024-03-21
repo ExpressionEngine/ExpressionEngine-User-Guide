@@ -63,10 +63,10 @@ Two
 Three
 ```
 
-By default, `{item}` will render the item's label To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
+By default, `{item}` will render the item's value. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
 
     {field_name}
-        Label: {item}<br> {!-- 1 --}
+        Value: {item}<br> {!-- 1 --}
         Value: {item:value}<br> {!-- 1 --}
         Label: {item:label}<br> {!-- One --}
     {/field_name}

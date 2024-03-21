@@ -60,10 +60,10 @@ When allowing multiple items to be selected, Selectable Buttons will usually be 
         {item}<br>
     {/field_name}
 
-By default, `{item}` will render the item's label. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
+By default, `{item}` will render the item's value. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
 
     {field_name}
-        Label: {item}<br>
+        Value: {item}<br>
         Value: {item:value}<br>
         Label: {item:label}<br>
     {/field_name}
