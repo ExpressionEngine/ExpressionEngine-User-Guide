@@ -17,7 +17,7 @@ It is recommended to select good a [password security policy](control-panel/sett
 
 ## Validation URL
 
-    `{exp:member:validation_url fields="password_rank"}`
+    {exp:member:validation_url fields="password_rank"}
 
 Return URL that is serving as the endpoint for validating member data and getting password rank. It can only accept POST requests sent via AJAX.
 It returns a JSON string that can contain following keys:

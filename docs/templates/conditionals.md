@@ -429,7 +429,7 @@ You can test against the username of the currently logged in user.
 
 Whether Multi-Factor Authentication is enabled for logged in user.
 
-    `{if !mfa_enabled}Enable multi-factor authentication for more security{/if}`
+    {if !mfa_enabled}Enable multi-factor authentication for more security{/if}
 
 ### `segment_*X*`
 
