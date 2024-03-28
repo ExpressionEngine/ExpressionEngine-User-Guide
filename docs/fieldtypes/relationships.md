@@ -94,6 +94,7 @@ The following parameters are available to all looping relationship tags, allowin
 - `channel`
 - `entry_id`
 - `group_id`
+- `limit`
 - `offset`
 - `orderby`
 - `show_expired`
