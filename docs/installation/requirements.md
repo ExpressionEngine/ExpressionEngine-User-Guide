@@ -104,7 +104,7 @@ If the [Server Compatibility Wizard](#server-compatibility-wizard) lists URL Seg
 
 ## Local Development
 
-ExpressionEngine can be ran locally on a number of local development environments. Below are just a few to help you get started. 
+ExpressionEngine can be run locally on a number of local development environments. Below are just a few to help you get started. 
 
 NOTE: **Note:** When setting up your local environment, you must make sure it still meets the requirements listed above.
 
@@ -115,3 +115,197 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
 - **[Devilbox](http://devilbox.org/)** - (macOS, Windows, Linux) Devilbox is another great stack which allows user to quickly get up and running with Docker environments. To install ExpressionEngine on Devilbox simply follow the [Setup ExpressionEngine Docs](https://devilbox.readthedocs.io/en/latest/examples/setup-expressionengine.html). 
 
 - **[MAMP](https://www.mamp.info/en/)** - (macOS, Windows) MAMP can be very convenient for local development, but it has some quirks. If you are using MAMP, you will need to use PHP 7+ due to outdated cURL and OpenSSL libraries that MAMP ships with its older versions of PHP.
+
+## PHP Version Requirements Across EE Versions
+
+
+<div class="ee-version-compatiblity">
+    <div class="table-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th><strong></strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>4.0</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>5.6</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>7.0</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>7.2</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>7.4</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>8.0</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>8.2</strong></th>
+                    <th><img src="/_images/php-logo.svg" class="php-logo"><strong>8.3</strong></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 7.4"><strong>7.4</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-fail"><span>PHP 5.6</span></td>
+                    <td class="ee-maybe"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-works"><span>PHP 8.2</span></td>
+                    <td class="ee-works"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 7.2.8">
+                            <strong>7.2.8</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-fail"><span>PHP 5.6</span></td>
+                    <td class="ee-maybe"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-works"><span>PHP 8.2</span></td>
+                    <td class="ee-maybe"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 7.0">
+                            <strong>7.0</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-fail"><span>PHP 5.6</span></td>
+                    <td class="ee-maybe"><span>PHP 7.0</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 6.4.15">
+                            <strong>6.4.15</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-maybe"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-works"><span>PHP 8.2</span></td>
+                    <td class="ee-maybe"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 6.0.0">
+                            <strong>6.0.0</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 5.4.3">
+                            <strong>5.4.3</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 4.3.8">
+                            <strong>4.3.8</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-works"><span>PHP 7.2</span></td>
+                    <td class="ee-maybe"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 3.5.1">
+                            <strong>3.5.17</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
+                    <td class="ee-fail"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 2.11.9">
+                            <strong>2.11.9</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-works"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
+                    <td class="ee-fail"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 1.7.3">
+                            <strong>1.7.3</strong>
+                        </span>
+                    </td>
+                    <td class="ee-works"><span>PHP 4.0</span></td>
+                    <td class="ee-works"><span>PHP 5.6</span></td>
+                    <td class="ee-fail"><span>PHP 7.0</span></td>
+                    <td class="ee-fail"><span>PHP 7.2</span></td>
+                    <td class="ee-fail"><span>PHP 7.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-fail"><span>PHP 8.2</span></td>
+                    <td class="ee-fail"><span>PHP 8.3</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div class="ee-version-compatiblity-legend">
+
+<span class="ee-works"></span> - the PHP version is fully supported by this ExpressionEngine version
+
+<span class="ee-fail"></span> - the system will not work under this PHP version, or a significant part of functionality will not work
+
+<span class="ee-maybe"></span> - some of the functionality might work incorrectly, or compatibility has not been checked
+
+</div>
