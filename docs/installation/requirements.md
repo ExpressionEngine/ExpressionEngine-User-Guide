@@ -211,7 +211,7 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-works"><span>PHP 7.0</span></td>
                     <td class="ee-works"><span>PHP 7.2</span></td>
                     <td class="ee-works"><span>PHP 7.4</span></td>
-                    <td class="ee-fail"><span>PHP 8.0</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
                     <td class="ee-fail"><span>PHP 8.3</span></td>
                 </tr>
