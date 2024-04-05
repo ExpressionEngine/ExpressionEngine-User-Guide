@@ -72,12 +72,10 @@ The following variables are available inside field's tags pair:
 | `{index}`       | Counter for each of selected items, starting with 0 |
 | `{total_items}` | Total number of selected items                      |
 
-By default, `{item}` will render the item's label. 
-
-To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
+By default, `{item}` will render the item's label. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
 
     {field_name}
-        Label: {item}<br>
+        Value: {item}<br>
         Value: {item:value}<br>
         Label: {item:label}<br>
     {/field_name}

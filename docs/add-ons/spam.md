@@ -25,7 +25,7 @@ The Spam Module has three important configuration settings:
 
 ### Sensitivity
 
-The Spam Module works by calculating the probability that a piece of content is spam based on all the examples it's seen before. The sensitivity is the cutoff for what we consider spam. This defaults to 70 which means there has to be at least a 70% probability something is spam for it to get flagged. If this is higher you will have fewere false positives but more spam will slip through.
+The Spam Module works by calculating the probability that a piece of content is spam based on all the examples it's seen before. The sensitivity is the cutoff for what we consider spam. This defaults to 70 which means there has to be at least a 70% probability something is spam for it to get flagged. If this is higher you will have fewer false positives but more spam will slip through.
 
 ### Word Limit
 

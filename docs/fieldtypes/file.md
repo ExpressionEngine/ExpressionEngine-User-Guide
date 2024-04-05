@@ -19,7 +19,13 @@ File fields utilize the built-in file browser to store uploaded files and images
 
 ![file field](_images/field_file.png)
 
-NOTE: **Note:**Your site must have at least one upload directory before you can create a file field.
+NOTE: **Note:** Your site must have at least one upload directory before you can create a file field.
+
+A File field allows you to browse through existing files and upload new files.  You can use the operating system's file selection interface or simply drag and drop files to the File field to upload them.
+
+![file field with file selected](_images/field_file_file.png)
+
+Once a file has been selected in the field, that file can be replaced by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_edit.png" alt="edit icon"> icon. The field selection can be cleared by clicking <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_remove.png" alt="remove icon"> icon (this will not remove the file from the system). You can also change the file metadata (such as the title or description) by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_edit_meta.png" alt="settings icon"> icon - please note that file's metadata will be changed globally throughout the system.
 
 ## Field Settings
 
@@ -216,18 +222,19 @@ Resize the image.
 
 ### `:crop`
 
-    {news_image:crop width="100" height="100"}
+    {news_image:crop width="100" height="100" position="center"}
 
-Crop the image.
+Crop the image. By default, cropping uses top left corner of image as starting position. You can specify `x` and `y` offset, if needed, or `position="center"` parameter to make crop happen close to image center.
 
 | Parameter | Values  | Default    | Description                           |
 | --------- | ------- | ---------- | -------------------------------------- |
 | width    | `Number` | `*required`| Width to crop to |
 | height   | `Number` | `*required`| Height to crop to |
-| quality  | `0`-`100`| `75`| Image quality, % |
-| maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
-| x        | `Number` | `0`| Horizontal offset, px |
-| y        | `Number` | `0`| Vertical offset, px |
+| quality  | `0`-`100`| `75`       | Image quality, % |
+| maintain_ratio      | `y` / `n`  | `y`| Keep image ratio (yes/no)  |
+| position | `center` |            | Crop close to image center  |
+| x        | `Number` | `0`        | Horizontal offset, px |
+| y        | `Number` | `0`        | Vertical offset, px |
 
 ### `:rotate`
 

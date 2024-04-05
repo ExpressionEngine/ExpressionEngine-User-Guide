@@ -7,6 +7,8 @@
 
 - name: Config Files
   items:
+  - name: Main Configuration File
+    href: config/config.md
   - name: System Config Overrides
     href: general/system-configuration-overrides.md
   - name: Additional Config Files
@@ -203,6 +205,8 @@
               href: development/extension-hooks/global/pagination.md
             - name: Relationships Fieldtype
               href: development/extension-hooks/global/relationships.md
+            - name: Members Fieldtype
+              href: development/extension-hooks/global/member-ft.md
             - name: Session Library
               href: development/extension-hooks/global/session.md
             - name: Template Library
@@ -326,6 +330,8 @@
           href: development/services/consent.md
         - name: Cookie
           href: development/services/cookie.md
+        - name: Cookie Registry
+          href: development/services/cookie-registry.md
         - name: CSV Library
           href: development/services/csv.md
         - name: Encrypt Service
@@ -416,6 +422,8 @@
           href: development/models/category-field.md
         - name: Category Group Model
           href: development/models/category-group.md
+        - name: Category Group Settings Model
+          href: development/models/category-group-settings.md
         - name: Channel Entry Model
           href: development/models/channel-entry.md
         - name: Channel Field Group Model
@@ -426,6 +434,8 @@
           href: development/models/comment.md
         - name: Comment Subscription Model
           href: development/models/comment-subscription.md
+        - name: Cookie Settings Model
+          href: development/models/cookie-settings.md
         - name: CP Log Model
           href: development/models/cp-log.md
         - name: Developer Log Model
@@ -623,6 +633,12 @@
           href: development/guidelines/view-php-syntax.md
     - name: Debugging
       href: development/debugging.md
+    - name: License Validation
+      items:
+        - name: Overview
+          href: development/license-validation/index.md
+        - name: Importing Licenses Through the API
+          href: development/license-validation/importing-licenses.md
     - name: v3 Add-on Migration
       href: development/v3-add-on-migration.md
     - name: v4 Add-on Migration
@@ -643,7 +659,7 @@
         - name: Add-on Management
           href: cli/built-in-commands/addons.md
         - name: Add-on Generator
-          href: cli/built-in-commands/make-addon.md
+          href: development/addon-development-overview.md
         - name: Backup Database
           href: cli/built-in-commands/backup-database.md
         - name: Clear Cache
@@ -666,6 +682,12 @@
           href: cli/built-in-commands/make-prolet.md
         - name: Widget Generator
           href: cli/built-in-commands/make-widget.md
+    - name: Creating a Command
+      href: cli/creating-a-command.md
+    - name: Defining Input
+      href: cli/defining-input.md
+    - name: Displaying Output
+      href: cli/displaying-output.md
 
 
 - name: Entry Cloning

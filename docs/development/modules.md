@@ -223,7 +223,7 @@ public $automatic = false;
 
 This tells our Sidebar class not to automatically create any sidebars. 
 
-From here you can utilize utilize the [`CP/Sidebar Service`](development/services/sidebar.md) in the `process()` method of our Sidebar class to manually create your sidebar and all related items.
+From here you can utilize the [`CP/Sidebar Service`](development/services/sidebar.md) in the `process()` method of our Sidebar class to manually create your sidebar and all related items.
 
 
 ### Toolbar

@@ -183,6 +183,10 @@ This variable will be substituted with your site name as defined under `Settings
 
 This variable will be substituted with your site URL as defined under `Settings --> URL and Path Settings`.
 
+### `{site_id}`
+
+This variable will be substituted with the ID of your site as defined under `Developer --> Sites` (if MSM is enabled).
+
 ### `{template_name}`
 
 This variable displays the name of the template currently being processed.:
@@ -251,13 +255,59 @@ NOTE: **Note:** Like the `{current_time}` variable, `{variable_time}` is availab
 
 The email address for the site, as specified in [Email Configuration](control-panel/settings/email.md).
 
+## Custom Global Variables
+
+You can define your own global variables as overrides in your `config.php` file or `index.php` file using `global_vars` property (which itself needs to be an associative array). These variables will be available to all of your templates.
+
+NOTE: Do not confuse these with [Site Template Variables](templates/variable.md), which are defined in the control panel.
+
+When using `index.php` file, you need set `global_vars` property in `$assign_to_config` array. For example:
+
+    $assign_to_config['global_vars'] = array(
+        'show_banner' => 'y',
+    );
+
+When using `config.php` file, you need to set the `$config` array variable. For example:
+
+    $config['global_vars'] = array(
+        'show_banner' => 'n',
+    );
+
+You can use the [environment variables](advanced-usage/env-support.md) for the values of global variables. For example:
+
+    $config['global_vars'] = array(
+        'show_banner' => $_ENV['SHOW_BANNER'],
+    );
+
+Note that the global variables defined in `config.php` file will be overridden by the global variables defined in `index.php` file when a name conflict occurs.
+
 ## Member Variables
 
 [TOC=3]
 
+### `{logged_in_avatar_filename}`
+
+The filename of avatar image for the currently logged-in user.
+
+### `{logged_in_avatar_height}`
+
+Height of avatar image for the currently logged-in user.
+
+### `{logged_in_avatar_width}`
+
+Width of avatar image for the currently logged-in user.
+
 ### `{logged_in_email}`
 
 The email address for the currently logged-in user.
+
+### `{logged_in_ip_address}`
+
+This variable will be substituted with the IP address of the currently logged in user.
+
+### `{logged_in_member_id}`
+
+The Member ID for the currently logged-in user.
 
 ### `{logged_in_primary_role_id}`
 
@@ -274,14 +324,6 @@ The short name of the Primary Role for the currently logged-in user.
 ### `{logged_in_primary_role_description}`
 
 The Primary Role description for the currently logged-in user.
-
-### `{logged_in_ip_address}`
-
-This variable will be substituted with the IP address of the currently logged in user.
-
-### `{logged_in_member_id}`
-
-The Member ID for the currently logged-in user.
 
 ### `{logged_in_private_messages}`
 

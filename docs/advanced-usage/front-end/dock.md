@@ -12,7 +12,7 @@
 [TOC]
 
 ## Overview
-The Dock is a central component of ExpressionEngine's front-end functionality. 
+The Dock is a central component of ExpressionEngine's front-end functionality.
 
 ![dock overview](_images/ee-pro-dock.png)
 
@@ -47,7 +47,7 @@ The Control Panel button on the Dock will open the site's Control Panel in a new
 Prolets are add-on components that reveal some of add-on's functionality for the Control Panel to the front-end, making it possible to edit data directly on the page where it belongs.
 
 ### Built-in Prolets
-ExpressionEngine is shipped with the Entries and Publish prolets. 
+ExpressionEngine is shipped with the Entries and Publish prolets.
 
 Clicking on the Entries prolet opens a prolet window with all entries currently listed. Allowing you to quickly find and edit other entries in your site.
 
@@ -61,6 +61,6 @@ Developers may create third-party prolets that can be installed with add-ons. Re
 ![dock prolets](_images/ee-pro-dock-prolets.png)
 
 ## Disabling
-The Dock can be disabled by either the setting in the [Control Panel](control-panel/settings/front-end-editing.md#general-settings) or [config override](general/system-configuration-overrides.md#enable_dock).
+The Dock can be disabled by either the setting in the [Control Panel](control-panel/settings/front-end-editing.md#enable-dock) or [config override](general/system-configuration-overrides.md#enable_dock).
 
-WARN **Warning**: If the Dock is disabled, all of ExpressionEngine's [Front-End Content Management](advanced-usage/front-end/overview.md) is turned off for the front-end. 
+WARN **Warning**: If the Dock is disabled, all of ExpressionEngine's [Front-End Content Management](advanced-usage/front-end/overview.md) is turned off for the front-end.

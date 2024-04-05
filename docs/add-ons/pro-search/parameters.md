@@ -117,7 +117,7 @@ This is equal to:
 
 ### SQL parameters
 
-Pro Search supports SQL parameters. This means you can use a SQL query in any pararameter. SQL queries are limited to SELECTs only and should always end with a semi-colon (;). Pro Search will take the first item in the SELECT statement and creates a pipe-separated list from it. If the SQL query produces no results, it sets the parameter value to what comes after the semi-colon. You can optionally prefix the SQL query for better matching. Schematically, such a query looks like this:
+Pro Search supports SQL parameters. This means you can use a SQL query in any parameter. SQL queries are limited to SELECTs only and should always end with a semi-colon (;). Pro Search will take the first item in the SELECT statement and creates a pipe-separated list from it. If the SQL query produces no results, it sets the parameter value to what comes after the semi-colon. You can optionally prefix the SQL query for better matching. Schematically, such a query looks like this:
 
 `param="prefix SELECT field FROM table WHERE lorem = 'ipsum';no results"`
 

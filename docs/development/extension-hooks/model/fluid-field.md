@@ -60,7 +60,7 @@ Called before the fluid field is updated. Changes made to the object will be sav
 
 How it's called:
 
-    ee()->extensions->call('fluid_field_add_field', $field_table_name, $values);
+    ee()->extensions->call('fluid_field_update_field', $field_table_name, $values);
 
 TIP: **New in version 6.1.0.**
 

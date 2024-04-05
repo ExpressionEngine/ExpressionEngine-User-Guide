@@ -11,7 +11,7 @@
 
 [TOC]
 
-Checkboxes allow publishers to choose multiple items from a list. 
+Checkboxes allow publishers to choose multiple items from a list.
 
 ![multiselect field](_images/cp-field-multiselect.png)
 
@@ -74,12 +74,10 @@ The following variables are available inside field's tags pair:
 | `{index}`       | Counter for each of selected items, starting with 0 |
 | `{total_items}` | Total number of selected items                      |
 
-By default, `{item}` will render the item's label.
-
-To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
+By default, `{item}` will render the item's label. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
 
     {field_name}
-        Label: {item}<br> {!-- 1 --}
+        Value: {item}<br> {!-- 1 --}
         Value: {item:value}<br> {!-- 1 --}
         Label: {item:label}<br> {!-- One --}
     {/field_name}
@@ -101,7 +99,7 @@ Given that the selection option is 2/Two:
 
 TIP: **Tip:** It is recommended that you use the value in conditionals, as it typically will not change over time. That way, if you ever need to change the wording, spelling, or even casing of labels in your publish/edit UI, you will not need to modify your templates.
 
-TIP: **Tip:** Checkboxes, Multiselect and Selectable Buttons all default to showing the label. Radio Buttons and Selects default to showing the value. 
+TIP: **Tip:** Checkboxes, Multiselect and Selectable Buttons all default to showing the label. Radio Buttons and Selects default to showing the value.
 
 ### Parameters
 

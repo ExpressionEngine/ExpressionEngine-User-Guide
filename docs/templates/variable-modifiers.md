@@ -113,6 +113,11 @@ Make the content safe to use as the value of a form field.
 
 ### `:json`
 
+| Parameter            | Default   |                                                                                                                             |
+| -------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------- |
+| double_encode=       | `yes`      | Whether or not to double encode already-encoded entities, e.g. should `&quot;` become `&amp;quot;`?                         |                           |
+| enclose_with_quotes= | `yes`     | Whether the output is automatically enclosed in quotes |
+
 Encode the content for JSON output.
 
     "headline": {title:json},
@@ -134,6 +139,8 @@ Outputs the length of the content in characters.
 | end_char=   | `&#8230;` | character to append when a limit terminates the content |
 
 Limits the content to the specified number of characters. Without `preserve_words='n'` may be fewer than the exact limit, as this retains whole words.
+
+Note that all HTML formatting will be stripped out automatically before applying limit modifier.
 
     {excerpt:limit characters='20'}
     {!-- A discussion&#8230; --}

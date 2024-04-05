@@ -44,7 +44,7 @@ You will need to set up environment file that will hold important information th
 This command will open the Cypress UI that lists all tests that exist for ExpressionEngine in `tests/cypress/cypress/integration` folder and can be run individually. Clicking on the test file name will run the test using selected browser.
 
 5. `npx cypress run --headed --no-exit -s cypress/integration/cp/login.ee6.js`
-This command will run particular test file as specified by `-s` parameter. You can also specicy wildcart `*` in place of file name to run all tests in folder. Note that as of current Cypress version that EE is using the test files cannot be placed above `tests/cypress` directory in directories tree.
+This command will run particular test file as specified by `-s` parameter. You can also specify a wildcard `*` in place of the file name to run all tests in a folder. Note that as of the current Cypress version that EE is using the test files cannot be placed above `tests/cypress` directory in directories tree.
 
 ## Cypress commands and tasks for EE
 
@@ -134,7 +134,7 @@ However if you have more than one test, it's better to have them organized into 
         })
     })
 
-The typical test would try to emulate user performing certain actions and then check the result against what is expected. 
+The typical test would try to emulate user performing certain actions and then check the result against what is expected.
 
 It is recommended to keep the tests granular, so if one of the tests fails and the other ones pass you know exactly where to look. However for complex test cases sometimes the procedure needs to be written as one large test; in such case, it is good practice to perform intermediate checks during the test run.
 

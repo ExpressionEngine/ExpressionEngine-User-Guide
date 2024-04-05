@@ -73,6 +73,8 @@ Besides specifying whether future entries are included in the search using the [
 
 ## Parameters
 
+{{embed:_tips/form-attributes.md}}
+
 ### `name=`
 
     name="search_form"

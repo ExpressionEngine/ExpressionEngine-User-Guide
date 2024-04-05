@@ -71,7 +71,7 @@ User-created Consent requests, that you as the site builder create, are referenc
 
 ### Checking if the User has Responded
 
-All of the above variables act like a boolean—`TRUE` if the user has given consent and `FALSE` if they've not given consent, or have denied or withdrawn it. But what about folks who haven't responded yet? You can use the `has_reponded:` prefix with any consent variable. For example, you could ask for consent for using a cool widget, but only if they've not responded. If they told you no, you don't want to keep asking.
+All of the above variables act like a boolean—`TRUE` if the user has given consent and `FALSE` if they've not given consent, or have denied or withdrawn it. But what about folks who haven't responded yet? You can use the `has_responded:` prefix with any consent variable. For example, you could ask for consent for using a cool widget, but only if they've not responded. If they told you no, you don't want to keep asking.
 
 has_responded: :
 
