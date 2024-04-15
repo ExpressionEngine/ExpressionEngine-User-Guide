@@ -8,6 +8,41 @@
 -->
 # ExpressionEngine v7 Change Log
 
+# Version 7.4.7
+(Release: April 15, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Allow automatic login and redirect to custom page after account activation; [#3581](https://github.com/ExpressionEngine/ExpressionEngine/issues/3581)
+- Open date field localization info in new window
+- Improved Authors dropdown when editing entry by showing Member ID; [#4168](https://github.com/ExpressionEngine/ExpressionEngine/issues/4168)
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#1333](https://github.com/ExpressionEngine/ExpressionEngine/issues/1333) where having template files stored outside of site folder could cause PHP warnings
+- Resolved an issue with tmpfile fallback not being possible in PHP7
+- Resolved [#3951](https://github.com/ExpressionEngine/ExpressionEngine/issues/3951) where File Grid doesn't allow uploading multiple images using "Upload New" button
+- Resolved [#4192](https://github.com/ExpressionEngine/ExpressionEngine/issues/4192) where edit_avatar tag did not accept webp file
+- Resolved [#3992](https://github.com/ExpressionEngine/ExpressionEngine/issues/3992) where Superadmin did not have a way to disable MFA for users
+- Fixed an issue where reordering items in Menu Sets did not work
+- Resolved [#4210](https://github.com/ExpressionEngine/ExpressionEngine/issues/4210) where members fieldtype had issues in LivePreview
+- Resolved [#4069](https://github.com/ExpressionEngine/ExpressionEngine/issues/4069) where incorrect fieldtype options were shown on load
+- Do not hide saved field options in entry if the field settings do not contain those options anymore; [#2973](https://github.com/ExpressionEngine/ExpressionEngine/issues/2973)
+- Resolved [#4193](https://github.com/ExpressionEngine/ExpressionEngine/issues/4193) where Select dropdown could show incorrect values as selected
+- Resolved [#4194](https://github.com/ExpressionEngine/ExpressionEngine/issues/4194) where profile edit form needed extra validation
+
 ## Version 7.4.6
 (Release: April 1, 2024)
 
@@ -135,7 +170,7 @@
 
 - Resolved [#4102](https://github.com/ExpressionEngine/ExpressionEngine/issues/4102) where template layouts could skip some variables
 - Resolved [#4040](https://github.com/ExpressionEngine/ExpressionEngine/issues/4040) where required column indicators were missing inside Grid field
-- Resolved [#3645](https://github.com/ExpressionEngine/ExpressionEngine/issues/3645) where Autosave did not include data from Grids with Relationships 
+- Resolved [#3645](https://github.com/ExpressionEngine/ExpressionEngine/issues/3645) where Autosave did not include data from Grids with Relationships
 - Resolved issue where error message was not using custom system message template if an extension file was missing
 - Resolved [#4033](https://github.com/ExpressionEngine/ExpressionEngine/issues/4033) where Menu Sets item could not be moved to the bottom
 - Resolved issue where `:excerpt` modifier on RTE field could cause PHP notice
