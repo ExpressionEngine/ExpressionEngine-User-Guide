@@ -60,7 +60,19 @@ When allowing multiple items to be selected, Selectable Buttons will usually be 
         {item}<br>
     {/field_name}
 
-By default, `{item}` will render the item's value. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
+
+The following variables are available inside field's tags pair:
+
+| Variable        | Description                                         |
+| --------------- | --------------------------------------------------- |
+| `{item}`        | Label of selected item                              |
+| `{item:label}`  | Label of selected item                              |
+| `{item:value}`  | Value of selected item                              |
+| `{count}`       | Counter for each of selected items, starting with 1 |
+| `{index}`       | Counter for each of selected items, starting with 0 |
+| `{total_items}` | Total number of selected items                      |
+
+By default, `{item}` will render the item's label. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
 
     {field_name}
         Value: {item}<br>
@@ -98,11 +110,13 @@ TIP: **Tip:** Checkboxes, Multiselect and Selectable Buttons all default to show
 
 NOTE: **NOTE:** For Select fields used in [Custom Member Fields](control-panel/member-manager.md#custom-member-fields) and [Category Group Details Tab](control-panel/categories.md#details-tab), the modifiers are not currently available in conditionals, and _must_ be based on the value, e.g. `{if some_cat_field == 2}`
 
-### Limit Parameter
+### Parameters
+
+#### `limit`
 
 This parameter limits the number of selected items output by the tag. It works for both the single variable, as well as the tag pair.
 
-### Markup Parameter
+#### `markup`
 
 When allowing for multiple selections, a single tag will display a comma separated list of values. If you want an HTML list, you can use markup="ul" or markup="ol" to change the output to the equivalent html list
 
@@ -116,7 +130,7 @@ Which will render as
         <li>Orange</li>
     </ul>
 
-### Backspace Parameter
+#### `backspace`
 
 Backspacing removes characters (including spaces and line breaks) from the last iteration of the loop when using a variable pair. For example, if you put a `<br>` tag after each item you'll have this
 
