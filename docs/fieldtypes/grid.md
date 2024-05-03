@@ -35,6 +35,11 @@ Enables moving the Grid rows with drag & drop to change the order
 
 #### Grid layout
 
+Tip: Grid Field Layout
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/g_-XvAR_OFI?si=wEWXAANYks-7FJqB" title="Setting Grid field to Horizontal or Vertical in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 **Auto (default)** - the fields within the grid will be placed in a horizontal row on bigger screens, and stacked vertically on smaller screens or when there is not enough space on the page.
 
 **Vertical layout** - The fields within the grid will always be stack vertically on the publish form.
