@@ -13,10 +13,43 @@
 
 ## Recommended Requirements
 
-**For the best experience**, ExpressionEngine requires:
+**For the best experience**, this version of ExpressionEngine should use:
 
-- [PHP](https://www.php.net/) 7.4 or newer, running with [PHP-FPM](https://php.net/manual/en/install.fpm.php)
-- [MySQL](https://www.mysql.com/) 5.6 or newer **OR** [Percona](https://www.percona.com/software/mysql-database/percona-server) 5.6 or newer
+- [PHP](https://www.php.net/) 7.4 **OR** 8.2, running with [PHP-FPM](https://php.net/manual/en/install.fpm.php)
+- [MySQL](https://www.mysql.com/) 5.6 or newer, [including MySQL 8](https://u.expressionengine.com/article/mysql-8-and-expressionengine-tips-for-the-trailblazers) **OR** [Percona](https://www.percona.com/software/mysql-database/percona-server) 5.6 or newer
+
+PHP 8.3 is fully supported though there may be third-party add-ons that are not updated as rapidly as EE is. As well, there does not seem to be noticeable performance improvement from PHP 8.2 to 8.3.
+
+[MariaDB](https://mariadb.org/) has long been a drop-in replacement for MySQL and has been used as the database by many, many EE sites. MariaDB often appears more performative than MySQL; however, there can be edge cases and queries where the opposite is true. Third-party add-ons also occasionally do not anticipate MariaDB being used by an EE site. Therefore, it's not officially supported.
+
+It has always been a core goal to ensure that ExpressionEngine is usable on a broadly diverse and accessible range of devices by a broad and diverse range of people. 
+
+The developers recognize that not only the wide range of servers setups, but also that sometimes we're not able to build our site on the machine of our dreams. Besides, no one likes it when they're forced to update an underlying tool unnecessarily.
+
+While ExpressionEngine achieves compatibility with the newest releases of PHP and MySQL, there's also a lot of effort made to keep EE stable and running properly with older versions. [See the chart](#php-version-requirements-across-ee-versions) below for full details of EE and PHP version compatibility.
+
+## The Bare Minimums
+
+If you are stuck in an older environment, ExpressionEngine _can_ run on PHP 7.2.5+ with 32M of memory, and MySQL 5.6.4+. 
+
+PHP-FPM is also optional, but [tends to handily outperform mod_php](https://www.cloudways.com/blog/php-fpm-on-cloud/). That said, running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group stopped providing support for PHP 5.6 [on December 31, 2018](https://php.net/supported-versions.php) and for PHP 7.1 [on December 1, 2019](https://www.php.net/eol.php). Oracle also ceased providing support for MySQL 5.5 at the same time.
+
+Why not save yourself the worry and hassle, enjoy a faster and more secure site that costs less to maintain, and upgrade now? Here's an email you can send to your host if they need a little nudge:
+
+```md
+Hey there!
+
+I'm running the PHP/MySQL-based content management system ExpressionEngine,
+and would like to make sure it's speedy, secure, and making the most efficient
+use of the resources available on my server.
+
+Could I speak with someone about moving to an environment that has PHP 8+
+and MySQL 5.6+? If they are available, I'd love to use PHP-FPM to implement PHP,
+and Percona as a drop-in replacement for MySQL, too.
+
+Thanks!
+```
+
 
 ## Server Compatibility Wizard
 
@@ -26,25 +59,9 @@ If you're not sure whether your server meets the minimum requirements, the serve
 - Upload the folder to your server.
 - Point your web browser to the folder. For example: `https://example.com/ee_wizard`
 
-## The Bare Minimums
+## Browser Requirements for the Control Panel
 
-If you are stuck in an older environment, ExpressionEngine _can_ run on PHP 7.2.5+ with 32M of memory, and MySQL 5.6.4+. PHP-FPM is also optional, but [tends to handily outperform mod_php](https://www.cloudways.com/blog/php-fpm-on-cloud/). That said, running older versions not only hurts performance—increasing the cost of your website—but also puts your site **at risk of security vulnerabilities**. The PHP Group stopped providing support for PHP 5.6 [on December 31, 2018](https://php.net/supported-versions.php). Oracle also ceased providing support for MySQL 5.5 at the same time.
-
-Why not save yourself the worry and hassle, enjoy a faster and more secure site that costs less to maintain, and upgrade now? Here's an email you can send to your host if they need a little nudge:
-
-```md
-Hey there!
-
-I'm running the PHP/MySQL based content management system ExpressionEngine, and would like to make sure it's speedy, secure, and making the most efficient use of the resources available on my server.
-
-Could I speak with someone about moving to an environment that has PHP 7+ and MySQL 5.6+? If they are available, I'd love to use PHP-FPM to implement PHP, and Percona as a drop-in replacement for MySQL, too.
-
-Thanks!
-```
-
-## Control Panel Browser Requirements
-
-ExpressionEngine's Control Panel targets compatibility with the final-release versions of the web browsers listed here, so it's important to keep your browser up to date. These requirements do not apply to your website, which **you are 100% in control of**, just ExpressionEngine's control panel.
+ExpressionEngine's Control Panel targets compatibility with the final-release versions of the web browsers listed here, so it's important to keep your browser up to date. These browser requirements apply only to ExpressionEngine's Control Panel, not to your website, which **you are 100% in control of**.
 
 - Chrome
 - Safari
@@ -110,7 +127,7 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
 
 - **[Valet](https://laravel.com/docs/8.x/valet)** - (macOS only) Valet is the ExpressionEngine's team recommended local development environment. Super fast and easy to use.
 
-- **[DDEV Local](https://www.ddev.com/ddev-local/)** - (macOS, Windows, Linux) DDEV Local makes working with Docker containers a breeze. Quickly setup and share environments that mirror your production.
+- **[DDEV Local](https://www.ddev.com/ddev-local/)** - (macOS, Windows, Linux) DDEV Local makes working with Docker containers a breeze. Quickly set up and share environments that mirror your production.
 
 - **[Devilbox](http://devilbox.org/)** - (macOS, Windows, Linux) Devilbox is another great stack which allows user to quickly get up and running with Docker environments. To install ExpressionEngine on Devilbox simply follow the [Setup ExpressionEngine Docs](https://devilbox.readthedocs.io/en/latest/examples/setup-expressionengine.html).
 
