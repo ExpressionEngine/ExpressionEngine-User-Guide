@@ -232,6 +232,11 @@ Global Variables can contain text, HTML, javascript, etc. but cannot contain PHP
 
 **Control Panel Location: `Developer > Templates > New/Edit`**
 
+Tip: Custom Ordering Template Groups
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/9SExELl2AX0?" title="Custom Ordering ExpressionEngine Template Groups" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 This section of the Control Panel allows you to create or edit a template group.
 
 ## Export Templates

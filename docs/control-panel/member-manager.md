@@ -68,7 +68,51 @@ The role settings are grouped into the following tabs.
 
 #### Role tab
 
-This tab contains the generic settings for the role, including name, description, color label and security preferences (such as requiring MFA). You can also assign the role to Role Groups on this tab.
+This tab contains the generic settings for the role. You can also assign the role to Role Groups on this tab.
+
+##### Name
+
+The display name of the role.
+
+##### Short Name
+
+The role shortname, used in tags and conditionals.
+
+##### Description
+
+A brief description of the role, available for output as a member variables ``{primary_role_description}``
+
+##### Highlight Color
+
+Color for this role badge.
+
+##### Require Multi-Factor Authentication
+
+Requires [Multi-Factor Authentication](member/mfa.md) for all members in the role.
+
+##### Include members in: author/member lists.
+
+Roles included in the author list are available in the author select field on the entry publish/edit page for any channel the role has permission to publish in.
+
+Roles included in the member lists are available to display in the [member list tag](member/memberlist.md).  
+
+##### Security Lock
+
+If enabled, only Super Admin users can add or remove members to the role.
+
+##### Role Groups
+
+Assign the role to [role groups](member-manager.md#role-groups).
+
+##### Show field names on Publish
+
+Enables the display of the field tags on the entry publish/edit page. This option is only available to the Super Admin role.
+
+Tip: Hide and Show Field Short Names in the Publish Area
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/ai2-OiI9iDc?si=-0ox0OSj37V5EcFv" title="Hide and Show Field Short names in the ExpressionEngine publish area" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 
 #### Website Access tab
 
