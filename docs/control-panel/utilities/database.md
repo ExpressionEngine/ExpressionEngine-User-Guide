@@ -15,6 +15,11 @@
 
 **Control Panel Location: `Tools > Utilities > Back Up Database`**
 
+Tip: Two ways to back up your ExpressionEngine Database
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/oKAEyqH1lts?si=P0O4_7QTfILYqylh" title="Two ways to back up your ExpressionEngine Database" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 This utility allows you to make simple SQL dump backups of your ExpressionEngine database. For file backups, or more robust and automated database backup options, please refer to [Back-up your ExpressionEngine database and files](general/database-backup.md).
 
 When you click "Back Up Database", a SQL dump will be created and stored in your `system/user/cache/` folder, named based on the date and time of the backup, e.g.: `my_database_2017-10-20_09h20mPDT.sql`

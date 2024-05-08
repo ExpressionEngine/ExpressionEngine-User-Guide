@@ -150,6 +150,12 @@ The Publish/Edit page can be customized, with the layout saved per member role, 
 
 **Control Panel Location: `Developer > Channels > Layouts > New/Edit`**
 
+Tip: Side by Side Fields Using Layouts
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/B7HvEKOF7gU?si=y4q_45V1bcZIEKa_" title="Side by Side Field Layout in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+
 This section of the control panel is where channel layouts are created or edited.
 
 Editors in a member role will see the Publish / Edit entry page in accordance with the assigned publish layout for that channel.
