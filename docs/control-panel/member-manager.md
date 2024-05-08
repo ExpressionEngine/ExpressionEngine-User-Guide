@@ -70,43 +70,25 @@ The role settings are grouped into the following tabs.
 
 This tab contains the generic settings for the role. You can also assign the role to Role Groups on this tab.
 
-##### Name
+- **Name** --  The display name of the role.
 
-The display name of the role.
+- **Short Name** -- The role shortname, used in tags and conditionals.
 
-##### Short Name
+- **Description** -- A brief description of the role, available for output as a member variables ``{primary_role_description}``
 
-The role shortname, used in tags and conditionals.
+- **Highlight Color** -- Color for this role badge.
 
-##### Description
+- **Require Multi-Factor Authentication** -- Requires [Multi-Factor Authentication](member/mfa.md) for all members in the role.
 
-A brief description of the role, available for output as a member variables ``{primary_role_description}``
+- **Include members in: author/member lists.**
+-- Roles included in the author list are available in the author select field on the entry publish/edit page for any channel the role has permission to publish in.
+-- Roles included in the member lists are available to display in the [member list tag](member/memberlist.md).  
 
-##### Highlight Color
+- **Security Lock** -- If enabled, only Super Admin users can add or remove members to the role.
 
-Color for this role badge.
+- **Role Groups** -- Assign the role to [role groups](control-panel/member-manager.md#role-groups).
 
-##### Require Multi-Factor Authentication
-
-Requires [Multi-Factor Authentication](member/mfa.md) for all members in the role.
-
-##### Include members in: author/member lists.
-
-Roles included in the author list are available in the author select field on the entry publish/edit page for any channel the role has permission to publish in.
-
-Roles included in the member lists are available to display in the [member list tag](member/memberlist.md).  
-
-##### Security Lock
-
-If enabled, only Super Admin users can add or remove members to the role.
-
-##### Role Groups
-
-Assign the role to [role groups](member-manager.md#role-groups).
-
-##### Show field names on Publish
-
-Enables the display of the field tags on the entry publish/edit page. This option is only available to the Super Admin role.
+- **Show field names on Publish** -- Enables the display of the field tags on the entry publish/edit page. This option is only available to the Super Admin role.
 
 Tip: Hide and Show Field Short Names in the Publish Area
 <div class="video-wrapper">

@@ -22,7 +22,7 @@ Tip: How to Find Where a Field Is Used
 <iframe src="https://www.youtube.com/embed/vXbm9aoOQXU?si=VoUJjU-9gvsNKHT7" title="How to Determine Where Channel Fields are Used in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 </div>
 
-For more ways to see how fields relate to entries, see the [Show Fields on Publish](member/member-manager.md#) option in the member role settings.
+For more ways to see how fields relate to entries, see the [Show Fields on Publish](control-panel/member-manager.md) option in the member role settings.
 
 ## Create/Edit Field
 
