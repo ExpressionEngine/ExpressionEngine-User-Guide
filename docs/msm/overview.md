@@ -35,7 +35,10 @@ Available settings for a site are:
 - **Description**: A brief description of this site.
 - **Color coding for the site**: Allows for applying a custom color to the top of the control panel’s sidebar when the site is selected as the current site in the control panel.
 
-![color code site](/_images/msm_color_code_site.png)
+Tip: Color-Coding MSM Sites
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/Wp47a0PofLU?si=-0ox0OSj37V5EcFv" title="Color-Coding MSM Sites in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 ## Setting Up Multiple Sites
 

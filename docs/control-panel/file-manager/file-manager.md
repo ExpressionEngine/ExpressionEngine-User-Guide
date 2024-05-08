@@ -184,6 +184,11 @@ WARN:**Note** that exporting can be time and resource consuming.
 
 WARN:**Note:** Compatibility Mode is enabled by default for sites upgraded from older ExpressionEngine versions.
 
+Tip: How to Turn off File Manager Compatibility Mode
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/V1sRqz-b83k?si=0YrmOgxxcfhbWl_L" title="Turn off File Manager Compatibility Mode in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 ExpressionEngine 7+ stores files in the database differently then previous versions (using `{file:XX:url}` format instead of `{filedir_X}filename.ext`). This enables ExpressionEngine to provide a more powerful overall experience with files, such as storing files in subfolders, moving files to different locations, and collecting file usage data.
 
 ExpressionEngine will still parse the `{filedir_X}` tags in templates or channel entries. However, third-party add-ons that parse file data on their own may not be compatible with the `{file:XX:url}` syntax, causing issues. In order to prevent a bad user experience, users can enable Compatibility Mode for the sites that are upgraded from earlier versions. If you know all installed add-ons are compatible with the new file format, you can run the Update File Usage (found in Tools-> Utilities-> Update File Usage) and then disable Compatibility Mode from the [Content & Design settings](/control-panel/settings/content-design.md#run-file-manager-in-compatibility-mode).
