@@ -676,6 +676,12 @@
           href: cli/built-in-commands/make-migration.md
         - name: Model Generator
           href: cli/built-in-commands/make-model.md
+        - name: Sync Conditional Fields
+          href: cli/built-in-commands/sync-conditional-fields.md
+        - name: Sync Reindex Content
+          href: cli/built-in-commands/sync-reindex.md	
+        - name: Sync Upload Directory
+          href: cli/built-in-commands/sync-upload-directory.md		  	  
         - name: Update ExpressionEngine
           href: cli/built-in-commands/update.md
         - name: Prolet Generator
