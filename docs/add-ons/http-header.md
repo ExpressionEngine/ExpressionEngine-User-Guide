@@ -43,6 +43,8 @@ Here are the available parameters:
 |content_location=                   |Content-Location|
 |content_md5=                        |Content-MD5|
 |content_range=                      |Content-Range|
+|content_security_policy             |Content-Security-Policy|
+|content_security_policy_report_only |Content-Security-Policy-Report-Only|
 |content_type=                       |Content-Type - You can manually write out the full header value (i.e. text/html; charset=UTF-8) or you can simply specify the type and use the charset= parameter.|
 |etag=                               |ETag|
 |expires=                            |Expires - You can use relative date such as "+1 day";|
