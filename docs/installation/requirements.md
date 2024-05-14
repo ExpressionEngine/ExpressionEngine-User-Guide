@@ -20,7 +20,7 @@
 
 PHP 8.3 is fully supported though there may be third-party add-ons that are not updated as rapidly as EE is. As well, there does not seem to be noticeable performance improvement from PHP 8.2 to 8.3.
 
-[MariaDB](https://mariadb.org/) has long been a drop-in replacement for MySQL and has been used as the database by many, many EE sites. MariaDB often appears more performative than MySQL; however, there can be edge cases and queries where the opposite is true. Third-party add-ons also occasionally do not anticipate MariaDB being used by an EE site. Therefore, it's not officially supported.
+[MariaDB](https://mariadb.org/) has long been a drop-in replacement for MySQL and has been used as the database by many EE sites. MariaDB often appears more performant than MySQL; however, there are a few edge cases and queries where the opposite is true. with any database option, testing, and fine-tuning the server settings as needed will give you optimal results.
 
 It has always been a core goal to ensure that ExpressionEngine is usable on a broadly diverse and accessible range of devices by a broad and diverse range of people. 
 
