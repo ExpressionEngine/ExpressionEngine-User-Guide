@@ -36,6 +36,11 @@ If it finds a tag that corresponds to the add-on that is missing or not installe
 
 Clicking on the tag name shows the list of templates where it is found.
 
+Tip: How to Find Template Tags for Uninstalled Add-ons
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/IcO-p176zoY" title="How to Find Template Tags for Uninstalled Add-ons" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 ## Debug Fieldtypes
 
 **Control Panel Location: `Tools > Utilities > Debug Fieldtypes`**
