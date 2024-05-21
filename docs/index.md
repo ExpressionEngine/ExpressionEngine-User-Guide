@@ -11,6 +11,23 @@
 
 Welcome to the official ExpressionEngine Docs! In addition to the documentation, there are a number of resources linked below that will help you learn how to master ExpressionEngine.
 
+<div id="welcome-introduce" class="eeconf-promo max-w-full mx-auto p-8 lg:p-10 bg-white rounded-lg shadow-custom-black flex mt-12 flex-wrap lg:flex-nowrap">
+            <div class="w-64 h-64 mr-10 flex-shrink-0 mb-4 lg:mb-0">
+                <a href="https://eeconf.com/"><img src="https://eeconf.com/eeconf/300x250.jpg" width="max-w-full mb-0"></a>
+            </div>
+            <div class="mb-0">
+                <span class="text-red font-bold uppercase text-xs mb-4 block tracking-wider">Events</span>
+                <h2 class="text-purple-dark mb-4 leading-snug p-0 mt-0 border-none text-2">EEConf 2024</h2>
+                <p class="text-purple-dark text-base pb-7 mb-0">Join us for the ExpressionEngine 2024 Conference, October 2-3 in San Diego. Speakers. Networking. Community powered. Awesome.</p>
+                <p class="links-wrapper flex mb-0 flex-wrap xl:flex-nowrap">
+                    <a href="https://eeconf.com/" class="inline-flex text-base h-12 leading-none justify-center items-center bg-red mb-4 xl:mb-0 mr-2.5 rounded-5 border border-solid border-red hover:bg-white hover:text-red text-white" target="_BLANK">
+                        <strong>Register</strong>&nbsp;now!
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </p>
+            </div>
+        </div>
+        
 <div id="welcome-introduce" class="max-w-full mx-auto p-8 lg:p-10 bg-white rounded-lg shadow-custom-black flex mt-12 flex-wrap lg:flex-nowrap">
     <div class="w-64 h-64 mr-10 flex-shrink-0 mb-4 lg:mb-0">
         <img src="_images/welcome-image.svg" width="max-w-full mb-0">
