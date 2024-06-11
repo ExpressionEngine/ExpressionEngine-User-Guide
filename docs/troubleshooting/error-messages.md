@@ -109,6 +109,29 @@ This error happens when ExpressionEngine tries to save content with an emoji to 
 
 This happens when the query has a syntax error.  However, if you can't see an obvious syntax error and the query runs in other environments, it may be a server configuration issue.  Make certain MySQL is not running with  [ANSI_QUOTES](https://dev.mysql.com/doc/refman/5.7/en/sql-mode.html#sqlmode_ansi_quotes) on.
 
+## PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY000] [2002]
+
+This may happen when attempting to use the CLI when the ExpressionEngine intallation is running on [MAMP](https://www.mamp.info/).
+
+### Troubleshooting
+
+Change the following configuration values in config.php: hostname, port.  See example:
+
+```php
+$config['database'] = array(
+	'expressionengine' => array(
+		'hostname' => '127.0.0.1',
+		'database' => 'EEdb',
+		'username' => 'root',
+		'password' => 'root',
+		'dbprefix' => 'exp_',
+		'char_set' => 'utf8mb4',
+		'dbcollat' => 'utf8mb4_unicode_ci',
+		'port'     => '8889'
+	)
+);
+```
+
 ## Missing Encryption Keys
 
 ExpressionEngine displays the error: **You do not have value set for \[encryption_key/session_crypt_key\] in your config.php. This may leave your install open to security vulnerabilities. Restore the keys or see this troubleshooting article in the user guide for help.**
