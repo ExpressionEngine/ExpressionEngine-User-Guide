@@ -69,6 +69,7 @@ Then, you'll need to create a method to handle the form:
     public function do_upload()
     {
         $config['upload_path']   = './uploads/';
+        //$config['upload_destination'] = 5;
         $config['allowed_types'] = 'gif|jpg|png';
         $config['max_size']      = 100;
         $config['max_width']     = 1024;
@@ -109,6 +110,7 @@ Like most other classes in ExpressionEngine, the Upload class is initialized in 
 Similar to other libraries, you'll control what is allowed to be upload based on your preferences. In the controller you built above you set the following preferences:
 
     $config['upload_path'] = './uploads/';
+    //$config['upload_destination'] = 5;
     $config['allowed_types'] = 'gif|jpg|png';
     $config['max_size'] = '100';
     $config['max_width'] = '1024';
@@ -125,24 +127,24 @@ The above preferences should be fairly self-explanatory. Below is a table descri
 
 The following preferences are available. The default value indicates what will be used if you do not specify that preference.
 
-| Preference             | Default Value | Options              | Description                                                                                                                                                                                                                |
-| ---------------------- | ------------- | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| upload_path            | None          | None                 | The path to the directory where the upload should be placed. The directory must be writable and the path can be absolute or relative.                                                                                      |
-| allowed_types          | None          | None                 | The mime types corresponding to the types of files you allow to be uploaded. Usually the file extension can be used as the mime type. Can be either an array or a pipe-separated string.                                   |
-| file_name              | None          | Desired file name    | If set ExpressionEngine will rename the uploaded file to this name. The extension provided in the file name must also be an allowed file type. If no extension is provided in the original file_name will be used.         |
-| file_ext_tolower       | FALSE         | TRUE/FALSE (boolean) | If set to TRUE, the file extension will be forced to lower case                                                                                                                                                            |
-| overwrite              | FALSE         | TRUE/FALSE (boolean) | If set to true, if a file with the same name as the one you are uploading exists, it will be overwritten. If set to false, a number will be appended to the filename if another with the same name exists.                 |
-| max_size               | 0             | None                 | The maximum size (in kilobytes) that the file can be. Set to zero for no limit. Note: Most PHP installations have their own limit, as specified in the php.ini file. Usually 2 MB (or 2048 KB) by default.                 |
-| max_width              | 0             | None                 | The maximum width (in pixels) that the image can be. Set to zero for no limit.                                                                                                                                             |
-| max_height             | 0             | None                 | The maximum height (in pixels) that the image can be. Set to zero for no limit.                                                                                                                                            |
-| min_width              | 0             | None                 | The minimum width (in pixels) that the image can be. Set to zero for no limit.                                                                                                                                             |
-| min_height             | 0             | None                 | The minimum height (in pixels) that the image can be. Set to zero for no limit.                                                                                                                                            |
-| max_filename           | 0             | None                 | The maximum length that a file name can be. Set to zero for no limit.                                                                                                                                                      |
-| max_filename_increment | 100           | None                 | When overwrite is set to FALSE, use this to set the maximum filename increment for ExpressionEngine to append to the filename.                                                                                             |
-| encrypt_name           | FALSE         | TRUE/FALSE (boolean) | If set to TRUE the file name will be converted to a random encrypted string. This can be useful if you would like the file saved with a name that can not be discerned by the person uploading it.                         |
-| remove_spaces          | TRUE          | TRUE/FALSE (boolean) | If set to TRUE, any spaces in the file name will be converted to underscores. This is recommended.                                                                                                                         |
-| detect_mime            | TRUE          | TRUE/FALSE (boolean) | If set to TRUE, a server side detection of the file type will be performed to avoid code injection attacks. DO NOT disable this option unless you have no other option as that would cause a security risk.                |
-| mod_mime_fix           | TRUE          | TRUE/FALSE (boolean) | If set to TRUE, multiple filename extensions will be suffixed with an underscore in order to avoid triggering Apache mod_mime. DO NOT turn off this option if your upload directory is public, as this is a security risk. |
+| Preference             | Default Value | Options              | Description                                                                                  |
+| ---------------------- | ------------- | -------------------- | -------------------------------------------------------------------------------------------- |
+| upload_destination     | NULL          | None                 | ID of upload directory where the file should be saved. Mandatory, unless `upload_path` is specified |
+| upload_path            | None          | None                 | The path to the directory where the upload should be placed. The directory must be writable and the path can be absolute or relative. |
+| allowed_types          | None          | None                 | The mime types corresponding to the types of files you allow to be uploaded. Usually the file extension can be used as the mime type. Can be either an array or a pipe-separated string. |
+| file_name              | None          | Desired file name    | If set ExpressionEngine will rename the uploaded file to this name. The extension provided in the file name must also be an allowed file type. If no extension is provided in the original file_name will be used.  |
+| file_ext_tolower       | FALSE         | TRUE/FALSE (boolean) | If set to TRUE, the file extension will be forced to lower case                              |
+| overwrite              | FALSE         | TRUE/FALSE (boolean) | If set to true, if a file with the same name as the one you are uploading exists, it will be overwritten. If set to false, a number will be appended to the filename if another with the same name exists.  |
+| max_size               | 0             | None                 | The maximum size (in kilobytes) that the file can be. Set to zero for no limit. Note: Most PHP installations have their own limit, as specified in the php.ini file. Usually 2 MB (or 2048 KB) by default. |
+| max_width              | 0             | None                 | The maximum width (in pixels) that the image can be. Set to zero for no limit.               |
+| max_height             | 0             | None                 | The maximum height (in pixels) that the image can be. Set to zero for no limit.              |
+| min_width              | 0             | None                 | The minimum width (in pixels) that the image can be. Set to zero for no limit.               |
+| min_height             | 0             | None                 | The minimum height (in pixels) that the image can be. Set to zero for no limit.              |
+| max_filename           | 0             | None                 | The maximum length that a file name can be. Set to zero for no limit.                        |
+| max_filename_increment | 100           | None                 | When overwrite is set to FALSE, use this to set the maximum filename increment for ExpressionEngine to append to the filename. |
+| encrypt_name           | FALSE         | TRUE/FALSE (boolean) | If set to TRUE the file name will be converted to a random encrypted string. This can be useful if you would like the file saved with a name that can not be discerned by the person uploading it. |
+| remove_spaces          | TRUE          | TRUE/FALSE (boolean) | If set to TRUE, any spaces in the file name will be converted to underscores. This is recommended. |
+| auto_resize            | FALSE          | TRUE/FALSE (boolean) | If set to TRUE, the uploaded image will be automatically resized to the max_width / min_height dimensions. |
 
 ## Class Reference
 

@@ -29,7 +29,11 @@ The library is loaded using the following code:
 | \$val     | `String` | The value of the variable being added                |
 | Returns   | `Void`   |                                                      |
 
-Add a variable to the EE javascript object. Useful if you need to dynamically set variables for your external script. Will intelligently resolve namespaces (i.e. `filemanager.filelist`) so please use them.
+Add a variable to the [EE javascript object](development/control-panel-js/globals.md). Useful if you need to dynamically set variables for your external script. Will intelligently resolve namespaces (i.e. `filemanager.filelist`) so please use them.
+
+    ee()->javascript->set_global([
+        'publish.foreignChars' => ee()->config->loadFile('foreign_chars')
+    ]);
 
 ### `compile([$view_var = 'script_foot'[, $script_tags = TRUE]])`
 

@@ -20,33 +20,39 @@ lang: php
 ## Properties
 
 ### Required
-#### `role_id` int
+
+- `role_id` int
 
 ### Optional
-#### `id` Key
-#### `site_id` int
-#### `menu_set_id` int
-#### `mbr_delete_notify_emails`
-#### `exclude_from_moderation` boolString
-#### `search_flood_control` int
-#### `prv_msg_send_limit` int
-#### `prv_msg_storage_limit` int
-#### `include_in_authorlist`  boolString
-#### `include_in_memberlist` boolString
-#### `cp_homepage`
-#### `cp_homepage_channel` int
-#### `cp_homepage_custom`
+
+- `id` Key
+- `site_id` int
+- `menu_set_id` int
+- `mbr_delete_notify_emails`
+- `exclude_from_moderation` boolString
+- `search_flood_control` int
+- `prv_msg_send_limit` int
+- `prv_msg_storage_limit` int
+- `include_in_authorlist`  boolString
+- `include_in_memberlist` boolString
+- `cp_homepage`
+- `cp_homepage_channel` int
+- `cp_homepage_custom`
 
 ## Relationships
 
 #### `MenuSet`
+
 The control panel menu layout for the member.
 
 #### `Role`
+
 The role the member belongs to.
 
 #### `Site`
+
 The site ID the member belongs to.
 
 ## Methods
+
 This model has no additional methods.

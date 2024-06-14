@@ -20,27 +20,32 @@ lang: php
 ## Properties
 
 ### Required
-#### `status` Unique
-#### `highlight` Hex color
+
+- `status` Unique
+- `highlight` Hex color
 
 ### Optional
-#### `status_id` Key
-#### `status_order` ini
+
+- `status_id` Key
+- `status_order` ini
 
 ## Relationships
 
 #### `Channels`
+
 Related channels the status is assigned to.
 
 #### `ChannelEntries`
+
 Related channel entries the status is used in.
 
 #### `Site`
+
 Sites the status is used in.
 
 #### `Roles`
-Roles with permissions to use the status.
 
+Roles with permissions to use the status.
 
 ## Methods
 
@@ -50,8 +55,8 @@ Returns the value and rendered label for option select input display
 
 | Parameter | Type         | Description                                   |
 | --------- | ------------ | --------------------------------------------- |
-| use_ids   | `array` | ID of status, otherwise uses the status name.  Default is `false` |
-| Returns   | `array` | Array of value, and rendered label using `renderTag()` method.|
+| use_ids   | `array`      | ID of status, otherwise uses the status name.  Default is `false` |
+| Returns   | `array`      | Array of value, and rendered label using `renderTag()` method.|
 
 ### `renderTag()`
 
@@ -63,25 +68,28 @@ Override of the parent validateUnique to alter the language key if it is a failu
 
 | Parameter | Type         | Description                                   |
 | --------- | ------------ | --------------------------------------------- |
-| key   | `string` | Property name |
-| value   | `string` | Property value |
-| params   | `array` | Rule parameters |
-| Returns   | `string` | option component array |
-
+| key       | `string`     | Property name |
+| value     | `string`     | Property value |
+| params    | `array`      | Rule parameters |
+| Returns   | `string`     | option component array |
 
 ## Events
+
 Saving with this model will trigger the following events:
-`beforeInsert`
+
+- `beforeInsert`
 
 ## Examples
 
-#### Get a Status
-```
+### Get a Status
+
+```php
 $status = ee('Model')->get('Status')->filter('status','open')->first();
 ```
 
-#### Get entry IDs with a specific status
-```
+### Get entry IDs with a specific status
+
+```php
 // Get the Status Object.
 $status = ee('Model')->get('Status')->filter('status','open')->first();
 
@@ -89,8 +97,9 @@ $status = ee('Model')->get('Status')->filter('status','open')->first();
 $entries_array = $status->ChannelEntries->pluck('entry_id');
 ```
 
-#### Get Users that can access the Status
-```
+### Get Users that can access the Status
+
+```php
 // Get the Status Object.
 $status = ee('Model')->get('Status')->filter('status','open')->first();
 
@@ -114,8 +123,9 @@ $username_arrays = $ee('Model')
                     ->pluck('username');
 ```
 
-#### Edit the Status name
-```
+### Edit the Status name
+
+```php
 // Get the Status Object.
 $status = ee('Model')->get('Status')->filter('status','review')->first();
 
@@ -130,9 +140,9 @@ if ($result->isValid())
 }
 ```
 
+### Create a New Status
 
-#### Create a New Status
-```
+```php
 // Make the Status Model.
 $status = ee('Model')->make('Status');
 

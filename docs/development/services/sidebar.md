@@ -15,6 +15,12 @@ lang: php
 
 [TOC]
 
+## Automatically Created Sidebars
+If you are automatically generating a sidebar in your add-on you can use either of these methods to customize the sidebar further:
+- Modify the sidebar on every page load in the in the `process()` method of your `ControlPanel/Routes/Sidebar.php` file. The sidebar object is available using `$this->getSidebar()` You can also loop through each sidebar item with $this->getItems()`
+- Modify the sidebar only when a specific route is loaded by accessing the sidebar instance in the `process()` function of the route file (`ControlPanel/Routes/[route_name].php`).You can modify the sidebar item connected to the current route by using `$this->getCurrentSidebarItem()` with the [BasicItem Methods](#basicitem-methods) listed below.  You can also use `$this->getSidebar()` to get the entire sidebar instance.
+
+
 ## Simple Example
 
 ```php

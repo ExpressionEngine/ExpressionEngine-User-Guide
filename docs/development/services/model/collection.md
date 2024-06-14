@@ -170,6 +170,7 @@ Removes an element from the Collection and returns the reduced Collection.
 | Returns    | `Collection` | The updated collection without the $model element (if found). |
 
 **Note:** This is a handy way to correct for an issue with the EE Model search method which performs `%search_term%` searches rather than literal searches, so you get back all the records that contain the search term in the nominated field rather than those that match the search term. For example, if $collection is a Collection object, this code **removes** any elements that fail to meet a conditional test - so if it had 100 elements to begin with and 5 fail the test, after the code `$collection->count()` will return 95:
+
 ```
 foreach($collection as $element) {
     if($element->field != 'reference_value') {
