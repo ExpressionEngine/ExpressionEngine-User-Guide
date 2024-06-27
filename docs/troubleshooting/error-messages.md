@@ -115,7 +115,7 @@ This may happen when attempting to use the CLI when the ExpressionEngine intalla
 
 ### Troubleshooting
 
-Change the following configuration values in config.php: hostname, port.  See example:
+Check following configuration values in config.php: hostname, port.  Hostname may need to be ```127.0.0.1``` instead of ``localhost`` and the port may differ from the default 3306.  You can check the port used in the MAMP MySQL settings.  For example:
 
 ```php
 $config['database'] = array(
