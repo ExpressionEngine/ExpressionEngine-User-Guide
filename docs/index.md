@@ -42,7 +42,7 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
         <p class="text-purple-dark text-base pb-7 mb-0">ExpressionEngine 2024 Quarter 1 Review</p>
         <p class="links-wrapper flex mb-0 flex-wrap xl:flex-nowrap">
             <a href="https://expressionengine.com/blog/expressionengine-2024-quarter-1-review?utm_source=docs&utm_campaign=2024q1-review" class="inline-flex text-base h-12 leading-none justify-center items-center bg-red mb-4 xl:mb-0 mr-2.5 rounded-5 border border-solid border-red hover:bg-white hover:text-red text-white" target="_BLANK">
-                <strong>Register</strong>&nbsp;now!
+                <strong>Watch</strong>&nbsp;now!
                 <i class="fas fa-arrow-right ml-2"></i>
             </a>
         </p>
