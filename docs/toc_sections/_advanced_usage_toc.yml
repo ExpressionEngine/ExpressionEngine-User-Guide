@@ -714,3 +714,9 @@
       href: msm/overview.md
     - name: Variables and Parameter
       href: msm/code.md
+	  
+- name: ExpressionEngine + Laravel
+  items:
+    - name: Overview
+      href: advanced-usage/coilpack/overview.md
+	  
