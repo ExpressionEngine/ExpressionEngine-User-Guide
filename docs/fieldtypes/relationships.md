@@ -114,6 +114,16 @@ NOTE: **NOTE:** The [`disable`](fieldtypes/relationships.md#optimizing-relations
 
 [TOC=3]
 
+### Parameters
+
+In addition to the standard parameters described above, the following parameter may be used in this tag:
+
+##### `fixed_order=`
+
+    fixed_order="10|21|15"
+
+Allows the output of the tag pair to order related in a fixed order of entry IDs.
+
 ### Usage: Multiple Related Entries
 
 Given the following channel layout:
