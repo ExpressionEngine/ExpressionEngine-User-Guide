@@ -893,9 +893,9 @@ The "count" out of the current entries being displayed. If five entries are bein
       <a href="{cp_edit_entry_url}">Edit Entry</a>
     {/if}
 
-The URL of the entry form in the control panel where this entry can be edited. It is recommended you wrap this variable in an `{if logged_in}` conditional to hide your control panel's URL from regular site visitors. If you are running a membership based site, hide it behind an appropriate `logged_in_role_id` conditional. For example, to hide this link from everyone but Super Admins:
+The URL of the entry form in the control panel where this entry can be edited. It is recommended you wrap this variable in an `{if logged_in}` conditional to hide your control panel's URL from regular site visitors. If you are running a membership-based site, hide it behind an appropriate `logged_in_primary_role_id` conditional or use [exp:member:has_role](/member/member-roles-tags.html#expmemberhas_role). For example, to hide this link from everyone but Super Admins:
 
-    {if logged_in_role_id == 1}
+    {if logged_in_primary_role_id == 1}
       <a href="{cp_edit_entry_url}">Edit Entry</a>
     {/if}
 
