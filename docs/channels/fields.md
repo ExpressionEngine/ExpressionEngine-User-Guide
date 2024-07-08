@@ -16,7 +16,8 @@
 `{exp:channel:field}` tag allows displaying properties of [channel field](control-panel/field-manager/edit-field.md) irrespective of the context.
 
     {exp:channel:field field_name="department"}
-        <p>Choose <b>{field_label}</b>:</p>
+        <div>
+            <p>Choose <b>{field_label}</b>:</p>
             {field_options}
                 <p><span class="value">{value}</span>: <span class="label">{label}</span></p>
             {/field_options}
