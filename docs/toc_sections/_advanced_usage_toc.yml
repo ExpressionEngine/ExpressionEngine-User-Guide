@@ -122,9 +122,15 @@
     - name: Statistics
       href: add-ons/statistics.md
     - name: Structure
-      href: add-ons/structure/overview.md
-    - name: Emoticon (Deprecated)
-      href: add-ons/emoticon.md
+      items:
+        - name: Overview
+          href: add-ons/structure/overview.md
+        - name: Page Types
+          href: add-ons/structure/page-types.md
+        - name: Tags
+          href: add-ons/structure/tags.md
+        - name: Examples and Techniques
+          href: add-ons/structure/examples.md
 
 - name: Add-On Development
   items:
