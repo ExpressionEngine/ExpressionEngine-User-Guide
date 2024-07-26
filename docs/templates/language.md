@@ -17,6 +17,8 @@ lang: ee
 
 ExpressionEngine has its own template language which allows you to retrieve and display information dynamically.
 
+[Twig](https://twig.symfony.com/) and [Blade](https://laravel.com/docs/11.x/blade) templating engines are available when using the [Coilpack package](https://github.com/ExpressionEngine/Coilpack) on the [Laravel Framework](https://laravel.com/).
+
 ## Single Variables
 
 Single Variables output a single piece of content. Some variables are intended to be used within Template Tags (as in the examples below), others are available globally wherever you would like to put them in your templates.

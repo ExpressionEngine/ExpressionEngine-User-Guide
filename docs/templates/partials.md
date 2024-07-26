@@ -25,19 +25,23 @@ You can create and edit Template partials at `Developer --> Templates --> Templa
 
 NOTE: **Note:** Template partials may not be nested inside other Template partials.
 
-## Template partial vs. Template variable
+## Template Partial vs. Template Variable
 
-Template partials are expanded at a very early stage on each template, making it possible for them to hold dynamic content, ExpressionEngine tags, other variables, PHP, etc. (Read more about [the rendering stages of the template engine](templates/engine.md).) They shine when you need to reuse dynamic information but don't need the extra overhead of access control or separate preferences of an embedded template. [Template variables](templates/variable.md) are the polar opposites, expanded during one of the final rendering stages of the template engine, and should be used for static text, HTML, JavaScript, and other static content that would not affect other tags and variables on the template.
+Template partials are expanded at an early stage in each template, which makes it possible for them to hold and control dynamic content, ExpressionEngine tags, other variables, PHP, etc. (Read more about [the rendering stages of the template engine](templates/engine.md).) They shine most when you need to reuse dynamic information but don't need the extra overhead of access control or separate preferences of an embedded template. 
 
-## Template partial vs. Embedded Template
+[Template variables](templates/variable.md) are the polar opposites, expanded during the final rendering stages of the template engine, and they should be used for static text, HTML, JavaScript, and other static content that would not affect other tags and variables in the template.
 
-Template partials can be considered to actually be part of the template that they are used on, with their expanded contents parsed simultaneous to other tags and variables on the template. [Embedded templates](templates/embedding.md) are separate templates, with their own preferences (caching, PHP parsing, access, etc.), and are parsed individually. Put another way, embedded templates are not _included_ in the parent template, but rather _added to them_ after the fact, using a separate query and full page parsing resources for each template.
+## Template Partial vs. Embedded Template
+
+Template partials behave as a natural part of the template that calls them, with their expanded contents inserted early and parsed simultaneously to other tags and variables in that template. They interact fully with the logic and data in the calling template.
+
+[Embedded templates](templates/embedding.md) are more like sub-templates, with their own preferences (caching, PHP parsing, access, etc.). Embedded templates are processed individually after most of the calling template's parsing has happened. Put another way, embedded templates are not _included_ in the parent template, but rather _added to them_ after the parent template is mostly built, using a separate set of queries and using full page-parsing resources for each embedded template.
 
 ## Multiple Site Manager
 
 TIP: **Tip:** If you are using the Multiple Site Manager, you'll notice that you have a new preference when editing each Template partial: make it available to all your MSM sites or this site only. To easily identify the difference when reading your templates, consider prefixing your Template partial names with the site's short name or, for Template partials available to all sites, _global_:
 
-    {ellislab_date_formatting}
+    {packettide_date_formatting}
 
     {expressionengine_date_formatting}
 

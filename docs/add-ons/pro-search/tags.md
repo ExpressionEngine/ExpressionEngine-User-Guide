@@ -91,7 +91,7 @@ Name of the shortcut to use for the search query
 
 #### {pro_search_*query_parameter*}
 
-To output the value of an existing [query parameter](parameters.md) such as "keywords" or "item:size", use `{pro_search_}` and append the parameter name e.g. `{pro_search_item:size}`.
+To output the value of an existing [query parameter](/add-ons/pro-search/parameters.md) such as "keywords" or "item:size", use `{pro_search_}` and append the parameter name e.g. `{pro_search_item:size}`.
 
 #### {collections}{/collections}
 
@@ -273,7 +273,7 @@ Name of the shortcut to use for the search query.
 
 #### {pro_search_*query_parameter*}
 
-To output the value of an existing [query parameter](parameters.md) such as "keywords" or "item:size", use `{pro_search_}` and append the parameter name e.g. `{pro_search_item:size}`.
+To output the value of an existing [query parameter](/add-ons/pro-search/parameters.md) such as "keywords" or "item:size", use `{pro_search_}` and append the parameter name e.g. `{pro_search_item:size}`.
 
 NOTE: **Note:** This is not used to output the content from a matching result. It outputs the value of an existing search parameter i.e. *Your search for "cowboy hats" in size "Large" returned 19 results.*
 

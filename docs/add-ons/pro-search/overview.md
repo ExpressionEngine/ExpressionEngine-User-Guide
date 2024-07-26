@@ -26,11 +26,11 @@ Apart from the powerful [keywords filter](/add-ons/pro-search/filters.md#keyword
 
 Other features include:
 
-- Keyword [suggestions](/add-ons/pro-search/tags.md#suggestions-tag) based on your own [lexicon](/add-ons/pro-search/lexicon.md);
-- Fuzzy searches using [singulars & plurals](/add-ons/pro-search/filters.md#keywords-inflect) or [word stems](/add-ons/pro-search/filters.md#keywords-stem);
-- [Diacritic insensitive](/add-ons/pro-search/collections.md#diacritics) keyword searches;
+- Keyword [suggestions](/add-ons/pro-search/tags.md#exppro_searchsuggestions) based on your own [lexicon](/add-ons/pro-search/lexicon.md);
+- Fuzzy searches using [singulars & plurals](/add-ons/pro-search/filters.md#keywordsinflect) or [word stems](/add-ons/pro-search/filters.md#keywordsstem);
+- [Diacritic insensitive](/add-ons/pro-search/collections.md#diacritics-and-foreign-characters) keyword searches;
 - Multiple site search;
 - Search [shortcuts](/add-ons/pro-search/shortcuts.md) for custom search queries and URLs;
 - An exportable search log;
-- A super powerful [Find & Replace utility](/add-ons/pro-search/find-replace.md);
+- A super powerful [Find & Replace utility](/add-ons/pro-search/find-and-replace.md);
 - A [custom filter API](/add-ons/pro-search/development/create.md), [fieldtype API](/add-ons/pro-search/development/api.md), and [extension hooks](/add-ons/pro-search/development/hooks.md) for developers.

@@ -22,7 +22,7 @@ Here is a basic example showing how you might use the comment tag:
       <p>By {name} on {comment_date format="%Y %m %d"}</p>
     {/exp:comment:entries}
 
-NOTE: **Important:** The Comment Entries tag should **not** be nested inside of a standard {exp:channel:entries} tag.
+NOTE: **Important:** The Comment Entries tag should **not** be nested inside of a standard {exp:channel:entries} tag. If you do, the outer tag will replace many of these variables and conditionals before the Comment Entries tag has the chance to do so.
 
 ## Parameters
 
@@ -158,12 +158,6 @@ This variable will always display the absolute total number of results that are 
 
 The _opposite_ of `{absolute_count}`, in that it displays the entry count position counting backwards from the absolute total. Works across pagination, so the fifth entry in a list of fifteen entries would display "10".
 
-### `{allow_comments}`
-
-    {if allow_comments}
-
-TRUE / FALSE, Whether or not the entry being displayed allows comments. Typically used as a conditional.
-
 ### `{author}`
 
 The comment author's screen name, if a member; otherwise, this variable will display the name submitted with the comment.
@@ -195,10 +189,6 @@ The width of the avatar image associated with the entry's author. Typically used
 The URL to the avatar image associated with the entry's author. Typically used as such:
 
     {if avatar} <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar" /> {/if}
-
-### `{if can_moderate_comment}`
-
-TRUE / FALSE, Whether a member has permission to edit a given comment AND/OR close that comment. Used in conjunction with [comment editing](comment/form.md#allowing-members-to-edit-comments-on-the-front-end).
 
 ### `{channel_id}`
 
@@ -288,12 +278,6 @@ If five entries are being displayed per page, then for the fourth entry on the p
     {edit_date format="%Y %m %d"}
 
 The date on which the comment was edited. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
-
-### `{editable}`
-
-    {if editable}Show Edit{/if}
-
-This variable will be used in a conditional to allow [comment editing](comment/form.md#allowing-members-to-edit-comments-on-the-front-end). It indicates whether a member has [permission to edit a given comment](control-panel/member-manager.md#createedit-all-member-roles).
 
 ### `{email}`
 
@@ -453,7 +437,15 @@ These are totally dynamic in that any profile field you create for your members 
 
 [TOC=3]
 
-The following special conditionals are available:
+The following special conditionals are available.
+
+NOTE: **Important:** Avoid using Template Caching on any Template containing these conditional that are user-specific. If you do not avoid caching, then data will not be dynamic for each user. Instead, whoever happens to load the page when it gets cached will have their conditionals applied to every subsequent visitor until the cache expires.
+
+### `{if allow_comments}`
+
+    {if allow_comments} content {/if}
+
+TRUE / FALSE, Whether or not the entry being displayed allows comments. Typically used as a conditional.
 
 ### `{if avatar}`
 
@@ -463,7 +455,13 @@ This special conditional lets you conditionally display content if the current e
 
     {if avatar} <img src="{avatar_url}" width="{avatar_image_width}" height="{avatar_image_height}" alt="{author}'s avatar" /> {/if}
 
+### `{if can_moderate_comment}`
+
+TRUE / FALSE, Whether a member has permission to edit a given comment AND/OR close that comment. Used in conjunction with [comment editing](comment/form.md#allowing-members-to-edit-comments-on-the-front-end).
+
 ### `{if comments_expired}`
+
+    {if comments_expired} content {/if}
 
 If commenting has expired (and expiration is not set to be [overridden by moderation](comment/control-panel.md)), the contents of this conditional will be displayed.
 
@@ -471,17 +469,23 @@ NOTE: **Note:** `{if no_results}` has precedence over this conditional. If there
 
 ### `{if comments_disabled}`
 
-    {if comments_disabled}
+    {if comments_disabled} content {/if}
 
 If commenting has been disabled, the contents of this conditional will be displayed.
 
 NOTE: **Note:** `{if no_results}` has precedence over this conditional. If there are no comments, this conditional is not evaluated.
 
+### `{if editable}`
+
+    {if editable} Show Edit Form {/if}
+
+TRUE / FALSE, This variable will be used in a conditional to allow [comment editing](comment/form.md#allowing-members-to-edit-comments-on-the-front-end). It indicates whether a member has [permission to edit a given comment](control-panel/member-manager.md#createedit-all-member-roles).
+
 ### `{if is_ignored}`
 
     {if is_ignored} content {/if}
 
-This conditionals allows you to show (or hide) specific content if the comment was made by a member on the logged-in user's ignore list. A simplified example of how this might be used is:
+This conditional allows you to show (or hide) specific content if the comment was made by a member on the logged-in user's ignore list. A simplified example of how this might be used is:
 
     {exp:comment:entries}
       {if is_ignored}You are ignoring {author}.{/if}
@@ -509,7 +513,7 @@ Or you can use Javascript to allow the user to read the comment if they wish:
       <div id="{comment_id}" {if is_ignored}style="display: none;"{/if}>{comment}</div>
     {/exp:comment:entries}
 
-NOTE: **Important:** Avoid using Template Caching on any Template containing this conditional. If you do not avoid caching, then data will not be dynamic for each user. Instead, whoever happens to load the page when it is cached will have their ignore list applied to everyone until the cache expires.
+NOTE: **Important:** Avoid using Template Caching on any Template containing this conditional. If you cache this, whoever happens to load the page when it is first cached will have their ignore list applied to everyone until the cache is cleared.
 
 ### `{if no_results}`
 
