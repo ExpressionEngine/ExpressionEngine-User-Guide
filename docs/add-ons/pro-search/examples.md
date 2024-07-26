@@ -8,7 +8,7 @@
 -->
 # Examples
 
-Have you read the docs on [Parameters](/add-ons/pro-search/parameter.md)? Good. Are you familiar with the custom [Filters](/add-ons/pro-search/filters.md)? Excellent. Taken a look at the [Template Tags](/add-ons/pro-search/tags.md)? Perfect. Then here are some examples that illustrate how these three are combined.
+Have you read the docs on [Parameters](/add-ons/pro-search/parameters.md)? Good. Are you familiar with the custom [Filters](/add-ons/pro-search/filters.md)? Excellent. Taken a look at the [Template Tags](/add-ons/pro-search/tags.md)? Perfect. Then here are some examples that illustrate how these three are combined.
 
 [TOC]
 
@@ -503,7 +503,7 @@ Below are two lists of tags. You can select multiple tags per list. Entries that
 
 ## Other & Native
 
-In addition to what all the [filters](/add-ons/pro-search/filters.md) bring to the party, you can also filter by native ExpressionEngine parameters, as well as some [little extras](/add-ons/pro-search/tags.md/results-tag).
+In addition to what all the [filters](/add-ons/pro-search/filters.md) bring to the party, you can also filter by native ExpressionEngine parameters, as well as some [little extras](/add-ons/pro-search/tags.md#results-tag).
 
 ### Orderby and sort in one go
 

@@ -97,7 +97,7 @@ Checks if given value is present in given parameter.
 
 ### prep
 
-Modifies a parameter value to EE syntax based on the presence of the parameter name in other parameters like [require_all](./parameters#inclusive-values) or [exclude](./parameters#exclude-values).
+Modifies a parameter value to EE syntax based on the presence of the parameter name in other parameters like [require_all](/add-ons/pro-search/parameters.md#inclusive-values) or [exclude](/add-ons/pro-search/parameters.md#exclude-values).
 
 #### Arguments
 

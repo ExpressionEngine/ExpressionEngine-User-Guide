@@ -68,7 +68,7 @@ Total of iterations of the loop.
 
 If you’re displaying a 3rd party field type, you can use all variables you would normally use inside the field channel variable pair.
 
-NOTE: **Note:** the `{_my_var_:…}` variables are _only_ available when using the Parse tag pair or Pair tag pair, _and_ if the variable type allows multiple items to be selected. For more options on the native variable types, [check their properties](/add-ons/pro-variables/types.md).
+NOTE: **Note:** the `{_my_var_:…}` variables are _only_ available when using the Parse tag pair or Pair tag pair, _and_ if the variable type allows multiple items to be selected. For more options on the native variable types, [check their properties](/add-ons/pro-variables/type.md).
 
     {exp:pro_variables:parse var="my_site:my_var"}
 
