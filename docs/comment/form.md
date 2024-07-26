@@ -229,7 +229,7 @@ A request for an edit will return a response array. In the case of an error, an 
 
 By using the [{if editable}](/comment/entries.html#if-editable) conditional in the Comment Entries tag, you can output a link, instructions or a form if the viewing member has permission to edit the comment, and by using the {if can_moderate_comment} you can display whatever is appropriate if the viewing member has permission to moderate (close) the comment.
 
-For default regular members, in order to edit a comment, they must be logged in, the author of the comment, and the editing time limit must not have expired. If a member has a role with permission to edit the comments of any entry, that member will have edit permissions regardless of the editing time limit.
+For members without administrative access, in order to edit a comment they must be logged in, the author of the comment, and the editing time limit must not have expired. If a member has a role with permission to edit the comments of any entry, that member will have edit permissions regardless of the editing time limit.
 
 Comment moderators may close the comment. The edit time limit does not apply to moderators. 
 

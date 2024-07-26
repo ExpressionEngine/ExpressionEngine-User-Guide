@@ -22,7 +22,7 @@ Here is a basic example showing how you might use the comment tag:
       <p>By {name} on {comment_date format="%Y %m %d"}</p>
     {/exp:comment:entries}
 
-NOTE: **Important:** The Comment Entries tag should **not** be nested inside of a standard {exp:channel:entries} tag. If you do, the outer tag will parse and resolve many of these variables and conditionals before the Comment Entries tag has the chance to do so.
+NOTE: **Important:** The Comment Entries tag should **not** be nested inside of a standard {exp:channel:entries} tag. If you do, the outer tag will replace many of these variables and conditionals before the Comment Entries tag has the chance to do so.
 
 ## Parameters
 
@@ -485,7 +485,7 @@ TRUE / FALSE, This variable will be used in a conditional to allow [comment edit
 
     {if is_ignored} content {/if}
 
-This conditionals allows you to show (or hide) specific content if the comment was made by a member on the logged-in user's ignore list. A simplified example of how this might be used is:
+This conditional allows you to show (or hide) specific content if the comment was made by a member on the logged-in user's ignore list. A simplified example of how this might be used is:
 
     {exp:comment:entries}
       {if is_ignored}You are ignoring {author}.{/if}

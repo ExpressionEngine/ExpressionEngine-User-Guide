@@ -126,7 +126,7 @@ You can hard code the file entries tag to show specific files. You may also spec
 
     folder_id="34"
 
-If you want to display only the files that are in certain folder within Upload Directory, specify folder ID using this parameter.
+If you want to display only the files that are in certain folder within an Upload Directory, specify the folder ID using this parameter.
 
 ### `limit=`
 
@@ -227,7 +227,7 @@ The URL to the file.
 
 ### `{folder_id}`
 
-If the file is in a subfolder, will return ID of the folder. If the file is in root or upload directory, will return 0.
+The ID of the folder the file is in. If the file is in the top level folder of the upload directory, it will return 0.
 
 ### `{height}`
 

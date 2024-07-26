@@ -134,7 +134,7 @@ If you have defined any [image manipulations](control-panel/file-manager/upload-
 
 ### `{folder_id}`
 
-If the file is in a subfolder, will return ID of the folder. If the file is in root or upload directory, will return 0.
+The ID of the folder the file is in. If the file is in the top level folder of the upload directory, it will return 0.
 
 ### `{height}`
 

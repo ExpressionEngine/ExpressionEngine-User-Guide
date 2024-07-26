@@ -33,7 +33,7 @@ This variable will be substituted for the global character set (UTF-8). It is ty
 
 ### `{cp_session_id}`
 
-The active session id for the control panel. This is the value needed in the "S=" portion of the control panel URL. Only made available for logged-in members who have access to the Control Panel. Used to build a URL from the front-end to, for instance, an add-on in the control panel. 
+The active session id for the control panel. This is the value needed in the "S=" portion of the control panel URL. Only made available for logged-in members who have access to the Control Panel. Used to build a URL from the front-end to, for instance, an add-on in the control panel. If sessions are not required for control panel login, this variable returns 0.
 
     {if logged_in_primary_role_id == 1}
       &bull; <a href="{cp_url}?/cp/addons/settings/my_addon{if cp_session_id}&S={cp_session_id}{/if}">CP Link</a>
