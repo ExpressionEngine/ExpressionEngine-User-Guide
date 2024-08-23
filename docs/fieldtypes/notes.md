@@ -9,7 +9,7 @@
 
 # Notes Fieldtype
 
-Notes is a fieldtype that contains text used to give context to content editors. It cannot be edited in a channel entry and is only there for informational purposes. 
+Notes is a fieldtype that contains text used to give context to content editors. It cannot be edited in a channel entry and is only there for informational purposes.
 
 ![notes field](_images/notes.png)
 
@@ -28,4 +28,5 @@ This is the content that will appear as a note on the publish form. Markdown for
 
 ## Template Tag
 
-Usage of notes is not supported in templates.
+The note contents can be displayed in a channel:entries loop using a single variable.
+
