@@ -280,7 +280,7 @@ Below is a list of radio buttons, one for each letter of the alphabet. Selecting
 
 Below is a list of checkboxes based on a custom channel field of the Checkboxes type. You can select multiple options from this list. Entries will be shown that have any of the selected options checked. Uses [Low Options](https://github.com/EEHarbor/low_options) to generate field options.
 
-Adding `contains_words="parameter_name"` to the Results tag will ensure that the selected items are not contained within other words, like appending `\W` to the values. 
+Adding `contains_words="parameter_name"` to the Results tag will ensure that the selected items are not contained within other words, like appending `\W` to the values.
 
     {exp:pro_search:form query="{segment_3}"}
       {exp:low_options:service_options}
@@ -503,7 +503,7 @@ Below are two lists of tags. You can select multiple tags per list. Entries that
 
 ## Other & Native
 
-In addition to what all the [filters](/add-ons/pro-search/filters.md) bring to the party, you can also filter by native ExpressionEngine parameters, as well as some [little extras](/add-ons/pro-search/tags.md#results-tag).
+In addition to what all the [filters](/add-ons/pro-search/filters.md) bring to the party, you can also filter by native ExpressionEngine parameters, as well as some [little extras](/add-ons/pro-search/tags.md#exppro_searchresults).
 
 ### Orderby and sort in one go
 

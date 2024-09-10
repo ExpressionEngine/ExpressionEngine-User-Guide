@@ -95,7 +95,7 @@ The automatic `keywords:mode` uses operators in keywords for any/all/exact match
 
 ### Singulars & Plurals
 
-Pro Search supports singular and plural matching of keywords [inflections](http://en.wikipedia.org/wiki/Inflection). To enable this, both the `keywords:inflect` and the `keywords:lang` parameters must be set. Pro Search supports English inflections natively and you can add support for other languages by adding inflection rules to your [Config file](/general/system_configuration_overrides.md):
+Pro Search supports singular and plural matching of keywords [inflections](http://en.wikipedia.org/wiki/Inflection). To enable this, both the `keywords:inflect` and the `keywords:lang` parameters must be set. Pro Search supports English inflections natively and you can add support for other languages by adding inflection rules to your [Config file](/general/system-configuration-overrides.md):
 
 ```
 $config['pro_search_inflection_rules'][lang] = array(
@@ -110,7 +110,7 @@ $config['pro_search_inflection_rules'][lang] = array(
 
 ### Stems
 
-Pro Search supports matching of keywords by their stem [stemming](http://en.wikipedia.org/wiki/Stemming). To enable this, both the `keywords:stem` and the `keywords:lang` parameters must be set. English stemming is supported natively, using a [Porter stemmer](http://tartarus.org/martin/PorterStemmer/) class, and you can add support for other languages by adding this to your [Config file](/general/system_configuration_overrides.md):
+Pro Search supports matching of keywords by their stem [stemming](http://en.wikipedia.org/wiki/Stemming). To enable this, both the `keywords:stem` and the `keywords:lang` parameters must be set. English stemming is supported natively, using a [Porter stemmer](http://tartarus.org/martin/PorterStemmer/) class, and you can add support for other languages by adding this to your [Config file](/general/system-configuration-overrides.md):
 
 ```
 $config['pro_search_stemmers'][lang] = array(
@@ -154,7 +154,7 @@ You can use the Distance filter to limit results by a given maximum distance. Th
 NOTE: **Note:** Use two separate fields instead of a single one for better performance.
 
 ### Variables
-The Distance filter also makes this variable available in the [Results tag](/add-ons/pro-search/tags#results-tag):
+The Distance filter also makes this variable available in the [Results tag](/add-ons/pro-search/tags.md#exppro_searchresults):
 
 #### `{pro_search_distance}`
     The calculated distance in the given unit for this entry.
@@ -163,7 +163,7 @@ NOTE: **Note:** Using the Distance filter will return the search results ordered
 
 ## Field Search
 
-You can use the native `search:field_name` parameter to target specific fields. Additionally, Pro Search can target the entry’s ***title***, ***url_title***, ***status***, target [Grid](/fieldtypes/grid.md) columns, use multiple values for [numeric matching](/channel/channel_entries.md#numeric-matching) (in combination with the `gt`, `gte`, `lt` and `lte` params), and use ***starts / ends with*** matching.
+You can use the native `search:field_name` parameter to target specific fields. Additionally, Pro Search can target the entry’s ***title***, ***url_title***, ***status***, target [Grid](/fieldtypes/grid.md) columns, use multiple values for [numeric matching](/channels/entries.md#numeric-matching) (in combination with the `gt`, `gte`, `lt` and `lte` params), and use ***starts / ends with*** matching.
 
 ### Parameters
 
