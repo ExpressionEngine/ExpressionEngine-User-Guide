@@ -15,6 +15,8 @@
 
 Outputs a searchable list of members, including form filters to sort and limit the members.
 
+{{embed:_tips/form-validation.md}}
+
 ## Parameters
 
 {{embed:_tips/form-attributes.md}}
@@ -98,7 +100,7 @@ This is a **required** variable in order to use the search form.  It creates the
 
 ### `{role_options}`
 
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
+A list of options for filtering by member role
 
     <select name='role_id' class='select'>
         {role_options}
@@ -106,7 +108,7 @@ Form submission errors are displayed using a "looping pair" as there can be more
 
 ### `{order_by_options}`
 
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
+A list of options for changing the results order
 
     <select name='order_by' class='select'>
         {order_by_options}
@@ -114,7 +116,7 @@ Form submission errors are displayed using a "looping pair" as there can be more
 
 ### `{row_limit_options}`
 
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
+A list of options for changing the number of results returned
 
     <select name='row_limit' class='select'>
         {row_limit_options}
@@ -122,39 +124,13 @@ Form submission errors are displayed using a "looping pair" as there can be more
 
 ### `{sort_order_options}`
 
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
+A list of options for changing the results sort order
 
     <select name='sort_order' class='select'>
         {sort_order_options}
     </select>
 
 ## Variable Pairs
-
-### `{errors}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    {errors}
-        <p>{error}</p>
-    {/errors}
-
-#### Error Tag Pair Parameters
-
-##### `backspace=`
-
-    backspace="3"
-
-The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair.
-
-#### Error Tag Pair Variables
-
-##### `{error}`
-
-    {error}
-
-The error text.
-
-
 
 ### `{member_rows}`
 

@@ -17,6 +17,8 @@ Output a member registration form.
 
 NOTE: **Important:** In order for site visitors to be allowed to register for accounts via front-end forms the [Allow Registrations](control-panel/settings/members.md#allow-registrations) must be set to allow registrations under Settings > Member Settings.
 
+{{embed:_tips/form-validation.md}}
+
 ## Parameters
 
 {{embed:_tips/form-attributes.md}}
@@ -136,6 +138,9 @@ Custom fields can also be output inside the ``{custom_fields}`` variable tag pai
 
                 {form:custom_profile_field}
 
+                {if error}
+                    <span class="error">{error}</span>
+                {/if}
             </p>
          {/custom_fields}
 
@@ -211,7 +216,7 @@ Displays the custom field input form for the given field (substitute `field_name
 
     {exp:member:registration_form
         return="member/registration/success"
-        error_handling="inline"
+        inline_errors="yes"
     }
 
         <p>* Required fields</p>
@@ -259,6 +264,9 @@ Displays the custom field input form for the given field (substitute `field_name
             <label for="captcha">{lang:captcha}*</label>
             {captcha}<br/>
             <input type="text" id="captcha" name="captcha" value="" size="20" maxlength="20" style="width:140px;"/>
+            {if error:captcha}
+                <span class="error">{error:captcha}</span>
+            {/if}
         </p>
         {/if}
     </fieldset>

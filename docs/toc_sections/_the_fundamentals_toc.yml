@@ -142,7 +142,7 @@
       href: templates/variable.md
     - name: Global Template Variables
       items:
-        - name: Single Global Variables
+        - name: Global Variables
           href: templates/globals/single-variables.md
         - name: Linking to Stylesheets
           href: templates/globals/stylesheet.md
@@ -164,6 +164,8 @@
       href: templates/routes.md
     - name: Pagination
       href: templates/pagination.md
+    - name: Form Validation
+      href: templates/form-validation.md
     - name: The Template Engine
       href: templates/engine.md
 

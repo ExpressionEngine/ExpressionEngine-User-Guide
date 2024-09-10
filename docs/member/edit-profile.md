@@ -17,6 +17,8 @@
 
 This template tag allows editing a member's profile using the form that is similar to [Channel Form](channels/channel-form/overview.md). Please note however that not all Channel Form parameters and template tags are available in the Member Profile form, so make sure to consult the documentation below. The form can only be used to update profile of the member that is currently logged in.
 
+{{embed:_tips/form-validation.md}}
+
 ## Parameters
 
 {{embed:_tips/form-attributes.md}}
@@ -194,6 +196,7 @@ Short name of the fieldtype used for field
     {exp:member:edit_profile
         return="member/registration/success"
 		include_assets="yes"
+        inline_errors="yes"
 		datepicker="yes"
         }
 
@@ -204,27 +207,42 @@ Short name of the fieldtype used for field
             <p>
                 <label for="username">Username*:</label><br />
                 <input type="text" name="username" id="username" value="{username}"/><br />
+                {if error:username}
+                    <span class="error">{error:username}</span>
+                {/if}
             </p>
 
             <p>
                 <label for="email">Email:</label><br />
                 <input type="text" name="email" id="email" value="{email}"/><br />
+                {if error:email}
+                    <span class="error">{error:email}</span>
+                {/if}
             </p>
 
             <p>
                 <label for="password">Password:</label><br />
                 <input type="password" name="password" id="password" value=""/>
+                {if error:password}
+                    <span class="error">{error:password}</span>
+                {/if}
             </p>
 
             <p>
                 <label for="password_confirm">Confirm password*:</label><br />
                 <input type="password" name="password_confirm" id="password_confirm" value=""/>
+                {if error:password_confirm}
+                    <span class="error">{error:password_confirm}</span>
+                {/if}
             </p>
 
             <p>
                 <label for="current_password">Current password*:</label><br />
 					<em>You <b>must</b> enter your current password to change your password, username or email.</em>
                  <input type="password" name="current_password" id="current_password" value=""/>
+                 {if error:current_password}
+                    <span class="error">{error:current_password}</span>
+                {/if}
             </p>
 
 
@@ -235,6 +253,9 @@ Short name of the fieldtype used for field
 
                 {form:custom_profile_field}
 
+                {if has_error}
+                    <span class="error">{error}</span>
+                {/if}
             </p>
          {/custom_profile_fields}
 

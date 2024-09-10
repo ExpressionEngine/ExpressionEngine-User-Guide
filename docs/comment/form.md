@@ -35,7 +35,7 @@ The comment submission form is created very similar to a standard web form, only
 
       <input type="submit" name="submit" value="Submit" />
       <input type="submit" name="preview" value="Preview" />
-      
+
       {!-- required to prevent EE from outputting form if commenting is disabled or expired --}
 	  {if comments_disabled}Comments on this entry are currently disabled.{/if}
       {if comments_expired}Commenting on this entry has expired.{/if}
@@ -45,6 +45,8 @@ The comment submission form is created very similar to a standard web form, only
 This form should be placed on a "single-entry" type page such as a comments page, of course.
 
 TIP: **Tip:** Notice the variables in the "value" form fields? These allow us to show the user's information in the form automatically if they click the "remember personal info" option.
+
+{{embed:_tips/form-validation.md}}
 
 ## Comment Form Tag
 
@@ -227,11 +229,11 @@ A request for an edit will return a response array. In the case of an error, an 
 
 ### Editing Permissions
 
-By using the [{if editable}](/comment/entries.html#if-editable) conditional in the Comment Entries tag, you can output a link, instructions or a form if the viewing member has permission to edit the comment, and by using the {if can_moderate_comment} you can display whatever is appropriate if the viewing member has permission to moderate (close) the comment.
+By using the [{if editable}](/comment/entries.md#if-editable) conditional in the Comment Entries tag, you can output a link, instructions or a form if the viewing member has permission to edit the comment, and by using the {if can_moderate_comment} you can display whatever is appropriate if the viewing member has permission to moderate (close) the comment.
 
 For members without administrative access, in order to edit a comment they must be logged in, the author of the comment, and the editing time limit must not have expired. If a member has a role with permission to edit the comments of any entry, that member will have edit permissions regardless of the editing time limit.
 
-Comment moderators may close the comment. The edit time limit does not apply to moderators. 
+Comment moderators may close the comment. The edit time limit does not apply to moderators.
 
 Superadmins will always have {editable} and {can_moderate_comment} permissions on any comment.
 
