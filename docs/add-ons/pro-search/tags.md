@@ -22,6 +22,7 @@ added in X.X.X: This parameter/field is only available from this version forward
 logged in: This tag is only available if the user is logged in.  
 ```
 
+NOTE: See the [template generator](control-panel/template-manager.md#template-generators) for the keyword search in ExpressionEngine 7.5+. Pro Search must be installed and a Collection created.
 
 ## {exp:pro_search:form}
 
