@@ -69,7 +69,7 @@ An array of entry IDs, an empty array (no results), or `NULL` (if given and your
 
 ### fixed_order
 
-Should return `TRUE` or `FALSE` depending on whether the entry IDs returned by [the filter method](#filter-method) are in the order they should appear in the [Results tag](/add-ons/pro-search/tags.md#results-tag). Defaults to `FALSE`.
+Should return `TRUE` or `FALSE` depending on whether the entry IDs returned by [the filter method](#filter) are in the order they should appear in the [Results tag](/add-ons/pro-search/tags.md#exppro_searchresults). Defaults to `FALSE`.
 
 #### Returns
 
@@ -85,7 +85,7 @@ Should return an array of entry IDs that should be _excluded_ from the search re
 
 ### results
 
-This method is called before displaying the search results in the [Results tag](/add-ons/pro-search/tags.md#results-tag) so you can add your own custom variables to the search results. It basically piggy-backs on the [channel_entries_query_result](/development/extension_hooks/module/channel/index.md#channel-entries-query-result) extension hook.
+This method is called before displaying the search results in the [Results tag](/add-ons/pro-search/tags.md#exppro_searchresults) so you can add your own custom variables to the search results. It basically piggy-backs on the [channel_entries_query_result](/development/extension-hooks/module/channel.md#channel_entries_query_resultthis-query_result) extension hook.
 
 #### Arguments
 

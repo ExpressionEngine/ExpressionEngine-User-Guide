@@ -11,6 +11,7 @@
 
 Welcome to the official ExpressionEngine Docs! In addition to the documentation, there are a number of resources linked below that will help you learn how to master ExpressionEngine.
 
+<<<<<<< 7.dev
 <div id="welcome-introduce" class="eeconf-promo max-w-full mx-auto p-8 lg:p-10 bg-white rounded-lg shadow-custom-black flex mt-12 flex-wrap lg:flex-nowrap">
             <div class="w-64 h-64 mr-10 flex-shrink-0 mb-4 lg:mb-0">
                 <a href="https://eeconf.com/"><img src="https://eeconf.com/eeconf/300x250.jpg" width="max-w-full mb-0"></a>
@@ -29,6 +30,9 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
         </div>
         
 <div id="welcome-introduce" class="max-w-full mx-auto p-8 lg:p-10 bg-white rounded-lg shadow-custom-black flex mt-12 flex-wrap lg:flex-nowrap">
+=======
+ <div id="welcome-introduce" class="max-w-full mx-auto p-8 lg:p-10 bg-white rounded-lg shadow-custom-black flex mt-12 flex-wrap lg:flex-nowrap">
+>>>>>>> 7.dev
     <div class="w-64 h-64 mr-10 flex-shrink-0 mb-4 lg:mb-0">
         <img src="_images/welcome-image.svg" width="max-w-full mb-0">
     </div>
@@ -47,7 +51,9 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
             </a>
         </p>
     </div>
-</div>
+</div> 
+
+
 
 <div id="welcome-grid" class="grid grid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-6 lg:gap-y-0 my-8">
     <a href="https://u.expressionengine.com" class="university rounded-lg bg-purple-new mb-0 text-white text-center overflow-hidden px-7 py-9 flex items-center justify-start flex-col relative border-none" target="_BLANK">
