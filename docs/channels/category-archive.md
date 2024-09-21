@@ -168,6 +168,13 @@ By default, categories with no entries **will** be included.
 
 You can determine whether you wish for entries dated in the "future" to be included. This option is useful when doing things like creating a list of events, some of which have not occurred yet.
 
+### `show_offline_sites=`
+
+    show_offline_sites="no"
+
+When this option is set to "no", entries from MSM sites that are set to "offline" will not be included in the results. The default is "yes", which includes entries from offline sites.
+
+
 ### `sort=`
 
     sort="asc"

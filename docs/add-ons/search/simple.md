@@ -125,6 +125,12 @@ With this parameter you can specify whether or not expired entries will be inclu
 
 With this parameter you can specify whether or not entries with the date set in the future will be included in search results. The default behavior is for future entries to _not_ be included. You may set this parameter to "yes" or "no". You may also let the user choose by using an [Include Future Entries](#include-future-entries) form field.
 
+### `show_offline_sites=`
+
+    show_offline_sites="no"
+
+When this option is set to "no", entries from MSM sites that are set to "offline" will not be included in the results. The default is "yes", which includes entries from offline sites.
+
 ### `site=`
 
     site="default_site"

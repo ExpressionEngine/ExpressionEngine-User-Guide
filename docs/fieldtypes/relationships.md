@@ -99,6 +99,7 @@ The following parameters are available to all looping relationship tags, allowin
 - `orderby`
 - `show_expired`
 - `show_future_entries`
+- `show_offline_sites`
 - `sort`
 - `start_on`
 - `status`
