@@ -295,3 +295,17 @@ Resize the image and then crop it.
 - `{url}` - processed image URL
 - `{width}` - processed image width
 - `{height}` - processed image height
+
+### Using different modifiers within same tag pair
+
+It is possible to use different modifiers within same tag pair.
+The modifiers and parameters would need to be applied to `{url}` variables available inside field tag pair.
+This can be useful, for instance, if you want to build `<picture>` tag with different sizes of same image
+
+    {news_image}
+        <picture>
+            <source media="(min-width:650px)" srcset="{url:resize width="650"}">
+            <source media="(min-width:465px)" srcset="{url:resize width="465"}">
+            <img src="{url}" alt="{title}" style="width:auto;">
+        </picture>
+    {/news_image}
