@@ -366,6 +366,8 @@
               href: development/services/model/fetching.md
             - name: Relationships
               href: development/services/model/relationships.md
+            - name: Query Builder
+              href: development/services/model/query-builder.md
             - name: Collections
               href: development/services/model/collection.md
             - name: Building your own Models
