@@ -394,6 +394,8 @@
           href: development/services/spam.md
         - name: CP/Table Service
           href: development/services/table.md
+        - name: Template Generator Service
+          href: development/services/template-generator.md
         - name: CP/URL Service
           href: development/services/url.md
         - name: Validation Service
@@ -679,9 +681,9 @@
         - name: Sync Conditional Fields
           href: cli/built-in-commands/sync-conditional-fields.md
         - name: Sync Reindex Content
-          href: cli/built-in-commands/sync-reindex.md	
+          href: cli/built-in-commands/sync-reindex.md
         - name: Sync Upload Directory
-          href: cli/built-in-commands/sync-upload-directory.md		  	  
+          href: cli/built-in-commands/sync-upload-directory.md
         - name: Update ExpressionEngine
           href: cli/built-in-commands/update.md
         - name: Prolet Generator
@@ -714,9 +716,9 @@
       href: msm/overview.md
     - name: Variables and Parameter
       href: msm/code.md
-	  
+
 - name: ExpressionEngine + Laravel
   items:
     - name: Overview
       href: advanced-usage/coilpack/overview.md
-	  
+

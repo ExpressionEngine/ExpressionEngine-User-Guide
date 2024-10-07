@@ -166,6 +166,8 @@
       href: templates/pagination.md
     - name: The Template Engine
       href: templates/engine.md
+    - name: Template Generators
+      href: templates/generators.md
 
 - name: Channels
   items:
