@@ -56,11 +56,11 @@ Uses the native [File field](/fieldtypes/file.md). To output the variable, alway
 
 #### `modifier`
 
-Allows applying modifiers, which, among other, are used to apply [on-the-fly image manipulations](/fieldtypes/grid.md#on-the-fly-image-manipulations) to files
+Allows applying modifiers, which, among other, are used to apply [on-the-fly image manipulations](/fieldtypes/file.md#on-the-fly-image-manipulations) to files
 
 ## Grid
 
-Uses the native [Grid field](/fieldtypes/grid.md). All native types are available, _except for Relationships_. To output the variable, use the `{exp:pro_variables:pair}` or `{exp:pro_variables:single}` tag where appropriate. You can use any of Grid’s [parameters](/fieldtypes/grid.md#parameters) and [variables](/fieldtypes/grid.ms#variables) using these tags. Additionally, one more parameter is available:
+Uses the native [Grid field](/fieldtypes/grid.md). All native types are available, _except for Relationships and Members_. To output the variable, use the `{exp:pro_variables:pair}` or `{exp:pro_variables:single}` tag where appropriate. You can use any of Grid’s [parameters](/fieldtypes/grid.md#parameters) and [variables](/fieldtypes/grid.md#variables) using these tags. Additionally, one more parameter is available:
 
 ### Parameters
 
@@ -355,7 +355,7 @@ To be used in combination with `format`. Possible values: `none`, `safe` or `all
 
 #### `preparse:_my_var_`
 
-If the variable content contains variables that need to be parsed before it is put in the template, you can use this parameter, similar to [embed variables](/templates/embedding.md#embed-variables-for-the-embedded-template). For example: setting the parameter `preparse:foo="bar"` will replace the variable `{preparse:foo}` with `bar` in the variable content.
+If the variable content contains variables that need to be parsed before it is put in the template, you can use this parameter, similar to [embed variables](/templates/embedding.md#embedding-variables). For example: setting the parameter `preparse:foo="bar"` will replace the variable `{preparse:foo}` with `bar` in the variable content.
 
 #### `preparse_prefix`
 

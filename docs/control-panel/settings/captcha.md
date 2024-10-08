@@ -55,7 +55,7 @@ If you wish to use Google reCAPTCH v3 as a replacement you will need to ensure t
 
 ### Use reCAPTCHA v3?
 
-If you enable this preference then the system will use reCAPTCH v3 in place of the older image based solution.
+If you enable this preference then the system will use reCAPTCHA v3 in place of the older image based solution.
 
 ### reCAPTCHA site key
 

@@ -126,6 +126,8 @@ Any form will accept the `form_class` and `form_id` parameters. Access the value
 
     $r = ee()->functions->form_declaration($form_details);
 
+{{embed:_tips/form-attributes.md}}
+
 ### `form_backtrack([$offset = ''])`
 
 | Parameter | Type      | Description                                                                                                                                    |

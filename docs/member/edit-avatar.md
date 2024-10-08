@@ -20,6 +20,8 @@ This tag allows users to edit their avatar image. The image will be uploaded to 
 
 ## Parameters
 
+{{embed:_tips/form-attributes.md}}
+
 ### `return=`
 
     return="member/profile"

@@ -8,6 +8,461 @@
 -->
 # ExpressionEngine v7 Change Log
 
+# Version 7.4.11
+(Release: June 13, 2024)
+
+NOTE: **Important:** This version includes important security updates.
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17011377?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Brad Akin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999" target="_BLANK">@bakin1999</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Add MySQL errors to system error log file
+- Modify model gateways to handle missing relationships more gracefully
+
+**Bug Fixes** 💃🐛
+
+- Resolved a serialization issue where retrieving a field from cache might not setup its fieldtype properly
+- Resolved [#4286](https://github.com/ExpressionEngine/ExpressionEngine/issues/4286) and [#4287](https://github.com/ExpressionEngine/ExpressionEngine/issues/4287) where member listings had pagination issues
+- Resolved an issue where cp_member_reset_password hook did not fire
+- Resolved [#4324](https://github.com/ExpressionEngine/ExpressionEngine/issues/4324) where add-on name with caps was snaked cased between caps
+- Resolved [#4282](https://github.com/ExpressionEngine/ExpressionEngine/issues/4282) where parse_variables() did not always provide loop variables
+- Resolved [#4298](https://github.com/ExpressionEngine/ExpressionEngine/issues/4298) error backing up table with set type column
+- Resolved PHP warnings in Pro Search
+
+# Version 7.4.10
+(Release: May 21, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1679951?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Gary Reckard</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=GaryReckard" target="_BLANK">@GaryReckard</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Adding HTTP header CSP
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#4245](https://github.com/ExpressionEngine/ExpressionEngine/issues/4245) where watermark image paths using config variables weren't parsed
+- Resolved an issue where setting addon install errors could trigger PHP notice
+- Resolved [#4285](https://github.com/ExpressionEngine/ExpressionEngine/issues/4285) where original file dimensions were not returned in AJAX upload response
+- Resolved [#4319](https://github.com/ExpressionEngine/ExpressionEngine/issues/4319) by showing an error when image properties can't be gathered
+- Resolved [#4317](https://github.com/ExpressionEngine/ExpressionEngine/issues/4317) where replacing an image would not create manipulations
+- Resolved [#4312](https://github.com/ExpressionEngine/ExpressionEngine/issues/4312) where nested categories could display ids in publish tab
+- Resolved [#4308](https://github.com/ExpressionEngine/ExpressionEngine/issues/4308) where category tab edit flyout didn't work
+- Resolved [#4300](https://github.com/ExpressionEngine/ExpressionEngine/issues/4300) where url title validation failed with some emoji
+- Resolved [#4291](https://github.com/ExpressionEngine/ExpressionEngine/issues/4291) where the move action was missing from the all files listing
+- Resolved issues with Pending Member Management
+- Resolved [#3554](https://github.com/ExpressionEngine/ExpressionEngine/issues/3554) where image manipulation path could be incorrect on Windows
+- Resolved [#4244](https://github.com/ExpressionEngine/ExpressionEngine/issues/4244) where conditional sync sometimes failed
+- Resolved [#4249](https://github.com/ExpressionEngine/ExpressionEngine/issues/4249) where ID of perpage dropdown was not unique
+- Resolved [#3908](https://github.com/ExpressionEngine/ExpressionEngine/issues/3908) where Structure URI for new entry could have been different from URL Title
+- Resolved [#4201](https://github.com/ExpressionEngine/ExpressionEngine/issues/4201) where limit was not applied to memberlist tag when pagination variables not present
+- Resolved [#4217](https://github.com/ExpressionEngine/ExpressionEngine/issues/4217) where image thumbnails were cached after replacement
+
+# Version 7.4.9
+(Release: April 23, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Fix structure empty template id validation issue
+- Resolved [#4131](https://github.com/ExpressionEngine/ExpressionEngine/issues/4131) where not all custom fields were displayed when creating member in the CP
+- Resolved [#4196](https://github.com/ExpressionEngine/ExpressionEngine/issues/4196) where Spam stopwords language file could not be loaded
+- Resolved [#4258](https://github.com/ExpressionEngine/ExpressionEngine/issues/4258) where no error was shown in File Manager when uploading too large files
+- Resolved [#4207](https://github.com/ExpressionEngine/ExpressionEngine/issues/4207) where Color Picker settings were not displayed when adding new column into Grid field
+- Resolved [#4246](https://github.com/ExpressionEngine/ExpressionEngine/issues/4246) where using `*` could result in invalid URL Title being generated programmatically
+- Resolved [#4197](https://github.com/ExpressionEngine/ExpressionEngine/issues/4197) sql error from saving invalid entry with member
+
+# Version 7.4.8
+(Release: April 18, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added focus on search input when choosing the type for a new field.
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#4187](https://github.com/ExpressionEngine/ExpressionEngine/issues/4187) where Pro Variables tag was causing a warning
+- Resolved issue where an entry without structure parent fails validation
+
+# Version 7.4.7
+(Release: April 15, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Allow automatic login and redirect to custom page after account activation; [#3581](https://github.com/ExpressionEngine/ExpressionEngine/issues/3581)
+- Open date field localization info in new window
+- Improved Authors dropdown when editing entry by showing Member ID; [#4168](https://github.com/ExpressionEngine/ExpressionEngine/issues/4168)
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#1333](https://github.com/ExpressionEngine/ExpressionEngine/issues/1333) where having template files stored outside of site folder could cause PHP warnings
+- Resolved an issue with tmpfile fallback not being possible in PHP7
+- Resolved [#3951](https://github.com/ExpressionEngine/ExpressionEngine/issues/3951) where File Grid doesn't allow uploading multiple images using "Upload New" button
+- Resolved [#4192](https://github.com/ExpressionEngine/ExpressionEngine/issues/4192) where edit_avatar tag did not accept webp file
+- Resolved [#3992](https://github.com/ExpressionEngine/ExpressionEngine/issues/3992) where Superadmin did not have a way to disable MFA for users
+- Fixed an issue where reordering items in Menu Sets did not work
+- Resolved [#4210](https://github.com/ExpressionEngine/ExpressionEngine/issues/4210) where members fieldtype had issues in LivePreview
+- Resolved [#4069](https://github.com/ExpressionEngine/ExpressionEngine/issues/4069) where incorrect fieldtype options were shown on load
+- Do not hide saved field options in entry if the field settings do not contain those options anymore; [#2973](https://github.com/ExpressionEngine/ExpressionEngine/issues/2973)
+- Resolved [#4193](https://github.com/ExpressionEngine/ExpressionEngine/issues/4193) where Select dropdown could show incorrect values as selected
+- Resolved [#4194](https://github.com/ExpressionEngine/ExpressionEngine/issues/4194) where profile edit form needed extra validation
+
+## Version 7.4.6
+(Release: April 1, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/14264007?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Garry Childs</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=krytenuk" target="_BLANK">@krytenuk</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Improved Avatar image to ensure it correctly displays images of all aspect ratios; [#4175](https://github.com/ExpressionEngine/ExpressionEngine/issues/4175)
+- Default search in Entry Manager to "Titles only"; [#3431](https://github.com/ExpressionEngine/ExpressionEngine/issues/3431)
+- Added `{index}` and `{total_items}` variables to options fieldtypes; [#3363](https://github.com/ExpressionEngine/ExpressionEngine/issues/3363)
+- Enable on-the-fly cropping from image center; [#2947](https://github.com/ExpressionEngine/ExpressionEngine/issues/2947)
+- Added Debug Channel Entries Utility; [#3024](https://github.com/ExpressionEngine/ExpressionEngine/issues/3024)
+- Modified the addon update process to stay on Updates tab if more updates are available; [#2860](https://github.com/ExpressionEngine/ExpressionEngine/issues/2860)
+- Enabled testing of email configuration from email settings page
+
+**Bug Fixes** 💃🐛
+
+- Resolved issue where language was not fully loaded for date picker in channel form
+- Resolved [#4180](https://github.com/ExpressionEngine/ExpressionEngine/issues/4180) where some regular expression patterns could not be used for validation
+- Updated CKEditor version for RTE fieldtype
+- Added more plugins and better support for advanced configuration of CKEditor in RTE
+- Resolved issue when using out-of-date translation files could cause language keys to show instead of messages
+- Resolved [#3950](https://github.com/ExpressionEngine/ExpressionEngine/issues/3950) where order of upload directories and folders was not consistent in dropdowns
+- Resolved [#4045](https://github.com/ExpressionEngine/ExpressionEngine/issues/4045) where Relationship field did not fully respect "sort by date" setting
+- Resolved [#3959](https://github.com/ExpressionEngine/ExpressionEngine/issues/3959) where sort order of categories in Entry Manager filter could have been wrong
+- Resolved issue where template conditionals could show PHP warning
+- Resolved [#4165](https://github.com/ExpressionEngine/ExpressionEngine/issues/4165) where Pro Variables prolet was showing PHP warning if single variables were used
+- Resolved [#3844](https://github.com/ExpressionEngine/ExpressionEngine/issues/3844) where applying `search:field="IS_EMPTY"` parameter to Grid field would cause PHP warning
+- Resolved issue where the Pro Variables prolet could have bad links
+- Resolved [#4159](https://github.com/ExpressionEngine/ExpressionEngine/issues/4159) where on-the-fly image manipulations were not cleared
+- Resolved [#4135](https://github.com/ExpressionEngine/ExpressionEngine/issues/4135) where removing page with children from Structure was giving an error
+- Resolved [#4152](https://github.com/ExpressionEngine/ExpressionEngine/issues/4152) where Channel Form stylesheet was overriding some custom styles
+- Resolved [#4098](https://github.com/ExpressionEngine/ExpressionEngine/issues/4098) where Date field by default was not setting time to current
+- Resolved [#4141](https://github.com/ExpressionEngine/ExpressionEngine/issues/4141) where password reset pages were not using custom branded logo
+- Resolved [#4167](https://github.com/ExpressionEngine/ExpressionEngine/issues/4167) where filter dropdown sometimes requires more space
+
+## Version 7.4.5
+(Release: March 20, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Resolved [#3972](https://github.com/ExpressionEngine/ExpressionEngine/issues/3972) where it was not possible to use 1-click Updater on servers with `disk_free_space()` disabled
+- Enabled view counters to be displayed in Entry Manager
+- Changed default limit in Members field settings
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#4148](https://github.com/ExpressionEngine/ExpressionEngine/issues/4148) where SuperAdmins were not able to approve members into Locked roles
+- Resolved [#4147](https://github.com/ExpressionEngine/ExpressionEngine/issues/4147) where label of dropdown select field for member was not parsed correctly
+- Resolved [#4129](https://github.com/ExpressionEngine/ExpressionEngine/issues/4129) where CSRF token not getting refreshed when CP session type is "session only"
+- Resolved issue where saving RTE toolset could show an error
+- Resolved issue where certain uses of Member model in CLI requests were causing errors
+- Resolved [#4111](https://github.com/ExpressionEngine/ExpressionEngine/issues/4111) where reordering groups did not work in Pro Variables
+
+## Version 7.4.4
+(Release: March 11, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Enable setting global variables in config file; [#3015](https://github.com/ExpressionEngine/ExpressionEngine/issues/3015)
+
+**Bug Fixes** 💃🐛
+
+- Resolved issue where Enum validation was not working when using PHP8+
+- Resolved [#987](https://github.com/ExpressionEngine/ExpressionEngine/issues/987) where pagination could be wrong on Entry Manager if Categories column present
+- Resolved [#4077](https://github.com/ExpressionEngine/ExpressionEngine/issues/4077) where PHP deprecation notice could have been shown for some migrated Pro Variables
+- Resolved [#4079](https://github.com/ExpressionEngine/ExpressionEngine/issues/4079) where orphan relationship record could cause PHP notices
+- Resolved [#4116](https://github.com/ExpressionEngine/ExpressionEngine/issues/4116) where PHP warning could be shown when using template layouts
+
+**Developers** 💻
+
+- Added ability to send http status code with ajax response, [#4108](https://github.com/ExpressionEngine/ExpressionEngine/issues/4108)
+
+## Version 7.4.3
+(Release: March 4, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added fallback for PHP `tmpfile()` function when it's not enabled
+- Improved styles for Entry Status dropdown on Publish pages
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#4102](https://github.com/ExpressionEngine/ExpressionEngine/issues/4102) where template layouts could skip some variables
+- Resolved [#4040](https://github.com/ExpressionEngine/ExpressionEngine/issues/4040) where required column indicators were missing inside Grid field
+- Resolved [#3645](https://github.com/ExpressionEngine/ExpressionEngine/issues/3645) where Autosave did not include data from Grids with Relationships
+- Resolved issue where error message was not using custom system message template if an extension file was missing
+- Resolved [#4033](https://github.com/ExpressionEngine/ExpressionEngine/issues/4033) where Menu Sets item could not be moved to the bottom
+- Resolved issue where `:excerpt` modifier on RTE field could cause PHP notice
+- Resolved [#4072](https://github.com/ExpressionEngine/ExpressionEngine/issues/4072) where Pro Search could show PHP deprecation error when using PHP 8.2
+- Resolved [#4083](https://github.com/ExpressionEngine/ExpressionEngine/issues/4083) where `<em>` in RedactorX was set to `display:block`
+
+**Developers** 💻
+
+- Resolved [#3910](https://github.com/ExpressionEngine/ExpressionEngine/issues/3910) where JavaScript to encode / decode email addresses was using deprecated function
+
+## Version 7.4.2
+(Release: February 27, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/5134048?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Asad Munir</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=asadmunir" target="_BLANK">@asadmunir</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Improved styles for Checkboxes fieldtype in Channel Form
+- Include short field name in keyword search in channel settings
+- Added auto focus when editing Folder Name in the File Manager
+- Enabled specifying database for the Redis cache driver in config file; [#3997](https://github.com/ExpressionEngine/ExpressionEngine/issues/3997)
+
+**Bug Fixes** 💃🐛
+
+- Resolved issue where cloning entry with Closed status was causing an error
+- Resolved [#3998](https://github.com/ExpressionEngine/ExpressionEngine/issues/3998) where no proper error was shown when trying to clone entry with an invalid IP address
+- Resolved [#3968](https://github.com/ExpressionEngine/ExpressionEngine/issues/3968) where sorting order in Entry Manager was reset after applying filter
+- Resolved [#3942](https://github.com/ExpressionEngine/ExpressionEngine/issues/3942) where using undefined layout variables as array would cause parsing issue
+- Resolved [#3933](https://github.com/ExpressionEngine/ExpressionEngine/issues/3933) where chaining invalid modifier on File field would cause PHP error
+- Resolved [#3769](https://github.com/ExpressionEngine/ExpressionEngine/issues/3769) where an image could been uploaded several times after closing file selection window
+- Resolved [#3858](https://github.com/ExpressionEngine/ExpressionEngine/issues/3858) where File field was still showing upload component when user did not have File Manager permission
+- Resolved [#3824](https://github.com/ExpressionEngine/ExpressionEngine/issues/3824) where fieldtypes in Fieldtype Advisor were not properly sorted
+- Resolved [#3807](https://github.com/ExpressionEngine/ExpressionEngine/issues/3807) where EE Debug's Font Awesome CSS tag was too aggressive
+- Resolved [#4086](https://github.com/ExpressionEngine/ExpressionEngine/issues/4086) where update to 7.4 could show preflight error on some installations
+
+**Developers** 💻
+
+- Added programmatic ability to add publish layout tabs for specific channels
+
+## Version 7.4.1
+(Release: February 19, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Support swatches for Colorpicker field in Channel Form
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#4050](https://github.com/ExpressionEngine/ExpressionEngine/issues/4050) where error was shown in Channel Form when multiple category groups were assigned
+- Resolved [#4048](https://github.com/ExpressionEngine/ExpressionEngine/issues/4048) where category group could not be added from Channel page if no other category groups exist
+- Resolved issue when category group settings were not retained after editing from Channel page
+- Resolved issue where `{categories}` variable pair was not populated in Channel Form
+- Resolved issue where only one category group was shown in Categories filter in Entry manager if the channel is selected
+- Resolved issue where Categories filter was empty if no channel is selected in Entry Manager
+- Resolved [#3913](https://github.com/ExpressionEngine/ExpressionEngine/issues/3913) where PHP deprecation error could be shown on entry manager page when entry author did not exist
+- Resolved [#3894](https://github.com/ExpressionEngine/ExpressionEngine/issues/3894) where PHP error could be shown when displaying CAPTCHA using PHP 8.1
+- Resolved [#3886](https://github.com/ExpressionEngine/ExpressionEngine/issues/3886) where namespace of exception handler in the `backup:database` command was causing issues when it fails
+- Resolved [#3883](https://github.com/ExpressionEngine/ExpressionEngine/issues/3883) where `update:prepare` command could throw errors
+
+## Version 7.4.0
+(Release: February 14, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2423727?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">swierczek</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=swierczek" target="_BLANK">@swierczek</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/13821249?v=4"><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Gavin * JCOGS</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=jcogs-design" target="_BLANK">@jcogs-design</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/53965?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Brian Litzinger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=litzinger" target="_BLANK">@litzinger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1244495?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Stefan Rechsteiner</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=albuvee" target="_BLANK">@albuvee</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/12139134?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Pedro Guimaraes</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=willowlight" target="_BLANK">@willowlight</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added Members fieldtype to select one or multiple members in channel entry; [#1080](https://github.com/ExpressionEngine/ExpressionEngine/issues/1080)
+- Introduced ability for custom fieldtypes to be used in Member profiles; [#715](https://github.com/ExpressionEngine/ExpressionEngine/issues/715)
+- Introduced new Member Manager with configurable column display
+- Added global variables for logged in user's avatar; [#2583](https://github.com/ExpressionEngine/ExpressionEngine/issues/2583)
+- Enabled logging in using email address; [#2931](https://github.com/ExpressionEngine/ExpressionEngine/issues/2931)
+- Member Registration and Profile Edit forms now include form field output options similar to Channel Entry form.
+- Added more variables to address position of field in group inside Fluid field
+- Enabled editing HTML source in RTE with CKEditor
+- Added RTE configuration to use custom CKEditor build
+- Added Styles plugin for CKEditor in RTE; [#3136](https://github.com/ExpressionEngine/ExpressionEngine/issues/3136)
+- Added RedactorX as editing engine for RTE
+- Deprecated Redactor editing engine
+- Enabled showing field short names on Entry Publish page; [#3340](https://github.com/ExpressionEngine/ExpressionEngine/issues/3340)
+- Enabled passing through valid HTML form attributes to forms in ExpressionEngine as tag parameters; [#441](https://github.com/ExpressionEngine/ExpressionEngine/issues/441)
+- Improved getting real IP address of visitor when using load balancers
+- Added ability to edit file metadata from file field; [#2855](https://github.com/ExpressionEngine/ExpressionEngine/issues/2855)
+- Added `primary_role_id` parameter for `exp:channel:entries` to work same as older `group_id`; [#1353](https://github.com/ExpressionEngine/ExpressionEngine/issues/1353)
+- Enabled synchronizing upload directory via CLI; [#3044](https://github.com/ExpressionEngine/ExpressionEngine/issues/3044)
+- Added CLI command to run Content Reindex; [#3428](https://github.com/ExpressionEngine/ExpressionEngine/issues/3428)
+- Added styles to Toggle, Slider, Radio, Grid, Date, Selectable Buttons fieldtypes for better use with Channel Form
+- Enabled `{exp:member:has_role}` to check against multiple roles; [#2749](https://github.com/ExpressionEngine/ExpressionEngine/issues/2749)
+- Improved updater script to ensure that built-in roles are always present; [#3200](https://github.com/ExpressionEngine/ExpressionEngine/issues/3200)
+- Improved Entry Date field to make it user-friendly to pick different time; [#3021](https://github.com/ExpressionEngine/ExpressionEngine/issues/3021)
+- Added `{exp:member:role_groups}` template tag
+- Allow making category group required for channel
+- Allow restricting category selection to single category per group; [#2865](https://github.com/ExpressionEngine/ExpressionEngine/issues/2865)
+- Improved performance of Structure tab on entry publish page
+- Improved synchronization of conditional fields status
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#3489](https://github.com/ExpressionEngine/ExpressionEngine/issues/3489) where `member_rows` variable in `exp:member:memberlist` did not support backspace parameter
+- Resolved [#2806](https://github.com/ExpressionEngine/ExpressionEngine/issues/2806) where relationships field data was not saved if that was the only change for ChannelEntry model
+- Resolved [#3865](https://github.com/ExpressionEngine/ExpressionEngine/issues/3865) where cloning entries with field groups in Fluid field did not retain grouping
+- Resolved [#2703](https://github.com/ExpressionEngine/ExpressionEngine/issues/2703) where legacy member template could be shown when placing empty member tag
+- Resolved [#243](https://github.com/ExpressionEngine/ExpressionEngine/issues/243) where email length was limited to maximum username length
+- Resolved [#3841](https://github.com/ExpressionEngine/ExpressionEngine/issues/3841) where some characters in entry title might cause automatic url_title generation to not work
+- Resolved [#3973](https://github.com/ExpressionEngine/ExpressionEngine/issues/3973) where cloned channel might been not shown as option when saving entry
+- Resolved PHP compatibility issue in Channel Calendar tags
+
+**Developers** 💻
+
+- Enable passing through MySQL PDO configuration from config file; [#2989](https://github.com/ExpressionEngine/ExpressionEngine/issues/2989); [#3427](https://github.com/ExpressionEngine/ExpressionEngine/issues/3427)
+- Only set MySQL collation explicitely if it's different than default
+- Skip performing SQL JOIN on field data tables, if no custom fields exist on model
+- Added `cli_boot` and `cli_before_handle` extension hooks to run on each CLI request; [#2846](https://github.com/ExpressionEngine/ExpressionEngine/issues/2846)
+- Added `before_response_send_output` and `after_response_send_output` extension hooks
+
+## Version 7.3.15
+(Release: January 18, 2024)
+
+NOTE: **Important:** This version includes important security updates.
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#3989](https://github.com/ExpressionEngine/ExpressionEngine/issues/3989) where Role permissions could have been saved during validation request
+- Resolved [#3749](https://github.com/ExpressionEngine/ExpressionEngine/issues/3749) where TLS 1.3 was showing up as option in email settings for PHP versions that don't support it
+- Resolved [#3860](https://github.com/ExpressionEngine/ExpressionEngine/issues/3860) where certain "Save" buttons did not scale properly on mobile devices
+- Resolved [#3884](https://github.com/ExpressionEngine/ExpressionEngine/issues/3884) where error could be shown using CLI `sync:conditional-fields` command when using PHP 8.2
+- Resolved issue where saving entry with Fluid field using groups could throw PHP error if field was removed from group
+
 ## Version 7.3.14
 (Release: October 24, 2023)
 
@@ -15,7 +470,7 @@
 <div class="max-w-7xl mx-autotext-center">
 <div class="space-y-8 sm:space-y-12">
     <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
-<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>    
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/2423727?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">swierczek</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=swierczek" target="_BLANK">@swierczek</a></p></div></div></div></li>
 
@@ -62,7 +517,7 @@
 - Updated ColorPicker fieldtype so it could be used with Channel Form
 - Resolved [#3754](https://github.com/ExpressionEngine/ExpressionEngine/issues/3754) where PHP deprecation notice could be shown when using File Grid with file column empty
 - Resolved [#3759](https://github.com/ExpressionEngine/ExpressionEngine/issues/3759) when pressing Ctrl+S with Redactor editor being in full screen mode would cause the field content to be erased
-- Resolved [#3772](https://github.com/ExpressionEngine/ExpressionEngine/issues/3772) where ExpressionEngine News dashboard widgets was not using date fomatting preference
+- Resolved [#3772](https://github.com/ExpressionEngine/ExpressionEngine/issues/3772) where ExpressionEngine News dashboard widgets was not using date formatting preference
 - Resolved issue where CP could sometimes redirect to invalid URL after idle session
 - Resolved some PHP 8.2 compatibility issues
 
@@ -140,7 +595,7 @@
 - Resolved issue where navigating subfolders in File Manager did not retain filers and sorting
 - Fixed issue when styling in Grid field was not accurate when sorting
 - Resolved [#532](https://github.com/ExpressionEngine/ExpressionEngine/issues/532) where index template could be deleted but then immediately recreated
-- Resolved [#3667](https://github.com/ExpressionEngine/ExpressionEngine/issues/3667) where all members with access to Template Manager could access System Templates 
+- Resolved [#3667](https://github.com/ExpressionEngine/ExpressionEngine/issues/3667) where all members with access to Template Manager could access System Templates
 
 ## Version 7.3.10
 (Release: August 11, 2023)
@@ -184,8 +639,8 @@
 
 **Bug Fixes** 💃🐛
 
-- Resolved issue where it was not possible to save loaded revision if Fluid field has some fields deleted; 
-- Resolved [#3639](https://github.com/ExpressionEngine/ExpressionEngine/issues/3639) where is was not possible to save loaded revision with removed Grid rows; 
+- Resolved issue where it was not possible to save loaded revision if Fluid field has some fields deleted;
+- Resolved [#3639](https://github.com/ExpressionEngine/ExpressionEngine/issues/3639) where is was not possible to save loaded revision with removed Grid rows;
 - Resolved [#3529](https://github.com/ExpressionEngine/ExpressionEngine/issues/3529) where records for Grid and Relationship fields were still left in database after removing from Fluid
 - Resolved [#2666](https://github.com/ExpressionEngine/ExpressionEngine/issues/2666) where using Dynamic query caching caused pagination on Structure listing being inaccurate
 - Resolved issue where field group names were made lowercase in Fluid
@@ -268,7 +723,7 @@
 - Resolved [#674](https://github.com/ExpressionEngine/ExpressionEngine/issues/674) where having conflicting member_id in Member Import XML file was causing SQL error
 - Resolved [#2178](https://github.com/ExpressionEngine/ExpressionEngine/issues/2178) where pagination in Entry Manager was not correct for people who only can edit their own entries
 - Resolved issue where Structure would show deprecation notice when using PHP 8.2
-- Resolved [issue](https://github.com/ExpressionEngine/ExpressionEngine/pull/3477) with Comments entry tag would show deprecation notice whhen using PHP 8.2
+- Resolved [issue](https://github.com/ExpressionEngine/ExpressionEngine/pull/3477) with Comments entry tag would show deprecation notice when using PHP 8.2
 - Resolved [#3402](https://github.com/ExpressionEngine/ExpressionEngine/pull/3406) where PHP 8.1 deprecation noticed showed when build editing entries with pages module installed
 - Resolved [issue](https://github.com/ExpressionEngine/ExpressionEngine/pull/3587) where uninstalled add-ons could have still have tab file called from Entry Manager
 - Resolved [#3397](https://github.com/ExpressionEngine/ExpressionEngine/pull/3400) where Template Routes page was showing deprecation notices when using PHP 8.2
@@ -403,7 +858,7 @@
 
 - Resolved issue where Entry Manager could show PHP error when some add-on was missing
 - Resolved issue where it was impossible to edit Categories when using phone
-- Resolved [#3259](https://github.com/ExpressionEngine/ExpressionEngine/issues/3259) where certain coditionals in templates could generate PHP warning
+- Resolved [#3259](https://github.com/ExpressionEngine/ExpressionEngine/issues/3259) where certain conditionals in templates could generate PHP warning
 - Resolved issue where MariaDB 10 could report the wrong version to the DB requirements checker
 
 ## Version 7.3.0

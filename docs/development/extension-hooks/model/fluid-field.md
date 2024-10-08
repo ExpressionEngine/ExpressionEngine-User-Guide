@@ -90,7 +90,7 @@ Called before the fluid field is updated. Changes made to the object will be sav
 
 How it's called:
 
-    ee()->extensions->call('fluid_field_add_field', $field_table_name, $values);
+    ee()->extensions->call('fluid_field_update_field', $field_table_name, $values);
 
 ### `fluid_field_after_update_field($fluid_field, $field_table_name, $values)`
 
@@ -119,3 +119,5 @@ Called before the fluid field is deleted. Field will be deleted after hook is ca
 How it's called:
 
     ee()->extensions->call('fluid_field_remove_field', $fluid_field);
+
+TIP: **New in version 6.1.0.**

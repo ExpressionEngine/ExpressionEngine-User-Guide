@@ -88,7 +88,7 @@ When many rows of data are returned you will wish to loop through the returned a
         }
     }
 
-## INSERTTing Data
+## INSERTing Data
 
 Active Record includes `insert()`, `insert_batch()` and `set()` methods that makes the inserting of data into the database easier by correctly formatting the `INSERT` string and escaping the values being inserted. The `insert()` and `insert_batch()` methods accept the name of the table for the insert and an array containing the field names as keys with the values containing the data for those fields:
 
@@ -106,7 +106,7 @@ Upon performing an insert you might wish to know the value of the primary key fo
     ee()->db->insert('channel', array('name' => $name));
     $entry_id = ee()->db->insert_id();
 
-## UPDATEEing Data
+## UPDATEing Data
 
 Active Record also includes `update()` and `update_batch()` methods that makes the updating of data in the database easier by correctly formatting the UPDATE string and escaping the values being inserted. Both methods accept the name of the table for the update, an array containing the field names as keys with the values containing the updated data for those fields, and the `WHERE` clause for choosing which rows in the table to update:
 
@@ -122,7 +122,7 @@ Active Record also includes `update()` and `update_batch()` methods that makes t
         )
     );
 
-## DELETEEing Data
+## DELETEing Data
 
 Like `UPDATE`'s and `INSERT`'s, Active Record has a `delete()` method for deleting data. It accepts a table name and a string or array containing the `WHERE` clause(s):
 

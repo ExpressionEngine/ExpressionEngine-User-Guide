@@ -52,6 +52,8 @@ TIP: **Tip:** Notice the variables in the "value" form fields? These allow us to
 
 [TOC=4]
 
+{{embed:_tips/form-attributes.md}}
+
 #### `entry_id=`
 
     entry_id="24"
@@ -72,7 +74,7 @@ This is a **required** parameter if you are using comment previews indicating wh
 
 You can hard code the comment for tag to display a comment form for a specific channel entry by its URL title.
 
-NOTE: **Note:** This parameter takes precedence over any entry specified dynamically in the URL, so when using this parameter you will want to make sure it is clear to the user which entry the displayed comment form belong to.
+NOTE: **Note:** This parameter takes precedence over any entry specified dynamically in the URL, so when using this parameter you will want to make sure it is clear to the user which entry the displayed comment form belongs to.
 
 #### `channel=`
 
@@ -172,7 +174,7 @@ The following conditionals are available:
 
 ## Allowing Members to Edit Comments on the Front End
 
-The available tags and variables allow you to write your own client side code for implementing comment editing. The following is a simplified example using jQuery.
+The available tags and variables allow you to write your own client-side code for implementing comment editing. The following is a simplified example using jQuery.
 
 ### Example Code
 
@@ -225,13 +227,13 @@ A request for an edit will return a response array. In the case of an error, an 
 
 ### Editing Permissions
 
-The {if editable} conditional in the Comment Entries tag outputs content when the viewing member has permission to edit the comment indicated while the {if can_moderate_comment} outputs content if they have permission to close the comment.
+By using the [{if editable}](/comment/entries.html#if-editable) conditional in the Comment Entries tag, you can output a link, instructions or a form if the viewing member has permission to edit the comment, and by using the {if can_moderate_comment} you can display whatever is appropriate if the viewing member has permission to moderate (close) the comment.
 
-For regular members, in order to edit comments they must be a logged in member, the author of the comment, and the editing time limit must not have expired.
+For members without administrative access, in order to edit a comment they must be logged in, the author of the comment, and the editing time limit must not have expired. If a member has a role with permission to edit the comments of any entry, that member will have edit permissions regardless of the editing time limit.
 
-Comment moderators may close the comment. Superadmins will always have {editable} and {can_moderate_comment} permissions on any comment.
+Comment moderators may close the comment. The edit time limit does not apply to moderators. 
 
-Lastly, if a member is in a group with permission to edit comments in any entry, they will have edit permissions. The edit time limit does not apply to moderators.
+Superadmins will always have {editable} and {can_moderate_comment} permissions on any comment.
 
 ### Customizing Client-Side Code
 

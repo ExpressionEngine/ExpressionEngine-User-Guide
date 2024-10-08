@@ -113,6 +113,11 @@ Make the content safe to use as the value of a form field.
 
 ### `:json`
 
+| Parameter            | Default   |                                                                                                                             |
+| -------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------- |
+| double_encode=       | `yes`      | Whether or not to double encode already-encoded entities, e.g. should `&quot;` become `&amp;quot;`?                         |                           |
+| enclose_with_quotes= | `yes`     | Whether the output is automatically enclosed in quotes |
+
 Encode the content for JSON output.
 
     "headline": {title:json},

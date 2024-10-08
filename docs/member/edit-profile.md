@@ -13,9 +13,13 @@
 
 ## Overview
 
-Edit member profile.
+    exp:member:edit_profile
+
+This template tag allows editing a member's profile using the form that is similar to [Channel Form](channels/channel-form/overview.md). Please note however that not all Channel Form parameters and template tags are available in the Member Profile form, so make sure to consult the documentation below. The form can only be used to update profile of the member that is currently logged in.
 
 ## Parameters
+
+{{embed:_tips/form-attributes.md}}
 
 ### `datepicker=`
 
@@ -25,9 +29,31 @@ Include the datepicker javascript.  This should be set to ``yes`` if there is a 
 
 ### `include_assets=`
 
-Include the CSS for the custom member fields.
-
     include_assets="yes"
+
+Adds the Javascript and CSS that is required by custom member fields to your form. By default, these are **not** included
+
+### `datepicker=`
+
+    datepicker="no"
+
+Adds the datepicker to your date fields. Defaults to "yes".
+
+NOTE: **Note:** If you are manually constructing a date field, in order to apply the date picker you must include `rel="date-picker"`.
+
+### `include_css=`
+
+    include_css="no"
+
+Allows you to manage the inclusion of required CSS independently from the `include_assets` parameter. Defaults to "yes".
+
+### `include_jquery=`
+
+    include_jquery="no"
+
+Includes jQuery automatically. Defaults to "yes".
+
+NOTE: **Note:** If you are using your own copy of jQuery you will need to load it **before** the form.
 
 ### `return=`
 
@@ -96,9 +122,15 @@ Member username. This is a **required** field and must be unique across the site
     <label for="username">Username</label>
     <input type="text" name="username" value="{username}" maxlength="120" size="40" />
 
+### Custom field
+
+The custom profile fields can be displayed individually by addressing them using the field's short name prefixed with `field:`:
+
+    {field:birthday}
+
 ## Custom Profile Field Variable Pair
 
-All custom fields are output inside the ``{custom_profile_fields}`` varialble tag pair.
+All custom fields are output inside the ``{custom_profile_fields}`` variable tag pair.
 
         {custom_profile_fields}
             <p>
@@ -110,19 +142,52 @@ All custom fields are output inside the ``{custom_profile_fields}`` varialble ta
             </p>
          {/custom_profile_fields}
 
-## Custom Profile Field Variables
+### Custom Profile Field Variables
 
-#### {lang:profile_field}
+These variables are available inside `{custom_profile_fields}` tag pair.
 
-Outputs the custom field's name.
+#### `{lang:profile_field}`
+#### `{field_label}`
 
-#### {lang:profile_field_description}
+Outputs the custom field's label.
+
+#### `{field_id}`
+
+Field ID
+
+#### `{field_name}`
+
+The field's short name
+
+#### `{lang:profile_field_description}`
+#### `{field_instructions}`
 
 Outputs the field's description, if any.
 
-#### {form:custom_profile_field}
+#### `{form:custom_profile_field}`
+#### `{display_field}`
 
 Shows the fully parsed custom member form field.
+
+#### `{field_data}`
+
+Saved field data for the member
+
+#### `{if field_required}`
+
+Checks whether the field is set as required
+
+#### `{text_direction}`
+
+Text direction set for field (`rtl` or `ltr`)
+
+#### `{maxlength}`
+
+Maximum length set for text fields
+
+#### `{field_type}`
+
+Short name of the fieldtype used for field
 
 ## Example
 

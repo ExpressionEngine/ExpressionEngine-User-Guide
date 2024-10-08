@@ -11,7 +11,7 @@
 
 [TOC]
 
-Checkboxes allow publishers to choose multiple items from a list. 
+Checkboxes allow publishers to choose multiple items from a list.
 
 ![multiselect field](_images/cp-field-multiselect.png)
 
@@ -49,7 +49,7 @@ You can use a single variable for Checkboxes to render a comma-separated list of
 
 ### Variable Pair
 
-Using a variable pair, allows for customization of the output.
+Using a variable pair of field name, allows for customization of the output.
 
     {field_name}
         {item}<br>
@@ -63,10 +63,21 @@ Two
 Three
 ```
 
-By default, `{item}` will render the item's label To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
+The following variables are available inside field's tags pair:
+
+| Variable        | Description                                         |
+| --------------- | --------------------------------------------------- |
+| `{item}`        | Label of selected item                              |
+| `{item:label}`  | Label of selected item                              |
+| `{item:value}`  | Value of selected item                              |
+| `{count}`       | Counter for each of selected items, starting with 1 |
+| `{index}`       | Counter for each of selected items, starting with 0 |
+| `{total_items}` | Total number of selected items                      |
+
+By default, `{item}` will render the item's label. To access the value and label separately, simply add a `:value` or `:label` modifier to the `{item}` variable:
 
     {field_name}
-        Label: {item}<br> {!-- 1 --}
+        Value: {item}<br> {!-- 1 --}
         Value: {item:value}<br> {!-- 1 --}
         Label: {item:label}<br> {!-- One --}
     {/field_name}
@@ -88,9 +99,11 @@ Given that the selection option is 2/Two:
 
 TIP: **Tip:** It is recommended that you use the value in conditionals, as it typically will not change over time. That way, if you ever need to change the wording, spelling, or even casing of labels in your publish/edit UI, you will not need to modify your templates.
 
-TIP: **Tip:** Checkboxes, Multiselect and Selectable Buttons all default to showing the label. Radio Buttons and Selects default to showing the value. 
+TIP: **Tip:** Checkboxes, Multiselect and Selectable Buttons all default to showing the label. Radio Buttons and Selects default to showing the value.
 
-### Limit Parameter
+### Parameters
+
+#### `limit`
 
 This parameter limits the number of selected items output by the tag. It works for both the single variable, as well as the tag pair.
 
@@ -98,7 +111,7 @@ This parameter limits the number of selected items output by the tag. It works f
 {field_name limit="2"} {!-- One,Two --}
 ```
 
-### Markup Parameter
+#### `markup`
 
 As a single tag, a checkbox will display a comma separated list of values. If you want an HTML list, you can use markup="ul" or markup="ol" to change the output to the equivalent html list
 
@@ -112,7 +125,7 @@ Which will render as
         <li>Orange</li>
     </ul>
 
-### Backspace Parameter
+#### `backspace`
 
 When used as a tag pair, checkboxes are a looping pair. Backspacing removes characters (including spaces and line breaks) from the last iteration of the loop. For example, if you put a `<br>` tag after each item you'll have this
 

@@ -30,6 +30,11 @@ $system_path = './dazzle';
 
 ## Moving the System Directory Above Webroot
 
+Tip: System Directory Above Webroot
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/aj4_JzdiNwY?si=SNKpm0sXpdTMfX3-" title="System Directory Above Webroot in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 This is a more advanced procedure that provides even better security, but is not supported in all environments.
 
 1.  FTP to your server and move the entire system folder above webroot, but still within your user's account folder.

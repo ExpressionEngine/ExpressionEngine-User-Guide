@@ -18,14 +18,14 @@ The snippets below were truncated for clarity. The full example fieldtype can be
 [TOC]
 
 ## Generate Fieldtype File
-Start by generating a custom fieldtype for your add-on using the `make:fieldtype` command. 
+Start by generating a custom fieldtype for your add-on using the `make:fieldtype` command.
 
 ```
 $ php system/ee/eecli.php make:fieldtype
 Let's implement a fieldtype!
 What is the fieldtype name? Amazing Fieldtype
 What add-on is the fieldtype being added to? [amazing_add_on]:  amazing_add_on
-Building fieldype.
+Building fieldtype.
 Fieldtype created successfully!
 ```
 

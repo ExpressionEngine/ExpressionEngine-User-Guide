@@ -57,4 +57,9 @@ Note that the changes will only be applied when you save the changes. Only one t
 
 ## File Usage
 
+Tip: How to Find Where a File is Used
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/Mydsecio160?si=whTT7Vc-vqctsH2Y" title="How to find out where a file is used in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 This tab shows the list of entries where the file is being used in fieldtype (File, File Grid, Fluid, Textarea, RTE) and categories where the file is being used as a Category Image.

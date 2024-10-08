@@ -36,6 +36,11 @@ If it finds a tag that corresponds to the add-on that is missing or not installe
 
 Clicking on the tag name shows the list of templates where it is found.
 
+Tip: How to Find Template Tags for Uninstalled Add-ons
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/IcO-p176zoY" title="How to Find Template Tags for Uninstalled Add-ons" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 ## Debug Fieldtypes
 
 **Control Panel Location: `Tools > Utilities > Debug Fieldtypes`**
@@ -45,3 +50,8 @@ Clicking on the tag name shows the list of templates where it is found.
 This page shows the fieldtypes that are being used as custom fields, that have their corresponding add-on missing or not installed.
 
 It also lists all the fieldtypes installed, indicating what is currently in use and what is not in use.
+
+Tip: How to find out if a fieldtype is still in use
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/B0C22re0ZPM" title="How to find out if an ExpressionEngine fieldtype is still in use" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>

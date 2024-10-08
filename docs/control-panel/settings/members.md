@@ -31,6 +31,18 @@ Here you can choose how membership accounts are activated:
 - **Self-activation via email**: New members are sent an email. Inside the email is a special activation link that the user must visit within two days to activate their account. By default ExpressionEngine uses this method since it ensures that the email address the user submitted when signing up is valid.
 - **Manual activation by an administrator**: New members may only be activated by an admin visiting the `Members --> Activate Pending` section of the Control Panel.
 
+### Auto-Login
+
+![Automatic login after activation](/_images/members_auto_login_activation.png)
+
+You can configure auto-login behavior to automatically log a member in after they have completed self-activation via email.  Or if no activation is required you can enable auto-login after registration.
+
+### Activation redirect URL
+
+![Automatic login after activation](/_images/members_activation_redirect_url.png)
+
+Redirect members to a specific URL after clicking the email activation link.  When omitted, system message will be shown instead.
+
 ### Notify members when approved?
 
 ![Notify members when approved](/_images/members_notify_approval.png)
@@ -47,7 +59,7 @@ When set to **yes**, members will receive an email notification when their membe
 
 ![Require terms of service](/_images/members_require_terms.png)
 
-This preference determines whether new members must indicate that they agree to abide by your site's terms of service before they can register. 
+This preference determines whether new members must indicate that they agree to abide by your site's terms of service before they can register.
 
 If you are using legacy member profile template, when new members register through the site, a "terms of service" block of text is displayed. You may edit the terms of service within the registration form template, located at `Design --> Themes --> Member Profile Templates --> Default --> Registration Form`.
 

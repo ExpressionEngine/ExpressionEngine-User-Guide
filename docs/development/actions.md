@@ -9,12 +9,12 @@
 
 # Actions
 
-TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md) 
+TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md)
 
 [TOC]
 
 ## Overview
-Actions in ExpressionEngine are URL endpoints that are reached with the `ACT` query parameter. An example of this might be `http://myamazingsite.com/?ACT=43` where 43 is the ID given to an action registered in the `exp_actions` database table. These actions are tied to methods in an add-on which can be used to accept input from forms or run some sort of other functionality defined in the add-on. 
+Actions in ExpressionEngine are URL endpoints that are reached with the `ACT` query parameter. An example of this might be `http://myamazingsite.com/?ACT=43` where 43 is the ID given to an action registered in the `exp_actions` database table. These actions are tied to methods in an add-on which can be used to accept input from forms or run some sort of other functionality defined in the add-on.
 
 NOTE:Before adding an action to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
@@ -37,7 +37,7 @@ amazing_add_on
  ┗...
 ```
 
-We also notice that a migration is created in our `database/migrations` folder. This migration is ran when your add-on is installed or uninstalled to tell ExpressionEngine what actions we needed added or removed with our add-on. 
+We also notice that a migration is created in our `database/migrations` folder. This migration is ran when your add-on is installed or uninstalled to tell ExpressionEngine what actions we needed added or removed with our add-on.
 
 ```
 //database/migrations/[timestamp]_[mirgrationname].php
@@ -45,7 +45,7 @@ We also notice that a migration is created in our `database/migrations` folder. 
 
 use ExpressionEngine\Service\Migration\Migration;
 
-class CreateactionamazingaztionforaddonamazingAddOn extends Migration
+class CreateactionamazingactionforaddonamazingAddOn extends Migration
 {
     /**
      * Execute the migration
@@ -55,7 +55,7 @@ class CreateactionamazingaztionforaddonamazingAddOn extends Migration
     {
         ee('Model')->make('Action', [
             'class' => 'Amazing_add_on',
-            'method' => 'AmazingAztion',
+            'method' => 'AmazingAction',
             'csrf_exempt' => false,
         ])->save();
     }
@@ -68,7 +68,7 @@ class CreateactionamazingaztionforaddonamazingAddOn extends Migration
     {
         ee('Model')->get('Action')
             ->filter('class', 'Amazing_add_on')
-            ->filter('method', 'AmazingAztion')
+            ->filter('method', 'AmazingAction')
             ->delete();
     }
 }
@@ -150,9 +150,9 @@ The `exp_actions` table is comprised of 4 columns:
 
 WARN:**Security Alert:**Setting your action to CSRF Exempt, also makes this endpoint less secure though as you are allowing outside connections to your application.
 
-For security reasons, actions are protected by [Cross Site Request Forgery(CSRF)](/development/guidelines/security.md#cross-site-request-forgery). If you want users to be able to reach this endpoint from outside your site (e.g. using cURL to from another domain or application to reach this endpoint and expect data to be returned ) then you will most likely need to make your action CSRF exempt. 
+For security reasons, actions are protected by [Cross Site Request Forgery(CSRF)](/development/guidelines/security.md#cross-site-request-forgery). If you want users to be able to reach this endpoint from outside your site (e.g. using cURL to from another domain or application to reach this endpoint and expect data to be returned ) then you will most likely need to make your action CSRF exempt.
 
-- To make your action immediately CSRF exempt, update the `csrf_exempt` value in the `exp_actions` table to be a value of `1`.   
+- To make your action immediately CSRF exempt, update the `csrf_exempt` value in the `exp_actions` table to be a value of `1`.
 - To ensure your action is CSRF exempt for future installations, update the corresponding migration by setting the `csrf_exempt` property to `true`:
 ```
 ...
@@ -160,13 +160,13 @@ public function up()
 {
     ee('Model')->make('Action', [
         'class' => 'Amazing_add_on',
-        'method' => 'AmazingAztion',
+        'method' => 'AmazingAction',
         'csrf_exempt' => true,
     ])->save();
 }
 ...
 ```
-- To set an action as CSRF exempt on creation, use the `--csrf_exempt` or `-c` flag in the CLI: 
+- To set an action as CSRF exempt on creation, use the `--csrf_exempt` or `-c` flag in the CLI:
 
 ```
 $ php system/ee/eecli.php make:action --csrf_exempt
@@ -176,10 +176,10 @@ $ php system/ee/eecli.php make:action --csrf_exempt
 
 ## Do Something - Build An Action
 
-Let's do something with our action to demonstrate how this would work. 
+Let's do something with our action to demonstrate how this would work.
 
 ### Form Data
-In this example we want to insert a row into our database when a user submits a form. 
+In this example we want to insert a row into our database when a user submits a form.
 
 For this example we'll use a really basic form that would be found in our template which uses our action's endpoint as the action for the form. We know our action's ID from the `exp_actions` table and we're just going to collect the user's first name and last name. We'll then take that information and store it in our database. For the purpose of this example, we'll insert this into a custom table we've added to ExpressionEngine which just has columns `ID`, `first_name`, `last_name`.
 
@@ -191,7 +191,7 @@ What is the action name? ExampleAction
 What add-on is the action being added to? [amazing_add_on,...]: amazing_add_on
 ```
 
-This creates our required files.   
+This creates our required files.
 
 Now we had some functionality to our action which will add the first and last name submitted from a form to our custom database table.
 
@@ -220,7 +220,7 @@ class ExampleAction extends AbstractRoute
         ee()->db->insert('our_amazing_table', $data);
 
         return true;
-        
+
     }
 }
 ```
@@ -319,7 +319,7 @@ The response:
 </div>
 ...
 ```
-This is because of the [`csrf_exempt` value](#cross-site-request-forgerycsrf-exemption) mentioned above. To fix this we can go into the `exp_actions` table of our database and update the `csrf_exempt` column to `1`. 
+This is because of the [`csrf_exempt` value](#cross-site-request-forgerycsrf-exemption) mentioned above. To fix this we can go into the `exp_actions` table of our database and update the `csrf_exempt` column to `1`.
 
 Now when I send that same request, I simply get the entry title I requested:
 

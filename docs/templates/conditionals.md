@@ -160,6 +160,11 @@ The NOT operator (`!`) also can be used at the beginning of the statement to neg
 
 ### Mathematic Operators
 
+Tip: Using Mathematic Operators in Conditionals
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/xNWCiKNNL_w" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 You can use the following mathematical operators to compute values:
 
 | Operator   | Name                                       |
@@ -325,6 +330,12 @@ You'll notice in the "logout" link above that a special path is used: {path='LOG
 
 There are a handful of variables that are always available to conditionals.
 
+### `logged_in_avatar_filename`
+### `logged_in_avatar_height`
+### `logged_in_avatar_width`
+
+    {if logged_in_avatar_filename}<img src="/avatars/{logged_in_avatar_filename}" width="{logged_in_avatar_width}" height="{logged_in_avatar_height}" />{/if}
+
 ### `logged_in_email`
 
     {if logged_in_email $= 'example.com'}  One of us! One of us!  {/if}
@@ -423,7 +434,7 @@ You can test against the username of the currently logged in user.
 
 Whether Multi-Factor Authentication is enabled for logged in user.
 
-    `{if !mfa_enabled}Enable multi-factor authentication for more security{/if}`
+    {if !mfa_enabled}Enable multi-factor authentication for more security{/if}
 
 ### `segment_*X*`
 

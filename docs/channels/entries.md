@@ -118,7 +118,7 @@ And, you can use an inclusive stack to only get entries with _all_ of the catego
 
     category="3&7&8"
 
-Or you can negate the inclusive stack and get entries that do not of _all_ of those categories
+Or you can negate the inclusive stack and get entries that do not match _all_ of those categories
 
     category="not 3&5"
 
@@ -274,7 +274,7 @@ When used in an RSS/Atom feed, this parameter allows ExpressionEngine to dynamic
 You can hard code the channel tag to show a specific channel entry. You may also specify multiple entries by separating them with the pipe character:
 
     entry_id="13|42|147"
-    
+
 Or use "not" to exclude entries::
 
     entry_id="not 45|534|807"
@@ -309,13 +309,15 @@ NOTE: **Note:** Using this parameter will automatically constrain the entries ta
 
 ### `group_id=`
 
+NOTE: We recommend using [primary_role_id=](#primary_role_id) parameter instead, which works the same but more clearly conveys that the filtering is happening on primary role ID.
+
     group_id="4"
 
 You can decide from which Member Role (by specifying the role ID) you wish entries to be shown. If you choose "4", then only entries created by members of the Primary Role with the ID of 4 will be shown. You can choose multiple Roles using a pipe:
 
     group_id="2|3|4"
 
-Or exclude groups using "not"
+Or exclude role using "not"
 
     group_id="not 2|3|4"
 
@@ -422,7 +424,7 @@ This parameter is for use with entry [pagination](templates/pagination.md) and d
 
 If no parameter is specified, the navigation block will default to the "bottom" behavior.
 
-If the pagination tag pair is not included, the entries returned will not respond to a page indicator in the URL. In othat case you would need to set the parameter to _hidden_ to allow the entries to reflect the pagination in the URL.
+If the pagination tag pair is not included, the entries returned will not respond to a page indicator in the URL. In that case you would need to set the parameter to _hidden_ to allow the entries to reflect the pagination in the URL.
 
 ### `paginate_base=`
 
@@ -435,6 +437,18 @@ This tells ExpressionEngine to override the normal [pagination](templates/pagina
     paginate_type="field"
 
 This tells ExpressionEngine to function in "pagination" mode for your channel entry fields so that you can automatically have an entry span multiple pages. See the [Spanning a Channel Entry Across Multiple Pages](channels/entry-spanning.md) page.
+
+### `primary_role_id=`
+
+    primary_role_id="4"
+
+You can decide from which Member Role (by specifying the role ID) you wish entries to be shown. If you choose "4", then only entries created by members of the Primary Role with the ID of 4 will be shown. You can choose multiple Roles using a pipe:
+
+    primary_role_id="2|3|4"
+
+Or exclude roles using "not"
+
+    primary_role_id="not 2|3|4"
 
 ### `related_categories_mode=`
 
@@ -879,9 +893,9 @@ The "count" out of the current entries being displayed. If five entries are bein
       <a href="{cp_edit_entry_url}">Edit Entry</a>
     {/if}
 
-The URL of the entry form in the control panel where this entry can be edited. It is recommended you wrap this variable in an `{if logged_in}` conditional to hide your control panel's URL from regular site visitors. If you are running a membership based site, hide it behind an appropriate `logged_in_role_id` conditional. For example, to hide this link from everyone but Super Admins:
+The URL of the entry form in the control panel where this entry can be edited. It is recommended you wrap this variable in an `{if logged_in}` conditional to hide your control panel's URL from regular site visitors. If you are running a membership-based site, hide it behind an appropriate `logged_in_primary_role_id` conditional or use [exp:member:has_role](/member/member-roles-tags.html#expmemberhas_role). For example, to hide this link from everyone but Super Admins:
 
-    {if logged_in_role_id == 1}
+    {if logged_in_primary_role_id == 1}
       <a href="{cp_edit_entry_url}">Edit Entry</a>
     {/if}
 

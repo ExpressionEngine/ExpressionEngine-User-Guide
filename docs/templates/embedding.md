@@ -21,7 +21,7 @@ Where "template_group" is the name of the group and "template" is the name of th
 
 You **must** include both the template group and the template name in the embed tag.
 
-By default, you cannot use embeds inside of Forum templates. See [Other Features](add-ons/forum/other-features.md) for instructions on running the forums through regular templates.
+By default, you cannot use embeds inside of Forum templates. See [Other Forum Features](https://github.com/ExpressionEngine/Forum/blob/main/docs/other-features.md) for instructions on running the forums through regular templates.
 
 ### Notes
 

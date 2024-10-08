@@ -21,7 +21,7 @@ When set to "enable", super admins and member roles with permissions will see PH
 
 ### Enable debugging?
 
-If enabled, Super Admins will see benchmark results, SQL queries, and submitted form data displayed at the bottom of the browser window. On the front end, this includes Global Variables, Conditionals, Tags, PHP on Input/Ouput, Embeds, and Extension Hooks. This is an excellent tool for debugging.
+If enabled, Super Admins will see benchmark results, SQL queries, and submitted form data displayed at the bottom of the browser window. On the front end, this includes Global Variables, Conditionals, Tags, PHP on Input/Output, Embeds, and Extension Hooks. This is an excellent tool for debugging.
 
 ### Enable GZIP compression?
 

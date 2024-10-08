@@ -138,4 +138,9 @@ Each member may also specify their own HTML Formatting buttons. These buttons ar
 
 **Control Panel Location: `Members > Profile > Quick Links`**
 
+Tip: What are Quick Links
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/8M_ezoBrz2g?si=6Qdssal6Aq5AeV23" title="What are Quick Links in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 Use this page to add personal links to the quick links menu in the control panel nav bar. These links will be visible only to you.

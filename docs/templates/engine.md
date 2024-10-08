@@ -13,7 +13,7 @@
 
 When ExpressionEngine serves up each Template, the system must go through a rendering process to parse out the Tags, Variables, Template Partials, and Embeds being used in the Template. This page explains the order of those rendering stages. This information can be immensely useful when building pages and troubleshooting problems.
 
-NOTE: **Note:** The information in this article applies only to rendering Templates. It doesn't apply to rendering theme files such as those used for [Member Profiles](control-panel/template-manager.md#member-profile-templates), or the [Discussion Forum](add-ons/forum/themes.md) module.
+NOTE: **Note:** The information in this article applies only to rendering Templates. It doesn't apply to rendering theme files such as those used for [Member Profiles](control-panel/template-manager.md#member-profile-templates) (legacy), or the [Discussion Forum](https://github.com/ExpressionEngine/Forum/blob/main/docs/themes.md) module.
 
 ## Rendering Order
 

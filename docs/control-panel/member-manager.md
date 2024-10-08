@@ -9,19 +9,25 @@
 
 # Member Manager
 
+[TOC=2-3]
+
+## Members Listing
+
 **Control Panel Location: `Members`**
 
-This page is used both to search and to browse through active members within your ExpressionEngine installation. Also, you can filter the members by member role and search members.
-
-This page also allows you to do the following:
-
-[TOC=2-3]
+This page is used both to search and to browse through members within your ExpressionEngine installation.
 
 ![Member Manager Control Panel Page](_images/cp-members.png)
 
+Filters and search input can be used to narrow down the list of members displayed.
+
+The set of columns displayed can be customized using the "Columns" dropdown. By default, the following columns are shown: Member ID, Name (which is composed of avatar, username and screen name), Email, Roles, Join Date, Last Visit Date. Also each member row has "Actions" buttons that contains links to some common actions and a checkbox that allows performing bulk actions on selected members. When "Pending" is selected in the "Role" filter, the bulk action options are "Approve" and "Decline", otherwise "Remove" is the only option.
+
+All roles assigned to a member are shown in the Roles column. When multiple roles are assigned, the primary role will have an indicator. If the member is pending the column does not say "Pending" but instead shows the role to which the member will be assigned once approved (with pending indicator) and a button to approve.
+
 ## Member Roles
 
-**Control Panel Location: `Members > Member Roles`**
+**Control Panel Location: `Members > Roles`**
 
 The _Member Roles_ area of the Control Panel permits you to manage your Member Roles. The member roles can be sorted by ID, Role Name, and Status.
 
@@ -31,7 +37,7 @@ You can assign multiple roles to a member.
 
 ### Create/Edit All Member Roles
 
-**Control Panel Location: `Members > Member Roles > Create/Edit`**
+**Control Panel Location: `Members > Roles > Create/Edit`**
 
 This sections allows you to set the various permissions and settings for the selected Member Role.
 
@@ -44,23 +50,149 @@ ExpressionEngine comes with 5 built-in Roles:
 
 These roles should never be deleted.
 
-If you need a custom set of permissions for the role, we suggest creating a new role for each case. You can do that by clicking "New Role" button, or you can create a new role based on an exsting one by picking "Clone to New Role" from the role's "Save" dropdown.
+If you need a custom set of permissions for the role, we suggest creating a new role for each case. You can do that by clicking "New Role" button, or you can create a new role based on an existing one by picking "Clone to New Role" from the role's "Save" dropdown.
 
 Edit the role by clicking its name in the list.
 
+### Role Settings
+
+**Control Panel Location: `Members > Roles > Create/Edit`**
+
+Roles are highly configurable to manage permissions for members that belong to the role. It is important to note that permissions are additive. This means that if a member belongs to multiple roles they will have the sum of all the permissions granted by each of their roles.
+
+You should be very careful when assigning permissions marked with a shield icon. These are related to the security of your website.
+
+The role settings are grouped into the following tabs.
+
+[TOC=4]
+
+#### Role tab
+
+This tab contains the generic settings for the role. You can also assign the role to Role Groups on this tab.
+
+- **Name** --  The display name of the role.
+
+- **Short Name** -- The role shortname, used in tags and conditionals.
+
+- **Description** -- A brief description of the role, available for output as a member variables ``{primary_role_description}``
+
+- **Highlight Color** -- Color for this role badge.
+
+- **Require Multi-Factor Authentication** -- Requires [Multi-Factor Authentication](member/mfa.md) for all members in the role.
+
+- **Include members in: author/member lists.**
+-- Roles included in the author list are available in the author select field on the entry publish/edit page for any channel the role has permission to publish in.
+-- Roles included in the member lists are available to display in the [member list tag](member/memberlist.md).  
+
+- **Security Lock** -- If enabled, only Super Admin users can add or remove members to the role.
+
+- **Role Groups** -- Assign the role to [role groups](control-panel/member-manager.md#role-groups).
+
+- **Show field names on Publish** -- Enables the display of the field tags on the entry publish/edit page. This option is only available to the Super Admin role.
+
+Tip: Hide and Show Field Short Names in the Publish Area
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/ai2-OiI9iDc?si=-0ox0OSj37V5EcFv" title="Hide and Show Field Short names in the ExpressionEngine publish area" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
+
+#### Website Access tab
+
+Use this tab to set up how members in this role can interact with your website and what actions they can perform on the front-end.
+
+#### CP Access tab
+
+This tab is used to set up the sections of the Control Panel that members in this role can access. You can also set up specific actions they can perform within each section. There are also settings for defining the look of certain Control Panel pages.
+
+The settings here are grouped into sections for each subset of Control Panel functionality.
+
+[TOC=5]
+
+##### Channel
+
+Defines whether and how the members in this role can administrate the [Channels](getting-started/the-big-picture.md#channels) and related content structures (such as Categories, Statuses).
+
+##### Channel Entries
+
+Defines the permissions that members in this role have for creating/editing/deleting entries in each of the channels.
+
+##### Files
+
+Defines actions members in this role can perform on the files as well as administrative permissions on [upload directories](control-panel/file-manager/upload-directories.md).
+
+Note: when editing channel entries with File fields, the members would need access to respective upload directories to modify those.
+
+##### Members
+
+Defines whether the members of this role can access Member Manager and perform certain actions on members and roles.
+
+##### Templates
+
+Defines whether the members of this role can create/edit/modify templates, template partials and template variables. Granular administrative permissions can also be set per template group.
+
+##### Add-Ons
+
+Defines whether the members of this role can access the Add-ons section and which Add-ons they are allowed to access in the Control Panel.
+
+##### Utilities
+
+Set the CP utilities that members of this role are allowed to use.
+
+##### Logs
+
+Defines if members of this role can access the Logs section in the Control Panel.
+
+##### Settings
+
+Defines if members of this role can modify system settings, with separate preferences for subsections which may contain more sensitive settings.
+
+#### Template Access tab
+
+This tab lists all the templates of your website. If you deselect certain templates, the members in this role will not be able to access site pages that are using these templates. Instead, they will see the "No Access" message as configured in settings for those templates.
+
+### Role Groups
+
+Role Groups are a way to organize your roles into logical groups. Create a Role Group by clicking "New" next to Role Groups heading in the sidebar. You can set the role group name and assign roles to it by checking the appropriate checkboxes.
+
+You can then assign members to the Role Group. These members will have all the permissions granted by all of the roles within the Role Group.
+
 ## Custom Member Fields
 
-**Control Panel Location: `Members > Member Fields`**
+**Control Panel Location: `Settings > Members > Member Fields`**
+
+The link to this section is also found on top of the Member Listing page.
 
 The _Member Fields_ feature permits you to add fields to the member registration form and/or member profile and My Account areas.
 
 ### Create/Edit
 
-**Control Panel Location: `Members > Member Fields > New/Edit`**
+**Control Panel Location: `Settings > Members > Member Fields > New/Edit`**
 
 This section allows you to create or edit Member Fields.
 
-The following fields are available:
+The following field types are compatible and can be used for custom member fields:
+
+- Checkboxes
+- Color Picker
+- Date
+- Duration
+- Email Address
+- File
+- Number Input
+- Multi Select
+- Radio Buttons
+- Range Slider
+- Rich Text Editor
+- Select Dropdown
+- Selectable Buttons
+- Text Input
+- Textarea
+- URL
+- Value Slider
+
+Additionally, third-party field types that specify support for the `MemberField` model can be selected.
+
+The following fields are available when creating a custom field:
 
 - **Type** -- You may choose what type of field this is. There are three choices: 1. **Text Input**: This is a single input line for text. It is the type of field you might use for a title, name, or other short information. 2. **Textarea**: This is a standard text entry box with multiple lines. This is what you would use for larger amount of text. 3. **Drop-down List**: This creates a standard HTML `<select>` drop-down list. You will need to define contents of the list in the provided form.
 
@@ -90,7 +222,7 @@ This section has the following options:
 
 ## Ban Settings
 
-**Control Panel Location: `Members sidebar > Ban Settings`**
+**Control Panel Location: `Settings > Members > Ban Settings`**
 
 The User Banning section of the Control Panel allows you to ban users by IP address, email, or name.
 

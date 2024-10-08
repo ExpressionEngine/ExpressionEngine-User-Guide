@@ -29,11 +29,11 @@ The File Manager is composed of several sections to help easily manage your file
 
 ### Sidebar
 
-The sidebar gives you access to creating, viewing, and managing [Upload Directories](control-panel/file-manager/upload-directories.md); [Watermarks](control-panel/file-manager/watermarks.md); and Exporting All Files. 
+The sidebar gives you access to creating, viewing, and managing [Upload Directories](control-panel/file-manager/upload-directories.md); [Watermarks](control-panel/file-manager/watermarks.md); and Exporting All Files.
 
 ![File manager sidebar](_images/cp_file_manager_sidebar.png)
 
-The sidebar can also be collapsed using the arrow icon ( <img style="margin-bottom: 0px; vertical-align: middle;display:inline-block;" src="../../_images/cp_collapase_arrow.png" alt="cp collapase arrow"> ) that is displayed to the side of the sidebar when hovering over the sidebar.
+The sidebar can also be collapsed using the arrow icon ( <img style="margin-bottom: 0px; vertical-align: middle;display:inline-block;" src="../../_images/cp_collapse_arrow.png" alt="cp collapase arrow"> ) that is displayed to the side of the sidebar when hovering over the sidebar.
 
 
 ### Filters
@@ -45,7 +45,7 @@ Filters allow you to quickly filter the files listed to find exactly what you ne
 The following selectable filters are available:
 
 * Type - Filter by the file type. Available types are Image, Document, Archive, Audio, Video (only file types of currently uploaded files are displayed)
-* Category - Filter by categories available to files. 
+* Category - Filter by categories available to files.
 * Date Added - Filter by date added. Available options are Custom Date (enter in a specific date), Last 24 Hours, Last 7 Days, Last 30 Days, Last 180 Days, Last 365 Days
 * Added By - Filter by the member who uploaded files
 
@@ -55,7 +55,7 @@ Files can also be filtered using the keyword search option.
 
 ### File Listing
 
-The bulk of the File Manager screen is composed of the file list. 
+The bulk of the File Manager screen is composed of the file list.
 
 ![File Manager Listing](_images/cp_file-manager-listing.png)
 
@@ -75,7 +75,7 @@ The List View also exposes a Utility Action menu which quickly allows for action
 
 ![File Manager Utility Action Menu](_images/cp_file_manager_utility_action.png)
 
-The columns displayed in the List View can also be adjusted to display file information relevant to your needs. 
+The columns displayed in the List View can also be adjusted to display file information relevant to your needs.
 These columns include:
 
 * Title
@@ -183,6 +183,11 @@ WARN:**Note** that exporting can be time and resource consuming.
 ## Compatibility Mode
 
 WARN:**Note:** Compatibility Mode is enabled by default for sites upgraded from older ExpressionEngine versions.
+
+Tip: How to Turn off File Manager Compatibility Mode
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/V1sRqz-b83k?si=0YrmOgxxcfhbWl_L" title="Turn off File Manager Compatibility Mode in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 ExpressionEngine 7+ stores files in the database differently then previous versions (using `{file:XX:url}` format instead of `{filedir_X}filename.ext`). This enables ExpressionEngine to provide a more powerful overall experience with files, such as storing files in subfolders, moving files to different locations, and collecting file usage data.
 

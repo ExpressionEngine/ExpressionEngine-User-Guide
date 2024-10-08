@@ -61,6 +61,15 @@ A channel can have any combination of fields and field groups assigned to it. Yo
 
 This tab allows you to create and assign category groups to your channel. A channel may have multiple category groups assigned, and groups can be created on the fly on this tab.
 
+![Channel Preferences - Categories settings](_images/cp-channel-categories-tab.png)
+
+For each category group assigned to a channel, the following per-group settings are available:
+
+| Setting         | Default | Description                                                                                 |
+| --------------- | ------- | ------------------------------------------------------------------------------------------- |
+| Allow multiple? | Yes     | When turned on, multiple categories from the group can be selected for an entry                |
+| Required?       | No      | When turned on, selecting at least one category from the group is required to save an entry |
+
 ---
 
 ### Statuses tab
@@ -140,6 +149,12 @@ The Publish/Edit page can be customized, with the layout saved per member role, 
 ### Create/Edit Publish Layouts
 
 **Control Panel Location: `Developer > Channels > Layouts > New/Edit`**
+
+Tip: Side by Side Fields Using Layouts
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/B7HvEKOF7gU?si=y4q_45V1bcZIEKa_" title="Side by Side Field Layout in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 
 This section of the control panel is where channel layouts are created or edited.
 
