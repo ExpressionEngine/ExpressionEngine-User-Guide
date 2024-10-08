@@ -28,5 +28,5 @@ This is the content that will appear as a note on the publish form. Markdown for
 
 ## Template Tag
 
-The note contents can be displayed in a channel:entries loop using a single variable.
+The note contents can be displayed in a `{channel:entries}` loop using a single variable.
 
