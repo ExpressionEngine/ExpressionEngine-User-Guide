@@ -9,7 +9,7 @@
 
 # Template Generator Service
 
-The `TemplateGenerator` Service is responsible for registering and creating template generators.
+The Template Generators feature automates the creation of structured templates for rapid development. The `TemplateGenerator` Service is responsible for registering and creating template generators.
 
 [TOC]
 
