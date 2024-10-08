@@ -34,7 +34,7 @@ NOTE: **Note:** A member account's Username and Screen Name can be identical, bu
 - [Ignore List Tag](member/ignore-list.md)
 - [Profile Templates (Legacy)](member/profile-templates.md)
 
-NOTE: See the [template generator](control-panel/template-manager.md#template-generators) for the member templates in ExpressionEngine 7.5+.
+NOTE: **Note:** See the [template generator](control-panel/template-manager.md#template-generators) for the member templates in ExpressionEngine 7.5+.
 
 
 ### Member Navigation
