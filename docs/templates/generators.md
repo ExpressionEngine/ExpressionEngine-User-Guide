@@ -11,17 +11,17 @@
 
 [TOC]
 
-ExpressionEngine provides a set of template generators that allow you to quickly scaffold templates based on your existing data structures (channels, custom fields, etc.). The template generators are available through both the Control Panel and the Command Line Interface (CLI). The generated templates will demonstrate the most common ways of accessing the data. Additionally, the templates have a settings option to also include comments and links to the field's documenation.
+ExpressionEngine provides a set of template generators that allow you to quickly scaffold templates based on your existing data structures (channels, custom fields, etc.). The template generators are available through both the Control Panel and the Command Line Interface (CLI). The generated templates will demonstrate the most common ways of accessing the data. Additionally, the templates have a settings option to also include comments and links to the field's documentation.
 
 ## Control Panel Usage
 
-Before you can use the template generators you will need to setup your channels and custom fields. Once this is done you can navigate to Templates > Template Generator.
+Before you can use the template generators you will need to set up your channels and custom fields. Once this is done you can navigate to Templates > Template Generator.
 
 ![ExpressionEngine Control Panel Template Generator](_images/cp-template-generators.png)
 
 Select the generator that you want along with any available options and then type in a name for the template group that will be created.
 
-Upon successful generation of new templates you will be brought to the Template Group page so that you may view and modify any of the generated files.
+Upon successful generation of new templates, you will be brought to the Template Group page so that you may view and modify any of the generated files.
 
 ## Command Line Usage
 
