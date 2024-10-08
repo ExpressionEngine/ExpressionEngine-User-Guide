@@ -15,10 +15,10 @@ The Template Generators feature automates the creation of structured templates f
 
 ## Template Generator Anatomy
 
-Template Generators were created to help users accelerate the process of building templates.  If you have an Add-on that provides template tags or fieldtypes it may be beneficial to include a template generator as well.
+Template Generators were created to help users accelerate the process of building templates.  If you have an Add-on that provides template tags or fieldtypes, it may also be beneficial to include a template generator.
 
-In its simplest form a template generator is a PHP class file that extends
-`ExpressionEngine\Service\TemplateGenerator\AbstractTemplateGenerator`. This file needs to be placed in a `TemplateGenerators` folder within your add-on's folder. The name you give your generator should also be used as the class name and the file name.
+In its simplest form, a template generator is a PHP class file that extends
+`ExpressionEngine\Service\TemplateGenerator\AbstractTemplateGenerator`. This file must be placed in a `TemplateGenerators` folder within your add-ons. The name you give your generator should also be used as the class name and the file name.
 
 Template generators need to be registered in your `addon.setup.php` file, under a
 `templateGenerators` array that should contain a list of your generator names e.g.
@@ -40,11 +40,11 @@ return array(
 );
 ```
 
-When properly defined your template generator will be available to select as long as your add-on is currently installed.  We do not display generators for uninstalled add-ons to avoid confusion.
+When properly defined, your template generator will be available to select as long as your add-on is currently installed.  We do not display generators for uninstalled add-ons to avoid confusion.
 
-The generator can be accessed through a dropdown when using the Control Panel or by it's key when using the CLI.  The generator key consists of the add-on name and generator name separated with a colon. For example the Entries Generator provided by our Channel add-on has a key of `channel:entries`.
+The generator can be accessed through a dropdown when using the Control Panel or by its key when using the CLI.  The generator key consists of the add-on name and generator name separated with a colon. For example, the Entries Generator provided by our Channel add-on has a key of `channel:entries`.
 
-Each generator is required to have a `$name` protected property that is the name of the generator that will be displayed to the user.
+Each generator is required to have a `$name` protected property which is the name of the generator that will be displayed to the user.
 
 The generator needs to provide a list of templates that it can generate. This is done by declaring a `$templates` protected property that is an associative array of template names and their description (saved as template notes). E.g.
 
@@ -102,11 +102,11 @@ A template generator must have a `getVariables()` method that returns an associa
 
 ## Template Stubs
 
-Templates are generated from a "stub" file, which is a PHP file parsed though the [View service](https://docs.expressionengine.com/latest/development/services/view.html).
+Templates are generated from a "stub" file, which is a PHP file parsed through the [View service](https://docs.expressionengine.com/latest/development/services/view.html).
 
 Add-ons must store their stubs inside a `stubs` directory within the add-on's own folder. Within the `stubs`, the files are stored in a folder that should match the generator name. The stub file name needs to match the template name that will be created.
 
-So for an `index` template to be created by Channel Entries generator, the stub file must exist in `Addons/channel/stubs/entries/index.php`.
+So for an `index` template to be created by the Channel Entries generator, the stub file must exist in `Addons/channel/stubs/entries/index.php`.
 
 The Template Generator Service will search several directories in priority order until it finds a match for the specified stub.
 
@@ -123,13 +123,13 @@ This example illustrates the concrete paths that the Template Generator will sea
 - `system/user/stubs`
 - `system/ee/templates/stubs`
 
-In addition to searching these directories for a match the Template Generator will also search for a stub file that matches the generated template's type and engine.  This will work in a manner of most specific to least specific.  For example if a user requests to generate an XML template called `sitemap` then the Template Generator will search through the paths in order looking for a `sitemap.xml.php` stub and then a `sitemap.php` stub within each path until a match is found.  This allows you to customize the output for different template types.
+In addition to searching these directories for a match, the Template Generator will also search for a stub file that matches the generated template's type and engine.  This will work in a manner of most specific to least specific.  For example, if a user requests to generate an XML template called `sitemap` then the Template Generator will search through the paths in order looking for a `sitemap.xml.php` stub and then a `sitemap.php` stub within each path until a match is found.  This allows you to customize the output for different template types.
 
-When running in an environment that introduces additional template engines this search is extended further to include variations for those engines.  We can continue the example above and request to a Twig XML template called `sitemap`.  Again the Template Generator will look through each path for the following file names until a match is found `sitemap.xml.twig.php`, `sitemap.twig.php`, `sitemap.xml.php`, `sitemap.php`.
+When running in an environment that introduces additional template engines, this search is extended further to include variations for those engines.  We can continue the example above and request a Twig XML template called `sitemap`.  Again the Template Generator will look through each path for the following file names until a match is found `sitemap.xml.twig.php`, `sitemap.twig.php`, `sitemap.xml.php`, `sitemap.php`.
 
 ### Includes
 
-A generator stub differs from traditional View files in the way it handles embedding other stubs. Usually with a view file you would only need to prefix your included file  with the add-on name (e.g. `channel:`). But with generator stubs you must use a combination of the add-on name and generator name (e.g. `channel:entries`) - something like `<?php $this->embed('channel:entries:_field_metadata', $vars)`. Embedding a stub for a fieldtype would still only require the add-on name as a prefix though since there is no generator involved (e.g. `$this->embed('grid:field', $vars)`).
+A generator stub differs from traditional View files in the way it handles embedding other stubs. Usually with a view file, you would only need to prefix your included file  with the add-on name (e.g. `channel:`). But with generator stubs, you must use a combination of the add-on name and generator name (e.g. `channel:entries`) - something like `<?php $this->embed('channel:entries:_field_metadata', $vars)`. Embedding a stub for a fieldtype would still only require the add-on name as a prefix though since there is no generator involved (e.g. `$this->embed('grid:field', $vars)`).
 
 The variables passed to a stub file include the options passed to the generator along with any variables created by the generator, so use the generator documentation and files for reference.
 
@@ -138,9 +138,9 @@ The variables passed to a stub file include the options passed to the generator 
 
 If the generator is utilizing fieldtypes, the template code is built from the stubs that are specific to the fieldtypes.
 
-The stubs are required to be placed in `stubs` directory within fieldtype's own folder. Remember that they need to have `.php` extension and will be utilizing View service.
+The stubs are required to be placed in `stubs` directory within fieldtype's own folder. Remember that they need to have `.php` extension and will be utilizing the View service.
 
-Default name of field stub is `field`. This can be overridden by setting `$stub` property in fieldtype file, e.g.
+The default name of the field stub is `field`. This can be overridden by setting `$stub` property in the fieldtype file, e.g.
 
 ```
 class Example_ft extends EE_Fieldtype
@@ -188,7 +188,7 @@ return [
 
 **class `ExpressionEngine\Service\TemplateGenerator\AbstractFieldTemplateGenerator`**
 
-The only method that fieldtypes generator is required to have is `getVariables()`. Is is required to return the associative array of variables that will be passed to View service when rendering the fieldtype stub.
+The only method that the fieldtypes generator is required to have is `getVariables()`. Is is required to return the associative array of variables that will be passed to the View service when rendering the fieldtype stub.
 
 The example fieldtype generator for the Grid fieldtype that provides a `$columns` variable to the stub file might look like this:
 
