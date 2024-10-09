@@ -56,28 +56,6 @@ TIP: **Tip:** Notice the variables in the "value" form fields? These allow us to
 
 {{embed:_tips/form-attributes.md}}
 
-#### `entry_id=`
-
-    entry_id="24"
-
-You can hard code the comment form tag to display a comment form for a specific channel entry by its entry ID.
-
-NOTE: **Note:** This parameter takes precedence over any entry specified dynamically in the URL, so when using this parameter you will want to make sure it is clear to the user which entry the displayed comment form belongs to.
-
-#### `preview=`
-
-    preview="channel/preview"
-
-This is a **required** parameter if you are using comment previews indicating which template should be used for comment previews. Like other "path" variables in ExpressionEngine you will use the Template Group/Template name. More on previewing can be found in the [Comment Previewing](#comment-previewing) section.
-
-#### `url_title=`
-
-    url_title="my_wedding"
-
-You can hard code the comment for tag to display a comment form for a specific channel entry by its URL title.
-
-NOTE: **Note:** This parameter takes precedence over any entry specified dynamically in the URL, so when using this parameter you will want to make sure it is clear to the user which entry the displayed comment form belongs to.
-
 #### `channel=`
 
     channel="news"
@@ -87,6 +65,14 @@ With this parameter you can specify exactly which channel you want the submitted
 If you link to your comment form page using the entry's URL Title, then you are **strongly encouraged** to include this parameter in your tag.
 
 Because you can have the same URL Title in different channels, using this parameter will ensure that the comment submitted will be associated with the correct entry. Without this parameter, it is possible that the comment could be associated with an entry in a different channel that happens to have the same URL Title.
+
+#### `entry_id=`
+
+    entry_id="24"
+
+You can hard code the comment form tag to display a comment form for a specific channel entry by its entry ID.
+
+NOTE: **Note:** This parameter takes precedence over any entry specified dynamically in the URL, so when using this parameter you will want to make sure it is clear to the user which entry the displayed comment form belongs to.
 
 #### `form_class=`
 
@@ -100,6 +86,19 @@ With this parameter, you can specify the css class you want the form to have, en
 
 With this parameter, you can specify the css id you want the form to have. The default value is 'comment_form'
 
+
+#### `inline_errors=`
+
+    inline_errors="yes"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the type of error reporting: inline or error template.
+
+#### `preview=`
+
+    preview="channel/preview"
+
+This is a **required** parameter if you are using comment previews indicating which template should be used for comment previews. Like other "path" variables in ExpressionEngine you will use the Template Group/Template name. More on previewing can be found in the [Comment Previewing](#comment-previewing) section.
+
 #### `return=`
 
     return="template_group/template/url_title"
@@ -110,6 +109,20 @@ This parameter allows you to define where the user will be returned after submit
 2.  Use a full URL. For example: return="<https://example.com/return.html>"
 
 If this parameter is not defined, they will be returned to the form page.
+
+#### `return_error=`
+
+    return_error="template_group/error"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.
+
+#### `url_title=`
+
+    url_title="my_wedding"
+
+You can hard code the comment for tag to display a comment form for a specific channel entry by its URL title.
+
+NOTE: **Note:** This parameter takes precedence over any entry specified dynamically in the URL, so when using this parameter you will want to make sure it is clear to the user which entry the displayed comment form belongs to.
 
 ### Conditionals
 

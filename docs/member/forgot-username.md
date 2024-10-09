@@ -43,6 +43,12 @@ Template to use for email which is sent to user.
 
 If no template is defined or if the template defined does not exist, the default [Member Profile Template](control-panel/template-manager.md#member-profile-templates) for a forgotten username will be used.
 
+### `inline_errors=`
+
+    inline_errors="yes"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the type of error reporting: inline or error template.
+
 ### `return=`
 
     return="member/login/forgot-username"
@@ -51,6 +57,12 @@ This parameter allows you to define where the user will be returned after succes
 
 1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="member/login/forgot-username"
 2.  Use a full URL. For example: return="<https://example.com/member/login/forgot-username.html>"
+
+### `return_error=`
+
+    return_error="template_group/error"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.
 
 ## Form Inputs
 
