@@ -28,7 +28,15 @@ Output a reset password form that allows members accessing it via a link from a 
 
     {/exp:member:reset_password_form}
 
+{{embed:_tips/form-validation.md}}
+
 ## Parameters
+
+### `inline_errors=`
+
+    inline_errors="yes"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the type of error reporting: inline or error template.
 
 ### `return=`
 
@@ -39,6 +47,12 @@ This parameter allows you to define where the user will be returned after succes
 1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
 2.  Use a full URL. For example: return="<https://example.com/return.html>"
 
+### `return_error=`
+
+    return_error="template_group/error"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.
+
 ## Form Inputs
 NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
 
@@ -47,7 +61,7 @@ NOTE: Be sure to include the required Javascript and CSS to use the native [Pass
             <label>Your New Password</label><br />
             <input type="password" name="password" value="" maxlength="50" size="40" />
 
-The new password to set.    
+The new password to set.
 
 ### Password Confirmation
 
@@ -57,49 +71,36 @@ The new password to set.
 
 Duplicate of the new password set in the password form input.
 
-
-## Variable Pairs
-
-### `{errors}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    {errors}
-        <p>{error}</p>
-    {/errors}
-
-#### Error Tag Pair Parameters
-
-##### `backspace=`
-
-    backspace="3"
-
-The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair.
-
-#### Error Tag Pair Variables
-
-##### `{error}`
-
-    {error}
-
-The error text.
-
-
-
 ## Example
 
     {exp:member:reset_password_form
         return="member/login/success"
+        inline_errors="yes"
         }
+
+        {if errors}
+            <fieldset class="error">
+                <legend>Errors</legend>
+                {errors}
+                    <p>{error}</p>
+                {/errors}
+            </fieldset>
+        {/if}
 
         <p>
             <label>Your New Password</label><br />
             <input type="password" name="password" value="" maxlength="50" size="40" />
+            {if error:password}
+                <span class="error">{error:password}</span>
+            {/if}
         </p>
 
         <p>
             <label>Confirm New Password</label><br />
             <input type="password" name="password_confirm" value="" maxlength="50" size="40" />
+            {if error:password_confirm}
+                <span class="error">{error:password_confirm}</span>
+            {/if}
         </p>
 
         <p><input type="submit" name="submit" value="Submit" /></p>

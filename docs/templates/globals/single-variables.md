@@ -7,13 +7,13 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Single Global Variables
+# Global Variables
 
 [TOC]
 
 These Global Variables can be used anywhere within your Templates. Note that they are subject to ExpressionEngine's [parsing order](templates/engine.md), which can affect their availability when used inside other tags.
 
-## Variables
+## Single Variables
 
 [TOC=3 hide]
 
@@ -39,7 +39,7 @@ The active session id for the control panel. This is the value needed in the "S=
       &bull; <a href="{cp_url}?/cp/addons/settings/my_addon{if cp_session_id}&S={cp_session_id}{/if}">CP Link</a>
     {/if}
 
-NOTE: **Note:** To check non-primary roles, use [exp:member:has_role](/member/member-roles-tags.html#expmemberhas_role)
+NOTE: **Note:** To check non-primary roles, use [exp:member:has_role](/member/member-roles-tags.md#expmemberhas_role)
 
 ### `{cp_url}`
 
@@ -315,7 +315,7 @@ The Member ID for the currently logged-in user.
 
 The Primary Role ID number for the currently logged-in user.
 
-NOTE: **Note:** To check and display non-primary roles, use [exp:member:has_role](/member/member-roles-tags.html#expmemberhas_role)
+NOTE: **Note:** To check and display non-primary roles, use [exp:member:has_role](/member/member-roles-tags.md#expmemberhas_role)
 
 ### `{logged_in_primary_role_name}`
 
@@ -360,3 +360,26 @@ The total number of forum topics made by the currently logged-in user.
 ### `{logged_in_username}`
 
 The username for the currently logged-in user.
+
+## Error Variables
+
+ExpressionEngine makes several variables available for handling [Form Validation](/templates/form-validation.md) errors.
+
+### `{if errors}`
+
+Conditionally check if error messages are present.
+
+### `{errors}...{error}...{/errors}`
+
+This variable pair is useful for displaying all errors at once, for example, in a fieldset at the top of the form. Inside the pair, each individual error message is available as `{error}` variable.
+
+    {if errors}
+        <p class="error">Please correct the following errors:</p>
+        <ul>
+            {errors}
+                <li>{error}</li>
+            {/errors}
+        </ul>
+    {if:else}
+        <!-- No errors, or form not submitted yet -->
+    {/if}

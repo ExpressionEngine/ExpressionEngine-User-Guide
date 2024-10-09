@@ -17,21 +17,12 @@
 
 This template tag allows editing a member's profile using the form that is similar to [Channel Form](channels/channel-form/overview.md). Please note however that not all Channel Form parameters and template tags are available in the Member Profile form, so make sure to consult the documentation below. The form can only be used to update profile of the member that is currently logged in.
 
+{{embed:_tips/form-validation.md}}
+
 ## Parameters
 
 {{embed:_tips/form-attributes.md}}
 
-### `datepicker=`
-
-Include the datepicker javascript.  This should be set to ``yes`` if there is a date type member custom field in order to output the calendar.
-
-    datepicker="yes"
-
-### `include_assets=`
-
-    include_assets="yes"
-
-Adds the Javascript and CSS that is required by custom member fields to your form. By default, these are **not** included
 
 ### `datepicker=`
 
@@ -40,24 +31,6 @@ Adds the Javascript and CSS that is required by custom member fields to your for
 Adds the datepicker to your date fields. Defaults to "yes".
 
 NOTE: **Note:** If you are manually constructing a date field, in order to apply the date picker you must include `rel="date-picker"`.
-
-### `include_css=`
-
-    include_css="no"
-
-Allows you to manage the inclusion of required CSS independently from the `include_assets` parameter. Defaults to "yes".
-
-### `include_jquery=`
-
-    include_jquery="no"
-
-Includes jQuery automatically. Defaults to "yes".
-
-NOTE: **Note:** If you are using your own copy of jQuery you will need to load it **before** the form.
-
-### `return=`
-
-    return="member/registration/success"
 
 ### `form_class=`
 
@@ -76,6 +49,44 @@ This parameter allows you to specify the id attribute for the &lt;form&gt; tag.
     form_name="login"
 
 This parameter allows you to specify a name attribute for the &lt;form&gt; tag.
+
+### `include_assets=`
+
+    include_assets="yes"
+
+Adds the Javascript and CSS that is required by custom member fields to your form. By default, these are **not** included
+
+### `include_css=`
+
+    include_css="no"
+
+Allows you to manage the inclusion of required CSS independently from the `include_assets` parameter. Defaults to "yes".
+
+### `include_jquery=`
+
+    include_jquery="no"
+
+Includes jQuery automatically. Defaults to "yes".
+
+NOTE: **Note:** If you are using your own copy of jQuery you will need to load it **before** the form.
+
+### `inline_errors=`
+
+    inline_errors="yes"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the type of error reporting: inline or error template.
+
+### `return=`
+
+    return="member/registration/success"
+	
+### `return_error=`
+
+    return_error="template_group/error"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.	
+
+
 
 ## Form Inputs
 NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
@@ -194,6 +205,7 @@ Short name of the fieldtype used for field
     {exp:member:edit_profile
         return="member/registration/success"
 		include_assets="yes"
+        inline_errors="yes"
 		datepicker="yes"
         }
 
@@ -204,27 +216,42 @@ Short name of the fieldtype used for field
             <p>
                 <label for="username">Username*:</label><br />
                 <input type="text" name="username" id="username" value="{username}"/><br />
+                {if error:username}
+                    <span class="error">{error:username}</span>
+                {/if}
             </p>
 
             <p>
                 <label for="email">Email:</label><br />
                 <input type="text" name="email" id="email" value="{email}"/><br />
+                {if error:email}
+                    <span class="error">{error:email}</span>
+                {/if}
             </p>
 
             <p>
                 <label for="password">Password:</label><br />
                 <input type="password" name="password" id="password" value=""/>
+                {if error:password}
+                    <span class="error">{error:password}</span>
+                {/if}
             </p>
 
             <p>
                 <label for="password_confirm">Confirm password*:</label><br />
                 <input type="password" name="password_confirm" id="password_confirm" value=""/>
+                {if error:password_confirm}
+                    <span class="error">{error:password_confirm}</span>
+                {/if}
             </p>
 
             <p>
                 <label for="current_password">Current password*:</label><br />
 					<em>You <b>must</b> enter your current password to change your password, username or email.</em>
                  <input type="password" name="current_password" id="current_password" value=""/>
+                 {if error:current_password}
+                    <span class="error">{error:current_password}</span>
+                {/if}
             </p>
 
 
@@ -235,6 +262,9 @@ Short name of the fieldtype used for field
 
                 {form:custom_profile_field}
 
+                {if has_error}
+                    <span class="error">{error}</span>
+                {/if}
             </p>
          {/custom_profile_fields}
 
