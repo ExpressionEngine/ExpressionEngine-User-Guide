@@ -25,7 +25,7 @@ Upon successful generation of new templates, you will be brought to the Template
 
 ## Command Line Usage
 
-You can also generate templates using [ExpressionEngine's Command Line Interface (CLI)](../cli/usage.md). The main CLI command to access all template generators in the system is: `php system/ee/eecli.php generate:templates`.
+You can also generate templates using [ExpressionEngine's Command Line Interface (CLI)](/cli/usage.md). The main CLI command to access all template generators in the system is: `php system/ee/eecli.php generate:templates`.
 
 To get the list of available template generators, pass the `--list` option to the command:
 
