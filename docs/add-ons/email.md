@@ -66,6 +66,12 @@ The contact form is created similar to a standard web form, only you **do not** 
 
 This allows you to set the character set of the email being sent. Use this if your form's template is using a character set other than iso-8859-1.
 
+### `inline_errors=`
+
+    inline_errors="yes"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the type of error reporting: inline or error template.
+
 ### `name=`
 
     name="myForm"
@@ -121,6 +127,12 @@ If used with the redirect="none" parameter, the link text can be specified by ad
     return="|Return to the Site"
 
 If the `redirect` parameter was set to value of `return`, then the user will be redirected immediately after submission of the form.
+
+### `return_error=`
+
+    return_error="template_group/error"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.
 
 ### `preview=`
 

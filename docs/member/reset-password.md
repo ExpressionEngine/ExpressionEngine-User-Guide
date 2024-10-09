@@ -32,6 +32,12 @@ Output a reset password form that allows members accessing it via a link from a 
 
 ## Parameters
 
+### `inline_errors=`
+
+    inline_errors="yes"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the type of error reporting: inline or error template.
+
 ### `return=`
 
     return="member/login/success"
@@ -40,6 +46,12 @@ This parameter allows you to define where the user will be returned after succes
 
 1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
 2.  Use a full URL. For example: return="<https://example.com/return.html>"
+
+### `return_error=`
+
+    return_error="template_group/error"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.
 
 ## Form Inputs
 NOTE: Be sure to include the required Javascript and CSS to use the native [Password Validation](member/password-validation.md).
