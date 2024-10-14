@@ -219,6 +219,12 @@ You may also let the user choose by using an Include Future Entries form field. 
         <option value="yes">Yes</option>
     </select>
 
+### `show_offline_sites=`
+
+    show_offline_sites="no"
+
+When this option is set to "no", entries from MSM sites that are set to "offline" will not be included in the results. The default is "yes", which includes entries from offline sites.
+
 ### `site=`
 
     site="default_site"

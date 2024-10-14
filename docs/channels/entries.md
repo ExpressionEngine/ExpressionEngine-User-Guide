@@ -608,6 +608,12 @@ There are three valid options for this parameter: "yes", "no", "only". The defau
 
 You can determine whether you wish for entries dated in the "future" to be included. This option is useful when doing things like creating a list of events, some of which have not occurred yet. Note that EE will still display past entries; this parameter simply instructs EE to also include entries from the future.
 
+### `show_offline_sites=`
+
+    show_offline_sites="no"
+
+When this option is set to "no", entries from MSM sites that are set to "offline" will not be included in the results. The default is "yes", which includes entries from offline sites.
+
 ### `show_pages=`
 
     show_pages="only" show_pages="no"
