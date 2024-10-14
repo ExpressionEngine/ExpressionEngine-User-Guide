@@ -51,7 +51,7 @@ This can be done in two ways:
 - assign custom field to a [Field Group](/control-panel/field-manager/field-manager-settings.md#createedit-field-group) which is associated to the Channel
 - assign field directly to channel by editing [Channel preferences](control-panel/channels.md#fields-tab)
 
-When working with [templates](templates/overview.md) you will be referencing the field by its short name. For convenience the short name can be displayed next to the field's name in the publish form (<img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/field_short_name.png" alt="field short name">) and will be copied to the clipboard when clicked. Displaying the short name can be toggled on or off in the [Role](control-panel/member-manager.md) settings.
+When working with [templates](templates/overview.md) you will be referencing the field by its short name or tag pair. For convenience the short name can be displayed next to the field's name in the publish form (<img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/field_short_name.png" alt="field short name">) and the variable(s) required to display the content will be copied to the clipboard when clicked. Displaying the short name can be toggled on or off in the [Role](control-panel/member-manager.md) settings.  Copying code via the shortname is only supported when on HTTPS.
 
 Note that some fields can be displayed with just single tags while others would require a tag pair with extra variables. More information can be found in the documentation for the field's specific [field type](fieldtypes/overview.md).
 

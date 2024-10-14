@@ -11,7 +11,9 @@
 
 **Control Panel Location: `Developer > Channels`**
 
-This section of the Control Panel is where channels are created, edited and deleted.
+This section of the Control Panel is where channels are created, edited and deleted. 
+
+The channel shortname on the main display supports quick copying the full template tag for the channel, including all fields assigned to the channel. The copied code is ready to use on your [templates](templates/overview.md). Quick copying code via the channel shortname is only supported when on HTTPS.
 
 [TOC]
 
