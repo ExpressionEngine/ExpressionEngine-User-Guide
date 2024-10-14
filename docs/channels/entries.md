@@ -33,6 +33,8 @@ The directives that tell the tag how to behave are **parameters**:
 
 Within the opening and closing ExpressionEngine Tags are **variables**. `{title}` is replaced with the Title of each entry, and `{body}` is replaced with the content from the "Body" field of each entry.
 
+The Channel Entries module provides a [Template Generator](templates/generators.md) that creates functional templates while demonstrating the parameters and variables documented below.
+
 ## Parameters
 
 [TOC=3 hide]
