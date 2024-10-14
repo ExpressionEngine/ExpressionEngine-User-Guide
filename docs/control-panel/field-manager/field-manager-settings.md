@@ -17,7 +17,7 @@ This section of the Control Panel is where custom fields are created, edited and
 
 ![](_images/cp-field-manager.png)
 
-The field shortname supports quick copying the full tag needed to display the field. The copied can is ready to use on your [templates](templates/overview.md).  Quick copying code via the channel shortname is only supported when on HTTPS.
+The field shortname supports quick copying the full tag needed to display the field. The copied can is ready to use on your [templates](templates/overview.md).  Displaying the short name can be toggled on or off in the [Role](control-panel/member-manager.md) settings.  Due to security restrictions in modern browsers quick copying code via the shortname is only supported when on HTTPS.
 
 Tip: How to Find Where a Field Is Used
 <div class="video-wrapper">
