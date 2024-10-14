@@ -28,6 +28,7 @@
 **Enhancements** 🚀
 
 - Introducing [Template Generators](https://expressionengine.com/blog/7.5-code-generators)
+- Expanded copy shortname functionality to the Channel and Field Manager making it possible to copy full template code for channels, field groups, and fields.
 - Show errors in Control Panel using default layout with sidebar [#3536](https://github.com/ExpressionEngine/ExpressionEngine/issues/3536)
 - Update specialty message templates if the site is using outdated EE2 versions
 - Fluid Field Group Improvements: Allow field group parsing outside of `{fields}` loop, Add new fixed_order and order parameters to `{fields}` tag, Update order of fields within `{fields}` tag to default to Field Group order
