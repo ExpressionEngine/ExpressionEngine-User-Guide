@@ -241,7 +241,7 @@ This section of the Control Panel allows you to create or edit a template group.
 
 ## Template Generators
 
-**Control Panel Location: `Developer > Templates > Template Generators`**
+**Control Panel Location: `Developer > Templates > Template Generator`**
 
 This section of the Control Panel allows you to automatically create the basic tag framework for a variety of modules, including channels, navigation, member tags, etc. using [Template Generators](templates/generators.md).
 
@@ -249,4 +249,4 @@ This section of the Control Panel allows you to automatically create the basic t
 
 **Control Panel Location: `Developer > Templates > Export`**
 
-![Export All Templates icon](/_images/export_templates.png) Clicking the Export All Templates Icon will download all templates, partials, and variables as a compressed *.zip archive. 
+![Export All Templates icon](/_images/export_templates.png) Clicking the Export All Templates Icon will download all templates, partials, and variables as a compressed *.zip archive.

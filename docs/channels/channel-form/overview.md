@@ -24,11 +24,10 @@ The Channel Form makes it possible to add and edit channel entries from outside 
 - Server-side validation.
 - Handles AJAX requests and can output responses in JSON.
 
-NOTE: See the [template generator](control-panel/template-manager.md#template-generators) for the channel form in ExpressionEngine 7.5+.
-
 ## Basic Usage
 
-TIP: Please visit the [Examples](channels/channel-form/examples.md) page to see a variety of implementations.
+TIP: You can view the [Examples](channels/channel-form/examples.md) page to see a variety of implementations.
+ The Channel Form [Template Generator](templates/generators.md) can also help create a functional template that demonstrates the parameters and variables documented below.
 
 The first thing you will need is a `{exp:channel:form}` tag pair, along with a few [parameters](#parameters) to determine where to submit the entry:
 

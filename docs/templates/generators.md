@@ -15,7 +15,7 @@ ExpressionEngine provides a set of template generators that allow you to quickly
 
 ## Control Panel Usage
 
-Before you can use the template generators you will need to set up your channels and custom fields. Once this is done you can navigate to Templates > Template Generator.
+Before you can use the template generators you will need to set up your channels and custom fields. Once this is done you can navigate to `Developer > Templates > Template Generator`.
 
 ![ExpressionEngine Control Panel Template Generator](_images/cp-template-generators.png)
 

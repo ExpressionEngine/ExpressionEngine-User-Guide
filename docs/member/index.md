@@ -14,7 +14,7 @@ You'll find many member management options available at:
 - The [Members](control-panel/member-manager.md) section, which hosts a comprehensive suite of member management utilities including the [Membership Preferences](control-panel/settings/members.md) page.
 - The My Account Page, accessible from the Control Panel's sidebar. It can also display information for any member if you choose a particular member from `Members`.
 - Member [global template variables](templates/globals/single-variables.md#member-variables), which allow you to output information on the current user.
-- Member tags can be used to build a robust frontend member  area, enabling your site members to manage their personal profile information without having access to your Control Panel.
+- Member tags can be used to build a robust frontend member  area, enabling your site members to manage their personal profile information without having access to your Control Panel.  The Member Management [Template Generator](templates/generators.md) can create a set of functional templates that demonstrate how to use these tags along with their available parameters and variables.
 
 
 NOTE: **Note:** A member account's Username and Screen Name can be identical, but the Username must be unique system-wide.
@@ -33,8 +33,6 @@ NOTE: **Note:** A member account's Username and Screen Name can be identical, bu
 - [Member Roles Tags](member/member-roles-tags.md)
 - [Ignore List Tag](member/ignore-list.md)
 - [Profile Templates (Legacy)](member/profile-templates.md)
-
-NOTE: **Note:** See the [template generator](control-panel/template-manager.md#template-generators) for the member templates in ExpressionEngine 7.5+.
 
 
 ### Member Navigation
