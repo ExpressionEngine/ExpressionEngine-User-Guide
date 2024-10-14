@@ -239,6 +239,12 @@ Tip: Custom Ordering Template Groups
 
 This section of the Control Panel allows you to create or edit a template group.
 
+## Template Generators
+
+**Control Panel Location: `Developer > Templates > Template Generators`**
+
+This section of the Control Panel allows you to automatically create the basic tag framework for a variety of modules, including channels, navigation, member tags, etc. using [Template Generators](templates/generators.md).
+
 ## Export Templates
 
 **Control Panel Location: `Developer > Templates > Export`**
