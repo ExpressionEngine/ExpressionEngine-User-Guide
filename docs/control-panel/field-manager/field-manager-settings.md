@@ -17,6 +17,8 @@ This section of the Control Panel is where custom fields are created, edited and
 
 ![](_images/cp-field-manager.png)
 
+The field shortname supports quick copying the full tag needed to display the field. The copied can is ready to use on your [templates](templates/overview.md).  Displaying the short name can be toggled on or off in the [Role](control-panel/member-manager.md) settings.  Due to security restrictions in modern browsers quick copying code via the shortname is only supported when on HTTPS.
+
 Tip: How to Find Where a Field Is Used
 <div class="video-wrapper">
 <iframe src="https://www.youtube.com/embed/vXbm9aoOQXU?si=VoUJjU-9gvsNKHT7" title="How to Determine Where Channel Fields are Used in ExpressionEngine" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
