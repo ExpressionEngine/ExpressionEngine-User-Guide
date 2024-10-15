@@ -11,7 +11,10 @@
 
 Welcome to the official ExpressionEngine Docs! In addition to the documentation, there are a number of resources linked below that will help you learn how to master ExpressionEngine.
 
-<div id="welcome-introduce" class="eeconf-promo max-w-full mx-auto p-8 lg:p-10 bg-white rounded-lg shadow-custom-black flex mt-12 flex-wrap lg:flex-nowrap">
+<!--
+EECONF BANNER
+
+  <div id="welcome-introduce" class="eeconf-promo max-w-full mx-auto p-8 lg:p-10 bg-white rounded-lg shadow-custom-black flex mt-12 flex-wrap lg:flex-nowrap">
             <div class="w-64 h-64 mr-10 flex-shrink-0 mb-4 lg:mb-0">
                 <a href="https://eeconf.com/"><img src="https://eeconf.com/eeconf/300x250.jpg" width="max-w-full mb-0"></a>
             </div>
@@ -27,6 +30,7 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
                 </p>
             </div>
         </div>
+-->
         
 <div id="welcome-introduce" class="max-w-full mx-auto p-8 lg:p-10 bg-white rounded-lg shadow-custom-black flex mt-12 flex-wrap lg:flex-nowrap">
     <div class="w-64 h-64 mr-10 flex-shrink-0 mb-4 lg:mb-0">
