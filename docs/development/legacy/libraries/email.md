@@ -30,8 +30,9 @@ The Email class will automatically create all email headers and will process the
     ee()->load->library('email');
     ee()->load->helper('text');
 
-    ee()->email->wordwrap = true;
-    ee()->email->mailtype = 'text';
+    ee()->email->set_wordwrap(TRUE);
+    ee()->email->set_mailtype('html');
+
     ee()->email->from($from);
     ee()->email->to($recipient);
     ee()->email->subject($email_subject);
@@ -212,7 +213,7 @@ Returns a string containing any server messages, the email headers, and the emai
 | \$clear_attachments | `Boolean` | If set to `TRUE` attachments will be cleared out, otherwise they're left alone. |
 | Returns             | `Object`  | Email class object                                                              |
 
-Clears out all parameters set either by property or method:
+Clears out all the message-specific parameters set either by property or method (text, recipient, subject, etc.), but not including the overall parameters like the charset, wordwrap, mailtype, and the sending method (smtp, etc.):
 
     ee()->email->clear();
 
@@ -223,8 +224,8 @@ If you are sending multiple emails in a method either for notifications or becau
     ee()->load->library('email');
     ee()->load->helper('text');
 
-    ee()->email->wordwrap = true;
-    ee()->email->mailtype = 'text';
+    ee()->email->set_wordwrap(TRUE);
+    ee()->email->set_mailtype('html');
     $errors = array();
 
     foreach($member_emails as $username => $from)

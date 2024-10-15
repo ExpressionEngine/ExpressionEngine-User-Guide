@@ -39,7 +39,7 @@ NOTE: **Note:** If you let the system create your URL Title for you it will conv
 
 ### Entry Fields
 
-The names and types of entry custom fields displayed will be determined by what [Fields](/fieldtypes/overview.md) you have defined for this channel. 
+The names and types of entry custom fields displayed will be determined by what [Fields](/fieldtypes/overview.md) you have defined for this channel.
 
 If an entry field is set to be "hidden" by default, it will have to be expanded by clicking on the field name before content can be entered.
 
@@ -51,7 +51,10 @@ This can be done in two ways:
 - assign custom field to a [Field Group](/control-panel/field-manager/field-manager-settings.md#createedit-field-group) which is associated to the Channel
 - assign field directly to channel by editing [Channel preferences](control-panel/channels.md#fields-tab)
 
-When working with [templates](templates/overview.md) you will be referencing the field by its short name. For convenience the short name can be displayed next to the field's name in the publish form (<img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/field_short_name.png" alt="field short name">) and will be copied to the clipboard when clicked. Displaying the short name can be toggled on or off in the [Role](control-panel/member-manager.md) settings.
+When working with [templates](templates/overview.md) you will be referencing the field by its short name or tag pair. For convenience the short name can be displayed next to the field's name in the publish form (<img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/field_short_name.png" alt="field short name">) and the variable(s) required to display the content will be copied to the clipboard when clicked. Displaying the short name can be toggled on or off in the [Role](control-panel/member-manager.md) settings.
+
+NOTE:
+Due to security restrictions in modern browsers quick copying code via the shortname is only supported when on HTTPS.
 
 Note that some fields can be displayed with just single tags while others would require a tag pair with extra variables. More information can be found in the documentation for the field's specific [field type](fieldtypes/overview.md).
 
@@ -189,6 +192,6 @@ A live preview of the entry is available if the `channel_prefs_preview_url` is s
 
 If neither is set, the preview button will have an exclamation mark (!) and will link to channel preferences page where Preview URL can be set.
 
-The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise. 
+The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise.
 
 When the preview is triggered, it is being displayed side-by-side with edit screen. The size of preview container can be adjusted with mouse dragging its border. The preview is dynamically being updated as you change the fields.

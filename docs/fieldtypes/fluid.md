@@ -61,8 +61,8 @@ For example, if you have a Fluid field `fluid_content` with a text field `fluid_
 
 The prefixed tag pair is a looping tag pair. You can have more than one `fluid_text` field for the entry, it's entirely at the entry author's discretion. The author also determines the order of the field output.
 
-Displaying field groups from within Fluid field is slightly different, as it requires additions `{fields}` tag pair.
-So given that `blog` is the short name of custom field group and `fluid_header` and `fluid_text` are fields in that group, the template might look like:
+Displaying field groups from within Fluid field is slightly different, as it uses a `{fields}` tag pair to loop through fields within the field group.  The order of fields within the loop defaults to the same order of the fields within the field group.  You may reverse this order by using `{fields order="desc"}` or specify a different order with `{fields fixed_order="field_2|field_1"}`.
+So given that `blog` is the short name of our custom field group and `fluid_header` and `fluid_text` are fields in that group, the template might look like:
 
     {fluid_content}
 
@@ -75,6 +75,18 @@ So given that `blog` is the short name of custom field group and `fluid_header` 
             <div>{content}</div>
           {/fluid_content:fluid_text}
         {/fields}
+      {/fluid_content:blog}
+
+    {/fluid_content}
+
+ExpressionEngine 7.5 introduces the ability to access fields from a field group without the use of a `{fields}` loop.
+The field name must be prefixed by the group's short_name and placed within the group tag like this:
+
+    {fluid_content}
+
+      {fluid_content:blog}
+          <h3>{blog:fluid_header}</h3>
+          <div>{blog:fluid_text}</div>
       {/fluid_content:blog}
 
     {/fluid_content}
@@ -181,13 +193,13 @@ Additionally, the following variable are available **when using custom field gro
 
     {fluid_content:count_in_group}
 
-The "count" out of the fields being displayed in a field group. If five fields are in a group, then for the fourth field the `count` variable would have a value of "4". 
+The "count" out of the fields being displayed in a field group. If five fields are in a group, then for the fourth field the `count` variable would have a value of "4".
 
 ### `first_in_group`
 
     {fluid_content:first_in_group}
 
-True, if the current field is the first one in the current field group. 
+True, if the current field is the first one in the current field group.
 
 ### `index_in_group`
 
@@ -441,7 +453,7 @@ Radio and single select fields use single variables:
       {/my_fluid_field:my_relationship}
     {/my_fluid_field}
 
-### RTF Text and Textare Fields
+### RTF Text and Textarea Fields
 
     {my_fluid_field}
       {my_fluid_field:my_textarea}

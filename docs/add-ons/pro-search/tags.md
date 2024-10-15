@@ -10,18 +10,19 @@
 
 [TOC]
 
-**These terms are used throughout the documentation:**  
+**These terms are used throughout the documentation:**
 ```
-required: This parameter/field is required for this tag to function.  
-form only: This can only be set as a field in the form and not as a parameter in the tag.  
-param only: This parameter can only be set in the tag and not as a field in the form.  
-fixed value: This field cannot be edited and is set with a fixed value.  
-recurring only: This parameter/field only applies to recurring charges.  
-one-time only: This parameter/field only applies to one-time charges.  
-added in X.X.X: This parameter/field is only available from this version forward.  
-logged in: This tag is only available if the user is logged in.  
+required: This parameter/field is required for this tag to function.
+form only: This can only be set as a field in the form and not as a parameter in the tag.
+param only: This parameter can only be set in the tag and not as a field in the form.
+fixed value: This field cannot be edited and is set with a fixed value.
+recurring only: This parameter/field only applies to recurring charges.
+one-time only: This parameter/field only applies to one-time charges.
+added in X.X.X: This parameter/field is only available from this version forward.
+logged in: This tag is only available if the user is logged in.
 ```
 
+NOTE: **Note:** See the [template generator](templates/generators.md) for the keyword search in ExpressionEngine 7.5+. Pro Search must be installed and a Collection created.
 
 ## {exp:pro_search:form}
 
@@ -156,7 +157,7 @@ Short syntax for the URL tag. When used, it will automatically inherit the query
 ## {exp:pro_search:filters}
 
 The Filters tag works identically to the Form tag, without generating a search form. Use it to show specific search filters anywhere on your page, or to create a list of URL tags in short syntax. The following example shows a list of one-click filters based on the current search that could be used to modify the results display with javascript:
-    
+
     {exp:pro_search:filters query="{segment_3}"}
      {exp:channel:categories channel="entries" style="linear"}
       {if count ==  1}<ul>{/if}
@@ -316,7 +317,7 @@ Alternative syntax for the native {if no_results}{/if} conditional.
 #### `group_id=`
 
 Limit shortcuts by given group ID
-    
+
     {exp:pro_search:shortcuts group_id="1"}
      {if count == 1}<ul>{/if}
       <li><a href="{path="search/{shortcut_name}"}">{shortcut_label}</a></li>
@@ -402,7 +403,7 @@ Group ID the shortcut needs to be saved to. **Required**.
       <button type="submit">Save</button>
      </fieldset>
     {/exp:pro_search:save}
-    
+
 #### `form_attribute=`
 
 Specifies any html attribute you want the form to have. For example: `form_id="search"` will add `id="search"` to the form tag, while `form_class="searchform"` will add `class="searchform"` to the tag.
@@ -437,7 +438,7 @@ The encoded search query to inherit. Not needed when [not encoding queries](http
 
 #### `reset=`
 
-Set to "yes" to stop this tag from inheriting the current query. 
+Set to "yes" to stop this tag from inheriting the current query.
 
     {exp:pro_search:url reset="yes"}
 
@@ -464,7 +465,7 @@ Use this single tag to output a single given parameter value outside of the Form
     {exp:pro_search:param get="item_size"}
 
 You can also use it as a paired loop to output multi-valued parameters.
- 
+
     {exp:pro_search:param:loop get="category" as="cat_id" query="{segment_3}"}
      {cat_id}
     {/exp:pro_search:param:loop}
@@ -500,7 +501,7 @@ Use this tag to display a list of popular keywords. The Search Log must be enabl
 #### `limit=`
 
 Maximum number of keywords to display. Defaults to 10.
-    
+
     {exp:pro_search:popular limit="10"}
      {if count == 1}<ul>{/if}
       <li>{keywords}: {search_count}</li>
@@ -624,7 +625,7 @@ Maximum number of suggestions to return. Defaults to 5.
 The method used for getting the suggestions, either `levenshtein` or `soundex`. Defaults to Levenshtein.
 
     {exp:pro_search:suggestions method="soundex"}
-    
+
 NOTE: **Note:** Using Soundex for generating suggestions is only effective for languages with a latin-based alphabet. The Levenshtein method works regardless of alphabet type.
 
 #### `query=`

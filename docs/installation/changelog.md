@@ -8,6 +8,47 @@
 -->
 # ExpressionEngine v7 Change Log
 
+# Version 7.5.0
+(Release: October 14, 2024)
+
+- **Contributors** 🙌
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulyaswan</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17011377?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Brad Akin</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bakin1999" target="_BLANK">@bakin1999</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Introducing [Template Generators](https://expressionengine.com/blog/7.5-code-generators)
+- Expanded copy shortname functionality to the Channel and Field Manager making it possible to copy full template code for channels, field groups, and fields.
+- Show errors in Control Panel using default layout with sidebar [#3536](https://github.com/ExpressionEngine/ExpressionEngine/issues/3536)
+- Update specialty message templates if the site is using outdated EE2 versions
+- Fluid Field Group Improvements: Allow field group parsing outside of `{fields}` loop, Add new fixed_order and order parameters to `{fields}` tag, Update order of fields within `{fields}` tag to default to Field Group order
+- Enable cloning of Menu Sets [#4214](https://github.com/ExpressionEngine/ExpressionEngine/issues/4214)
+- Add support for inline_errors in form submissions [#2871](https://github.com/ExpressionEngine/ExpressionEngine/issues/2871)
+- Added `{exp:channel:field}` tag to display field properties [#2870](https://github.com/ExpressionEngine/ExpressionEngine/issues/2870)
+- Update License Validation banners and improve messaging for users without ability to manage licenses
+- Added new config variable for setting the default template engine `$config['default_template_engine']`
+- Added Channel filter to the Field Manager
+- Updated Note Fieldtype so it can be used in templates to display its content
+
+**Bug Fixes** 💃🐛
+
+- Fixed [#4087](https://github.com/ExpressionEngine/ExpressionEngine/issues/4087), [#4055](https://github.com/ExpressionEngine/ExpressionEngine/issues/4055) where there were problems with copying short name of a field in the publish form
+- Resolved [#3556](https://github.com/ExpressionEngine/ExpressionEngine/issues/3556) where date fields could not accommodate dates past year 2038
+- Resolved [#3865](https://github.com/ExpressionEngine/ExpressionEngine/issues/3865) where cloning a fluid field could break existing field groups
+- Fix Live Preview bugs with Fluid field group [#4388](https://github.com/ExpressionEngine/ExpressionEngine/issues/4388)
+- Fix bug where adding new fields to field group in fluid would not allow existing entries to accept content for that field [#3741](https://github.com/ExpressionEngine/ExpressionEngine/issues/3741)
+- Fixed possible PHP warnings in Pro Search keyword handling
+
 # Version 7.4.11
 (Release: June 13, 2024)
 
@@ -1825,6 +1866,6 @@ NOTE:**Note:** If multiple members are needed, an ExpressionEngine Pro license i
   - Simple Commerce Add-on has now been removed from ExpressionEngine and made a downloadable add-on from the ExpressionEngine Store. On upgrades which use the Simple Commerce Add-on, the add-on will be moved from the `ee/addons` folder to `user/addons` and considered a user installed add-on.
   - Ip to Nation Add-on has now been removed from ExpressionEngine and made a downloadable add-on from the ExpressionEngine Store. On upgrades which use the Ip to Nation Add-on, the add-on will be moved from the `ee/addons` folder to `user/addons` and considered a user installed add-on.
   - The included version of jQuery used in the Control Panel has been updated to v3.6.0
-  - Added the option to [globally cache](/channels/entries.html#cache-refresh-cache_prefix) Channel Entries tag results
+  - Added the option to [globally cache](/channels/entries.md#cache-refresh-cache_prefix) Channel Entries tag results
   - Added [ENV File Support](/advanced-usage/env-support.md)
   - Added new Shared Form View
