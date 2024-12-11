@@ -1,0 +1,48 @@
+name: search
+
+on:
+  workflow_dispatch:
+
+jobs:
+  search:
+    name: Build Search Index
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+
+        - name: Setup Variables
+          run: |
+            if [[ "${{github.base_ref}}" == "7.x" || "${{github.ref}}" == "refs/heads/7.x" ]]; then
+              echo "DOCSEARCH_INDEX=expressionengine7" >> "$GITHUB_ENV"
+              echo "DOCS_URL=https://docs.expressionengine.com/latest" >> "$GITHUB_ENV"
+            else
+              echo "DOCSEARCH_INDEX=expressionengine7_staging" >> "$GITHUB_ENV"
+              echo "::add-mask::${{secrets.STAGING_DOCS_DOMAIN}}"
+              echo "DOCS_URL=${{secrets.STAGING_DOCS_URL}}" >> "$GITHUB_ENV"
+            fi
+
+        - name: Configure Docsearch Index
+          uses: richardrigutins/replace-in-files@v2
+          with:
+            search-text: "\"index_uid\": \"expressionengine\""
+            replacement-text: "\"index_uid\": \"${{ env.DOCSEARCH_INDEX }}\""
+            files: ./search.config.json
+
+        - name: Configure Docs Url
+          uses: richardrigutins/replace-in-files@v2
+          with:
+            search-text: "https://docs.expressionengine.com/latest"
+            replacement-text: ${{ env.DOCS_URL }}
+            files: ./search.config.json
+
+        - name: Scrape Docs
+          env:
+            HOST_URL: ${{ secrets.MEILISEARCH_HOST_URL }}
+            API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
+          run: |
+            docker run -t --rm \
+            -e MEILISEARCH_HOST_URL=$HOST_URL \
+            -e MEILISEARCH_API_KEY=$API_KEY \
+            -v ./search.config.json:/docs-scraper/search.config.json \
+            getmeili/docs-scraper:latest pipenv run ./docs_scraper search.config.json

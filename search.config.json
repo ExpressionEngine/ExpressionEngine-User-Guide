@@ -1,0 +1,183 @@
+{
+    "index_uid": "expressionengine",
+    "allowed_domains": [],
+    "start_urls": [
+        {
+            "url": "https://docs.expressionengine.com/latest/general",
+            "page_rank": 50
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/getting-started",
+            "page_rank": 45
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/installation",
+            "page_rank": 40
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/control-panel",
+            "page_rank": 5
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/channels",
+            "page_rank": 65
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/config",
+            "page_rank": 55
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/templates",
+            "page_rank": 60
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/troubleshooting",
+            "page_rank": 50
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/fieldtypes",
+            "page_rank": 55
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/comment",
+            "page_rank": 30
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/cli",
+            "page_rank": 35
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/member",
+            "page_rank": 30
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/optimization",
+            "page_rank": 35
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/security",
+            "page_rank": 35
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/localization",
+            "page_rank": 35
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/msm",
+            "page_rank": 30
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/advanced-usage",
+            "page_rank": 25
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/add-ons",
+            "page_rank": 25
+        },
+        {
+            "url": "https://docs.expressionengine.com/latest/development",
+            "page_rank": 30
+        }
+    ],
+    "sitemap_urls": [],
+    "stop_urls": [],
+    "min_indexed_level": 2,
+    "selectors_exclude": [
+        ".table-of-contents",
+        ".docs-footer"
+    ],
+    "selectors": {
+      "lvl0": {
+        "selector": "#docsearch-content h1",
+        "global": false
+      },
+      "lvl1": {
+        "selector": "#docsearch-content h2"
+      },
+      "lvl2": "#docsearch-content h3",
+      "lvl3": "#docsearch-content h4",
+      "lvl4": "#docsearch-content h5",
+      "lvl5": "#docsearch-content h6",
+      "text": "#docsearch-content > article > *:not(section), #docsearch-content > article > section > *:not(pre)"
+    },
+    "custom_settings": {
+        "displayedAttributes": [
+            "*"
+        ],
+        "searchableAttributes": [
+            "hierarchy_radio_lvl0",
+            "hierarchy_radio_lvl1",
+            "hierarchy_radio_lvl2",
+            "hierarchy_radio_lvl3",
+            "hierarchy_radio_lvl4",
+            "hierarchy_radio_lvl5",
+            "hierarchy_lvl0",
+            "hierarchy_lvl1",
+            "hierarchy_lvl2",
+            "hierarchy_lvl3",
+            "hierarchy_lvl4",
+            "hierarchy_lvl5",
+            "hierarchy_lvl6",
+            "content",
+            "anchor",
+            "url",
+            "objectID"
+        ],
+        "filterableAttributes": [
+            "hierarchy_lvl0",
+            "hierarchy_lvl1",
+            "hierarchy_lvl2",
+            "hierarchy_lvl3"
+        ],
+        "sortableAttributes": [],
+        "rankingRules":
+        [
+            "words",
+            "typo",
+            "proximity",
+            "attribute",
+            "page_rank:desc",
+            "exactness",
+            "sort"
+        ],
+        "stopWords": [
+            "a", "and", "as", "at", "be", "but", "by",
+            "do", "does", "doesn't", "for", "from",
+            "in", "is", "it", "no", "nor", "not",
+            "of", "off", "on", "or",
+            "so", "should", "than", "that", "that's", "the",
+            "then", "there", "there's", "these",
+            "this", "those", "to", "too",
+            "up", "was", "wasn't", "what", "what's", "when", "when's",
+            "where", "where's", "which", "while", "who", "who's",
+            "with", "won't", "would", "wouldn't", "example", "option"
+        ],
+        "nonSeparatorTokens": [],
+        "separatorTokens": [],
+        "dictionary": [],
+        "synonyms": {
+            "add-on": ["addon"],
+            "addon": ["add-on"],
+            "fieldtype": ["field type"],
+            "field type": ["fieldtype"]
+        },
+        "distinctAttribute": null,
+        "typoTolerance": {
+            "enabled": true,
+            "minWordSizeForTypos": {
+            "oneTypo": 5,
+            "twoTypos": 9
+            },
+            "disableOnWords": [],
+            "disableOnAttributes": []
+        },
+        "faceting": {
+            "maxValuesPerFacet": 100
+        },
+        "pagination": {
+            "maxTotalHits": 50
+        },
+        "proximityPrecision": "byWord",
+        "searchCutoffMs": null
+    }
+  }

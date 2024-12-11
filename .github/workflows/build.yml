@@ -1,0 +1,93 @@
+name: Build Docs
+
+on:
+  push:
+    branches:
+      - feature/docsearch
+      - 7.x
+      - 7.dev
+
+jobs:
+  build:
+    name: Build Documentation HTML
+    runs-on: ubuntu-latest
+    outputs:
+      DOCSEARCH_INDEX: ${{ steps.setup_vars.outputs.DOCSEARCH_INDEX }}
+      DOCS_URL: ${{ steps.setup_vars.outputs.DOCS_URL }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Variables
+        id: setup_vars
+        run: |
+          if [[ "${{github.base_ref}}" == "7.x" || "${{github.ref}}" == "refs/heads/7.x" ]]; then
+            echo "DOCSEARCH_INDEX=expressionengine7" >> "$GITHUB_OUTPUT"
+          else
+            echo "DOCSEARCH_INDEX=expressionengine7_staging" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update Docsearch Index
+        uses: richardrigutins/replace-in-files@v2
+        with:
+          search-text: "docsearch_index: 'expressionengine'"
+          replacement-text: "docsearch_index: '${{steps.setup_vars.outputs.DOCSEARCH_INDEX}}'"
+          files: ./config.yml
+
+      - name: Install NPM and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Archive Build files
+        uses: actions/upload-artifact@v4
+        with:
+          name: EEDocs7.latest
+          path: build
+
+      - name: Zip the docs
+        uses: montudor/action-zip@v1
+        with:
+          args: zip -qq -r EEDocs7.latest.zip build
+
+#   search:
+#     name: Build Search Index
+#     needs: build
+#     runs-on: ubuntu-latest
+#     steps:
+#         - name: Checkout code
+#           uses: actions/checkout@v2
+
+#         - name: Setup Variables
+#           run: |
+#             if [[ "${{github.base_ref}}" == "7.x" || "${{github.ref}}" == "refs/heads/7.x" ]]; then
+#               echo "DOCS_URL=https://docs.expressionengine.com/latest" >> "$GITHUB_ENV"
+#             else
+#               echo "::add-mask::${{secrets.STAGING_DOCS_DOMAIN}}"
+#               echo "DOCS_URL=${{secrets.STAGING_DOCS_URL}}" >> "$GITHUB_ENV"
+#             fi
+
+#         - name: Configure Docsearch Index
+#           uses: richardrigutins/replace-in-files@v2
+#           with:
+#             search-text: "\"index_uid\": \"expressionengine\""
+#             replacement-text: "\"index_uid\": \"${{ needs.build.outputs.DOCSEARCH_INDEX }}\""
+#             files: ./search.config.json
+
+#         - name: Configure Docs Url
+#           uses: richardrigutins/replace-in-files@v2
+#           with:
+#             search-text: "https://docs.expressionengine.com/latest"
+#             replacement-text: ${{ env.DOCS_URL }}
+#             files: ./search.config.json
+
+#         - name: Scrape Docs
+#           env:
+#             HOST_URL: ${{ secrets.MEILISEARCH_HOST_URL }}
+#             API_KEY: ${{ secrets.MEILISEARCH_API_KEY }}
+#           run: |
+#             docker run -t --rm \
+#             -e MEILISEARCH_HOST_URL=$HOST_URL \
+#             -e MEILISEARCH_API_KEY=$API_KEY \
+#             -v ./search.config.json:/docs-scraper/search.config.json \
+#             getmeili/docs-scraper:latest pipenv run ./docs_scraper search.config.json
