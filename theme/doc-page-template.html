@@ -14,7 +14,7 @@
 
 		<title>{{page_title}} — ExpressionEngine {{current_version}} Documentation</title>
 
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3" />
+        <link rel="stylesheet" href="https://unpkg.com/meilisearch-docsearch@latest/dist/index.css"/>
 
 		<link rel="stylesheet" href="{{root_dir}}_assets/default.min.css">
 
@@ -93,7 +93,7 @@
 		<div class="sidebar-container">
 			<div class="sidebar">
 				<div class="sidebar-search" id="docsearch">
-				
+
 				</div>
 
 				<div class="sidebar-toc">
@@ -127,20 +127,20 @@
 			</div>
 		</section>
 
-		<script src="https://cdn.jsdelivr.net/npm/@docsearch/js@3"></script>
-		<script type="text/javascript">
-
-			docsearch({
-				appId: 'BFKETQLPH4',
-				apiKey: '871012547f7adf3ab753e99d158612f6',
-				indexName: 'expressionengine',
-				container: '#docsearch',
-				searchParameters: { 
-					'facetFilters': ["version:latest"],
-					},
-				debug: false
-			});
-		</script>
+        <script src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"></script>
+        <script>
+            const { docsearch } = window.__docsearch_meilisearch__;
+            docsearch({
+                container: "#docsearch",
+                host: "https://docsearch.expressionengine.com",
+                apiKey: "{{docsearch_public_key}}",
+                indexUid: "{{docsearch_index}}",
+                searchParams: {
+                    distinct: "hierarchy_lvl1",
+                    attributesToSearchOn: ["content","hierarchy_lvl1"],
+                }
+            });
+        </script>
 
 		<script src="{{root_dir}}_assets/main.min.js"></script>
 	</body>

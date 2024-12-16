@@ -11,6 +11,7 @@ const Fs         = require('fs')
 const Path       = require('path')
 const MarkedJs   = require('marked')
 
+
 const isUrl      = require('is-url')
 const { bsToFs } = require('./utility.js')
 const Logger     = require('./logger.js')
@@ -185,13 +186,56 @@ renderer.table = function(header, body) {
 	return `<div class="table-wrapper"><table><thead>${header}</thead>${body}</table></div>`
 }
 
+
+// The sectionLevel will help us prevent matching the same header multiple times.
+let sectionLevel = 0;
+
+// Creating regular expressions is expensive so we create them once.
+// Create 7 sections since that is the maximum heading level.
+const sectionRegexps = new Array(7).fill().map((e, i) => new RegExp(`^(#{${i + 1}} )[^]*?(?:\\n(?=\\1)|$)`));
+
+const sectionExtension = {
+    name: 'sectionBlock',
+    level: 'block',
+    start(src) {
+      // Match when # is at the beginning of a line.
+      return src.match(/^#/m)?.index;
+    },
+    tokenizer(src) {
+      const match = src.match(sectionRegexps[sectionLevel]);
+      if (!match) {
+        return;
+      }
+
+
+      sectionLevel++;
+      // Tokenize text inside the section.
+      // Only add sectionBlock token for headers one level up from current level.
+      const tokens = this.lexer.blockTokens(match[0]);
+      sectionLevel--;
+
+      return {
+        type: 'sectionBlock',
+        raw: match[0],
+        level: sectionLevel + 1,
+        tokens
+      };
+    },
+    renderer(token) {
+      const tag = token.level === 1 ? 'article' : 'section';
+      return `<${tag}>\n${this.parser.parse(token.tokens)}</${tag}>\n`;
+    }
+};
+
 // -------------------------------------------------------------------
 
 module.exports = function (text, info) {
 	currentPageInfo = info
 	tocGenerator = new PageTocGenerator()
 
-	let renderedContent = MarkedJs(text, { renderer: renderer })
+	MarkedJs.marked.use({ renderer: renderer, extensions: [sectionExtension] })
+    let renderedContent = MarkedJs.marked.parse(text)
+
 
 	renderedContent = tocGenerator.renderTocs(renderedContent, currentPageInfo)
 

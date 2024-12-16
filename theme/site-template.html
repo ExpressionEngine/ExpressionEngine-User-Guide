@@ -81,24 +81,17 @@
 </div>
 
 <script type="text/javascript">
-	docsearch({
-		apiKey: 'ba20cc61ab2d8a0148041c98eeddd9c6',
-		indexName: 'expressionengine',
-		inputSelector: '#docsearch-input',
-		algoliaOptions: { 
-					'facetFilters': ["version:latest"],
-					'hitsPerPage': 50 
-					},
-		debug: false
-	});
-	docsearch({
-		apiKey: 'ba20cc61ab2d8a0148041c98eeddd9c6',
-		indexName: 'expressionengine',
-		inputSelector: '#docsearch-input-2',
-		algoliaOptions: { 
-					'facetFilters': ["version:latest"],
-					'hitsPerPage': 50 
-					},
-		debug: false
-	});
+    const { docsearch } = window.__docsearch_meilisearch__;
+    docsearch({
+        container: "#docsearch-input",
+        host: "https://docsearch.expressionengine.com",
+        apiKey: "{{docsearch_public_key}}",
+        indexUid: "{{docsearch_index}}",
+    });
+    docsearch({
+        container: "#docsearch-input2",
+        host: "https://docsearch.expressionengine.com",
+        apiKey: "{{docsearch_public_key}}",
+        indexUid: "{{docsearch_index}}",
+    });
 </script>
