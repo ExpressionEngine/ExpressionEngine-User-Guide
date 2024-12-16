@@ -16,7 +16,7 @@
         },
         {
             "url": "https://docs.expressionengine.com/latest/control-panel",
-            "page_rank": 5
+            "page_rank": 50
         },
         {
             "url": "https://docs.expressionengine.com/latest/channels",
@@ -98,19 +98,13 @@
       "lvl3": "#docsearch-content h4",
       "lvl4": "#docsearch-content h5",
       "lvl5": "#docsearch-content h6",
-      "text": "#docsearch-content > article > *:not(section), #docsearch-content > article > section > *:not(pre)"
+      "content": "#docsearch-content > article > *:not(section), #docsearch-content > article > section > *:not(pre)"
     },
     "custom_settings": {
         "displayedAttributes": [
             "*"
         ],
         "searchableAttributes": [
-            "hierarchy_radio_lvl0",
-            "hierarchy_radio_lvl1",
-            "hierarchy_radio_lvl2",
-            "hierarchy_radio_lvl3",
-            "hierarchy_radio_lvl4",
-            "hierarchy_radio_lvl5",
             "hierarchy_lvl0",
             "hierarchy_lvl1",
             "hierarchy_lvl2",

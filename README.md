@@ -38,14 +38,14 @@ Manually load `/build/index.html` in your browser to view your local build. For 
 
 First you will need to choose a docsearch index name to use for your local testing and set that in `config.yml`
 
-Then you will need to build the docs and serve a local copy.  For simplicity's sake we recommend using the node http-server like this `npx http-server -o ./build`
+Then you will need to build the docs and serve a local copy.  For simplicity's sake we recommend using the node http-server like this `npx http-server -o`
 
 Next you will need to update all the urls in `search.config.json` to point at your local copy of the documentation.  Do a find/replace on `https://docs.expressionengine.com/latest` => `http://localhost:8080`.  You will also need to update the `allowed_domains` array to include this new url. (If you are on a mac you may need to use `http://host.docker.internal:8080` instead so that the scraper container can connect to the docs on your local http-server.)
 
 Finally you can scrape your local docs with the following docker command
 
 ```
-docker run -t --rm --network=host
+docker run -t --rm --network=host \
     -e MEILISEARCH_HOST_URL=https://docsearch.expressionengine.com \
     -e MEILISEARCH_API_KEY={{ SECRET_KEY }} \
     -v ./search.config.json:/docs-scraper/search.config.json \

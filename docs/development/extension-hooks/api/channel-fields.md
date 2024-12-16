@@ -13,7 +13,7 @@ lang: php
 
 # Channel Fields API Extension Hooks
 
-### `custom_field_modify_data(EE_Fieldtype $ft, $method, $data)`
+## `custom_field_modify_data(EE_Fieldtype $ft, $method, $data)`
 
 | Parameter | Type     | Description                                         |
 | --------- | -------- | --------------------------------------------------- |

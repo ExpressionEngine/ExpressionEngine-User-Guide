@@ -13,9 +13,9 @@ lang: php
 
 # Forum Module Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `forum_add_template($which, $classname)`
+## `forum_add_template($which, $classname)`
 
 | Parameter   | Type     | Description                                                             |
 | ----------- | -------- | ----------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
 
     $classname = ee()->extensions->call('forum_add_template', $which, $classname);
 
-### `forum_include_extras($this, $function, $element)`
+## `forum_include_extras($this, $function, $element)`
 
 | Parameter  | Type     | Description                                       |
 | ---------- | -------- | ------------------------------------------------- |
@@ -44,7 +44,7 @@ How it's called:
 
     $element = ee()->extensions->call('forum_include_extras', $this, $function, $element);
 
-### `forum_submission_form_start($this, $str)`
+## `forum_submission_form_start($this, $str)`
 
 | Parameter | Type     | Description                      |
 | --------- | -------- | -------------------------------- |
@@ -59,7 +59,7 @@ How it's called:
     $str = ee()->extensions->universal_call('forum_submission_form_start', $this, $str);
     if (ee()->extensions->end_script === TRUE) return $str;
 
-### `forum_submission_form_end($this, $str)`
+## `forum_submission_form_end($this, $str)`
 
 | Parameter | Type     | Description                     |
 | --------- | -------- | ------------------------------- |
@@ -74,7 +74,7 @@ How it's called:
     $str = ee()->extensions->universal_call('forum_submission_form_end', $this, $str);
     if (ee()->extensions->end_script === TRUE) return $str;
 
-### `forum_submission_page($this, $type)`
+## `forum_submission_page($this, $type)`
 
 | Parameter | Type     | Description                                          |
 | --------- | -------- | ---------------------------------------------------- |
@@ -89,7 +89,7 @@ How it's called:
     $edata = $this->extensions->universal_call('forum_submission_page', $this, $type);
     if ($this->extensions->end_script === TRUE) return $edata;
 
-### `forum_submit_post_start($this)`
+## `forum_submit_post_start($this)`
 
 | Parameter | Type     | Description                   |
 | --------- | -------- | ----------------------------- |
@@ -103,7 +103,7 @@ How it's called:
     $edata = ee()->extensions->universal_call('forum_submit_post_start', $this);
     if (ee()->extensions->end_script === TRUE) return $edata;
 
-### `forum_submit_post_end($this, $data)`
+## `forum_submit_post_end($this, $data)`
 
 | Parameter | Type     | Description                   |
 | --------- | -------- | ----------------------------- |
@@ -120,7 +120,7 @@ How it's called:
 
 NOTE: **Note:** User notifications have not been sent at this point.
 
-### `forum_threads_template($this, $str, $tquery)`
+## `forum_threads_template($this, $str, $tquery)`
 
 | Parameter | Type     | Description                                          |
 | --------- | -------- | ---------------------------------------------------- |
@@ -136,7 +136,7 @@ How it's called:
     $str = ee()->extensions->universal_call('forum_threads_template', $this, $str, $tquery);
     if (ee()->extensions->end_script === TRUE) return $str;
 
-### `forum_thread_rows_absolute_end($this, $data, $thread_rows)`
+## `forum_thread_rows_absolute_end($this, $data, $thread_rows)`
 
 | Parameter     | Type     | Description                                                       |
 | ------------- | -------- | ----------------------------------------------------------------- |
@@ -152,7 +152,7 @@ How it's called:
     $thread_rows = ee()->extensions->universal_call('forum_thread_rows_absolute_end', $this, $data, $thread_rows);
     if (ee()->extensions->end_script === TRUE) return $thread_rows;
 
-### `forum_thread_rows_loop_start($this, $data, $row, $temp)`
+## `forum_thread_rows_loop_start($this, $data, $row, $temp)`
 
 | Parameter | Type     | Description                         |
 | --------- | -------- | ----------------------------------- |
@@ -169,7 +169,7 @@ How it's called:
     $temp = ee()->extensions->universal_call('forum_thread_rows_loop_start', $this, $data, $row, $temp);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `forum_thread_rows_loop_end($this, $data, $row, $temp)`
+## `forum_thread_rows_loop_end($this, $data, $row, $temp)`
 
 | Parameter | Type     | Description                         |
 | --------- | -------- | ----------------------------------- |
@@ -186,7 +186,7 @@ How it's called:
     $temp = ee()->extensions->universal_call('forum_thread_rows_loop_end', $this, $data, $row, $temp);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `forum_thread_rows_start($this, $template, $data, $is_announcement, $thread_review)`
+## `forum_thread_rows_start($this, $template, $data, $is_announcement, $thread_review)`
 
 | Parameter         | Type      | Description                                 |
 | ----------------- | --------- | ------------------------------------------- |
@@ -204,7 +204,7 @@ How it's called:
     $template = ee()->extensions->universal_call('forum_thread_rows_start', $this, $template, $data, $is_announcement, $thread_review);
     if (ee()->extensions->end_script === TRUE) return $template;
 
-### `forum_topics_absolute_end($this, $result, $str)`
+## `forum_topics_absolute_end($this, $result, $str)`
 
 | Parameter | Type     | Description                          |
 | --------- | -------- | ------------------------------------ |
@@ -220,7 +220,7 @@ How it's called:
     $str = ee()->extensions->universal_call('forum_topics_absolute_end', $this, $query->result(), $str);
     if (ee()->extensions->end_script === TRUE) return $str;
 
-### `forum_topics_loop_start($this, $result, $row, $temp)`
+## `forum_topics_loop_start($this, $result, $row, $temp)`
 
 | Parameter | Type     | Description                           |
 | --------- | -------- | ------------------------------------- |
@@ -237,7 +237,7 @@ How it's called:
     $temp = ee()->extensions->universal_call('forum_topics_loop_start', $this, $query->result(), $row, $temp);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `forum_topics_loop_end($this, $result, $row, $temp)`
+## `forum_topics_loop_end($this, $result, $row, $temp)`
 
 | Parameter | Type     | Description                      |
 | --------- | -------- | -------------------------------- |
@@ -254,7 +254,7 @@ How it's called:
     $temp = ee()->extensions->universal_call('forum_topics_loop_end', $this, $query->result(), $row, $temp);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `forum_topics_start($this, $str)`
+## `forum_topics_start($this, $str)`
 
 | Parameter | Type     | Description                       |
 | --------- | -------- | --------------------------------- |
@@ -269,7 +269,7 @@ How it's called:
     $str = ee()->extensions->universal_call('forum_topics_start', $this, $str);
     if (ee()->extensions->end_script === TRUE) return $str;
 
-### `main_forum_table_rows_template()`
+## `main_forum_table_rows_template()`
 
 | Parameter     | Type     | Description                                                   |
 | ------------- | -------- | ------------------------------------------------------------- |

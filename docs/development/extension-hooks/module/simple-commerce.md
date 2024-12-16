@@ -13,9 +13,9 @@ lang: php
 
 # Simple Commerce Module Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `simple_commerce_evaluate_ipn_response($this, $result)`
+## `simple_commerce_evaluate_ipn_response($this, $result)`
 
 | Parameter | Type     | Description                                                                                    |
 | --------- | -------- | ---------------------------------------------------------------------------------------------- |
@@ -30,7 +30,7 @@ How it's called:
     $result = ee()->extensions->universal_call('simple_commerce_evaluate_ipn_response', $this, $result);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `simple_commerce_perform_actions_end($this, $row)`
+## `simple_commerce_perform_actions_end($this, $row)`
 
 | Parameter | Type     | Description                                                                                    |
 | --------- | -------- | ---------------------------------------------------------------------------------------------- |
@@ -50,7 +50,7 @@ Useful object variables:
 - `$this->post` - array of information about the purchase
 - `$this->debug` - whether or not debug mode is enabled
 
-### `simple_commerce_perform_actions_start($this, $row)`
+## `simple_commerce_perform_actions_start($this, $row)`
 
 | Parameter | Type     | Description                                                                                    |
 | --------- | -------- | ---------------------------------------------------------------------------------------------- |

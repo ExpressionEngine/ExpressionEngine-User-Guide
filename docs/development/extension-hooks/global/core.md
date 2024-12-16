@@ -13,7 +13,7 @@ lang: php
 
 # Core Library Extension Hooks
 
-### `core_boot()`
+## `core_boot()`
 
 | Parameter | Type   |
 | --------- | ------ |
@@ -34,7 +34,7 @@ NOTE: **Note:** This hook fires on every ExpressionEngine request, so be mindful
       return;
     }
 
-### `core_template_route($uri_string)`
+## `core_template_route($uri_string)`
 
 | Parameter    | Type     | Description                                                              |
 | ------------ | -------- | ------------------------------------------------------------------------ |

@@ -13,9 +13,9 @@ lang: php
 
 # ChannelLayout Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_channel_layout_insert($channel, $values)`
+## `before_channel_layout_insert($channel, $values)`
 
 | Parameter | Type     | Description                                     |
 | --------- | -------- | ------------------------------------------------|
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_layout_insert', $this, $this->getValues());
 
-### `after_channel_layout_insert($channel, $values)`
+## `after_channel_layout_insert($channel, $values)`
 
 | Parameter | Type     | Description                                     |
 | --------- | -------- | ------------------------------------------------|
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_layout_insert', $this, $this->getValues());
 
-### `before_channel_layout_update($channel, $values, $modified)`
+## `before_channel_layout_update($channel, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | -------------------------------------------------|
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_layout_update', $this, $this->getValues(), $modified);
 
-### `after_channel_layout_update($channel, $values, $modified)`
+## `after_channel_layout_update($channel, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | -------------------------------------------------|
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_layout_update', $this, $this->getValues(), $modified);
 
-### `before_channel_layout_save($channel, $values)`
+## `before_channel_layout_save($channel, $values)`
 
 | Parameter | Type     | Description                                     |
 | --------- | -------- | ------------------------------------------------|
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_layout_save', $this, $this->getValues());
 
-### `after_channel_layout_save($channel, $values)`
+## `after_channel_layout_save($channel, $values)`
 
 | Parameter | Type     | Description                                     |
 | --------- | -------- | ------------------------------------------------|
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_layout_save', $this, $this->getValues());
 
-### `before_channel_layout_delete($channel, $values)`
+## `before_channel_layout_delete($channel, $values)`
 
 | Parameter | Type     | Description                                     |
 | --------- | -------- | ------------------------------------------------|
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_layout_delete', $this, $this->getValues());
 
-### `after_channel_layout_delete($channel, $values)`
+## `after_channel_layout_delete($channel, $values)`
 
 | Parameter | Type     | Description                                     |
 | --------- | -------- | ------------------------------------------------|

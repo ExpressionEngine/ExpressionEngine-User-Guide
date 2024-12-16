@@ -13,9 +13,9 @@ lang: php
 
 # ChannelFieldGroup Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_channel_field_group_insert($channel_field_group, $values)`
+## `before_channel_field_group_insert($channel_field_group, $values)`
 
 | Parameter             | Type     | Description                                         |
 | --------------------- | -------- | --------------------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_field_group_insert', $this, $this->getValues());
 
-### `after_channel_field_group_insert($channel_field_group, $values)`
+## `after_channel_field_group_insert($channel_field_group, $values)`
 
 | Parameter             | Type     | Description                                         |
 | --------------------- | -------- | --------------------------------------------------- |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_field_group_insert', $this, $this->getValues());
 
-### `before_channel_field_group_update($channel_field_group, $values, $modified)`
+## `before_channel_field_group_update($channel_field_group, $values, $modified)`
 
 | Parameter             | Type     | Description                                         |
 | --------------------- | -------- | --------------------------------------------------- |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_field_group_update', $this, $this->getValues(), $modified);
 
-### `after_channel_field_group_update($channel_field_group, $values, $modified)`
+## `after_channel_field_group_update($channel_field_group, $values, $modified)`
 
 | Parameter             | Type     | Description                                         |
 | --------------------- | -------- | --------------------------------------------------- |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_field_group_update', $this, $this->getValues(), $modified);
 
-### `before_channel_field_group_save($channel_field_group, $values)`
+## `before_channel_field_group_save($channel_field_group, $values)`
 
 | Parameter             | Type     | Description                                         |
 | --------------------- | -------- | --------------------------------------------------- |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_field_group_save', $this, $this->getValues());
 
-### `after_channel_field_group_save($channel_field_group, $values)`
+## `after_channel_field_group_save($channel_field_group, $values)`
 
 | Parameter             | Type     | Description                                         |
 | --------------------- | -------- | --------------------------------------------------- |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_field_group_save', $this, $this->getValues());
 
-### `before_channel_field_group_delete($channel_field_group, $values)`
+## `before_channel_field_group_delete($channel_field_group, $values)`
 
 | Parameter             | Type     | Description                                         |
 | --------------------- | -------- | --------------------------------------------------- |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_field_group_delete', $this, $this->getValues());
 
-### `after_channel_field_group_delete($channel_field_group, $values)`
+## `after_channel_field_group_delete($channel_field_group, $values)`
 
 | Parameter             | Type     | Description                                         |
 | --------------------- | -------- | --------------------------------------------------- |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_field_group_delete', $this, $this->getValues());
 
-### `before_channel_field_group_bulk_delete($delete_ids)`
+## `before_channel_field_group_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -144,7 +144,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `after_channel_field_group_bulk_delete($delete_ids)`
+## `after_channel_field_group_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

@@ -13,7 +13,7 @@ lang: php
 
 # Javascript Controller Extension Hooks
 
-### `cp_js_end()`
+## `cp_js_end()`
 
 | Parameter | Type     | Description                                       |
 | --------- | -------- | ------------------------------------------------- |

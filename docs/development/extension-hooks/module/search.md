@@ -13,7 +13,7 @@ lang: php
 
 # Search Module Extension Hooks
 
-### `channel_search_modify_search_query($sql, $hash)`
+## `channel_search_modify_search_query($sql, $hash)`
 
 | Parameter | Type     | Description                                      |
 | --------- | -------- | ------------------------------------------------ |
@@ -29,7 +29,7 @@ How it's called:
     ...
     if (ee()->extensions->end_script === TRUE) return $sql
 
-### `channel_search_modify_result_query($sql, $hash)`
+## `channel_search_modify_result_query($sql, $hash)`
 
 | Parameter   | Type     | Description                                      |
 | ----------- | -------- | ------------------------------------------------ |

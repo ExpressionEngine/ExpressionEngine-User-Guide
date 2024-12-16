@@ -13,9 +13,9 @@ lang: php
 
 # Channel Entry Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_channel_entry_insert($entry, $values)`
+## `before_channel_entry_insert($entry, $values)`
 
 | Parameter | Type     | Description                                    |
 | --------- | -------- | ---------------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_entry_insert', $this, $this->getValues());
 
-### `after_channel_entry_insert($entry, $values)`
+## `after_channel_entry_insert($entry, $values)`
 
 | Parameter | Type     | Description                                    |
 | --------- | -------- | ---------------------------------------------- |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_entry_insert', $this, $this->getValues());
 
-### `before_channel_entry_update($entry, $values, $modified)`
+## `before_channel_entry_update($entry, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_entry_update', $this, $this->getValues(), $modified);
 
-### `after_channel_entry_update($entry, $values, $modified)`
+## `after_channel_entry_update($entry, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_entry_update', $this, $this->getValues(), $modified);
 
-### `before_channel_entry_save($entry, $values)`
+## `before_channel_entry_save($entry, $values)`
 
 | Parameter | Type     | Description                                    |
 | --------- | -------- | ---------------------------------------------- |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_entry_save', $this, $this->getValues());
 
-### `after_channel_entry_save($entry, $values)`
+## `after_channel_entry_save($entry, $values)`
 
 | Parameter | Type     | Description                                    |
 | --------- | -------- | ---------------------------------------------- |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_entry_save', $this, $this->getValues());
 
-### `before_channel_entry_delete($entry, $values)`
+## `before_channel_entry_delete($entry, $values)`
 
 | Parameter | Type     | Description                                    |
 | --------- | -------- | ---------------------------------------------- |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_entry_delete', $this, $this->getValues());
 
-### `after_channel_entry_delete($entry, $values)`
+## `after_channel_entry_delete($entry, $values)`
 
 | Parameter | Type     | Description                                    |
 | --------- | -------- | ---------------------------------------------- |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_entry_delete', $this, $this->getValues());
 
-### `before_channel_entry_bulk_delete($delete_ids)`
+## `before_channel_entry_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -144,7 +144,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `after_channel_entry_bulk_delete($delete_ids)`
+## `after_channel_entry_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

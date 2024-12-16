@@ -13,9 +13,9 @@ lang: php
 
 # Category Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_category_insert($category, $values)`
+## `before_category_insert($category, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_category_insert', $this, $this->getValues());
 
-### `after_category_insert($category, $values)`
+## `after_category_insert($category, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_category_insert', $this, $this->getValues());
 
-### `before_category_update($category, $values, $modified)`
+## `before_category_update($category, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_category_update', $this, $this->getValues(), $modified);
 
-### `after_category_update($category, $values, $modified)`
+## `after_category_update($category, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_category_update', $this, $this->getValues(), $modified);
 
-### `before_category_save($category, $values)`
+## `before_category_save($category, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_category_save', $this, $this->getValues());
 
-### `after_category_save($category, $values)`
+## `after_category_save($category, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_category_save', $this, $this->getValues());
 
-### `before_category_delete($category, $values)`
+## `before_category_delete($category, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_category_delete', $this, $this->getValues());
 
-### `after_category_delete($category, $values)`
+## `after_category_delete($category, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_category_delete', $this, $this->getValues());
 
-### `before_category_bulk_delete($delete_ids)`
+## `before_category_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -144,7 +144,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `after_category_bulk_delete($delete_ids)`
+## `after_category_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

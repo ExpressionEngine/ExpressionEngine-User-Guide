@@ -13,7 +13,7 @@ lang: php
 
 # Session Library Extension Hooks
 
-### `sessions_end($this)`
+## `sessions_end($this)`
 
 | Parameter | Type     | Description                                                                                                                 |
 | --------- | -------- | --------------------------------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ How it's called:
     $this->extensions->call('sessions_end', $this);
     if ($this->extensions->end_script === TRUE) return;
 
-### `sessions_start($this)`
+## `sessions_start($this)`
 
 | Parameter | Type     | Description                                                          |
 | --------- | -------- | -------------------------------------------------------------------- |

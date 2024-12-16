@@ -20,56 +20,56 @@ The elements of global `EE` JavaScript objects could vary depending on the Contr
 
 To add the element to global object, call [`ee()->javascript->set_global()`](development/legacy/libraries/javascript.md#set_globalvar-val--) function.
 
-### `BASE`
+## `BASE`
 
 Control Panel base URL.
 
     $.get(EE.BASE + '&C=login&M=lock_cp');
 
-### `CSRF_TOKEN`
+## `CSRF_TOKEN`
 
 The current [Cross Site Request Forgery](development/guidelines/security.md#cross-site-request-forgery) token
 
     headers: { 'X-CSRF-TOKEN': EE.CSRF_TOKEN },
 
-### `PATH_CP_GBL_IMG`
+## `PATH_CP_GBL_IMG`
 
 Path to `themes/ee/asset/img` directory
 
-### `THEME_URL`
+## `THEME_URL`
 
 URL to `themes/ee/cp` folder
 
-### `username`
+## `username`
 
 Username of currently logged in member
 
-### `lang`
+## `lang`
 
 Object of language strings available for JavaScript function in member's preferred language
 
     text: EE.lang.loading
 
-### `hasRememberMe`
+## `hasRememberMe`
 
 Indicates whether the "remember me" checkbox was toggled on when member logged in.
 
-### `cp.appVer`
+## `cp.appVer`
 
 The version number of ExpressionEngine release.
     data: {
         appVer: EE.cp.appVer,
     }
 
-### `site_id`
+## `site_id`
 
 ID of MSM site that is currently active in Control Panel
 
-### `site_name`
+## `site_name`
 
 The configured site name
 
-### `site_url`
+## `site_url`
 
 The URL to the site's front-end
 
@@ -81,7 +81,7 @@ The URL to the site's front-end
         }
     ]
 
-### `fileManagerCompatibilityMode`
+## `fileManagerCompatibilityMode`
 
 Indicates whether File Manager is running in [Compatibility Mode](control-panel/file-manager/file-manager.md#compatibility-mode).
 
