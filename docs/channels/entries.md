@@ -11,8 +11,18 @@
 
 [TOC]
 
-## Overview
+## ExpressionEngine Channels Overview
+A channel in ExpressionEngine is similar to a "content type" in other content management systems. It serves as a container for specific types of data or content on your site. For example, you might create channels for:
 
+    - Blog posts
+    - News articles
+    - Products
+    - Events
+    - Testimonials
+
+Each channel is made up of customizable fields. These fields determine what kind of data can be entered for entries within the channel.  Check out the [list of Channel Fields](fieldtypes/overview.md) that ship as part of ExpressionEngine.
+
+## Channel Entries Tag
 The Channel Entries tag is the primary tag used within your [Templates](templates/overview.md) to show the content you create and edit via your Control Panel's `Create` or `Edit` section. It's the most powerful tag in ExpressionEngine, and the most commonly used since its main function is to retrieve and display your site's content.
 
 The Channel Entries tag can display both multi-entry and single-entry content--that is, several entries on a page, or one specific entry. By default, Channel Entries will use [information in the URL](general/url-structure.md) to retrieve the right content. By using available parameters and variables (described below), Channel Entries can display content from categories, specific days, monthly archives, and more.
