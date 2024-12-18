@@ -36,3 +36,24 @@ A common usage for preload replacements is to hold the Channel short name(s), to
         <h2>{title}</h2>
         {body}
     {/exp:channel:entries}
+
+### Conditional Usage
+
+You may want to combine this with EE's Live Preview functionality, so that your template can show content while you're in the control panel that you might not want to have appear on the live site:
+
+    {preload_replace:channels="news|reviews"}
+    {if is_live_preview_request}
+        {preload_replace:status_tag=" status='open|archive|draft' "}
+    {if:else}
+        {preload_replace:status_tag=" status='open' "}
+    {/if}
+
+    {exp:channel:entries
+        channel="{channels}"
+        limit="10"
+        {status_tag}
+        disable="category_fields|member_data|pagination"
+    }
+        <h2>{title}</h2>
+        {body}
+    {/exp:channel:entries}
