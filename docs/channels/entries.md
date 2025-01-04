@@ -1446,6 +1446,14 @@ The total number of categories being displayed.
 
 This variable displays the URL title of the category
 
+##### `{category_group_id}`
+
+The ID of category group that the category belongs to.
+
+##### `{category_group_name}`
+
+The name of the category group that the category belongs to.
+
 ##### `{parent_id}`
 
 The category ID associated with the category's parent (or 0 in the case of a top level category).
