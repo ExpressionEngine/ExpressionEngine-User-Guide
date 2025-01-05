@@ -128,6 +128,20 @@ You may alternatively specify which categories to not show
 
 If you specify that a parent category is not shown, then any children of that parent category are then unable to be shown by the tag. The parent category is required for any and all children categories.
 
+### `orderby=`
+
+This parameter allows you to specify the order in which the categories are displayed. Only applicable when using the "[linear](#style)" style. The default is to display the categories in the order they are displayed in the CP, where also they can be reordered. You can order by any of the following:
+
+    orderby="category_name"
+
+    orderby="category_url_title"
+
+    orderby="category_description"
+
+You can also the name of the custom field as the parameter value. If you have a custom field called "my_custom_field" you would use
+
+    orderby="my_custom_field"
+
 ### `show_empty=`
 
     show_empty="no"
