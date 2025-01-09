@@ -1300,6 +1300,19 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Tracking`: [Enable Template Hit Tracking](control-panel/settings/hit-tracking.md#enable-template-hit-tracking)
 
+### `enable_mfa`
+
+If enabled, the Multi-factor authentication (MFA) options will become available for member roles.
+
+| Value | Behavior                               |
+| ----- | -------------------------------------- |
+| y     | Enable Multi-factor authentication |
+| n     | Disable Multi-factor authentication (default) |
+
+Example Usage:
+
+    $config['enable_mfa'] = 'y';
+
 ### `enable_online_user_tracking`
 
 If enabled, online user statistics are tracked and the user-based variables in the [Statistics](add-ons/statistics.md) module are available for use.
