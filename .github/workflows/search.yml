@@ -1,4 +1,4 @@
-name: search
+name: Update Search
 
 on:
   workflow_dispatch:
