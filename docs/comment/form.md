@@ -248,7 +248,7 @@ For members without administrative access, in order to edit a comment they must 
 
 Comment moderators may close the comment. The edit time limit does not apply to moderators.
 
-Superadmins will always have {editable} and {can_moderate_comment} permissions on any comment.
+Super admins will always have {editable} and {can_moderate_comment} permissions on any comment.
 
 ### Customizing Client-Side Code
 
