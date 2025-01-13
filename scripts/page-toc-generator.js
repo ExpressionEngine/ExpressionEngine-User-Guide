@@ -102,7 +102,7 @@ class PageTocGenerator {
 
 			let start = toc.hide ? '<div class="table-of-contents collapse"><div class="toc-overview-button">Show List</div>' : '<div class="table-of-contents">'
 			// Render the list as html
-			let tocContent = start + Marked(list) + '</div>'
+			let tocContent = start + Marked.marked.parse(list) + '</div>'
 			// Replace the temporary id with the new html
 			pageContent    = pageContent.replace(key, tocContent)
 		}

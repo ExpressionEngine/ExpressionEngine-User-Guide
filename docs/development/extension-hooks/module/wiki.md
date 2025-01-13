@@ -13,9 +13,9 @@ lang: php
 
 # Wiki Module Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `wiki_start($this)`
+## `wiki_start($this)`
 
 | Parameter | Type     | Description                                   |
 | --------- | -------- | --------------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
     $this->return_data = ee()->extensions->universal_call('wiki_start', $this);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `wiki_article_start($this, $title, $query)`
+## `wiki_article_start($this, $title, $query)`
 
 | Parameter | Type     | Description                        |
 | --------- | -------- | ---------------------------------- |
@@ -45,7 +45,7 @@ How it's called:
     ee()->extensions->universal_call('wiki_article_start', $this, $title, $query);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `wiki_article_end($this, $query)`
+## `wiki_article_end($this, $query)`
 
 | Parameter | Type     | Description                                     |
 | --------- | -------- | ----------------------------------------------- |
@@ -60,7 +60,7 @@ How it's called:
     $this->return_data = ee()->extensions->universal_call('wiki_article_end', $this, $query);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `wiki_special_page($this, $topic)`
+## `wiki_special_page($this, $topic)`
 
 | Parameter | Type     | Description                                        |
 | --------- | -------- | -------------------------------------------------- |
@@ -75,7 +75,7 @@ How it's called:
     ee()->extensions->universal_call('wiki_special_page', $this, $topic);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `edit_wiki_article_end($this, $query)`
+## `edit_wiki_article_end($this, $query)`
 
 | Parameter | Type     | Description                      |
 | --------- | -------- | -------------------------------- |
@@ -90,7 +90,7 @@ How it's called:
     $edata = ee()->extensions->universal_call('edit_wiki_article_end', $this, $query);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `edit_wiki_article_form_start($this, $title, $query)`
+## `edit_wiki_article_form_start($this, $title, $query)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -106,7 +106,7 @@ How it's called:
     ee()->extensions->universal_call('edit_wiki_article_form_start', $this, $title, $query);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `edit_wiki_article_form_end($this, $query)`
+## `edit_wiki_article_form_end($this, $query)`
 
 | Parameter | Type     | Description                               |
 | --------- | -------- | ----------------------------------------- |

@@ -9,6 +9,6 @@
 
 # Template Structure API Extension Hooks
 
-### `template_types`
+## `template_types`
 
 See the Output library's [template_types](development/extension-hooks/cp/design.md#template_types).

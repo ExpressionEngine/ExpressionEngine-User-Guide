@@ -13,7 +13,9 @@ lang: php
 
 # Comment Model Extension Hooks
 
-### `before_comment_insert($comment, $values)`
+[TOC=2]
+
+## `before_comment_insert($comment, $values)`
 
 | Parameter | Type     | Description                               |
 | --------- | -------- | ----------------------------------------- |
@@ -27,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_comment_insert', $this, $this->getValues());
 
-### `after_comment_insert($comment, $values)`
+## `after_comment_insert($comment, $values)`
 
 | Parameter | Type     | Description                               |
 | --------- | -------- | ----------------------------------------- |
@@ -41,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_comment_insert', $this, $this->getValues());
 
-### `before_comment_update($comment, $values, $modified)`
+## `before_comment_update($comment, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -56,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_comment_update', $this, $this->getValues(), $modified);
 
-### `after_comment_update($comment, $values, $modified)`
+## `after_comment_update($comment, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -71,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_comment_update', $this, $this->getValues(), $modified);
 
-### `before_comment_save($comment, $values)`
+## `before_comment_save($comment, $values)`
 
 | Parameter | Type     | Description                               |
 | --------- | -------- | ----------------------------------------- |
@@ -85,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_comment_save', $this, $this->getValues());
 
-### `after_comment_save($comment, $values)`
+## `after_comment_save($comment, $values)`
 
 | Parameter | Type     | Description                               |
 | --------- | -------- | ----------------------------------------- |
@@ -99,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_comment_save', $this, $this->getValues());
 
-### `before_comment_delete($comment, $values)`
+## `before_comment_delete($comment, $values)`
 
 | Parameter | Type     | Description                               |
 | --------- | -------- | ----------------------------------------- |
@@ -113,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_comment_delete', $this, $this->getValues());
 
-### `after_comment_delete($comment, $values)`
+## `after_comment_delete($comment, $values)`
 
 | Parameter | Type     | Description                               |
 | --------- | -------- | ----------------------------------------- |
@@ -127,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_comment_delete', $this, $this->getValues());
 
-### `before_comment_bulk_delete($delete_ids)`
+## `before_comment_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -142,7 +144,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `after_comment_bulk_delete($delete_ids)`
+## `after_comment_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

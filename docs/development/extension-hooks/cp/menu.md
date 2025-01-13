@@ -13,7 +13,7 @@ lang: php
 
 # Control Panel Menu Extension Hooks
 
-### `cp_custom_menu($menu)`
+## `cp_custom_menu($menu)`
 
 Add menu items to the secondary navigation area specifically reserved for custom links.
 

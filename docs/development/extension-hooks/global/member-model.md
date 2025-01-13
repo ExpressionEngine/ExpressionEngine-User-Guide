@@ -13,9 +13,9 @@ lang: php
 
 # Legacy Member Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `member_create_start($data, $cdata)`
+## `member_create_start($data, $cdata)`
 
 | Parameter | Type    | Description                                                       |
 | --------- | ------- | ----------------------------------------------------------------- |
@@ -33,7 +33,7 @@ Example of array to return:
 
     array($data, $cdata)
 
-### `member_create_end($member_id, $data, $cdata)`
+## `member_create_end($member_id, $data, $cdata)`
 
 | Parameter   | Type    | Description                                  |
 | ----------- | ------- | -------------------------------------------- |
@@ -48,7 +48,7 @@ How it's called:
 
     $this->extensions->call('member_create_end', $member_id, $data, $cdata);
 
-### `member_update_start($member_id, $data)`
+## `member_update_start($member_id, $data)`
 
 | Parameter   | Type    | Description                   |
 | ----------- | ------- | ----------------------------- |
@@ -62,7 +62,7 @@ How it's called:
 
     $data = $this->extensions->call('member_update_start', $member_id, $data);
 
-### `member_update_end($member_id, $data)`
+## `member_update_end($member_id, $data)`
 
 | Parameter   | Type    | Description                   |
 | ----------- | ------- | ----------------------------- |
@@ -76,7 +76,7 @@ How it's called:
 
     $this->extensions->call('member_update_end', $member_id, $data);
 
-### `member_delete($member_ids)`
+## `member_delete($member_ids)`
 
 | Parameter    | Type    | Description                                                |
 | ------------ | ------- | ---------------------------------------------------------- |

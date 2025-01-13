@@ -13,7 +13,7 @@ lang: php
 
 # RTE Fieldtype Extension Hooks
 
-### `rte_before_display($field, $data)`
+## `rte_before_display($field, $data)`
 
 | Parameter      | Type     | Description                                                    |
 | -------------- | -------- | -------------------------------------------------------------- |
@@ -26,7 +26,7 @@ How it's called:
 
     $data = ee()->extensions->call('rte_before_display', $this, $data);
 
-### `rte_before_save($field, $data)`
+## `rte_before_save($field, $data)`
 
 | Parameter      | Type     | Description                                                    |
 | -------------- | -------- | -------------------------------------------------------------- |
@@ -39,7 +39,7 @@ How it's called:
 
     $data = ee()->extensions->call('rte_before_save', $this, $data);
 
-### `rte_before_replace($field, $data)`
+## `rte_before_replace($field, $data)`
 
 | Parameter      | Type     | Description                                                    |
 | -------------- | -------- | -------------------------------------------------------------- |
@@ -50,9 +50,9 @@ Allows modification of field data before it is being displayed using template ta
 
 How it's called:
 
-    $data = ee()->extensions->call('rte_before_replace', $this, $data);    
+    $data = ee()->extensions->call('rte_before_replace', $this, $data);
 
-### `rte_before_replace_end($field, $data)`
+## `rte_before_replace_end($field, $data)`
 
 | Parameter      | Type     | Description                                                    |
 | -------------- | -------- | -------------------------------------------------------------- |
@@ -63,4 +63,4 @@ Allows modification of field data before it is being displayed using template ta
 
 How it's called:
 
-    $data = ee()->extensions->call('rte_before_replace_end', $this, $data);        
+    $data = ee()->extensions->call('rte_before_replace_end', $this, $data);

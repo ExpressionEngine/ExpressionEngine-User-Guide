@@ -13,7 +13,7 @@ lang: php
 
 # CSS Controller Extension Hooks
 
-### `cp_css_end()`
+## `cp_css_end()`
 
 | Parameter | Type     | Description                            |
 | --------- | -------- | -------------------------------------- |
