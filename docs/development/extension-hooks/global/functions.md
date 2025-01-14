@@ -13,7 +13,7 @@ lang: php
 
 # Functions Library Extension Hooks
 
-### `cache_clearing_end($which)`
+## `cache_clearing_end($which)`
 
 | Parameter  | Type     | Description                                                        |
 | ---------- | -------- | ------------------------------------------------------------------ |
@@ -26,7 +26,7 @@ How it's called:
 
     $result = ee()->extensions->call('cache_clearing_end', $which);
 
-### `create_captcha_start($old_word)`
+## `create_captcha_start($old_word)`
 
 | Parameter  | Type     | Description                                                        |
 | ---------- | -------- | ------------------------------------------------------------------ |
@@ -40,7 +40,7 @@ How it's called:
     $edata = ee()->extensions->call('create_captcha_start', $old_word);
     if (ee()->extensions->end_script === TRUE) return $edata;
 
-### `form_declaration_modify_data($data)`
+## `form_declaration_modify_data($data)`
 
 | Parameter | Type    | Description                                                |
 | --------- | ------- | ---------------------------------------------------------- |
@@ -53,7 +53,7 @@ How it's called:
 
     $data = $this->extensions->call('form_declaration_modify_data', $data);
 
-### `form_declaration_return($data)`
+## `form_declaration_return($data)`
 
 | Parameter | Type     | Description                                                              |
 | --------- | -------- | ------------------------------------------------------------------------ |

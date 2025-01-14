@@ -13,7 +13,7 @@ lang: php
 
 # Template Library Extension Hooks
 
-### `template_fetch_template($row)`
+## `template_fetch_template($row)`
 
 | Parameter | Type    | Description                   |
 | --------- | ------- | ----------------------------- |
@@ -26,7 +26,7 @@ How it's called:
 
     ee()->extensions->call('template_fetch_template', $row);
 
-### `template_post_parse($final_template, $is_partial, $site_id, $currentTemplateInfo)`
+## `template_post_parse($final_template, $is_partial, $site_id, $currentTemplateInfo)`
 
 | Parameter        | Type      | Description                                              |
 | ---------------- | --------- | -------------------------------------------------------- |
@@ -49,7 +49,7 @@ How it's called:
     );
 
 NOTE: If `$is_partial` is true:
-- $final_template contains the interim $template at that point in parsing; 
+- $final_template contains the interim $template at that point in parsing;
 - the identity of the partial template most recently processed is stored in $currentTemplateInfo;
 - returning a modified version of $final_template updates the interim parsed template.
 

@@ -13,7 +13,7 @@ lang: php
 
 # Grid Fieldtype Extension Hooks
 
-### `grid_query($entry_ids, $field_id, $content_type, $data_table, $sql)`
+## `grid_query($entry_ids, $field_id, $content_type, $data_table, $sql)`
 
 | Parameter      | Type     | Description                                                    |
 | -------------- | -------- | -------------------------------------------------------------- |
@@ -46,7 +46,7 @@ How it's called:
       )->result_array();
     }
 
-### `grid_save($entry_id, $field_id, $content_type, $data_table, $data)`
+## `grid_save($entry_id, $field_id, $content_type, $data_table, $data)`
 
 | Parameter      | Type     | Description                                                    |
 | -------------- | -------- | -------------------------------------------------------------- |

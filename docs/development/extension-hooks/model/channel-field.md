@@ -13,9 +13,9 @@ lang: php
 
 # ChannelField Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_channel_field_insert($channel_field, $values)`
+## `before_channel_field_insert($channel_field, $values)`
 
 | Parameter       | Type     | Description                                    |
 | --------------- | -------- | ---------------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_field_insert', $this, $this->getValues());
 
-### `after_channel_field_insert($channel_field, $values)`
+## `after_channel_field_insert($channel_field, $values)`
 
 | Parameter       | Type     | Description                                    |
 | --------------- | -------- | ---------------------------------------------- |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_field_insert', $this, $this->getValues());
 
-### `before_channel_field_update($channel_field, $values, $modified)`
+## `before_channel_field_update($channel_field, $values, $modified)`
 
 | Parameter       | Type     | Description                                      |
 | --------------- | -------- | ------------------------------------------------ |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_field_update', $this, $this->getValues(), $modified);
 
-### `after_channel_field_update($channel_field, $values, $modified)`
+## `after_channel_field_update($channel_field, $values, $modified)`
 
 | Parameter       | Type     | Description                                      |
 | --------------- | -------- | ------------------------------------------------ |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_field_update', $this, $this->getValues(), $modified);
 
-### `before_channel_field_save($channel_field, $values)`
+## `before_channel_field_save($channel_field, $values)`
 
 | Parameter       | Type     | Description                                    |
 | --------------- | -------- | ---------------------------------------------- |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_field_save', $this, $this->getValues());
 
-### `after_channel_field_save($channel_field, $values)`
+## `after_channel_field_save($channel_field, $values)`
 
 | Parameter       | Type     | Description                                    |
 | --------------- | -------- | ---------------------------------------------- |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_field_save', $this, $this->getValues());
 
-### `before_channel_field_delete($channel_field, $values)`
+## `before_channel_field_delete($channel_field, $values)`
 
 | Parameter       | Type     | Description                                    |
 | --------------- | -------- | ---------------------------------------------- |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_channel_field_delete', $this, $this->getValues());
 
-### `after_channel_field_delete($channel_field, $values)`
+## `after_channel_field_delete($channel_field, $values)`
 
 | Parameter       | Type     | Description                                    |
 | --------------- | -------- | ---------------------------------------------- |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_channel_field_delete', $this, $this->getValues());
 
-### `before_channel_field_bulk_delete($delete_ids)`
+## `before_channel_field_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -144,7 +144,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `after_channel_field_bulk_delete($delete_ids)`
+## `after_channel_field_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

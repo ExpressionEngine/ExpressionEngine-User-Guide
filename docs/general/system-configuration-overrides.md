@@ -13,8 +13,6 @@ lang: php
 
 # System Configuration Overrides
 
-[TOC]
-
 WARN: **Warning:** This article covers advanced topics.
 
 By default, ExpressionEngine's system settings are managed in the Control Panel and stored in the database, but these settings can be overridden with one of 3 configuration files: the main configuration file, the site index file, and the CP index file.
@@ -44,13 +42,13 @@ ExpressionEngine's settings are loaded in this order at runtime:
 3.  If a front-end page is being served, a limited array of settings in `index.php` are loaded and override any settings loaded from the database and the main configuration file.
 4.  If a CP page is being served, a limited array of settings in `admin.php` are loaded and override any settings loaded from the database and the main configuration file.
 
-## Overrides
+**Overrides**
 
 Click "Show List" below to list all available overrides, or scroll through the list of overrides and their descriptions further below.
 
-[TOC=3 hide]
+[TOC=2 hide]
 
-### `allow_dictionary_pw`
+## `allow_dictionary_pw`
 
 Set whether words commonly found in the dictionary can be used as passwords. Must be used in combination with [name_of_dictionary_file](#name_of_dictionary_file).
 
@@ -65,7 +63,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Allow Dictionary Words as Passwords](control-panel/settings/security-privacy.md#allow-dictionary-words-in-passwords)
 
-### `allow_extensions`
+## `allow_extensions`
 
 Set whether extensions are enabled in the system. Disabling extensions will _not_ uninstall extensions.
 
@@ -78,7 +76,7 @@ Example Usage:
 
     $config['allow_extensions'] = 'y';
 
-### `allow_member_localization`
+## `allow_member_localization`
 
 Set whether dates and times are localized to each members' own localization preferences.
 
@@ -93,7 +91,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Allow members to set their own localization preferences](control-panel/settings/members.md#allow-members-to-set-time-preferences)
 
-### `allow_member_registration`
+## `allow_member_registration`
 
 Set whether site visitors are allowed to register for accounts.
 
@@ -108,7 +106,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Allow New Member Registrations](control-panel/settings/members.md#allow-registrations)
 
-### `allow_multi_logins`
+## `allow_multi_logins`
 
 Set whether an account can have multiple active sessions at one time.
 
@@ -125,7 +123,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Allow multiple log-ins from a single account](control-panel/settings/security-privacy.md#allow-multiple-logins)
 
-### `allow_pending_login`
+## `allow_pending_login`
 
 Set whether members of the Pending member role can log in or not. By default, Pending members cannot log in.
 
@@ -138,7 +136,7 @@ Example Usage:
 
     $config['allow_pending_login'] = 'y';
 
-### `allow_php`
+## `allow_php`
 
 Set whether the toggle to enable/disable PHP in templates is displayed.
 
@@ -151,7 +149,7 @@ Example Usage:
 
     $config['allow_php'] = 'y';
 
-### `allow_signatures`
+## `allow_signatures`
 
 Set whether member signatures are enabled when using Discussion Forum.
 
@@ -164,7 +162,7 @@ Example Usage:
 
     $config['allow_signatures'] = 'y';
 
-### `allow_textarea_tabs`
+## `allow_textarea_tabs`
 
 Set whether a tab keystroke produces a tab in Publish Page and Template Editor textareas. This is the default behavior.
 
@@ -177,7 +175,7 @@ Example Usage:
 
     $config['allow_textarea_tabs'] = 'y';
 
-### `allow_url_redirects_from_site`
+## `allow_url_redirects_from_site`
 Set whether `?URL=` query string is enabled on the front-end.
 
 | Value | Behavior                                                                      |
@@ -185,7 +183,7 @@ Set whether `?URL=` query string is enabled on the front-end.
 | n     | Disables `?URL=` query string redirecting users on the front-end (default)    |
 | y     | Allows `?URL=` query string to be used to redirect users to external domains  |
 
-### `allow_username_change`
+## `allow_username_change`
 
 Set whether members can change their own usernames after registration.
 
@@ -200,7 +198,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Allow members to change their username](control-panel/settings/security-privacy.md#allow-members-to-change-username)
 
-### `allowed_preview_domains`
+## `allowed_preview_domains`
 
 List extra domains that can be used to show live preview. You will need this if your site or CP is using domain that is not configured as Site URL or CP URL. Can be array or comma-separated string.
 
@@ -210,13 +208,13 @@ Example Usage:
 
     $config['allowed_preview_domains'] = ['example1.com', 'example2.com'];
 
-### `app_version`
+## `app_version`
 
 The installation's ExpressionEngine version.
 
 WARN: **Warning:** This configuration variable is automatically set by the system and **should not be modified**.
 
-### `auto_assign_cat_parents`
+## `auto_assign_cat_parents`
 
 Set whether to assign an entry to both the selected category and its parent category.
 
@@ -231,7 +229,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Content & Design`: [Auto-Assign Category Parents](control-panel/settings/content-design.md#assign-category-parents)
 
-### `autosave_interval_seconds`
+## `autosave_interval_seconds`
 
 Set the interval between autosaves on the Publish Page.
 
@@ -243,7 +241,7 @@ Example Usage:
 
     $config['autosave_interval_seconds'] = '30';
 
-### `autosave_prune_hours`
+## `autosave_prune_hours`
 
 Set the age at which Channel Entry autosaves are automatically deleted.
 
@@ -255,7 +253,7 @@ Example Usage:
 
     $config['autosave_prune_hours'] = '4';
 
-### `avatar_max_height`
+## `avatar_max_height`
 
 Set the maximum height (in pixels) allowed for user-uploaded avatars.
 
@@ -269,7 +267,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Avatars`: [Avatar Maximum Height](control-panel/settings/avatars.md#maximum-height)
 
-### `avatar_max_kb`
+## `avatar_max_kb`
 
 Set the maximum file size (in kilobytes) allowed for user-uploaded avatars.
 
@@ -283,7 +281,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Avatars`: [Avatar Maximum Size](control-panel/settings/avatars.md#maximum-file-size-kb)
 
-### `avatar_max_width`
+## `avatar_max_width`
 
 Set the maximum width (in pixels) allowed for user-uploaded avatars.
 
@@ -297,7 +295,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Avatars`: [Avatar Maximum Width](control-panel/settings/avatars.md#maximum-width)
 
-### `avatar_path`
+## `avatar_path`
 
 Set the server path to the avatar directory.
 
@@ -311,7 +309,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Avatars`: [Server Path to Avatar Folder](control-panel/settings/avatars.md#avatar-path)
 
-### `avatar_url`
+## `avatar_url`
 
 Set the URL to the avatar directory.
 
@@ -325,7 +323,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Avatars`: [URL to Avatar Folder](control-panel/settings/avatars.md#avatar-directory)
 
-### `ban_action`
+## `ban_action`
 
 Set the action to be taken when a visitor with a banned IP address attempts access.
 
@@ -339,7 +337,7 @@ Example Usage:
 
     $config['ban_action'] = 'message';
 
-### `ban_destination`
+## `ban_destination`
 
 Set the redirect destination for visitors with banned IP addresses. Must be used in conjunction with [ban_action](#ban_action) set to `bounce`.
 
@@ -351,7 +349,7 @@ Example Usage:
 
     $config['ban_destination'] = 'https://www.example.com';
 
-### `ban_message`
+## `ban_message`
 
 Set the message shown to visitors with banned IP addresses. Must be used in conjunction with [ban_action](#ban_action) set to `message`.
 
@@ -363,7 +361,7 @@ Example Usage:
 
     $config['ban_message'] = 'This site is currently unavailable.';
 
-### `banish_masked_ips`
+## `banish_masked_ips`
 
 Set the system to deny a visitor access if the user's IP address cannot be determined while [throttling is enabled](#enable_throttling).
 
@@ -378,7 +376,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [Deny Access if No IP Address is Present](control-panel/settings/throttling.md#require-ip)
 
-### `banishment_message`
+## `banishment_message`
 
 Set a custom message to show throttled visitors. [Throttling must be enabled](#enable_throttling) and [banishment_type](#banishment_type) must be set to `message`.
 
@@ -392,7 +390,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [Custom Message](control-panel/settings/throttling.md#message)
 
-### `banishment_type`
+## `banishment_type`
 
 Set the system's method for handling throttled web requests.
 
@@ -408,7 +406,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [Action to Take](control-panel/settings/throttling.md#lock-out-action)
 
-### `banishment_url`
+## `banishment_url`
 
 Set a URL to serve as the redirect destination for throttled visitors. [Throttling must be enabled](#enable_throttling) and [banishment_type](#banishment_type) must be set to `redirect`.
 
@@ -422,7 +420,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [URL for Redirect](control-panel/settings/throttling.md#redirect)
 
-### `banned_emails`
+## `banned_emails`
 
 Specify email addresses to ban from site registration and login. Use wildcards for partial email addresses.
 
@@ -436,7 +434,7 @@ Example Usage:
 
 **Also found in CP:** `Members --> Ban Settings`: [Banned Email Addresses](control-panel/member-manager.md#ban-settings)
 
-### `banned_ips`
+## `banned_ips`
 
 Specify IP addresses to ban from site registration and login. Use wildcards to ban blocks of IP addresses.
 
@@ -450,7 +448,7 @@ Example Usage:
 
 **Also found in CP:** `Members --> Ban Settings`: [Banned IP Address](control-panel/member-manager.md#ban-settings)
 
-### `banned_screen_names`
+## `banned_screen_names`
 
 Specify screen names that cannot be used for member accounts, which can be handy for reserving certain screen names for your own use.
 
@@ -464,7 +462,7 @@ Example Usage:
 
 **Also found in CP:** `Members --> Ban Settings`: [Restricted Screen Names](control-panel/member-manager.md#ban-settings)
 
-### `banned_usernames`
+## `banned_usernames`
 
 Specify usernames that cannot be used for member accounts, which can be handy for reserving certain usernames for your own use.
 
@@ -478,7 +476,7 @@ Example Usage:
 
 **Also found in CP:** `Members --> Ban Settings`: [Restricted Usernames](control-panel/member-manager.md#ban-settings)
 
-### `base_path`
+## `base_path`
 
 Set your site's base server path for use in other path configurations. Once set, this value is made available via a `{base_path}` variable that can be placed in server path fields in the control panel for easy environment management.
 
@@ -492,7 +490,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Default base path](control-panel/settings/urls.md#default-base-path)
 
-### `base_url`
+## `base_url`
 
 Set your site's base URL for use in other URL configurations. Once set, this value is made available via a `{base_url}` variable that can be placed in other URL configuration fields in the control panel for easy environment management.
 
@@ -506,7 +504,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Default base URL](control-panel/settings/urls.md#default-base-url)
 
-### `cache_driver`
+## `cache_driver`
 
 Specify a different [caching driver](optimization/caching.md#caching-drivers) to use.
 
@@ -521,7 +519,7 @@ Example Usage:
 
     $config['cache_driver'] = 'memcached';
 
-### `cache_driver_backup`
+## `cache_driver_backup`
 
 Specify a backup [caching driver](optimization/caching.md#caching-drivers) to use in case the one specified in [cache_driver](#cache_driver) isn't available. Same values accepted and same default as [cache_driver](#cache_driver).
 
@@ -529,7 +527,7 @@ Example Usage:
 
     $config['cache_driver_backup'] = 'file';
 
-### `captcha_font`
+## `captcha_font`
 
 Set whether TrueType fonts should be used for CAPTCHA images.
 
@@ -544,7 +542,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> CAPTCHA`: [Use TrueType Font for CAPTCHA](control-panel/settings/captcha.md#use-truetype-font)
 
-### `captcha_path`
+## `captcha_path`
 
 Set the path to the directory containing CAPTCHA images.
 
@@ -558,7 +556,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> CAPTCHA`: [Server Path to CAPTCHA Folder](control-panel/settings/captcha.md#captcha-path)
 
-### `captcha_rand`
+## `captcha_rand`
 
 Specify whether to add a random three-digit number to the end of each generated CAPTCHA word. This makes it more difficult for scripts to guess or brute-force the form submission.
 
@@ -573,7 +571,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> CAPTCHA`: [Add Random Number to CAPTCHA Word](control-panel/settings/captcha.md#add-random-number)
 
-### `captcha_require_members`
+## `captcha_require_members`
 
 Specify whether to require logged-in members to pass CAPTCHA validation to submit front-end forms, such as Channel Form, comment forms and email forms.
 
@@ -588,7 +586,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> CAPTCHA`: [Require CAPTCHA with logged-in members](control-panel/settings/captcha.md#require-captcha-while-logged-in)
 
-### `captcha_url`
+## `captcha_url`
 
 Set the full URL to the directory containing CAPTCHA images.
 
@@ -602,7 +600,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> CAPTCHA`: [Full URL to CAPTCHA Folder](control-panel/settings/captcha.md#captcha-path)
 
-### `censor_replacement`
+## `censor_replacement`
 
 You may optionally specify a word or phrase to be used when replacing censored words. For example, if you set "tisk tisk" as your replacement word, and "shucks" is in your censored list, then anytime "shucks" is used it will be replaced with "tisk tisk". If you do not set this preference, a pound symbol will be used for each character that is censored, so "shucks" would be converted to "\#\#\#\#\#\#".
 
@@ -616,7 +614,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Word Censoring`: [Censoring Replacement Word](control-panel/settings/word-censor.md#replacement-characters)
 
-### `censored_words`
+## `censored_words`
 
 Specify a list of words to censor. Wildcards are allowed. For example, `test*` would censor the words "test", "testing", and "tester", while `*gress` would censor the words "progress" and "congress".
 
@@ -630,7 +628,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Word Censoring`: [Censored Words](control-panel/settings/word-censor.md#words-to-censor)
 
-### `channel_form_overwrite`
+## `channel_form_overwrite`
 
 Allows Channel Form authors to overwrite *their own files only* when uploading files named the same as files previously uploaded by that author.
 
@@ -643,7 +641,7 @@ Example Usage:
 
     $config['channel_form_overwrite'] = 'y';
 
-### `charset`
+## `charset`
 
 Specify which character set for the system to use by default.
 
@@ -657,7 +655,7 @@ Example Usage:
 
     $config['charset'] = 'UTF-8';
 
-### `cli_enabled`
+## `cli_enabled`
 
 Allows to disable or enable command line interface.
 
@@ -672,7 +670,7 @@ Example Usage:
 
 WARN: **Important:** The CLI is available to every user that has SSH or terminal access to your site's webserver. It does not handle authorization inside ExpressionEngine and is relying on your server's authorization method instead.
 
-### `code_block_pre`
+## `code_block_pre`
 
 Custom markup to use wrap `[code]` blocks, works with `code_block_post` below to wrap the standard `<pre><code>...</code></pre>` with your custom markup.
 
@@ -685,7 +683,7 @@ Example Usage:
     $config['code_block_pre'] = '<div class="codeblock">';
     $config['code_block_post'] = '</div>';
 
-### `code_block_post`
+## `code_block_post`
 
 Custom markup to use wrap `[code]` blocks, works with `code_block_pre` above to wrap the standard `<pre><code>...</code></pre>` with your custom markup.
 
@@ -698,7 +696,7 @@ Example Usage:
     $config['code_block_pre'] = '<div class="codeblock">';
     $config['code_block_post'] = '</div>';
 
-### `codemirror_height`
+## `codemirror_height`
 
 Set the height of any CodeMirror textareas in the control panel, such as the Template Editor.
 
@@ -710,7 +708,7 @@ Example Usage:
 
     $config['codemirror_height'] = '18em';
 
-### `codemirror_fontsize`
+## `codemirror_fontsize`
 
 Set the font-size of any CodeMirror textareas in the control panel, such as the Template Editor. Default is `1rem`.
 
@@ -722,7 +720,7 @@ Example Usage:
 
     $config['codemirror_fontsize'] = '0.9rem';
 
-### `comment_edit_time_limit`
+## `comment_edit_time_limit`
 
 Set the length of time in seconds that members have to edit their comments on the front end of the site. Set to `0` for no limit. Members in the Super Admin group are exempt from this time limit.
 
@@ -736,7 +734,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Comment Settings`: [Comment Editing Time Limit](comment/control-panel.md#comment-editing-time-limit)
 
-### `comment_moderation_override`
+## `comment_moderation_override`
 
 By default, comments are no longer accepted for entries after their comment expiration date has passed. Set this preference to override that behavior and allow moderated comments on entries after comment expiration.
 
@@ -751,7 +749,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Comment Settings`: [Moderate expired entries](comment/control-panel.md#moderate-after-comments-expire)
 
-### `comment_word_censoring`
+## `comment_word_censoring`
 
 Apply word censoring to comments, even if censoring is not [enabled](general/system-configuration-overrides.md#enable_censoring) system-wide.
 
@@ -766,7 +764,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Comment Settings`: [Force word censoring for comments](comment/control-panel.md#enable-word-censoring)
 
-### `cookie_domain`
+## `cookie_domain`
 
 Optionally specify a domain the cookie is available to. By default, the exact hostname of the requested page is set as the cookie domain. For example, if the page at `https://www.example.com/blog/an-entry-title` is loaded and the cookie domain is left blank in ExpressionEngine's configuration, the browser will use `www.example.com` as the cookie domain. The browser will only make these cookies available when the page's hostname is _exactly_ `www.example.com`.
 
@@ -788,7 +786,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Cookie Domain](control-panel/settings/security-privacy.md#domain)
 
-### `cookie_httponly`
+## `cookie_httponly`
 
 Set the HttpOnly flag when setting a cookie. The HttpOnly flag is a security feature for cookies that prevents a client side script from accessing or deleting the cookie (if the browser supports it, as most modern browsers do). [Learn more.](https://www.owasp.org/index.php/HttpOnly)
 
@@ -801,7 +799,7 @@ Example Usage:
 
     $config['cookie_httponly'] = 'n';
 
-### `cookie_path`
+## `cookie_path`
 
 Optionally specify a cookie path. When a cookie path is set, the browser will only share cookies with ExpressionEngine when the beginning of the URL path matches the cookie path. For example, if the cookie path is set to `/blog/`, a cookie for the domain `example.com` will only be sent by the browser if the URL begins with `https://example.com/blog/`. This can be useful if you have ExpressionEngine installed in a sub-directory and want to ensure that only that particular installation has access to the cookies it sets.
 
@@ -815,7 +813,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Cookie Path](control-panel/settings/security-privacy.md#path)
 
-### `cookie_prefix`
+## `cookie_prefix`
 
 Specify a prefix for the cookie name set by ExpressionEngine. This protects against collisions from separate ExpressionEngine installations on the same [cookie domain](#cookie_domain).
 
@@ -829,7 +827,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Cookie Prefix](control-panel/settings/security-privacy.md#prefix)
 
-### `cookie_secure`
+## `cookie_secure`
 
 Require a secure connection (HTTPS) for ExpressionEngine to set cookies.
 
@@ -842,7 +840,7 @@ Example Usage:
 
     $config['cookie_secure'] = 'y';
 
-### `cookie_samesite`
+## `cookie_samesite`
 
 Declare if your cookie should be restricted to a first-party or same-site context. To find out more about SameSite cookies visit https://web.dev/samesite-cookies-explained/
 
@@ -856,7 +854,7 @@ Example Usage:
 
     $config['cookie_samesite'] = 'Strict';
 
-### `cp_session_length`
+## `cp_session_length`
 
 Set TTL for admin sessions.
 
@@ -866,7 +864,7 @@ Set TTL for admin sessions.
 
 NOTE: **Note:** An idle state may still trigger the [Idle Check Modal](control-panel/access.md) regardless of the session length.
 
-### `cp_session_type`
+## `cp_session_type`
 
 Set the method for session handling in the Control Panel.
 
@@ -884,7 +882,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Control Panel Session Type](control-panel/settings/security-privacy.md#cp-session-type)
 
-### `cp_url`
+## `cp_url`
 
 Set the full URL to your Control Panel.
 
@@ -902,7 +900,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`, 
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [URL to your Control Panel index page](control-panel/settings/urls.md#control-panel-directory)
 
-### `date_format`
+## `date_format`
 
 Set the default format for displaying dates. If [allow_member_localization](#allow_member_localization) is enabled and a member has their own localization preference set, that will override this setting.
 
@@ -914,7 +912,7 @@ Example Usage:
 
     $config['date_format'] = '%F %d %Y';
 
-### `db_backup_row_limit`
+## `db_backup_row_limit`
 
 When using the [Database Backup Utility](control-panel/utilities/database.md#database-backup-utility), some databases and PHP configurations may cause the backup utility to run out of memory while creating the backup. This config sets the maximum number of rows that will be queried and written to the backup file at a time. If you run into an out-of-memory error, try setting this to a lower number than the default to have the utility work in smaller batches.
 
@@ -926,7 +924,7 @@ Example Usage:
 
     $config['db_backup_row_limit'] = 2000;
 
-### `debug`
+## `debug`
 
 Set display preferences for PHP and database error messages.
 
@@ -944,7 +942,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Debugging & Output`: [Debug Preference](control-panel/settings/debug-output.md#enable-error-reporting)
 
-### `default_member_group`
+## `default_member_group`
 
 Set the primary member role to which new users will be assigned.
 
@@ -958,7 +956,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Default Member Role Assigned to New Members](control-panel/settings/members.md#default-primary-role)
 
-### `default_site_timezone`
+## `default_site_timezone`
 
 Set the default timezone. All dates and times displayed by ExpressionEngine will be localized to this timezone unless overridden by a member's own localization preferences.
 
@@ -972,7 +970,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> General Settings`: [Site Timezone](control-panel/settings/general.md#timezone)
 
-### `deft_lang`
+## `deft_lang`
 
 Set the default language. ExpressionEngine ships with English, and additional [language packs](localization/languages.md) are available for download.
 
@@ -984,7 +982,7 @@ Example Usage:
 
     $config['deft_lang'] = 'french';
 
-### `deny_duplicate_data`
+## `deny_duplicate_data`
 
 Set whether to reject duplicate data submissions. This feature blocks a comment if an identical one already exists on the site.
 
@@ -999,7 +997,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Deny Duplicate Data](security/spam-protection.md#deny-duplicate-data)
 
-### `disable_all_tracking`
+## `disable_all_tracking`
 
 This is an emergency override which will disable all tracking when enabled. This is useful for server administrators who need a way to respond immediately to a traffic spike to help keep the site running smoothly.
 
@@ -1013,7 +1011,7 @@ Example Usage:
 
     $config['disable_all_tracking'] = 'y';
 
-### `disable_csrf_protection`
+## `disable_csrf_protection`
 
 CSRF protection prevents automated scripts (the most common way spam is generated) from repeatedly submitting comments or other form data. A submission is only allowed when a user manually loads a page and submits the form from your site.
 
@@ -1026,7 +1024,7 @@ Example Usage:
 
     $config['disable_csrf_protection'] = 'y';
 
-### `disable_emoji_shorthand`
+## `disable_emoji_shorthand`
 
 Disables parsing of Emoji "shorthand", e.g. parsing `:rocket:` as 🚀.
 
@@ -1039,7 +1037,7 @@ Example Usage:
 
     $config['disable_emoji_shorthand'] = 'y';
 
-### `disable_tag_caching`
+## `disable_tag_caching`
 
 WARN: **Warning:** Use only under extreme circumstances.
 
@@ -1054,7 +1052,7 @@ Example Usage:
 
     $config['disable_tag_caching'] = 'y';
 
-### `dynamic_tracking_disabling`
+## `dynamic_tracking_disabling`
 
 Set a value for the maximum number of online visitors to track. Once this value is exceeded, all of the tracking features will be temporarily disabled until the number of online visitors drops below the indicated value. Recommended values for this feature will vary based on your hosting environment. Check with your server administrator to discuss reasonable limits for your site.
 
@@ -1070,7 +1068,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Tracking`: [Suspend ALL tracking when number of online visitors exceeds](control-panel/settings/hit-tracking.md#suspend-threshold):
 
-### `email_batch_size`
+## `email_batch_size`
 
 Set the number of emails to be sent in each batch. The batch size you should use depend on many things; among them the email protocol you have chosen, the server configuration, and the server power, so you may need to experiment a little to get it right.
 
@@ -1088,7 +1086,7 @@ Example Usage:
 
     $config['email_batch_size'] = '300';
 
-### `email_batchmode`
+## `email_batchmode`
 
 Set whether to send email via the Communicate section of the Control Panel in batches.
 
@@ -1103,7 +1101,7 @@ Example Usage:
 
     $config['email_batchmode'] = 'y';
 
-### `email_charset`
+## `email_charset`
 
 Set the character encoding used on the content of outgoing messages.
 
@@ -1117,7 +1115,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Outgoing Email`: [Email Character Encoding](control-panel/settings/email.md#character-encoding)
 
-### `email_console_timelock`
+## `email_console_timelock`
 
 Set the number of minutes that must lapse before a member is allowed to send another email.
 
@@ -1131,7 +1129,7 @@ Example Usage:
 
     $config['email_console_timelock'] = '300';
 
-### `email_crlf`
+## `email_crlf`
 
 If set, this overrides the core Email class setting for crlf characters in quoted-printable encoded emails (Email class \$crlf property).
 
@@ -1145,7 +1143,7 @@ Example Usage:
 
 NOTE: **Note:** Double quotes must be used around this value, as per example.
 
-### `email_newline`
+## `email_newline`
 
 If set, overrides the core Email class setting for newline characters (Email class \$newline property).
 
@@ -1159,7 +1157,7 @@ Example Usage:
 
 NOTE: **Note:** Double quotes must be used around this value, as per example.
 
-### `email_smtp_crypto`
+## `email_smtp_crypto`
 
 Cryptographic protocol for SMTP, when a secure connection is required.
 
@@ -1173,7 +1171,7 @@ Example Usage:
 
     $config['email_smtp_crypto'] = 'tls';
 
-### `emoticon_url`
+## `emoticon_url`
 
 Set the URL to the base folder where smiley graphics are stored.
 
@@ -1187,7 +1185,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Content & Design`: [URL to the folder containing your smileys](control-panel/settings/content-design.md#url)
 
-### `enable_censoring`
+## `enable_censoring`
 
 If enabled, the system will censor any [specified words](#censored_words) in channel entries, comments, forum posts, etc. Censored words will be replaced with the [censoring replacement word](#censor_replacement).
 
@@ -1202,9 +1200,9 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Word Censorship`: [Enable Word Censoring](control-panel/settings/word-censor.md#enable-censorship)
 
-### `enable_entry_cloning`
+## `enable_entry_cloning`
 
-When set to `n`, disables "Clone to New Entry" option and entry cloning globally. 
+When set to `n`, disables "Clone to New Entry" option and entry cloning globally.
 
 | Value | Behavior                                       |
 | ----- | ---------------------------------------------- |
@@ -1215,7 +1213,7 @@ Example Usage:
 
     $config['enable_entry_cloning'] = 'y';
 
-### `enable_dock`
+## `enable_dock`
 
 Allows turning off [front-end editing](advanced-usage/front-end/frontend.md) and Prolets completely. When set to `n`, Dock will not be shown and front-end field editing will not be enabled.
 
@@ -1228,7 +1226,7 @@ Example Usage:
 
     $config['enable_dock'] = 'n';
 
-### `enable_emoticons`
+## `enable_emoticons`
 
 If enabled, smileys entered as text will be replaced by emoji.
 
@@ -1243,7 +1241,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Content & Design`: [Enable emoticons?](control-panel/settings/content-design.md#enable-emoticons)
 
-### `enable_entry_view_tracking`
+## `enable_entry_view_tracking`
 
 If enabled, the [Entry "Views" Tracking Tag](channels/entry-tracking.md) feature of the Channel module is available for use.
 
@@ -1258,7 +1256,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Hit Tracking`: [Enable Channel Entry View Tracking](control-panel/settings/hit-tracking.md#enable-entry-view-tracking)
 
-### `enable_frontedit`
+## `enable_frontedit`
 
 When set to `n`, completely disables [front-end editing](advanced-usage/front-end/frontend.md) while keeping Dock visible and Prolets functional.
 
@@ -1272,7 +1270,7 @@ Example Usage:
 
     $config['enable_frontedit'] = 'n';
 
-### `enable_frontedit_links`
+## `enable_frontedit_links`
 
 When set to `n`, disables automatic creation of content management links on front-end. The links can still be [added manually](advanced-usage/front-end/frontend.md#customizing-the-link-location).
 
@@ -1285,7 +1283,7 @@ Example Usage:
 
     $config['enable_frontedit_links'] = 'y';
 
-### `enable_hit_tracking`
+## `enable_hit_tracking`
 
 If enabled, the hit will be tracked each time a template is loaded.
 
@@ -1300,7 +1298,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Tracking`: [Enable Template Hit Tracking](control-panel/settings/hit-tracking.md#enable-template-hit-tracking)
 
-### `enable_online_user_tracking`
+## `enable_online_user_tracking`
 
 If enabled, online user statistics are tracked and the user-based variables in the [Statistics](add-ons/statistics.md) module are available for use.
 
@@ -1315,7 +1313,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Tracking`: [Enable Online User Tracking](control-panel/settings/hit-tracking.md#enable-online-user-tracking)
 
-### `enable_tracking_cookie`
+## `enable_tracking_cookie`
 
 When enabled, ExpressionEngine will set `exp_tracker` cookie on each page visit, allowing navigation through browsing history. Disabling it might influence redirect behavior of some forms on front-end.
 
@@ -1330,7 +1328,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Tracking`: [Enable tracker cookie?](control-panel/settings/hit-tracking.md#enable-tracker-cookie)
 
-### `enable_search_log`
+## `enable_search_log`
 
 If enabled, each searched term will be logged and can be viewed in the [Search Log](control-panel/system-logs.md#search-logs).
 
@@ -1343,7 +1341,7 @@ Example Usage:
 
     $config['enable_search_log'] = 'n';
 
-### `enable_sql_caching`
+## `enable_sql_caching`
 
 Improves the speed at which the Channel Entries tag is rendered by caching queries that are normally executed dynamically.
 
@@ -1358,7 +1356,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Content & Design`: [Cache Dynamic Channel Queries](optimization/caching.md#dynamic-channel-query-caching)
 
-### `enable_template_routes`
+## `enable_template_routes`
 
 This setting toggles whether or not Template Routes are used. If this is set to no, templates will not be accessible by their routes. When disabled the Template Route options will not appear in the Template Manager.
 
@@ -1371,7 +1369,7 @@ Example Usage:
 
     $config['enable_template_routes'] = 'y';
 
-### `enable_throttling`
+## `enable_throttling`
 
 If enabled, the system will throttle excessive web requests from potentially malicious users.
 
@@ -1386,7 +1384,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [Enable Throttling](control-panel/settings/throttling.md#enable-throttling)
 
-### `encode_removed_text`
+## `encode_removed_text`
 
 If set and `$this->encode_email` is set to `FALSE` in the Template class---which is not the default---this text will replace all instances of the [encode](templates/globals/single-variables.md#encode) global variable.
 
@@ -1398,7 +1396,7 @@ Example Usage:
 
     $config['encode_removed_text'] = 'Encoded emails not allowed';
 
-### `encryption_key`
+## `encryption_key`
 
 May be used by third parties as part of encoding and decoding encrypted data. The recommended length of the key is 32 characters (128 bits). The key should include numbers and uppercase and lowercase letters.
 
@@ -1410,7 +1408,7 @@ Example Usage:
 
     $config['encryption_key'] = 'sy22k6QK6JzH38u4nLZ65bHOdK6VL89d';
 
-### `expire_session_on_browser_close`
+## `expire_session_on_browser_close`
 
 Set the system to end a user's session when the browser is closed. (In the case of Mac OS X, this means quitting the browser application.)
 
@@ -1423,16 +1421,16 @@ Example Usage:
 
     $config['expire_session_on_browser_close'] = 'y';
 
-### `favicon`
+## `favicon`
 
-URL to file used as favicon in Control Panel. 
+URL to file used as favicon in Control Panel.
 
 Example Usage:
 
     $config['favicon'] = '/url/to/icon.png';
 
 
-### `filename_increment`
+## `filename_increment`
 
 Forces filenames of uploaded files to be unique. Secondary uploads of existing files or uploads that share a filename with an existing file will have an incrementing number appended to the filename.
 
@@ -1445,7 +1443,7 @@ Example Usage:
 
     $config['filename_increment'] = 'y';
 
-### `force_query_string`
+## `force_query_string`
 
 If enabled, ExpressionEngine will render URLs with a question mark following `index.php` in order to pass along segment information as a standard query string:
 
@@ -1468,7 +1466,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Debugging & Output`: [Force URL query strings](control-panel/settings/debug-output.md#force-url-query-strings)
 
-### `force_redirect`
+## `force_redirect`
 
 If `redirect_submitted_links` is set to `y`, this setting can be used to show an interstitial message to the user to confirm they want to visit the link they clicked. This can prevent issues where a link looks like it leads to one place, but actually leads to another.
 
@@ -1483,7 +1481,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Force redirect confirmation on submitted links? ](control-panel/settings/security-privacy.md#enable-rank-denial-to-submitted-links)
 
-### `forum_is_installed`
+## `forum_is_installed`
 
 Automatically enabled when the [Discussion Forum](https://github.com/ExpressionEngine/Forum) module is installed.
 
@@ -1496,7 +1494,7 @@ Example Usage:
 
     $config['forum_is_installed'] = 'y';
 
-### `forum_trigger`
+## `forum_trigger`
 
 Sets the forum triggering word if the [Discussion Forum module is installed](https://github.com/ExpressionEngine/Forum).
 
@@ -1510,7 +1508,7 @@ Example Usage:
 
 **Also found in CP:** `Developer --> Add-Ons --> Discussion Forum Settings --> Edit`: [Forum Triggering Word](https://github.com/ExpressionEngine/Forum/blob/main/docs/boards.md#forum-triggering-word)
 
-### `gmail_duplication_prevention`
+## `gmail_duplication_prevention`
 
 Gmail email addresses can optionally include any number of `.`'s and they're equivalent to the same address without `.`'s. For example `example@gmail.com` is the same as `e.x.a.m.p.l.e@gmail.com`. By default, ExpressionEngine prevents duplicate registration from the same address, but you can disable the prevention.
 
@@ -1523,7 +1521,7 @@ Example Usage:
 
     $config['gmail_duplication_prevention'] = 'n';
 
-### `gzip_output`
+## `gzip_output`
 
 Set the system to serve compressed front-end pages for faster load times as long as the requesting browser supports gzip compression, PHP's zlib extension is loaded, and the web server is not already serving compressed pages. It's a good idea to enable this setting in most production environments.
 
@@ -1540,7 +1538,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Debugging & Output`: [Enable GZIP Output](control-panel/settings/debug-output.md#enable-gzip-compression)
 
-### `hidden_template_indicator`
+## `hidden_template_indicator`
 
 Specify the character(s) that denote a [hidden template](templates/overview.md#hidden-templates) when used to prefix a template name. The default is an underscore, e.g. `_my_hidden_template`.
 
@@ -1552,7 +1550,7 @@ Example Usage:
 
     $config['hidden_template_indicator'] = '.';
 
-### `hidden_template_404`
+## `hidden_template_404`
 
 Set the system to show either a 404 page or the template group's index page when a hidden template is directly loaded in a browser.
 
@@ -1560,7 +1558,7 @@ Example Usage:
 
     $config['hidden_template_404'] = 'y';
 
-### `htaccess_path`
+## `htaccess_path`
 
 Set the server path used by the [Block/Allow](add-ons/blocklist.md) module to [write rules to your .htaccess file](add-ons/blocklist.md#writing-the-block-list-to-htaccess-file).
 
@@ -1572,7 +1570,7 @@ Example Usage:
 
     $config['htaccess_path'] = '/server/path/to/your/.htaccess';
 
-### `ignore_entry_stats`
+## `ignore_entry_stats`
 Disable entry stats and analytics being saved during creating/updating of entries when using models. Disabling entry stats can lead to improved performance when using models
 
 | Value | Behavior                                             |
@@ -1584,7 +1582,7 @@ Example Usage:
 
     $config['ignore_entry_stats'] = 'y';
 
-### `ignore_member_stats`
+## `ignore_member_stats`
 Disable member role count being saved during creating/updating of members when using models. Disabling member stats can lead to improved performance when using models
 
 | Value | Behavior                                             |
@@ -1596,7 +1594,7 @@ Example Usage:
 
     $config['ignore_member_stats'] = 'y';
 
-### `image_library_path`
+## `image_library_path`
 
 Set the path to the selected image library.
 
@@ -1612,7 +1610,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Content & Design`: [Image Converter Path](control-panel/settings/content-design.md#converter-path)
 
-### `image_resize_protocol`
+## `image_resize_protocol`
 
 Specify the image manipulation library to use. You may need to contact your web host or sysadmin to determine which protocols are installed and available on your server.
 
@@ -1631,7 +1629,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Content & Design`: [Image Resizing Protocol](control-panel/settings/content-design.md#protocol)
 
-### `include_seconds`
+## `include_seconds`
 
 Set the system to include seconds when time is displayed in the interface.
 
@@ -1657,7 +1655,7 @@ Example Usage:
 
     $config['ip2nation'] = 'n';
 
-### `is_site_on`
+## `is_site_on`
 
 Specify whether the site should be viewable by the general public or taken offline. This can be helpful when performing maintenance on only one of several MSM sites.
 
@@ -1680,7 +1678,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`. 
 
 **Also found in CP:** `Settings --> General Settings`: Is site on?
 
-### `is_system_on`
+## `is_system_on`
 
 Specify whether the system's front-end should be viewable by the general public or taken offline. This can be helpful when performing maintenance.
 
@@ -1695,7 +1693,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> General Settings`: [Is system on? ](control-panel/settings/general.md#website-online)
 
-### `legacy_member_templates`
+## `legacy_member_templates`
 
 Enables legacy member templates
 
@@ -1708,7 +1706,7 @@ Example Usage:
 
     $config['legacy_member_templates'] = 'y';
 
-### `lockout_time`
+## `lockout_time`
 
 Set the length of time a throttled visitor will be locked out of the site.
 
@@ -1722,7 +1720,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [Lockout Time](control-panel/settings/throttling.md#lockout-time)
 
-### `log_date_format`
+## `log_date_format`
 
 Set the timestamp format for all items added to the log file.
 
@@ -1734,7 +1732,7 @@ Example Usage:
 
     $config['log_date_format'] = 'Y-m-d H:i:s';
 
-### `log_email_console_msgs`
+## `log_email_console_msgs`
 
 Enable logging of all messages sent via the email console in the member profile pages.
 
@@ -1747,7 +1745,7 @@ Example Usage:
 
     $config['log_email_console_msgs'] = 'n';
 
-### `log_referrers`
+## `log_referrers`
 
 Enable referrer tracking. When enabled, one additional database access query will be performed for each page load so that the statistics can be generated.
 
@@ -1760,11 +1758,11 @@ Example Usage:
 
     $config['log_referrers'] = 'n';
 
-### `log_search_terms`
+## `log_search_terms`
 
 Unused in first party files, this configuration item exists to allow backwards compatibility for any third party add-ons using it.
 
-### `log_threshold`
+## `log_threshold`
 
 NOTE: **Note:** In order to save anything to log files, you'll need to create the `/system/user/logs/` directory and ensure it's writable.
 
@@ -1782,7 +1780,7 @@ Example Usage:
 
     $config['log_threshold'] = '1';
 
-### `login_logo`
+## `login_logo`
 
 URL to file used as branded logo on login page.
 
@@ -1790,7 +1788,7 @@ Example Usage:
 
     $config['login_logo'] = '/url/to/file.jpg';
 
-### `mail_format`
+## `mail_format`
 
 Set the default mail format selection for emails sent via the Communicate section.
 
@@ -1805,7 +1803,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Outgoing Email`: [Default Mail Format](control-panel/settings/email.md#mail-format)
 
-### `mail_protocol`
+## `mail_protocol`
 
 Set the system's method for sending email.
 
@@ -1821,7 +1819,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Outgoing Email`: [Email Protocol](control-panel/settings/email.md#protocol)
 
-### `max_logged_searches`
+## `max_logged_searches`
 
 Set the maximum number of most recent search terms to save in the [search log](#enable_search_log).
 
@@ -1833,7 +1831,7 @@ Example Usage:
 
     $config['max_logged_searches'] = '500';
 
-### `max_page_loads`
+## `max_page_loads`
 
 Set the maximum number of times a visitor is allowed to load your web pages within a given [time interval](#time_interval) before being locked out. If you set this preference to 5 page loads within 10 seconds, a user can not browse more than 5 pages within a 10 second interval or the throttling feature will be triggered, locking them out for the given [lockout time](#lockout_time).
 
@@ -1847,7 +1845,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [Maximum Number of Page Loads](control-panel/settings/throttling.md#maximum-page-loads)
 
-### `max_tmpl_revisions`
+## `max_tmpl_revisions`
 
 Set the maximum number of template revisions to save if [template revisions are enabled](#save_tmpl_revisions).
 
@@ -1861,7 +1859,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Template Settings`: [Maximum Number of Revisions to Keep](control-panel/settings/template.md#maximum-revisions)
 
-### `max_url_segments`
+## `max_url_segments`
 
 Set the maximum number of URL segments allows in requests made to your site.
 
@@ -1873,7 +1871,7 @@ Example Usage:
 
     $config['max_url_segments'] = '12';
 
-### `mbr_notification_emails`
+## `mbr_notification_emails`
 
 List of email addresses to notify if [notification is enabled](#new_member_notification) for new member registrations.
 
@@ -1906,7 +1904,7 @@ Example Usage:
       )
     );
 
-### `member_theme`
+## `member_theme`
 
 Set the default member profile theme.
 
@@ -1920,7 +1918,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Default Member Profile Theme](control-panel/settings/members.md#member-profile-theme)
 
-### `memberlist_order_by`
+## `memberlist_order_by`
 
 Set the default sorting criteria for the member list.
 
@@ -1938,7 +1936,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Member List - Sort By](control-panel/settings/members.md#sort-by)
 
-### `mime_whitelist_additions`
+## `mime_whitelist_additions`
 
 With an array, add Mime Types to the whitelist.
 
@@ -1948,7 +1946,7 @@ Example Usage:
       'image/vnd.adobe.photoshop'
     );
 
-### `mime_whitelist_member_exception`
+## `mime_whitelist_member_exception`
 
 Specify member IDs to exclude from Mime Type whitelist restrictions.
 
@@ -1960,7 +1958,7 @@ Example Usage:
 
     $config['mime_whitelist_member_exception'] = '3, 14, 83';
 
-### `mime_whitelist_member_group_exception`
+## `mime_whitelist_member_group_exception`
 
 Specify member role IDs to exclude from Mime Type whitelist restrictions.
 
@@ -1972,7 +1970,7 @@ Example Usage:
 
     $config['mime_whitelist_member_group_exception'] = '2, 5';
 
-### `moblog_allow_nontextareas`
+## `moblog_allow_nontextareas`
 
 Remove Moblog's textarea-only restriction for Channel Fields.
 
@@ -1985,7 +1983,7 @@ Example Usage:
 
     $config['moblog_allow_nontextareas'] = 'y';
 
-### `memberlist_row_limit`
+## `memberlist_row_limit`
 
 Set the default number of rows for the member list to display.
 
@@ -1999,7 +1997,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Member List - Rows](control-panel/settings/members.md#total-results)
 
-### `memberlist_sort_order`
+## `memberlist_sort_order`
 
 Set the default member list sort order.
 
@@ -2014,7 +2012,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Member List - Order](control-panel/settings/members.md#order-by)
 
-### `multi_login_sites`
+## `multi_login_sites`
 
 Sets the frontend login to apply to multiple sites.
 
@@ -2028,7 +2026,7 @@ Example Usage:
 
 For more information, see [MSM multi site login](msm/overview.md#multi-site-login)
 
-### `multiple_sites_enabled`
+## `multiple_sites_enabled`
 
 Enable Multiple Site Manager.
 
@@ -2043,7 +2041,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> General Settings`:
 
-### `name_of_dictionary_file`
+## `name_of_dictionary_file`
 
 Filename for the dictionary file. The official dictionary file is [available for download](https://ellislab.com/asset/file/dictionary.zip). Must be used in combination with [allow_dictionary_pw](#allow_dictionary_pw).
 
@@ -2057,7 +2055,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Name of Dictionary File](control-panel/settings/security-privacy.md#dictionary-file)
 
-### `new_member_notification`
+## `new_member_notification`
 
 Enables notification of a [given notification list](#mbr_notification_emails) for new member registrations.
 
@@ -2072,7 +2070,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Send new member notifications](control-panel/settings/members.md#enable-new-member-notifications)
 
-### `new_posts_clear_caches`
+## `new_posts_clear_caches`
 
 Set caches to clear when new entries are posted.
 
@@ -2089,7 +2087,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Content & Design`: [Clear all caches when new entries are posted](control-panel/settings/content-design.md#clear-cache-for-new-entries)
 
-### `new_version_check`
+## `new_version_check`
 
 Set ExpressionEngine to periodically check for available updates.
 
@@ -2104,7 +2102,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> General Settings`: [New Version Auto Check](control-panel/settings/general.md#new-version-auto-check)
 
-### `newrelic_app_name`
+## `newrelic_app_name`
 
 Sets the application name that is reported in the New Relic dashboard. If you're using New Relic to monitor the performance of multiple ExpressionEngine installations, you'll likely want those installations to show up separately in your New Relic dashboard.
 
@@ -2120,7 +2118,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`, 
 
     $assign_to_config['newrelic_app_name'] = 'My Second Site';
 
-### `newrelic_include_version_number`
+## `newrelic_include_version_number`
 
 Whether or not to append the version number to the Application name in the New Relic dashboard.
 
@@ -2133,7 +2131,7 @@ Example Usage:
 
     $config['newrelic_include_version_number'] = 'y';
 
-### `parse_variables_query_results_by_default`
+## `parse_variables_query_results_by_default`
 
 In case you select a table which stores files, the returned value will look like `{file:XX:url}` or have `{filedir_` in front of the file names (when File Manager is in Compatibility mode). In case you select a table which stores site settings, the returned value may have `{base_` variables. To parse both cases by default, enable the following config:
 
@@ -2142,7 +2140,7 @@ In case you select a table which stores files, the returned value will look like
 | y     | Parse variables by default                  |
 | n     | Do not parse variables by default (default) |
 
-### `password_lockout`
+## `password_lockout`
 
 If enabled, the system will lock a member account if more than four invalid login attempts are made within a [specified time period](#password_lockout_interval). This is designed to deter hackers from using collision attacks to guess poorly chosen passwords. The account remains locked for the duration of the password lockout time period.
 
@@ -2157,7 +2155,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Enable Password Lockout](control-panel/settings/security-privacy.md#enable-password-lock-out)
 
-### `password_lockout_interval`
+## `password_lockout_interval`
 
 Set the time period for measuring [invalid login attempts](#password_lockout) and locking accounts.
 
@@ -2171,7 +2169,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Time Interval for Lockout](control-panel/settings/security-privacy.md#password-lock-out-interval)
 
-### `popup_link`
+## `popup_link`
 
 Specify whether links created by the [Typography class](development/legacy/libraries/typography.md) open in a new window.
 
@@ -2184,7 +2182,7 @@ Example Usage:
 
     $config['popup_link'] = 'y';
 
-### `profile_trigger`
+## `profile_trigger`
 
 Set the triggering word for the front-end members section. The default is "member", and the word you set cannot be the name of an existing template group.
 
@@ -2198,7 +2196,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Profile Triggering Word](control-panel/settings/urls.md#profile-url-segment)
 
-### `proxy_ips`
+## `proxy_ips`
 
 Allow list of reverse proxy servers that may forward the visitor's IP address.
 DEPRECATED. Use [`proxy.php` config file](config/config-files.md#reverse-proxy-ip-addresses) instead.
@@ -2211,7 +2209,7 @@ Example Usage:
 
     $config['proxy_ips'] = '10.0.1.25, 10.0.1.26';
 
-### `prv_msg_throttling_period`
+## `prv_msg_throttling_period`
 
 Set the length of time users must wait between sending private messages.
 
@@ -2225,7 +2223,7 @@ Example Usage:
 
     $config['prv_msg_throttling_period'] = '60';
 
-### `prv_msg_upload_path`
+## `prv_msg_upload_path`
 
 Set the server path to the private messages uploads directory.
 
@@ -2239,7 +2237,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Messages`: [Server Path for Attachment Upload Directory](control-panel/settings/messages.md#upload-path)
 
-### `prv_msg_waiting_period`
+## `prv_msg_waiting_period`
 
 Set the length of time members must wait after registration before being allowed to send private messages.
 
@@ -2253,7 +2251,7 @@ Example Usage:
 
     $config['prv_msg_waiting_period'] = '4';
 
-### `publish_page_title_focus`
+## `publish_page_title_focus`
 
 Specify whether the title field should gain focus when the publish page is loaded.
 
@@ -2266,7 +2264,7 @@ Example Usage:
 
     $config['publish_page_title_focus'] = 'n';
 
-### `pw_min_len`
+## `pw_min_len`
 
 Set the minimum number of characters allowed for member passwords.
 
@@ -2280,7 +2278,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Minimum Password Length](control-panel/settings/urls.md#profile-url-segment)
 
-### `recount_batch_total`
+## `recount_batch_total`
 
 Set the batch size for recounting statistics.
 
@@ -2294,7 +2292,7 @@ Example Usage:
 
     $config['recount_batch_total'] = '200';
 
-### `redirect_method`
+## `redirect_method`
 
 Set the method the system uses for page redirection.
 
@@ -2309,7 +2307,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Debugging & Output`: [Redirection Method](control-panel/settings/debug-output.md#redirection-type)
 
-### `redirect_submitted_links`
+## `redirect_submitted_links`
 
 Apply rank denial to user-submitted links. This feature rewrites links submitted in comments so they first point to an intermediate redirect page, helping deter comment spammers by preventing linked sites from gaining a search engine page rank advantage.
 
@@ -2337,7 +2335,7 @@ Example Usage:
       'timeout' => 0
     );
 
-### `relaxed_track_views`
+## `relaxed_track_views`
 
 Allow [Entry Views Tracking](channels/entry-tracking.md) to work for ANY combination that results in only one entry being returned by the tag, including Channel query caching.
 
@@ -2350,7 +2348,7 @@ Example Usage:
 
     $config['relaxed_track_views'] = 'y';
 
-### `remove_close_all_button`
+## `remove_close_all_button`
 
 Remove the button to close all HTML tags from the publish page and user-side HTML formatting buttons. Most browsers no longer need it.
 
@@ -2363,7 +2361,7 @@ Example Usage:
 
     $config['remove_close_all_button'] = 'y';
 
-### `remove_unparsed_vars`
+## `remove_unparsed_vars`
 
 Remove unparsed ExpressionEngine variables upon output when the [debug](#debug) has been set to `0`.
 
@@ -2376,7 +2374,7 @@ Example Usage:
 
     $config['remove_unparsed_vars'] = 'y';
 
-### `req_mbr_activation`
+## `req_mbr_activation`
 
 Specify whether new member activation is automatic, requires email verification, or requires an administrator's approval.
 
@@ -2392,7 +2390,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Require Member Account Activation](control-panel/settings/members.md#account-activation-type)
 
-### `require_captcha`
+## `require_captcha`
 
 When enabled, site visitors will be required to pass a CAPTCHA to submit any front-end form, including Channel Form, comment forms, and member registrations.
 
@@ -2403,7 +2401,7 @@ When enabled, site visitors will be required to pass a CAPTCHA to submit any fro
 
 **Also found in CP:** `Settings --> CAPTCHA`: [Require CAPTCHA](control-panel/settings/captcha.md#require-captcha)
 
-### `require_ip_for_login`
+## `require_ip_for_login`
 
 Require users have a valid IP address and browser user agent when logging in. This helps prevent hackers from logging in using direct socket connections or trying to access the system with a masked IP address.
 
@@ -2418,7 +2416,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Require IP Address and User Agent for Login](control-panel/settings/security-privacy.md#require-user-agent-and-ip-for-login)
 
-### `require_ip_for_posting`
+## `require_ip_for_posting`
 
 Require users have a valid IP address and browser user agent when posting comments or Channel Form entries.
 
@@ -2433,7 +2431,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Require IP Address and User Agent for posting](control-panel/settings/security-privacy.md#require-user-agent-and-ip-for-posting)
 
-### `require_secure_passwords`
+## `require_secure_passwords`
 
 Require users' passwords to adhere to certain password security policy as implemented by ExpressionEngine. Description of each policy can be found in [Password Security Policy](control-panel/settings/security-privacy.md#password-security-policy)
 
@@ -2450,7 +2448,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Require Secure Passwords](control-panel/settings/security-privacy.md#password-security-policy)
 
-### `require_terms_of_service`
+## `require_terms_of_service`
 
 Require new members to agree to your terms of service upon registration.
 
@@ -2465,7 +2463,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Require Terms of Service](control-panel/settings/members.md#require-terms-of-service)
 
-### `reserved_category_word`
+## `reserved_category_word`
 
 If [use_category_name](#use_category_name) is enabled, specify a word to use in category URLs to indicate to the system that the following segment is the category URL title. For example, if the indicator is set to "category" and the category URL title is "blogging":
 
@@ -2483,7 +2481,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Category URL Indicator](control-panel/settings/urls.md#category-url-segment)
 
-### `save_tmpl_files`
+## `save_tmpl_files`
 
 Enable the saving of templates as files.
 
@@ -2496,7 +2494,7 @@ Example Usage:
 
     $config['save_tmpl_files'] = 'y';
 
-### `save_tmpl_globals`
+## `save_tmpl_globals`
 
 Enable the saving of template global variables as files.
 
@@ -2509,7 +2507,7 @@ Example Usage:
 
     $config['save_tmpl_globals'] = 'y';
 
-### `save_tmpl_revisions`
+## `save_tmpl_revisions`
 
 Enable template revisions. Template history is saved when changes are made within the [template editor](control-panel/template-manager.md#edit-template).
 
@@ -2524,7 +2522,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Template Settings`: [Save Template Revisions](control-panel/settings/template.md#save-template-revisions)
 
-### `sc_certificate_id`
+## `sc_certificate_id`
 
 Specify the unique ID that is supplied by PayPal after providing them with a [public certificate](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#public-certificate-path).
 
@@ -2538,7 +2536,7 @@ Example Usage:
 
 **Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [ID Given to Public Certificate by PayPal](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#public-certification-id)
 
-### `sc_encrypt_buttons`
+## `sc_encrypt_buttons`
 
 Enable encryption for PayPal purchase links and buttons created by Simple Commerce.
 
@@ -2557,7 +2555,7 @@ Example Usage:
 
 **Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Encrypt PayPal Buttons and Links? ](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#encrypt-paypal-buttons-and-links)
 
-### `sc_paypal_account`
+## `sc_paypal_account`
 
 Specify the primary email address associated with the PayPal account processing payments for store purchases.
 
@@ -2571,7 +2569,7 @@ Example Usage:
 
 **Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [PayPal Account](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#paypal-account-email)
 
-### `sc_paypal_certificate`
+## `sc_paypal_certificate`
 
 Specify the path to the PayPal-provided certificate file. Please read the section on `simple_commerce_encrypted_payments` for full details.
 
@@ -2587,7 +2585,7 @@ Example Usage:
 
 **Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [PayPal Certificate Path](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#paypal-certificate-path)
 
-### `sc_private_key`
+## `sc_private_key`
 
 Specify the path to the private key file. Please read the section on `simple_commerce_encrypted_payments` for full details.
 
@@ -2603,7 +2601,7 @@ Example Usage:
 
 **Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Private Key Path](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#private-key-path)
 
-### `sc_public_certificate`
+## `sc_public_certificate`
 
 Specify the path to the public certificate file. Please read the section on `simple_commerce_encrypted_payments` for full details.
 
@@ -2619,7 +2617,7 @@ Example Usage:
 
 **Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Public Certificate Path](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#public-certificate-path)
 
-### `sc_temp_path`
+## `sc_temp_path`
 
 Specify the path to the temporarily stored encrypted files. Please read the section on `simple_commerce_encrypted_payments` for full details.
 
@@ -2635,7 +2633,7 @@ Example Usage:
 
 **Also found in CP:** `Developer --> Add-Ons --> Simple Commerce Settings`: [Temporary Encrypted Files Path](https://github.com/ExpressionEngine/Simple-Commerce/blob/main/docs/paypal-settings.md#temporary-encrypted-files-path)
 
-### `send_headers`
+## `send_headers`
 
 Specify whether the system should automatically send HTTP page headers when it serves pages to a visitor.
 
@@ -2650,7 +2648,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Debugging & Output`: [Generate HTTP Page Headers](control-panel/settings/debug-output.md#use-http-page-headers)
 
-### `server_offset`
+## `server_offset`
 
 When a server's clock is off and you are unable to correct it at the server level, use this preference to correct the disparity. Use a positive integer to correct a server clock that is too slow, and a negative integer to correct a server clock that is too fast.
 
@@ -2664,7 +2662,7 @@ Example Usage:
 
     $config['server_offset'] = '-15';
 
-### `show_profiler`
+## `show_profiler`
 
 Enable Output Profiler. When enabled, Super Admins will see benchmark results, SQL queries, and submitted form data displayed at the bottom of the browser window. Template debugging is included on the front end.
 
@@ -2679,7 +2677,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Debugging & Output`: [Display Output Profiler](control-panel/settings/debug-output.md#enable-debugging)
 
-### `sig_allow_img_hotlink`
+## `sig_allow_img_hotlink`
 
 Specify whether members can link to images hosted on other websites as their signature image for Discussion Forum.
 
@@ -2692,7 +2690,7 @@ Example Usage:
 
     $config['sig_allow_img_hotlink'] = 'n';
 
-### `sig_allow_img_upload`
+## `sig_allow_img_upload`
 
 Set whether members can upload their own signature image for Discussion Forum.
 
@@ -2705,7 +2703,7 @@ Example Usage:
 
     $config['sig_allow_img_upload'] = 'y';
 
-### `sig_img_max_height`
+## `sig_img_max_height`
 
 Set the maximum height (in pixels) allowed for user-uploaded signature images in Discussion Forum.
 
@@ -2717,7 +2715,7 @@ Example Usage:
 
     $config['sig_img_max_height'] = '150';
 
-### `sig_img_max_kb`
+## `sig_img_max_kb`
 
 Set the maximum file size (in kilobytes) allowed for user-uploaded signature images in Discussion Forum.
 
@@ -2729,7 +2727,7 @@ Example Usage:
 
     $config['sig_img_max_kb'] = '50';
 
-### `sig_img_max_width`
+## `sig_img_max_width`
 
 Set the maximum width (in pixels) allowed for user-uploaded signature images in Discussion Forum.
 
@@ -2741,7 +2739,7 @@ Example Usage:
 
     $config['sig_img_max_width'] = '150';
 
-### `sig_img_path`
+## `sig_img_path`
 
 Set the server path to the signature images directory. The default path is `{base_path}/images/signature_attachments/` when no override is set.
 
@@ -2753,7 +2751,7 @@ Example Usage:
 
     $config['sig_img_path'] = '/path/image/folder/';
 
-### `sig_img_url`
+## `sig_img_url`
 
 Set the URL to the signature images directory. The default path is `{base_url}/images/signature_attachments/` when no override is set.
 
@@ -2765,7 +2763,7 @@ Example Usage:
 
     $config['sig_img_url'] = 'https://example.com/images/signatures/';
 
-### `sig_maxlength`
+## `sig_maxlength`
 
 Set the maximum number of characters allowed in a member's signature for Discussion Forum.
 
@@ -2777,7 +2775,7 @@ Example Usage:
 
     $config['sig_maxlength'] = '500';
 
-### `site_404`
+## `site_404`
 
 Set which template should be displayed when a visitor tries to access an invalid URL.
 
@@ -2795,7 +2793,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`. 
 
 **Also found in CP:** `Settings --> Template Settings`: [404 Page](control-panel/settings/template.md#404-page)
 
-### `site_index`
+## `site_index`
 
 Set the filename of the [site index file](#site-index-file). By default, this will be `index.php`, which is located in the base folder. You will only need to alter this setting if you have changed the filename or you want to [remove index.php from your site's URLs](installation/best-practices.md#removing-indexphp-from-your-urls).
 
@@ -2813,7 +2811,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`. 
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Name of your site's index page](control-panel/settings/urls.md#website-index-page)
 
-### `site_name`
+## `site_name`
 
 Set the short name of the site. The site created upon installation is named `default_site`, so this is typically only helpful for additional sites in [MSM-enabled installations](msm/overview.md).
 
@@ -2827,7 +2825,7 @@ Available for use only in the [site index file](#site-index-file), `index.php`, 
 
 **Also found in CP:** `Developer --> Site Manager --> Edit`
 
-### `site_url`
+## `site_url`
 
 Set the full URL to the site's web root.
 
@@ -2845,7 +2843,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`. 
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [URL to the root directory of your site](control-panel/settings/urls.md#website-root-directory)
 
-### `smart_static_parsing`
+## `smart_static_parsing`
 
 When enabled, parsing of embedded templates that are not saved as [static templates](control-panel/template-manager.md#create-template) will still be parsed as if they were, if at all possible (i.e. they contain no PHP or ExpressionEngine tags). This setting is enabled by default.
 
@@ -2858,7 +2856,7 @@ Example Usage:
 
     $config['smart_static_parsing'] = 'n';
 
-### `smtp_password`
+## `smtp_password`
 
 If [mail protocol](#mail_protocol) is set to `smtp`, this sets the password the system will use to authenticate with the SMTP server. This information can be obtained from your email provider.
 
@@ -2872,7 +2870,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Outgoing Email`: [SMTP Password](control-panel/settings/email.md#password)
 
-### `smtp_port`
+## `smtp_port`
 
 If [mail protocol](#mail_protocol) is set to `smtp`, this sets the mail server port. This information can be obtained from your email provider.
 
@@ -2884,7 +2882,7 @@ Example Usage:
 
     $config['smtp_port'] = '2525';
 
-### `smtp_server`
+## `smtp_server`
 
 If [mail protocol](#mail_protocol) is set to `smtp`, this sets the mail server hostname. This information can be obtained from your email provider.
 
@@ -2900,7 +2898,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Outgoing Email`: [SMTP Server Address](control-panel/settings/email.md#server-address)
 
-### `smtp_username`
+## `smtp_username`
 
 If [mail protocol](#mail_protocol) is set to `smtp`, this sets the username the system will use to authenticate with the SMTP server. This information can be obtained from your email provider.
 
@@ -2914,7 +2912,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Outgoing Email`: [SMTP Username](control-panel/settings/email.md#username)
 
-### `spellcheck_language_code`
+## `spellcheck_language_code`
 
 Set the language used by spell check.
 
@@ -2926,7 +2924,7 @@ Example Usage:
 
     $config['spellcheck_language_code'] = 'en';
 
-### `strict_urls`
+## `strict_urls`
 
 Set whether the system will allow templates from your default template group to be directly accessed in the first URL segment. If enabled, the system will require that the first URL segment be a valid template group only or a 404 page will be shown.
 
@@ -2941,7 +2939,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Template Settings`: [Enable Strict URLs](control-panel/settings/template.md#enable-strict-urls)
 
-### `template`
+## `template`
 
 Sets the default template. Must be used with [template_group](#template_group), and the two overrides together set the template group and template shown on the front-end when the site is loaded without anything in the [URL segments](templates/globals/url-segments.md).
 
@@ -2959,7 +2957,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`. 
 
 **Also found in CP:** `Developer --> Templates --> New/Edit`: Make the index template in this group your site's home page?
 
-### `template_group`
+## `template_group`
 
 Sets the default template group. Must be used with [template](#template), and the two overrides together set the template group and template shown on the front-end when the site is loaded without anything in the [URL segments](templates/globals/url-segments.md).
 
@@ -2977,7 +2975,7 @@ Also available for use in the [site index file](#site-index-file), `index.php`. 
 
 **Also found in CP:** `Developer --> Templates --> New/Edit`: Make the index template in this group your site's home page?
 
-### `theme_folder_path`
+## `theme_folder_path`
 
 Set the server path to the `themes` directory.
 
@@ -2991,7 +2989,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Theme Folder Path](control-panel/settings/urls.md#themes-path)
 
-### `theme_folder_url`
+## `theme_folder_url`
 
 Set the URL to the `themes` directory.
 
@@ -3005,7 +3003,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [URL to your "themes" folder](control-panel/settings/urls.md#themes-directory)
 
-### `time_format`
+## `time_format`
 
 Set default time format to either 12- or 24-hour time format.
 
@@ -3018,7 +3016,7 @@ Example Usage:
 
     $config['time_format'] = '24';
 
-### `time_interval`
+## `time_interval`
 
 Set the time interval for measuring the [number of page loads](#max_page_loads) that will trigger throttling. If you set this preference to 5 page loads within 10 seconds, a user can not browse more than 5 pages within a 10 second interval or the throttling feature will be triggered, locking them out for the given [lockout time](#lockout_time).
 
@@ -3032,7 +3030,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Access Throttling`: [Time Interval](control-panel/settings/throttling.md#time-interval)
 
-### `tls_crypto_method`
+## `tls_crypto_method`
 
 Stream encryption method, when using TLS for sending emails over SMTP.
 
@@ -3043,12 +3041,12 @@ Stream encryption method, when using TLS for sending emails over SMTP.
 | STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT        | TLS v1.2 (default)         |
 | STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT        | TLS v1.3 (as of PHP 7.4.0) |
 
- 
+
 Example Usage:
 
     $config['tls_crypto_method'] = STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT;
 
-### `un_min_len`
+## `un_min_len`
 
 Set the minimum number of characters allowed for member usernames.
 
@@ -3062,7 +3060,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Minimum Username Length](control-panel/settings/security-privacy.md#minimum-username-length)
 
-### `updater_allow_advanced`
+## `updater_allow_advanced`
 
 Allow advanced options to be displayed during the ExpressionEngine update process.
 
@@ -3076,7 +3074,7 @@ Example Usage:
     $config['updater_allow_advanced'] = 'y';
 
 
-### `upload_blocked_file_names`
+## `upload_blocked_file_names`
 
 With an array, add a case insensitive list of file names that cannot be uploaded.
 
@@ -3086,7 +3084,7 @@ Example Usage:
       'logo.png',
     );
 
-### `upload_preferences`
+## `upload_preferences`
 
 With an associative array, specify upload destination paths, URLs, and titles.
 
@@ -3104,7 +3102,7 @@ Example Usage:
 
 **Also found in CP:** `Files`: [Edit Upload Destination](control-panel/file-manager/upload-directories.md#createedit-upload-directory)
 
-### `uri_protocol`
+## `uri_protocol`
 
 Specify which server global should be used to retrieve the URI string. The default setting of `AUTO` works for most servers. [Learn more](https://www.php.net/manual/en/reserved.variables.server.php) about these server globals.
 
@@ -3120,7 +3118,7 @@ Example Usage:
 
     $config['uri_protocol'] = 'PATH_INFO';
 
-### `use_category_name`
+## `use_category_name`
 
 Set the system to generate category links with category URL titles rather than the numeric category indicator (e.g. `/C12/`).
 
@@ -3135,7 +3133,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Use Category URL Titles In Links? ](control-panel/settings/urls.md#category-url)
 
-### `use_forum_url`
+## `use_forum_url`
 
 Set the system to use the forum URL specified in the [forum board preferences](https://github.com/ExpressionEngine/Forum/blob/main/docs/boards.md#forum-url) rather than the [the main site URL](#site_url) to form the forum's URL.
 
@@ -3148,7 +3146,7 @@ Example Usage:
 
     $config['use_forum_url'] = 'y';
 
-### `use_newrelic`
+## `use_newrelic`
 
 When enabled, New Relic will add [Real User Monitoring JavaScript](https://docs.newrelic.com/docs/browser/browser-monitoring/getting-started/introduction-browser-monitoring) to all ExpressionEngine-powered pages on both the front-end and in the CP.
 
@@ -3161,7 +3159,7 @@ Example Usage:
 
     $config['use_newrelic'] = 'y';
 
-### `webmaster_email`
+## `webmaster_email`
 
 Set the site's return email address for auto-generated emails.
 
@@ -3175,7 +3173,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Outgoing Email`: [Return email address for auto-generated emails](control-panel/settings/email.md#address)
 
-### `webmaster_name`
+## `webmaster_name`
 
 Set the _From_ name for auto-generated emails.
 
@@ -3198,7 +3196,7 @@ Set TTL for frontend sessions.
 | integer | Session TTL in seconds (default is 7200 - 2 hours) |
 
 
-### `website_session_type`
+## `website_session_type`
 
 Specify how sessions are handled on the front-end of the site.
 
@@ -3214,7 +3212,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Security & Privacy`: [Website Session Type](control-panel/settings/security-privacy.md#website-session-type)
 
-### `week_start`
+## `week_start`
 
 Set the day on which the new week starts. If [allow_member_localization](#allow_member_localization) is enabled and a member has their own localization preference set, that will override this setting.
 
@@ -3229,7 +3227,7 @@ Example Usage:
 
     $config['week_start'] = 'monday';
 
-### `word_separator`
+## `word_separator`
 
 Specify the character the system will use to replace spaces when auto-generating a URL title based on the entry's title.
 
@@ -3244,7 +3242,7 @@ Example Usage:
 
 **Also found in CP:** `Settings --> URL and Path Settings`: [Word Separator for URL Titles](control-panel/settings/urls.md#url-title-separator)
 
-### `x_frame_options`
+## `x_frame_options`
 
 Set the `X-Frame-Options` header to control where your site can be included in frames or iframes. This setting only affects the frontend of the site. The control panel will always use the default "SAMEORIGIN".
 
@@ -3254,7 +3252,7 @@ Set the `X-Frame-Options` header to control where your site can be included in f
 | SAMEORIGIN | Only allow framing from the site itself (default)                 |
 | DENY       | Do not allow framing of any sort                                  |
 
-### `xml_lang`
+## `xml_lang`
 
 Set the default XML language, typically used when outputting RSS feeds. Feeds will identify themselves as having the language specified here.
 
@@ -3266,7 +3264,7 @@ Example Usage:
 
     $config['xml_lang'] = 'en';
 
-### `xss_clean_member_exception`
+## `xss_clean_member_exception`
 
 Specify member IDs to exclude from XSS cleaning.
 
@@ -3278,7 +3276,7 @@ Example Usage:
 
     $config['xss_clean_member_exception'] = '3, 14, 83';
 
-### `xss_clean_member_group_exception`
+## `xss_clean_member_group_exception`
 
 Specify member role IDs to exclude from XSS cleaning.
 

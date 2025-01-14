@@ -13,7 +13,7 @@ lang: php
 
 # Typography Library Extension Hooks
 
-### `typography_parse_type_start($str, $this, $prefs)`
+## `typography_parse_type_start($str, $this, $prefs)`
 
 | Parameter | Type     | Description                                              |
 | --------- | -------- | -------------------------------------------------------- |
@@ -28,7 +28,7 @@ How it's called:
 
     $str = $this->extensions->call('typography_parse_type_start', $str, $this, $prefs);
 
-### `typography_parse_type_end($str, $this, $prefs)`
+## `typography_parse_type_end($str, $this, $prefs)`
 
 | Parameter | Type     | Description                                              |
 | --------- | -------- | -------------------------------------------------------- |

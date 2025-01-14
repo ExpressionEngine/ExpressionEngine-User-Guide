@@ -13,9 +13,9 @@ lang: php
 
 # Role Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_role_insert($role, $values)`
+## `before_role_insert($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_role_insert', $this, $this->getValues());
 
-### `after_role_insert($role, $values)`
+## `after_role_insert($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_role_insert', $this, $this->getValues());
 
-### `before_role_update($role, $values, $modified)`
+## `before_role_update($role, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_role_update', $this, $this->getValues(), $modified);
 
-### `after_role_update($role, $values, $modified)`
+## `after_role_update($role, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_role_update', $this, $this->getValues(), $modified);
 
-### `before_role_save($role, $values)`
+## `before_role_save($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_role_save', $this, $this->getValues());
 
-### `after_role_save($role, $values)`
+## `after_role_save($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_role_save', $this, $this->getValues());
 
-### `before_role_delete($role, $values)`
+## `before_role_delete($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_role_delete', $this, $this->getValues());
 
-### `after_role_delete($role, $values)`
+## `after_role_delete($role, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_role_delete', $this, $this->getValues());
 
-### `before_role_bulk_delete($delete_ids)`
+## `before_role_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -143,7 +143,7 @@ How it's called:
     ee()->extensions->call('before_role_bulk_delete', $delete_ids);
 
 
-### `after_role_bulk_delete($delete_ids)`
+## `after_role_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

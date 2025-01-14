@@ -13,7 +13,7 @@ lang: php
 
 # CLI Extension Hooks
 
-### `cli_boot($cli)`
+## `cli_boot($cli)`
 
 | Parameter          | Type     | Description                                                              |
 | ------------------ | -------- | ------------------------------------------------------------------------ |
@@ -29,7 +29,7 @@ How it's called:
         $this->complete('');
     }
 
-### `cli_before_handle($cli, $commandClass, $command)`
+## `cli_before_handle($cli, $commandClass, $command)`
 
 | Parameter      | Type     | Description                                                              |
 | -------------- | -------- | ------------------------------------------------------------------------ |

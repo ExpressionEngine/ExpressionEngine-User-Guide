@@ -13,7 +13,7 @@ lang: php
 
 # My Account Controller Extension Hooks
 
-### `myaccount_nav_setup()`
+## `myaccount_nav_setup()`
 
 | Parameter | Type    | Description                            |
 | --------- | ------- | -------------------------------------- |

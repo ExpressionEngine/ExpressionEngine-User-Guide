@@ -13,7 +13,7 @@ lang: php
 
 # Member Module Settings Extension Hooks
 
-### `member_edit_preferences($element)`
+## `member_edit_preferences($element)`
 
 | Parameter | Type     | Description                                    |
 | --------- | -------- | ---------------------------------------------- |
@@ -26,7 +26,7 @@ How it's called:
 
     $element = ee()->extensions->call('member_edit_preferences', $element);
 
-### `member_update_preferences($data)`
+## `member_update_preferences($data)`
 
 | Parameter | Type    | Description                      |
 | --------- | ------- | -------------------------------- |

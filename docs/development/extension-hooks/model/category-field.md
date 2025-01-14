@@ -13,9 +13,9 @@ lang: php
 
 # CategoryField Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_category_field_insert($category_field, $values)`
+## `before_category_field_insert($category_field, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_category_field_insert', $this, $this->getValues());
 
-### `after_category_field_insert($category_field, $values)`
+## `after_category_field_insert($category_field, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_category_field_insert', $this, $this->getValues());
 
-### `before_category_field_update($category_field, $values, $modified)`
+## `before_category_field_update($category_field, $values, $modified)`
 
 | Parameter        | Type     | Description                                      |
 | ---------------- | -------- | ------------------------------------------------ |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_category_field_update', $this, $this->getValues(), $modified);
 
-### `after_category_field_update($category_field, $values, $modified)`
+## `after_category_field_update($category_field, $values, $modified)`
 
 | Parameter        | Type     | Description                                      |
 | ---------------- | -------- | ------------------------------------------------ |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_category_field_update', $this, $this->getValues(), $modified);
 
-### `before_category_field_save($category_field, $values)`
+## `before_category_field_save($category_field, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_category_field_save', $this, $this->getValues());
 
-### `after_category_field_save($category_field, $values)`
+## `after_category_field_save($category_field, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_category_field_save', $this, $this->getValues());
 
-### `before_category_field_delete($category_field, $values)`
+## `before_category_field_delete($category_field, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_category_field_delete', $this, $this->getValues());
 
-### `after_category_field_delete($category_field, $values)`
+## `after_category_field_delete($category_field, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_category_field_delete', $this, $this->getValues());
 
-### `before_category_field_bulk_delete($delete_ids)`
+## `before_category_field_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -142,7 +142,7 @@ How it's called:
 
     ee()->extensions->call('before_category_field_bulk_delete', $delete_ids);
 
-### `after_category_field_bulk_delete($delete_ids)`
+## `after_category_field_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

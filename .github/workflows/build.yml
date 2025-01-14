@@ -1,0 +1,45 @@
+name: Build Docs
+
+on:
+  push:
+    branches:
+      - 7.x
+      - 7.dev
+
+jobs:
+  build:
+    name: Build Documentation HTML
+    runs-on: ubuntu-latest
+    outputs:
+      DOCSEARCH_INDEX: ${{ steps.setup_vars.outputs.DOCSEARCH_INDEX }}
+      DOCS_URL: ${{ steps.setup_vars.outputs.DOCS_URL }}
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Variables
+        id: setup_vars
+        run: |
+          if [[ "${{github.base_ref}}" == "7.x" || "${{github.ref}}" == "refs/heads/7.x" ]]; then
+            echo "DOCSEARCH_INDEX=expressionengine7" >> "$GITHUB_OUTPUT"
+          else
+            echo "DOCSEARCH_INDEX=expressionengine7_staging" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Update Docsearch Index
+        uses: richardrigutins/replace-in-files@v2
+        with:
+          search-text: "docsearch_index: 'expressionengine'"
+          replacement-text: "docsearch_index: '${{steps.setup_vars.outputs.DOCSEARCH_INDEX}}'"
+          files: ./config.yml
+
+      - name: Install NPM and build
+        run: |
+          npm install
+          npm run build
+
+      - name: Archive Build files
+        uses: actions/upload-artifact@v4
+        with:
+          name: EEDocs7.latest
+          path: build

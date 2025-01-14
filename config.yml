@@ -8,3 +8,5 @@ themeDir: theme
 customVariables:
   current_version: '7'
   current_year: 2024
+  docsearch_index: 'expressionengine'
+  docsearch_public_key: '7d283b55c1d7c0e5f340c71b5dfc751d8dc625708f29e582134f7643bc95dbd7'
