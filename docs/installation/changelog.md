@@ -8,6 +8,30 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.7
+(Release: January 22nd, 2025)
+
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+Resolved [#4622](https://github.com/ExpressionEngine/ExpressionEngine/issues/4622) where applying webp modifier to images with the same name but different extensions would produce the same result
+Resolved [#4634](https://github.com/ExpressionEngine/ExpressionEngine/issues/4634) where Member Template Generator was missing some templates
+Resolved [#4637](https://github.com/ExpressionEngine/ExpressionEngine/issues/4637) where Pro Search permissions were not displayed correctly
+Resolved [#4657](https://github.com/ExpressionEngine/ExpressionEngine/issues/4657) where automatic URL titles were not generated for entries with non-ASCII titles
+Resolved issue where dates were missing leading zeros when using dd.mm.yyyy format
+Resolved [#4658](https://github.com/ExpressionEngine/ExpressionEngine/issues/4658) where it was not possible to deselect an entry category if multiple selection was not allowed
+Resolved [#4636](https://github.com/ExpressionEngine/ExpressionEngine/issues/4636) where it was impossible to delete Files in File Manager from mobile phone
+Resolved [#4393](https://github.com/ExpressionEngine/ExpressionEngine/issues/4393) where Low search settings were not saved when migrating to Pro search
+
 ## Version 7.5.6
 (Release: December 10th, 2024)
 
