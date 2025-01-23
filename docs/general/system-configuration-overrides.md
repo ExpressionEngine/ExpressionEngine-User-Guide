@@ -942,6 +942,19 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Debugging & Output`: [Debug Preference](control-panel/settings/debug-output.md#enable-error-reporting)
 
+## `default_template_engine`
+
+Set the default Template language to be used when creating a new template, as well as in generators
+
+NOTE: **Note:** This config option only works with [Coilpack Installed](https://expressionengine.github.io/coilpack-docs/docs/)
+
+| Value   | Description     |
+| ------- | --------------- |
+| null    |  Native         |
+| twig    |  Twig           |
+| blade   |  Blade          |
+
+
 ## `default_member_group`
 
 Set the primary member role to which new users will be assigned.
