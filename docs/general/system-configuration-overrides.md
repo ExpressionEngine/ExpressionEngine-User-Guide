@@ -944,9 +944,9 @@ Example Usage:
 
 ## `default_template_engine`
 
-Set the default Template language to be used when creating a new template, as well as in generators
+Set the default template language to be used when creating new templates or using generators.
 
-NOTE: **Note:** This config option only works with [Coilpack Installed](https://expressionengine.github.io/coilpack-docs/docs/)
+NOTE: **Note:** This configuration option is only applicable when [Coilpack Installed](https://expressionengine.github.io/coilpack-docs/docs/)
 
 | Value   | Description     |
 | ------- | --------------- |
