@@ -128,7 +128,24 @@ Boolean (TRUE/FALSE) variable representing whether or not the template is being 
 Boolean (TRUE/FALSE) variable representing whether or not the current request is a Live Preview from the control panel. Most commonly you would use this to add/hide information on your preview page for content authors:
 
     {if is_live_preview_request}
-      {!-- include sample rendering of a social share, Twitter card, FB post, etc. --}
+        <span>DRAFT: Verify before publishing.</span>
+    {/if}
+
+You can also use this variable to control parameters within a tag, so that your preview template can show content that might not appear on the live site:
+
+    {if is_live_preview_request}
+        {exp:channel:entries
+            channel="events"
+            limit="1"
+            {if is_live_preview_request}
+            	status="open|archive|draft" show_future_entries="yes" show_expired="yes"
+            {if:else}
+            	status="open"
+            {/if}
+            disable="category_fields|member_data|pagination"
+        }
+            {title}
+        {/exp:channel:entries}
     {/if}
 
 ### `{lang}`
