@@ -23,14 +23,14 @@
 
 **Bug Fixes** 💃🐛
 
-Resolved [#4622](https://github.com/ExpressionEngine/ExpressionEngine/issues/4622) where applying webp modifier to images with the same name but different extensions would produce the same result
-Resolved [#4634](https://github.com/ExpressionEngine/ExpressionEngine/issues/4634) where Member Template Generator was missing some templates
-Resolved [#4637](https://github.com/ExpressionEngine/ExpressionEngine/issues/4637) where Pro Search permissions were not displayed correctly
-Resolved [#4657](https://github.com/ExpressionEngine/ExpressionEngine/issues/4657) where automatic URL titles were not generated for entries with non-ASCII titles
-Resolved issue where dates were missing leading zeros when using dd.mm.yyyy format
-Resolved [#4658](https://github.com/ExpressionEngine/ExpressionEngine/issues/4658) where it was not possible to deselect an entry category if multiple selection was not allowed
-Resolved [#4636](https://github.com/ExpressionEngine/ExpressionEngine/issues/4636) where it was impossible to delete Files in File Manager from mobile phone
-Resolved [#4393](https://github.com/ExpressionEngine/ExpressionEngine/issues/4393) where Low search settings were not saved when migrating to Pro search
+- Resolved [#4622](https://github.com/ExpressionEngine/ExpressionEngine/issues/4622) where applying webp modifier to images with the same name but different extensions would produce the same result
+- Resolved [#4634](https://github.com/ExpressionEngine/ExpressionEngine/issues/4634) where Member Template Generator was missing some templates
+- Resolved [#4637](https://github.com/ExpressionEngine/ExpressionEngine/issues/4637) where Pro Search permissions were not displayed correctly
+- Resolved [#4657](https://github.com/ExpressionEngine/ExpressionEngine/issues/4657) where automatic URL titles were not generated for entries with non-ASCII titles
+- Resolved issue where dates were missing leading zeros when using dd.mm.yyyy format
+- Resolved [#4658](https://github.com/ExpressionEngine/ExpressionEngine/issues/4658) where it was not possible to deselect an entry category if multiple selection was not allowed
+- Resolved [#4636](https://github.com/ExpressionEngine/ExpressionEngine/issues/4636) where it was impossible to delete Files in File Manager from mobile phone
+- Resolved [#4393](https://github.com/ExpressionEngine/ExpressionEngine/issues/4393) where Low search settings were not saved when migrating to Pro search
 
 ## Version 7.5.6
 (Release: December 10th, 2024)
