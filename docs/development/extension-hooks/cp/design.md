@@ -13,7 +13,7 @@ lang: php
 
 # Design Controller Extension Hooks
 
-### `template_types()`
+## `template_types()`
 
 | Parameter | Type    | Description                            |
 | --------- | ------- | -------------------------------------- |

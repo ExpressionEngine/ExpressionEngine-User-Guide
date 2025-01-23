@@ -13,9 +13,9 @@ lang: php
 
 # FluidField Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `fluid_field_get_all_data($data, $fluid_field_id)`
+## `fluid_field_get_all_data($data, $fluid_field_id)`
 
 | Parameter        | Type         | Description                                                             |
 | ---------------- | ------------ | ----------------------------------------------------------------------- |
@@ -31,7 +31,7 @@ How it's called:
 
 TIP: **New in version 6.1.0.**
 
-### `fluid_field_add_field($field_table_name, $values)`
+## `fluid_field_add_field($field_table_name, $values)`
 
 | Parameter          | Type         | Description                   |
 | ------------------ | ------------ | ----------------------------- |
@@ -47,7 +47,7 @@ How it's called:
 
 TIP: **New in version 6.1.0.**
 
-### `fluid_field_update_field($fluid_field, $field_table_name, $values)`
+## `fluid_field_update_field($fluid_field, $field_table_name, $values)`
 
 | Parameter          | Type         | Description                                                             |
 | ------------------ | ------------ | ----------------------------------------------------------------------- |
@@ -64,7 +64,7 @@ How it's called:
 
 TIP: **New in version 6.1.0.**
 
-### `fluid_field_remove_field($fluid_field)`
+## `fluid_field_remove_field($fluid_field)`
 
 | Parameter          | Type         | Description                                                             |
 | ------------------ | ------------ | ----------------------------------------------------------------------- |

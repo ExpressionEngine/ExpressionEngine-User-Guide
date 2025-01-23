@@ -13,7 +13,7 @@ lang: php
 
 # Filemanager Library Extension Hooks
 
-### `file_after_save($file_id, $data)`
+## `file_after_save($file_id, $data)`
 
 | Parameter | Type    | Description                                  |
 | --------- | ------- | -------------------------------------------- |
@@ -28,7 +28,7 @@ How it's called:
     $this->extensions->call('file_after_save', $file_id, $data);
     if ($this->extensions->end_script === TRUE) return;
 
-### `files_after_delete($deleted)`
+## `files_after_delete($deleted)`
 
 | Parameter | Type    | Description                                                   |
 | --------- | ------- | ------------------------------------------------------------- |

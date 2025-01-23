@@ -13,9 +13,9 @@ lang: php
 
 # File Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_file_insert($file, $values)`
+## `before_file_insert($file, $values)`
 
 | Parameter | Type     | Description                            |
 | --------- | -------- | -------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_file_insert', $this, $this->getValues());
 
-### `after_file_insert($file, $values)`
+## `after_file_insert($file, $values)`
 
 | Parameter | Type     | Description                            |
 | --------- | -------- | -------------------------------------- |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_file_insert', $this, $this->getValues());
 
-### `before_file_update($file, $values, $modified)`
+## `before_file_update($file, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_file_update', $this, $this->getValues(), $modified);
 
-### `after_file_update($file, $values, $modified)`
+## `after_file_update($file, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_file_update', $this, $this->getValues(), $modified);
 
-### `before_file_save($file, $values)`
+## `before_file_save($file, $values)`
 
 | Parameter | Type     | Description                            |
 | --------- | -------- | -------------------------------------- |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_file_save', $this, $this->getValues());
 
-### `after_file_save($file, $values)`
+## `after_file_save($file, $values)`
 
 | Parameter | Type     | Description                            |
 | --------- | -------- | -------------------------------------- |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_file_save', $this, $this->getValues());
 
-### `before_file_delete($file, $values)`
+## `before_file_delete($file, $values)`
 
 | Parameter | Type     | Description                            |
 | --------- | -------- | -------------------------------------- |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_file_delete', $this, $this->getValues());
 
-### `after_file_delete($file, $values)`
+## `after_file_delete($file, $values)`
 
 | Parameter | Type     | Description                            |
 | --------- | -------- | -------------------------------------- |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_file_delete', $this, $this->getValues());
 
-### `before_file_bulk_delete($delete_ids)`
+## `before_file_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -144,7 +144,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `after_file_bulk_delete($delete_ids)`
+## `after_file_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

@@ -13,9 +13,9 @@ lang: php
 
 # Channel Form Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `channel_form_entry_form_absolute_start($channel_form_obj)`
+## `channel_form_entry_form_absolute_start($channel_form_obj)`
 
 | Parameter          | Type     | Description                |
 | ------------------ | -------- | -------------------------- |
@@ -27,7 +27,7 @@ How it's called:
     ee()->extensions->call('channel_form_entry_form_absolute_start', $this);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `channel_form_entry_form_tagdata_start($tagdata, $channel_form_obj)`
+## `channel_form_entry_form_tagdata_start($tagdata, $channel_form_obj)`
 
 | Parameter          | Type     | Description                |
 | ------------------ | -------- | -------------------------- |
@@ -40,7 +40,7 @@ How it's called:
     ee()->TMPL->tagdata = ee()->extensions->call('channel_form_entry_form_tagdata_start', ee()->TMPL->tagdata, $this);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `channel_form_entry_form_tagdata_end($return_tagdata, $channel_form_obj)`
+## `channel_form_entry_form_tagdata_end($return_tagdata, $channel_form_obj)`
 
 | Parameter          | Type     | Description                      |
 | ------------------ | -------- | -------------------------------- |
@@ -53,7 +53,7 @@ How it's called:
     $return = ee()->extensions->call('channel_form_entry_form_tagdata_end', $return, $this);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `channel_form_submit_entry_start($channel_form_obj)`
+## `channel_form_submit_entry_start($channel_form_obj)`
 
 | Parameter          | Type     | Description                |
 | ------------------ | -------- | -------------------------- |
@@ -64,7 +64,7 @@ How it's called:
     ee()->extensions->call('channel_form_submit_entry_start', $this);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `channel_form_submit_entry_end($channel_form_obj)`
+## `channel_form_submit_entry_end($channel_form_obj)`
 
 | Parameter          | Type     | Description                |
 | ------------------ | -------- | -------------------------- |

@@ -13,9 +13,9 @@ lang: php
 
 # Template Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_template_insert($template, $values)`
+## `before_template_insert($template, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_template_insert', $this, $this->getValues());
 
-### `after_template_insert($template, $values)`
+## `after_template_insert($template, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_template_insert', $this, $this->getValues());
 
-### `before_template_update($template, $values, $modified)`
+## `before_template_update($template, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_template_update', $this, $this->getValues(), $modified);
 
-### `after_template_update($template, $values, $modified)`
+## `after_template_update($template, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_template_update', $this, $this->getValues(), $modified);
 
-### `before_template_save($template, $values)`
+## `before_template_save($template, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_template_save', $this, $this->getValues());
 
-### `after_template_save($template, $values)`
+## `after_template_save($template, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_template_save', $this, $this->getValues());
 
-### `before_template_delete($template, $values)`
+## `before_template_delete($template, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_template_delete', $this, $this->getValues());
 
-### `after_template_delete($template, $values)`
+## `after_template_delete($template, $values)`
 
 | Parameter  | Type     | Description                                |
 | ---------- | -------- | ------------------------------------------ |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_template_delete', $this, $this->getValues());
 
-### `before_template_bulk_delete($delete_ids)`
+## `before_template_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -144,7 +144,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `after_template_bulk_delete($delete_ids)`
+## `after_template_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

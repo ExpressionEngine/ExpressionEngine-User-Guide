@@ -13,9 +13,9 @@ lang: php
 
 # Pagination Library Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `pagination_create($this, $count)`
+## `pagination_create($this, $count)`
 
 | Parameter | Type     | Description                                                                                                                     |
 | --------- | -------- | ------------------------------------------------------------------------------------------------------------------------------- |
@@ -30,7 +30,7 @@ How it's called:
     $this->extensions->call('pagination_create', $this, $count);
     if ($this->extensions->end_script === TRUE) return;
 
-### `pagination_fetch_data($this)`
+## `pagination_fetch_data($this)`
 
 | Parameter | Type     | Description                                                             |
 | --------- | -------- | ----------------------------------------------------------------------- |

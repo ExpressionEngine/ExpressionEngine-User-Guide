@@ -13,9 +13,9 @@ lang: php
 
 # TemplateRoute Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_template_route_insert($template_route, $values)`
+## `before_template_route_insert($template_route, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_template_route_insert', $this, $this->getValues());
 
-### `after_template_route_insert($template_route, $values)`
+## `after_template_route_insert($template_route, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_template_route_insert', $this, $this->getValues());
 
-### `before_template_route_update($template_route, $values, $modified)`
+## `before_template_route_update($template_route, $values, $modified)`
 
 | Parameter        | Type     | Description                                      |
 | ---------------- | -------- | ------------------------------------------------ |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_template_route_update', $this, $this->getValues(), $modified);
 
-### `after_template_route_update($template_route, $values, $modified)`
+## `after_template_route_update($template_route, $values, $modified)`
 
 | Parameter        | Type     | Description                                      |
 | ---------------- | -------- | ------------------------------------------------ |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_template_route_update', $this, $this->getValues(), $modified);
 
-### `before_template_route_save($template_route, $values)`
+## `before_template_route_save($template_route, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_template_route_save', $this, $this->getValues());
 
-### `after_template_route_save($template_route, $values)`
+## `after_template_route_save($template_route, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_template_route_save', $this, $this->getValues());
 
-### `before_template_route_delete($template_route, $values)`
+## `before_template_route_delete($template_route, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_template_route_delete', $this, $this->getValues());
 
-### `after_template_route_delete($template_route, $values)`
+## `after_template_route_delete($template_route, $values)`
 
 | Parameter        | Type     | Description                                     |
 | ---------------- | -------- | ----------------------------------------------- |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_template_route_delete', $this, $this->getValues());
 
-### `before_template_route_bulk_delete($delete_ids)`
+## `before_template_route_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -144,7 +144,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `after_template_route_bulk_delete($delete_ids)`
+## `after_template_route_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |

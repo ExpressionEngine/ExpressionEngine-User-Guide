@@ -13,9 +13,9 @@ lang: php
 
 # Admin Content Controller Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `category_delete($cat_ids)`
+## `category_delete($cat_ids)`
 
 | Parameter | Type    | Description                         |
 | --------- | ------- | ----------------------------------- |
@@ -28,7 +28,7 @@ How it's called:
 
     ee()->extensions->call('category_delete', $cat_ids);
 
-### `category_save($cat_id, $data)`
+## `category_save($cat_id, $data)`
 
 | Parameter       | Type    | Description          |
 | --------------- | ------- | -------------------- |
@@ -42,6 +42,6 @@ How it's called:
 
     ee()->extensions->call('category_save', $cat_id, $category_data);
 
-### `foreign_character_conversion_array`
+## `foreign_character_conversion_array`
 
 See Content_publish's `foreign_character_conversion_array`.

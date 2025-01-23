@@ -13,9 +13,9 @@ lang: php
 
 # Member Model Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `before_member_insert($member, $values)`
+## `before_member_insert($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
 
     ee()->extensions->call('before_member_insert', $this, $this->getValues());
 
-### `after_member_insert($member, $values)`
+## `after_member_insert($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -43,7 +43,7 @@ How it's called:
 
     ee()->extensions->call('after_member_insert', $this, $this->getValues());
 
-### `before_member_update($member, $values, $modified)`
+## `before_member_update($member, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -58,7 +58,7 @@ How it's called:
 
     ee()->extensions->call('before_member_update', $this, $this->getValues(), $modified);
 
-### `after_member_update($member, $values, $modified)`
+## `after_member_update($member, $values, $modified)`
 
 | Parameter  | Type     | Description                                      |
 | ---------- | -------- | ------------------------------------------------ |
@@ -73,7 +73,7 @@ How it's called:
 
     ee()->extensions->call('after_member_update', $this, $this->getValues(), $modified);
 
-### `before_member_save($member, $values)`
+## `before_member_save($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -87,7 +87,7 @@ How it's called:
 
     ee()->extensions->call('before_member_save', $this, $this->getValues());
 
-### `after_member_save($member, $values)`
+## `after_member_save($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -101,7 +101,7 @@ How it's called:
 
     ee()->extensions->call('after_member_save', $this, $this->getValues());
 
-### `before_member_delete($member, $values)`
+## `before_member_delete($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -115,7 +115,7 @@ How it's called:
 
     ee()->extensions->call('before_member_delete', $this, $this->getValues());
 
-### `after_member_delete($member, $values)`
+## `after_member_delete($member, $values)`
 
 | Parameter | Type     | Description                              |
 | --------- | -------- | ---------------------------------------- |
@@ -129,7 +129,7 @@ How it's called:
 
     ee()->extensions->call('after_member_delete', $this, $this->getValues());
 
-### `before_member_bulk_delete($delete_ids)`
+## `before_member_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -144,7 +144,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `after_member_bulk_delete($delete_ids)`
+## `after_member_bulk_delete($delete_ids)`
 
 | Parameter    | Type    | Description                                     |
 | ------------ | ------- | ----------------------------------------------- |
@@ -159,7 +159,7 @@ How it's called:
 
 TIP: **New in version 4.3.0.**
 
-### `member_anonymize($member)`
+## `member_anonymize($member)`
 
 | Parameter | Type     | Description                          |
 | --------- | -------- | ------------------------------------ |

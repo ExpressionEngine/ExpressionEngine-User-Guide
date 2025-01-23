@@ -13,9 +13,9 @@ lang: php
 
 # Relationships Fieldtype Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `relationships_display_field($entry_id, $field_id, $sql)`
+## `relationships_display_field($entry_id, $field_id, $sql)`
 
 | Parameter  | Type     | Description                                             |
 | ---------- | -------- | ------------------------------------------------------- |
@@ -44,7 +44,7 @@ How it's called:
 
 NOTE: **Note:** To use this hook, you can either add to the existing Active Record call, or call `ee()->db->_reset_select()` to cancel the Active Record call and start your own, or modify the passed compiled SQL.
 
-### `relationships_display_field_options($entry_id, $field_id, $sql)`
+## `relationships_display_field_options($entry_id, $field_id, $sql)`
 
 | Parameter  | Type     | Description                                    |
 | ---------- | -------- | ---------------------------------------------- |
@@ -67,7 +67,7 @@ How it's called:
         );
     }
 
-### `relationships_post_save($ships, $entry_id, $field_id)`
+## `relationships_post_save($ships, $entry_id, $field_id)`
 
 | Parameter  | Type    | Description                                    |
 | ---------- | ------- | ---------------------------------------------- |
@@ -82,7 +82,7 @@ How it's called:
 
     $ships = ee()->extensions->call('relationships_post_save', $ships, $entry_id, $field_id);
 
-### `relationships_query($field_name, $entry_ids, $depths, $sql)`
+## `relationships_query($field_name, $entry_ids, $depths, $sql)`
 
 | Parameter    | Type     | Description                                             |
 | ------------ | -------- | ------------------------------------------------------- |
@@ -113,7 +113,7 @@ How it's called:
 
 NOTE: **Note:** To use this hook, you can either add to the existing Active Record call, or call `ee()->db->_reset_select()` to cancel the Active Record call and start your own, or modify the passed compiled SQL.
 
-### `relationships_query_result($entry_lookup)`
+## `relationships_query_result($entry_lookup)`
 
 | Parameter      | Type    | Description                                           |
 | -------------- | ------- | ----------------------------------------------------- |
@@ -126,7 +126,7 @@ How it's called:
 
     $entry_lookup = ee()->extensions->call('relationships_query_result', $entry_lookup);
 
-### `relationships_modify_rows($rows, $node)`
+## `relationships_modify_rows($rows, $node)`
 
 | Parameter | Type        | Description                                   |
 | --------- | ----------- | --------------------------------------------- |
@@ -140,7 +140,7 @@ How it's called:
 
     $rows = ee()->extensions->call('relationships_modify_rows', $rows, $node);
 
-### `relationship_entries_tagdata($tagdata, $row)`
+## `relationship_entries_tagdata($tagdata, $row)`
 
 | Parameter | Type     | Description                  |
 | --------- | -------- | ---------------------------- |
