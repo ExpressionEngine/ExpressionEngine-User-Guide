@@ -23,6 +23,8 @@ The second method is a more traditional "next page" / "previous page" output:
 
 Pagination will also automatically restrict itself to any category you're currently viewing. So if you have a category specified in your channel entries tag or you are viewing the entries of a category, then the pagination links will automatically restrict themselves to only entries in that category.
 
+NOTE: **Note:** If there is not enough content for more than one page, nothing will be output by these tags.
+
 ## Example Code
 
 Here are two basic code examples, one for each of the methods mentioned above. Information about the variables and parameters are covered later.
