@@ -9,7 +9,7 @@
 # ExpressionEngine v7 Change Log
 
 ## Version 7.5.7
-(Release: January 22nd, 2025)
+(Release: January 23nd, 2025)
 
 <div class="max-w-7xl mx-autotext-center">
 <div class="space-y-8 sm:space-y-12">
