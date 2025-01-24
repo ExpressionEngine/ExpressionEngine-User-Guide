@@ -13,68 +13,115 @@
 
 ## Keywords Filter
 
-The Keywords filter lets you filter entries by search terms (ie. keywords). You need to create at least one Collection to use the Keywords filter. It also adds a relevance score to the search results. To further fine-tune a keyword search, the following parameters are available.
+The Keywords filter lets you filter entries by search terms (ie. keywords). You need to create at least one Collection to use the Keywords filter. (You don't need a collection for other types of filters.)
 
+Using the Keywords filter also adds a relevance score to the search results. To further fine-tune a keyword search, the following parameters are available.
 
 
 ### Parameters
 
 #### collection
-    Limit search results to given collection names or IDs. Will use all collections if not specified and keywords are given.
+
+Limit search results to given collection names or IDs. If this is not specified and keywords are given, results will use all collections
+
+    collection="news|staff"
+
 #### collection_lang
-    Limit search results to collections with the given language(s).
+
+Limit search results to collections with the given language(s).
+
+    collection_lang="en"
+
 #### keywords
-    The search terms to filter by. You can use double quotes to group terms, eg. lion "mighty jungle"
+
+The search terms to filter by. You usually don't need this because it's in the form data that was submitted or it's in the query / URL. You can use double quotes to group terms, eg. lion "mighty jungle"
+
+    keywords="example"
+
 #### keywords:inflect
-    Set to yes to enable singular & plural matching for the keywords, based on the language given in keywords:lang. Eg. searching for lions will also match lion.
+
+Defaults to `no`. Set to `yes` to enable singular & plural matching for the keywords, based on the language given in `keywords:lang`. Eg. searching for `lions` will also match `lion` if you've set `keywords:lang` to `en`
+
+    keywords:inflect="yes"
+
 #### keywords:lang
-    The language of the given keywords, eg. en. Adding this will enable keyword inflections and stemming, as well as keyword suggestions.
+
+The language of the given keywords, eg. `en`. Adding this will enable keyword inflections and stemming, as well as keyword suggestions. There is no default.
+
+    keywords:lang="en"
+
 #### keywords:loose
-    Enables partial or substring matches:
-- **right**: lion will match lions and lionized.
-- **left**: lion will match dandelion and medallion.
-- **both**: lion will match stallions and millionaire.
-- **no**: lion will only match lion. This is the default.
 
-NOTE: **Note:** keywords:mode needs to be set to any or all.
+Enables partial or substring matches. If you search for `lion`:
 
-#### keywords:match
-    If a valid field (native or custom) is given, entries where that field exactly matches the keywords given will be pushed to the top of the search results, regardless of score. Eg. title
-#### keywords:mode
-    How to treat the given keywords:
-- **any**: returns entries containing any of the given terms.
-- **all**: returns entries containing all of the given terms.
-- **exact**: returns entries containing the given terms as an exact phrase.
-- **auto**: uses operators to process the given terms. This is the default.
-#### keywords:score
-    Limit the search results to entries with a score greater than the given number. Eg. >=1 or 2.
-#### keywords:stem
-    Set to yes to enable matching keywords by their stem, based on the language given in keywords:lang. Eg. searching for sleeping will also match words starting with sleep, like sleeps and sleepy.
+- `keywords:loose="no"`  will only match lion. This is the default.
+- `keywords:loose="right"`  will match lions and lionized. (This is a broader match than what keywords:inflect would match.)
+- `keywords:loose="left"`  will match dandelion and medallion.
+- `keywords:loose="both"`  will match stallions and millionaire.
+
+NOTE: **Note:** keywords:mode needs to be set to `any` or `all` for this matching to happen.
 
 NOTE: **Note:** Setting keywords:loose to left or both will result in a slower query than normal. It is recommended to only use this option with languages that do not have word delimiters, like Thai or Japanese.
 
+#### keywords:match
+
+If a valid field (native or custom) is specified, entries where that field exactly matches the keywords  will be pushed to the top of the search results, regardless of score. For instance, if you specify title, entries with that exact title will appear at the top of the results. You can only specify one field.
+
+    keywords:match="title"
+
+#### keywords:mode
+
+How to treat the given keywords:
+
+- `keywords:mode="auto"` uses operators to process the given keywords. This is the default.
+- `keywords:mode="any"` returns entries containing any of the given keywords.
+- `keywords:mode="all"` returns entries containing all of the given keywords.
+- `keywords:mode="exact"` returns entries containing the given keywords as an exact phrase.
+
+#### keywords:score
+
+Limit the search results to entries with a score equal or greater than the given number. There is no minimum score by default.
+
+    keywords:score="1"
+
+#### keywords:stem
+
+Set to `yes` to enable matching keywords by their stem, based on the language given in `keywords:lang`. E.g. Searching for `sleeping` will also match words starting with sleep, like sleeps and sleepy.
+
+
 ### Variables
+
 The keywords filter also makes these variables available in the Results tag:
 
 #### {pro_search_collection_id}
-    Collection ID for the collection the entry was found in.
+
+Collection ID for the collection the entry was found in.
+
 #### {pro_search_collection_label}
-    Collection label for the collection the entry was found in.
+
+Collection label for the collection the entry was found in.
+
 #### {pro_search_collection_language}
-    Collection language for the collection the entry was found in.
+
+Collection language for the collection the entry was found in.
+
 #### {pro_search_collection_name}
-    Collection name for the collection the entry was found in.
+
+Collection name for the collection the entry was found in.
+
 #### {pro_search_score}
-    Relevance score of the entry.
 
-### Order by collection
+Relevance score of the entry.
 
-By default, search results will be ordered by relevance score:
+### Order By
 
-#### pro_search_score
-Use `orderby="pro_search_collection:foo,bar"` to order by collection first, where foo and bar are collection names. Search results that belong to other collections than defined here will be grouped together and shown last.
+By default, search results will be ordered by relevance score.
 
-#### keywords:mode="auto"
+    orderby="pro_search_score"
+
+Use `orderby="pro_search_collection:foo,bar"` to order by collection first and score within that, where foo and bar are collection names. Search results that belong to other collections than what are defined in this parameter will be grouped together and shown last.
+
+#### About Keywords:mode="auto"
 
 The automatic `keywords:mode` uses operators in keywords for any/all/exact matching, excluding terms, and partial matching. The `keywords:loose` parameter is ignored when using this mode.
 
@@ -106,11 +153,11 @@ $config['pro_search_inflection_rules'][lang] = array(
 );
 ```
 
-`lang` is the 2-letter language code. The `plural` and `singular` keys should contain an array of key/value pairs to be used in a `preg_replace()` call. The `irregular` key should contain an array of irregular singulars (keys) and plurals (values). The `uncountable` key should contain a flat array of uncountable terms. Here are [Dutch inflection](https://github.com/low/dutch-inflection-rules) rules as an example.
+For `lang`, use the 2-letter language code. The `plural` and `singular` keys should contain an array of key/value pairs to be used in a `preg_replace()` call. The `irregular` key should contain an array of irregular singulars (keys) and plurals (values). The `uncountable` key should contain a flat array of uncountable terms. Here are [Dutch inflection](https://github.com/low/dutch-inflection-rules) rules as an example.
 
 ### Stems
 
-Pro Search supports matching of keywords by their stem [stemming](http://en.wikipedia.org/wiki/Stemming). To enable this, both the `keywords:stem` and the `keywords:lang` parameters must be set. English stemming is supported natively, using a [Porter stemmer](http://tartarus.org/martin/PorterStemmer/) class, and you can add support for other languages by adding this to your [Config file](/general/system-configuration-overrides.md):
+Pro Search supports matching of keywords by their [stem](http://en.wikipedia.org/wiki/Stemming). To enable this, both the `keywords:stem` and the `keywords:lang` parameters must be set. English stemming is supported natively, using a [Porter stemmer](http://tartarus.org/martin/PorterStemmer/) class, and you can add support for other languages by adding this to your [Config file](/general/system-configuration-overrides.md):
 
 ```
 $config['pro_search_stemmers'][lang] = array(
@@ -120,44 +167,63 @@ $config['pro_search_stemmers'][lang] = array(
 );
 ```
 
-`lang` is the 2-letter language code. `file_path` is the full path to your the stemmer file, `class_name` is the class name the file contains, `method` is the method name that should be called to return the stem of a given word. Here’s a [Dutch stemmer class](https://github.com/simplicitylab/php-dutch-stemmer) that you could use.
+For `lang`, use the 2-letter language code. `file_path` is the full path to your the stemmer file, `class_name` is the class name the file contains, `method` is the method name that should be called to return the stem of a given word. Here is a [Dutch stemmer class](https://github.com/simplicitylab/php-dutch-stemmer) that you could use.
 
-NOTE: **Note:** When enabled, inflections and stems are only applied keyword searches that do not contain wildcards or have keywords:loose set to left, right or both.
+NOTE: **Note:** When enabled, inflections and stems are only applied to keyword searches that do not contain wildcards or have `keywords:loose` set to left, right or both.
 
 ## Categories
 
 You can use the native `category` parameter to filter by category. For more advanced filtering by category, you can also divide categories into groups. The group syntax lets you combine AND and OR filtering (category 1 or 2 and category 3 or 4), as parameters are always combined with AND.
 
 ### `category`
-    Like the [native category= parameter](/channel/channel_entries.md#category), but it also accepts category URL titles.
+
+Like the [native category= parameter](/channel/channel_entries.md#category), but it also accepts category URL titles.
 
 ### `category:group_name`
-    Works just like the `category` parameter. When using category URL titles as the value, you can use the category group ID to limit the conversion to category IDs to that specific group, eg. `category:5`
+
+Works just like the `category` parameter. When using category URL titles as the value, you can use the category group ID to limit the conversion to category IDs to that specific group, eg. `category:5`
 
 NOTE: **Note:** Use category IDs instead of URL titles for better performance.
 
 ## Distance
 
-You can use the Distance filter to limit results by a given maximum distance. This filter requires you to use two channel fields where latitude and longitude values are stored. Alternatively, you can use a single field where the two values are separated by a comma. Using the Distance filter will limit results to entries that actually have latitude and longitude values entered.
+You can use the Distance filter to limit results by a given maximum distance. This filter prefers for you to use two channel fields where latitude and longitude values are stored. Alternatively, you can use a single field where the two values are separated by a comma. Using the Distance filter will limit results to entries that actually have latitude and longitude values entered.
 
 ### Parameters
 
 #### `distance:from`
-    Latitude and longitude values separated by a vertical bar, used to calculate the distance. Eg. 52.163298|4.505547
+
+Latitude and longitude values separated by a vertical bar, used to calculate the distance.
+
+    distance:from="52.163298|4.505547"
+
 #### `distance:to`
-    The one or two channel field names that contain the latitude and longitude values separated by a vertical bar, used to calculate the distance. Eg. cf_entry_lat|cf_entry_long
-#### `distance:radius`
-    The maximum distance between the from and to values. Leave blank for no maximum. Eg. 50.
-#### `distance:unit`
-    The unit for the distances, either km, mi, m or yd. Defaults to km.
+
+The one or two channel field names that contain the latitude and longitude values separated by a vertical bar, used to calculate the distance.
+
+    distance:to="cf_entry_lat|cf_entry_long"
 
 NOTE: **Note:** Use two separate fields instead of a single one for better performance.
 
+#### `distance:radius`
+
+The maximum distance between the from and to values. Leave blank for no maximum.
+
+    distance:radius="50"
+
+#### `distance:unit`
+
+The unit for the distances, either km, mi, m or yd. Defaults to km.
+
+    distance:unit="km"
+
 ### Variables
-The Distance filter also makes this variable available in the [Results tag](/add-ons/pro-search/tags.md#exppro_searchresults):
+
+The Distance filter makes this variable available in the [Results tag](/add-ons/pro-search/tags.md#exppro_searchresults):
 
 #### `{pro_search_distance}`
-    The calculated distance in the given unit for this entry.
+
+The calculated distance in the given unit for this entry.
 
 NOTE: **Note:** Using the Distance filter will return the search results ordered by distance, ignoring keyword relevance if applicable. Override by explicitly setting the orderby parameter.
 
@@ -168,35 +234,62 @@ You can use the native `search:field_name` parameter to target specific fields. 
 ### Parameters
 
 #### `search:field_name`
-    Like the [channel search:field_name= parameter](/channel/channel_entries.md#search-field-name).
+
+Like the [channel search:field_name= parameter](/channel/channel_entries.md#search-field-name).
+
 #### `search:field_name:column_name`
-    Works just like the `search:field_name` parameter, but targets a specific column in a Grid/Matrix field.
+
+Works just like the `search:field_name` parameter, but targets a specific column in a Grid/Matrix field.
+
 #### `search:title`
-    Works just like the `search:field_name` parameter, but targets titles.
+
+Works just like the `search:field_name` parameter, but targets titles.
+
 #### `search:url_title`
-    Works just like the `search:field_name` parameter, but targets url_titles.
+
+Works just like the `search:field_name` parameter, but targets url_titles.
+
 #### `search:status`
-    Works just like the `search:field_name` parameter, but targets statuses.
+
+Works just like the `search:field_name` parameter, but targets statuses.
+
 #### `contains_words`
-    Accepts parameter names. Force the given parameter values to match the full term, to ensure that the values are [not contained within other words](/channel/channel_entries.md#contains-matching). Also possible by using `search:field_name="value\W"`.
+
+Accepts search field parameter names. Force the given parameter values to match the full term, to ensure that the values are [not contained within other words](/channel/channel_entries.md#contains-matching). Similar to forcing full term matching by using `search:field_name="value\W"`.
+
+    contains_words="search:field_name"
+
 #### `ends_with`
-    Accepts parameter names. Force the given parameter values to match the end of the target field. Also possible by using `search:field_name="value$"`.
+
+Accepts search field parameter names. Force the given parameter values to match the end of the target field. Also possible by using `search:field_name="value$"`.
+
 #### `exact`
-    Accepts parameter names. Force the given parameter values to exactly match the target field. Also possible by using `search:field_name="=value"`.
+
+Accepts field parameter names. Force the given parameter values to exactly match the target field. Also possible by using `search:field_name="=value"`.
+
 #### `gt`
-    Accepts parameter names. Force the given parameter values to have greater than prepended to it. Also possible by using `search:field_name=">value"`.
+
+Accepts search field parameter names. Force the given parameter values to have greater than prepended to it. Also possible by using `search:field_name=">value"`.
+
 #### `gte`
-    Accepts parameter names. Force the given parameter values to have greater than or equal to prepended to it. Also possible by using `search:field_name=">=value"`.
+
+Accepts search field parameter names. Force the given parameter values to have greater than or equal to prepended to it. Also possible by using `search:field_name=">=value"`.
+
 #### `lt`
-    Accepts parameter names. Force the given parameter values to have less than prepended to it. Also possible by using
-`search:field_name="value"`.
+
+Accepts search field parameter names. Force the given parameter values to have less than prepended to it. Also possible by using `search:field_name="value"`.
+
 #### `lte`
-    Accepts parameter names. Force the given parameter values to have less than or equal to prepended to it. Also possible by using
-`search:field_name="<=value"`.
+
+Accepts search field parameter names. Force the given parameter values to have less than or equal to prepended to it. Also possible by using `search:field_name="<=value"`.
+
 #### `starts_with`
-    Accepts parameter names. Force the given parameter values to match the beginning of the target field. Also possible by using `search:field_name="^value"`.
+
+Accepts search field parameter names. Force the given parameter values to match the beginning of the target field. Also possible by using `search:field_name="^value"`.
+
 #### `smart_field_search`
-    Set to `yes` to make `search:field_name` parameters that target non-Grid custom channel fields aware of the channels they belong to. Use this if your search results contain multiple channels.
+
+Set to `yes` to make `search:field_name` parameters that target non-Grid custom channel fields aware of the channels they belong to. Use this if your search results contain multiple channels.
 
 NOTE: **Note:** using `smart_field_search="yes"` can affect performance, depending on the total amount of entries. Using Collections and collection="" parameter can help in such cases.
 
@@ -207,25 +300,37 @@ You can use the Ranges filter to limit results by a given range, targeting a num
 ### Parameters
 
 #### `range:field_name`
-    Takes a from and to value, separated by a vertical bar: |. Use `field_name:column_name to target Grid/Matrix columns (v4.2.0+).
+
+Takes a from and to value, separated by a vertical bar: |. Use `field_name:column_name` to target Grid/Matrix columns (v4.2.0+).
+
 #### `range-from:field_name`
-    Takes a single from value. Use field_name:column_name to target Grid/Matrix columns (v4.2.0+).
+
+Takes a single from value. Use `field_name:column_name` to target Grid/Matrix columns (v4.2.0+).
+
 #### `range-to:field_name`
-    Takes a single to value. Use field_name:column_name to target Grid/Matrix columns (v4.2.0+).
+
+Takes a single to value. Use field_name:column_name to target Grid/Matrix columns (v4.2.0+).
+
 #### `range:min_field:max_field`
-    Where min and max are two separate (non-Grid/Matrix) fields. If a single value is given, entries will be returned where the value is between the min and max fields. If a from and to value is given, entries will be returned where the min and max fields overlap the given range.
+
+Where min and max are two separate (non-Grid/Matrix) fields. If a single value is given, entries will be returned where the value is between the min and max fields. If a from and to value is given, entries will be returned where the min and max fields overlap the given range.
+
 #### `range-from:min_field:max_field`
-    Where min and max are two separate fields. Takes a single from value.
+
+Where min and max are two separate fields. Takes a single from value.
+
 #### `range-to:min_field:max_field`
-    Where min and max are two separate fields. Takes a single to value.
+
+Where min and max are two separate fields. Takes a single to value.
+
 #### `exclude`
-    Accepts parameter names. Excludes a given parameter value from the range itself. For example,
-`range:field_name="0|10" exclude="range:field_name"`
-will result in values `> 0` and `< 10` rather than `>= 0` and `<= 10`.
+
+Accepts parameter names. Excludes a given parameter value from the range itself. For example, `range:field_name="0|10" exclude="range:field_name"` will result in values `> 0` and `< 10` rather than `>= 0` and `<= 10`.
 
 NOTE: **Note:** For numeric fields, make sure the Field Content option in the field’s settings is set to Number, Integer or Decimal.
 
 ### Supported Fields
+
 Apart from any custom numeric or date field, the following standard channel fields are supported:
 
 - `entry_date`
@@ -246,31 +351,47 @@ You can use the Relationships filter to limit results by given parent or child e
 ### Parameters
 
 #### `child:field_name`
-    Limit results by entries that have the given entry IDs or URL titles as a child for the Relationships/Playa field defined.
+
+Limit results by entries that have the given entry IDs or URL titles as a child for the Relationships/Playa field defined.
+
 #### `parent:field_name`
-    Limit results by entries that have the given entry IDs or URL titles as a parent for the Relationships/Playa field defined.
+
+Limit results by entries that have the given entry IDs or URL titles as a parent for the Relationships/Playa field defined.
+
 #### `child:field_name:column_name`
-    Limit results by entries that have the given entry IDs or URL titles as a child for the Relationships/Playa column defined in a Grid field.
+
+Limit results by entries that have the given entry IDs or URL titles as a child for the Relationships/Playa column defined in a Grid field.
+
 #### `parent:field_name:column_name`
-    Limit results by entries that have the given entry IDs or URL titles as a parent for the Relationships/Playa column defined in a Grid field.
+
+Limit results by entries that have the given entry IDs or URL titles as a parent for the Relationships/Playa column defined in a Grid field.
 
 NOTE: **Note:** Use entry IDs instead of URL titles for better performance.
 
 ## Tags
 
-You can use the Tags filter to limit results by given tag names or IDs.For more advanced filtering by tags, you can also divide tags into groups. The group syntax lets you combine AND and OR filtering (tag 1 or 2 and tag 3 or 4), as parameters are always combined with AND.
+You can use the Tags filter to limit results by given tag names or IDs. For more advanced filtering by tags, you can also divide tags into groups. The group syntax lets you combine AND and OR filtering (tag 1 or 2 and tag 3 or 4), as parameters are always combined with AND.
 
 ### Parameters
 
 #### `tag_id`
-    Limit results by entries that have the given tag IDs assigned to them.
+
+Limit results by entries that have the given tag IDs assigned to them.
+
 #### `tag_name`
-    Limit results by entries that have the given tag names assigned to them.
+
+Limit results by entries that have the given tag names assigned to them.
+
 #### `tag_id:group_name`
-    Works just like the tag_id parameter.
+
+Works just like the tag_id parameter.
+
 #### `tag_name:group_name`
-    Works just like the tag_name parameter.
+
+Works just like the tag_name parameter.
+
 #### `websafe_separator`
-    The websafe separator character for multi-word tags. Defaults to +.
+
+The websafe separator character for multi-word tags. Defaults to +.
 
 NOTE: **Note:** Use `tag_id` instead of `tag_name` for better performance.
