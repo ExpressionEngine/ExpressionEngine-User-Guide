@@ -34,7 +34,7 @@ Limit search results to collections with the given language(s).
 
 #### keywords
 
-The search terms to filter by. You usually don't need this because it's in the form data that was subnitted or it's in the query / URL. You can use double quotes to group terms, eg. lion "mighty jungle"
+The search terms to filter by. You usually don't need this because it's in the form data that was submitted or it's in the query / URL. You can use double quotes to group terms, eg. lion "mighty jungle"
 
     keywords="example"
 
