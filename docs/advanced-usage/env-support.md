@@ -31,13 +31,12 @@ This variable can now be used in your `/system/user/config.php` as illustrated b
 Here is an example of what it might look like to manage all your database connection settings, and Base URL in `.env.php`
 
 ```
-# .env.php
+// .env.php
 
-#URLs
+// URLs
 BASE_URL=http://mysite.test/
 
-# DATABASE SETTINGS
-# # # # # # # # # # # #
+// DATABASE SETTINGS
 DB_HOSTNAME=db
 DB_DATABASE=db
 DB_USERNAME=db
