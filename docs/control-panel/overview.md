@@ -16,6 +16,7 @@ The Overview page is the first screen a member sees upon logging into the contro
 ![](_images/overview.png)
 
 ## Release Notes
+
 This section appears after each update until dismissed. It highlights new features and improvements introduced in the latest version of ExpressionEngine. A Release Notes link is also included, directing users to the full changelog for detailed information on recent updates.
 
 ## Recent Entries
