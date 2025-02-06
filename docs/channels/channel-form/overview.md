@@ -46,13 +46,12 @@ The Channel Form tag will automatically load jQuery for you. If you prefer to in
 
 ### Allowing Guests to Post Entries
 
-Allowing guest posts is controlled in the Channel Form settings at `Developer --> Channels` in the channel's **Settings** tab.
+Allowing guest posts is controlled in the Channel Form settings in `Channels` in the channel's **Settings** tab.
 
-To allow guests to post in a certain channel, locate the options for "Allow Guest Posts" next to the channel you want to allow guest posts for, and choose "Yes".
+You can optionally choose an author that entries entered as guests appear as authored by in the Guest Author field.
 
-You can optionally require the guest to pass a captcha before they submit the Channel Form by choosing "Yes" under "Guest Captcha".
+Requirements regarding use of a captcha for guest posting are controlled in `Settings --> CAPTCHA`.
 
-Finally, you can optionally choose an author that entries entered as guests appear as authored by under Guest Author.
 
 ### Form Validation
 
