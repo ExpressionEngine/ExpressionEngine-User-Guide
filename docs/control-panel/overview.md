@@ -33,4 +33,5 @@ A quick-access box linking to official ExpressionEngine support, ensuring help i
 
 ## Comments
 
+![](_images/cp_comments.png)
 If comments are enabled, this section displays the number of new comments since the user's last visit, as well as any pending moderation tasks. Users can quickly review and approve comments directly from this section.
