@@ -11,22 +11,27 @@
 
 **Control Panel Location: `Home`**
 
-The overview page is shown when a member has logged into the control panel, or has clicked the Home icon next to the name of the site in the top navigation bar. The overview page provides a quick glance at site statistics, and provides convenient links to relevant action items. Here's an overview of all the sections that can be visible based on member permissions on the overview page.
+The Overview page is the first screen a member sees upon logging into the control panel or clicking the "Overview" link in the navigation. It provides a quick snapshot of key site information and convenient links to relevant actions. Below is a breakdown of the sections that may appear based on member permissions.
 
 ![](_images/overview.png)
 
-## Comments
+## Release Notes
 
-If you have comments enabled, this box will appear on the overview page to show you how many new comments have been left since your last visit to the control panel, as well as let you know if any comments are awaiting your moderation. You then have the option to review and/or approve those new comments.
+This section appears after each update until dismissed. It highlights new features and improvements introduced in the latest version of ExpressionEngine. A Release Notes link is also included, directing users to the full changelog for detailed information on recent updates.
 
-## Channels
+## Recent Entries
 
-If a member has access to Channels, they will see a Channels box with quick access a channels listing, as well as a link to existing field groups. An action button will let them create a new Channel.
+For members with Channel access, this section displays the seven most recently created entries, providing quick access to editing or viewing them. A View All link leads to the [Entry Manager](/control-panel/entry-manager.md) or managing all entries.
 
 ## Members
 
-The members section gives a glance at the total number of members and banned members, along with links to manage them. An action button will allow members with proper permissions to create a new member.
+This section shows the most recent member logins, along with links to manage user accounts. A View All link directs users to the [Member Management](/control-panel/member-manager.md)) section for full member administration.
 
-## Content
+## ExpressionEngine Support
 
-The content section provides quick statistics on Channel entries with links to a list of the sites entries available to manage. The action button in the upper right will allow members to jump to the publish form of a particular Channel to create a new entry.
+A quick-access box linking to official ExpressionEngine support, ensuring help is always within reach.
+
+## Comments
+
+![](_images/cp_comments.png)
+If comments are enabled, this section displays the number of new comments since the user's last visit, as well as any pending moderation tasks. Users can quickly review and approve comments directly from this section.
