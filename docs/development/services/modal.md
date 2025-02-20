@@ -142,7 +142,7 @@ By default, clicking the close button, the escape key, or anywhere outside of th
     );
     $modal_html = ee('View')->make('ee:_shared/modal_confirm_delete')->render($modal_vars);
 
-NOTE: Note: you will also need to add custom JS to remove `.must-interact`, and then trigger `$(modal).trigger('modal:close')` in order to close it.
+NOTE: Note: you will also need to add custom JS to remove `.must-interact`, and then trigger the `modal:close` event in order to close it.
 
     $('.modal-wrap .dialog__buttons button').on('click', function() {
         $(this).closest('.must-interact').removeClass('must-interact');
