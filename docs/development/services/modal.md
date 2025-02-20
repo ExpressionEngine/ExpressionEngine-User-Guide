@@ -130,6 +130,25 @@ Finally, we need to create our Bulk Action Controls with some special data attri
 
 Now when a user selects some content in the table, the bulk action controls should appear, and when "Remove" is selected and submitted, a modal will appear showing a list of content about to be deleted, where they can then confirm the deletion and your `POST` handler will be fired.
 
+## Advanced functionality
+
+### Required interaction
+
+By default, clicking the close button, the escape key, or anywhere outside of the modal will close it, acting similar to cancelling the action the modal was prompting for. But if you want to prevent this default behavior and instead want to require the modal to be interacted with, you can add the `must-interact` class as part of the `name` parameter.
+
+    $modal_vars = array(
+      'name' => 'hello must-interact',
+      // ... other settings
+    );
+    $modal_html = ee('View')->make('ee:_shared/modal_confirm_delete')->render($modal_vars);
+
+NOTE: Note: you will also need to add custom JS to remove `.must-interact`, and then trigger `$(modal).trigger('modal:close')` in order to close it.
+
+    $('.modal-wrap .dialog__buttons button').on('click', function() {
+        $(this).closest('.must-interact').removeClass('must-interact');
+        $(this).closest('.modal').trigger('modal:close');
+    });
+
 ## CP/Modal Service Methods
 
 **class `ExpressionEngine\Service\Modal\ModalCollection`**
