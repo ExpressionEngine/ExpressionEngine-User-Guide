@@ -8,6 +8,28 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.8
+(Release: March 4th, 2025)
+
+
+**Enhancements** 🚀
+
+- Removed unnecessary indentation in "update version" sidebar item; [#4721](https://github.com/ExpressionEngine/ExpressionEngine/pull/4721)
+- Add method to list indexes for a given table #4710 ; [#4571](https://github.com/ExpressionEngine/ExpressionEngine/pull/4710)
+- Updated sidebar version section to be red with white color when theres a critical update [#4706](https://github.com/ExpressionEngine/ExpressionEngine/pull/4706)
+- Decouple site query from log query when viewing CP logs [#4703](https://github.com/ExpressionEngine/ExpressionEngine/pull/4703)
+- Updated drop-down filter controls to show as much of the filter value as possible [#4581](https://github.com/ExpressionEngine/ExpressionEngine/discussions/4581)
+
+**Bug Fixes** 💃🐛
+
+- Resolved an issue where numeric channel shortnames caused a js error in Pro Search settings [#4709](https://github.com/ExpressionEngine/ExpressionEngine/pull/4709)
+- Resolved [#4576](https://github.com/ExpressionEngine/ExpressionEngine/issues/4576) where replace in Pro Search did not work with shared Grid fields
+
+**Developers** 💻
+
+- Added before_version_delete hook to entry versioning [#4694](https://github.com/ExpressionEngine/ExpressionEngine/pull/4694)
+- Treat smart quotes more lightly when searching [#4359](https://github.com/ExpressionEngine/ExpressionEngine/discussions/4359)
+
 ## Version 7.5.7
 (Release: January 23nd, 2025)
 
