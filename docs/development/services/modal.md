@@ -130,6 +130,18 @@ Finally, we need to create our Bulk Action Controls with some special data attri
 
 Now when a user selects some content in the table, the bulk action controls should appear, and when "Remove" is selected and submitted, a modal will appear showing a list of content about to be deleted, where they can then confirm the deletion and your `POST` handler will be fired.
 
+## Advanced functionality
+
+### Automatically open a modal
+
+If you manually build a modal view, you can add `.app-modal` and a `rev` attribute like:
+
+    <div class="modal-wrap app-modal" rev="my-automatic-modal">
+
+Then, visiting the CP page with `#my-automatic-modal` in the URL will automatically open this modal on page load.
+
+NOTE: Note: the `rev` value must be longer than 5 characters in order for this to work. `#test` would not work, but `#testing` would.
+
 ## CP/Modal Service Methods
 
 **class `ExpressionEngine\Service\Modal\ModalCollection`**
