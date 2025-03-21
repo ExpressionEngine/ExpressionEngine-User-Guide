@@ -31,18 +31,19 @@ This variable can now be used in your `/system/user/config.php` as illustrated b
 Here is an example of what it might look like to manage all your database connection settings, and Base URL in `.env.php`
 
 ```
-// .env.php
-
-// URLs
+# .env.php
+# URLs
 BASE_URL=http://mysite.test/
 
-// DATABASE SETTINGS
+# DATABASE SETTINGS
 DB_HOSTNAME=db
 DB_DATABASE=db
 DB_USERNAME=db
 DB_PASSWORD=db
 DB_PORT=3306
 ```
+
+NOTE: You must use `#` for comments within `.env.php`. Using `//` will result in your `.env.php` being unable to be read.
 
 ```
 // system/user/config.php
@@ -53,7 +54,7 @@ $config['save_tmpl_files'] = 'y';
 $config['base_url'] = $_ENV['BASE_URL'];
 $config['site_url'] = $config['base_url'];
 
-$config['app_version'] = '7.2.0';
+$config['app_version'] = '7.5.8';
 $config['encryption_key'] = 'bb748b72de235352315122d00';
 $config['session_crypt_key'] = '985796e4444444563463e2c80242';
 
@@ -83,15 +84,15 @@ The site short name can be accessed in the code using `$GLOBALS['assign_to_confi
 The below example demonstrates this approach, assuming you have 2 MSM sites with short names of `default_site` and `second_site`
 
 ```
-// .env.php
-// SITE-SPECIFIC SETTINGS
+# .env.php
+# SITE-SPECIFIC SETTINGS
 default_site.BASE_PATH=/home/sites/mysite.test/
 default_site.BASE_URL=http://mysite.test/
 
 second_site.BASE_PATH=/home/sites/anothersite.test/
 second_site.BASE_URL=http://anothersite.test/
 
-// DATABASE SETTINGS
+# DATABASE SETTINGS
 DB_HOSTNAME=db
 DB_DATABASE=db
 DB_USERNAME=db
@@ -110,7 +111,7 @@ $config['base_url'] = $_ENV[$GLOBALS['assign_to_config']['site_name'] . '.' . 'B
 
 $config['site_url'] = $config['base_url'];
 
-$config['app_version'] = '7.2.0';
+$config['app_version'] = '7.5.8';
 $config['encryption_key'] = 'bb748b72de235352315122d00';
 $config['session_crypt_key'] = '985796e4444444563463e2c80242';
 
