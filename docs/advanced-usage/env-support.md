@@ -8,7 +8,7 @@
 -->
 # ENV File Support
 
-Config files can also be configured using [PHP Environment variables ($_ENV)](https://www.php.net/manual/en/reserved.variables.environment.php). To utilize this, create a file named `.env.php` in the root of your ExpressionEngine install. 
+Config files can also be configured using [PHP Environment variables ($_ENV)](https://www.php.net/manual/en/reserved.variables.environment.php). To utilize this, create a file named `.env.php` in the root of your ExpressionEngine install.
 
 NOTE: The `.env.php` file must be placed in same directory as the `system` directory. If you move the `system` directory above the webroot you must also move `.env.php`.
 
@@ -31,11 +31,11 @@ This variable can now be used in your `/system/user/config.php` as illustrated b
 Here is an example of what it might look like to manage all your database connection settings, and Base URL in `.env.php`
 
 ```
-# .env.php
-# URLs
+#.env.php
+#URLs
 BASE_URL=http://mysite.test/
 
-# DATABASE SETTINGS
+#DATABASE SETTINGS
 DB_HOSTNAME=db
 DB_DATABASE=db
 DB_USERNAME=db
@@ -84,15 +84,15 @@ The site short name can be accessed in the code using `$GLOBALS['assign_to_confi
 The below example demonstrates this approach, assuming you have 2 MSM sites with short names of `default_site` and `second_site`
 
 ```
-# .env.php
-# SITE-SPECIFIC SETTINGS
+#.env.php
+#SITE-SPECIFIC SETTINGS
 default_site.BASE_PATH=/home/sites/mysite.test/
 default_site.BASE_URL=http://mysite.test/
 
 second_site.BASE_PATH=/home/sites/anothersite.test/
 second_site.BASE_URL=http://anothersite.test/
 
-# DATABASE SETTINGS
+#DATABASE SETTINGS
 DB_HOSTNAME=db
 DB_DATABASE=db
 DB_USERNAME=db
