@@ -21,6 +21,9 @@
 </div>
 </div>
 
+**Bug Fixes** 💃🐛
+- Resolved an issue where updates from the CLI would fail if not running from a built release
+- Added default values for the roles table in the event they did not take effect in older updates
 
 ## Version 7.5.9
 (Release: March 26th, 2025)
