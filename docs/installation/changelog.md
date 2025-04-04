@@ -43,11 +43,14 @@
 - Resolved [#4692](https://github.com/ExpressionEngine/ExpressionEngine/issues/4692) where Search add-on did not include enough custom fields when searching multiple channels
 - Resolved [#4745](https://github.com/ExpressionEngine/ExpressionEngine/issues/4745) where using `edit_date` variable in Structure navigation was giving PHP error
 - Resolved [#4725](https://github.com/ExpressionEngine/ExpressionEngine/issues/4725) where Search was showing an error if `results` parameter was too big
-- Resolved [#4720](https://github.com/ExpressionEngine/ExpressionEngine/issues/4720) where file usage was not calculated correctly for textareas containing multiple images
 - Resolved [#4689](https://github.com/ExpressionEngine/ExpressionEngine/issues/4689) where adding category from entry page could show wrong UI
 - Resolved [#4682](https://github.com/ExpressionEngine/ExpressionEngine/issues/4682) where cloning entry with hidden RTE field was giving PHP error
 - Resolved an issue where curl requests on Windows could not use the native root certificate store
 - Resolved an issue where updates from the CLI would not increment the version number
+- Resolved [#4720](https://github.com/ExpressionEngine/ExpressionEngine/issues/4720) where file usage was not calculated correctly for textareas containing multiple images
+
+NOTE: **Important:** If your site uses any textareas that contain multiple image links, you should [Update File Usage Information](/latest/control-panel/utilities/data-operations.md#update-file-usage-information) after upgrading to trigger a re-count of file usage statistics.
+
 
 ## Version 7.5.8
 (Release: March 4th, 2025)
