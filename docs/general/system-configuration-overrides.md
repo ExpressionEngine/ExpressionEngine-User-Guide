@@ -1840,12 +1840,21 @@ Set the system's method for sending email.
 | mail     | PHP Mail |
 | smtp     | SMTP     |
 | sendmail | Sendmail |
+| dummy    | Log      |
 
 Example Usage:
 
     $config['mail_protocol'] = 'smtp';
 
 **Also found in CP:** `Settings --> Outgoing Email`: [Email Protocol](control-panel/settings/email.md#protocol)
+
+## `dummy_mail_path`
+
+Used when mail_protocol is set to dummy. This is the path to write the email logs to. Default is `/tmp`
+
+Example Usage:
+
+    $config['dummy_mail_path'] = '/mail-log';
 
 ## `max_logged_searches`
 
