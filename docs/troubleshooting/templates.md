@@ -64,16 +64,17 @@ Ensure that the channel field is being called within the template. For example, 
 
 ## CAPTCHA images not appearing
 
-CAPTCHAs are enabling but there is a blank space where they should appear.
+CAPTCHAs are enabled but there is a blank space where they should appear.
 
 ### Troubleshooting missing CAPTCHA Images
 
 There are several possible reasons for CAPTCHA images to not appear:
 
-- The path and/or URL to the CAPTCHA directory is not specified correctly under `Settings --> CAPTCHA`.
+- The path and/or URL to the CAPTCHA directory is not specified correctly under [`Settings --> CAPTCHA`](control-panel/settings/captcha.md).
 - The `images/captchas/` directory is not writable. See [File Permissions](troubleshooting/general.md#file-permissions) for details.
 - The server does not support True Type Fonts. TrueType Fonts can be disabled in `Settings --> CAPTCHA`.
 - GD library isn't installed and/or working correctly
+- You are logged in as a superadmin, and superadmins are not required to solve CAPTCHAs
 
 ## Can not save a template with the {exp:query} tag
 
