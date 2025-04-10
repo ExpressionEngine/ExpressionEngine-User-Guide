@@ -180,7 +180,7 @@ renderer.table = function(header, body) {
 
 module.exports = function (text, info) {
 	currentPageInfo = info
-	let renderedContent = MarkedJs(text, { renderer: renderer })
+	let renderedContent = MarkedJs.parse(text, { renderer: renderer })
 
 	return renderedContent
 }

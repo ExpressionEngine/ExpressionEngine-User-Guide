@@ -9,6 +9,8 @@
 
 # Add-on Update File
 
+[TOC]
+
 ## Overview
 
 The `upd.[addon_name].php` file (commonly just called the `upd` file) is critical to ExpressionEngine knowing what to do with your add-on. Here we tell ExpressionEngine what actions to register, core hooks we want to use, database tables to update, and much more. We need to tell ExpressionEngine what to do when we install an add-on, update an add-on, and uninstall and add-on. Thankfully the CLI takes care of most of this for us.
@@ -63,8 +65,8 @@ class Amazing_add_on_upd extends Installer
 The first thing you will notice in our `Amazing_add_on_upd` class is a list of properties that describe some specifics of our add-on to ExpressionEngine. There are two required properties to declare here:
 
 ```
-    public $has_cp_backend = 'y'; // Shows the option to see addon’s settings.
-    public $has_publish_fields = 'n'; // Whether module provides tab for entry edit page
+public $has_cp_backend = 'y'; // Shows the option to see addon’s settings.
+public $has_publish_fields = 'n'; // Whether module provides tab for entry edit page
 ```
 
 ## Install Your Add-On (`install()`)
@@ -77,23 +79,25 @@ The CLI automatically generates our install method. This method will ensure that
 
 
 ```
-   public function install()
-    {
-        parent::install();
+public function install()
+{
+    parent::install();
 
-        // create a database table
-        // notify mission control
-        // add publish tabs
+    // create a database table
+    // notify mission control
+    // add publish tabs
 
-        return true;
-    }
+    return true;
+}
 ```
 
 ### Adding Publish Tabs
 Optionally add the publish page tab fields to any saved publish layouts. This is ONLY used if the module adds a tab to the publish page and it requires the [`tabs()` function](#add-publish-tabs-with-your-add-on-tabs):
 
-      ee()->load->library('layout');
-      ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
+```
+ee()->load->library('layout');
+ee()->layout->add_layout_tabs($this->tabs(), 'module_name');
+```
 
 
 ## Add Publish Tabs With Your Add-on (`tabs()`)
@@ -104,25 +108,27 @@ Optionally add the publish page tab fields to any saved publish layouts. This is
 
 An optional function included only if your add-on adds a tab to the publish page. This function should return a multidimensional associative array: the top array key consisting of the tab name, followed by any field names, with each field having a variety of default settings. Note that when the fields are added to the publish page, they are namespaced to prevent variable collisions:
 
-    function tabs()
-    {
-        $tabs['tab_name'] = array(
-            'field_name_one'=> array(
-                'visible'   => 'true',
-                'collapse'  => 'false',
-                'htmlbuttons'   => 'true',
-                'width'     => '100%'
-                ),
-            'field_name_two'=> array(
-                'visible'   => 'true',
-                'collapse'  => 'false',
-                'htmlbuttons'   => 'true',
-                'width'     => '100%'
-                ),
-            );
+```
+function tabs()
+{
+    $tabs['tab_name'] = array(
+        'field_name_one'=> array(
+            'visible'   => 'true',
+            'collapse'  => 'false',
+            'htmlbuttons'   => 'true',
+            'width'     => '100%'
+            ),
+        'field_name_two'=> array(
+            'visible'   => 'true',
+            'collapse'  => 'false',
+            'htmlbuttons'   => 'true',
+            'width'     => '100%'
+            ),
+        );
 
-        return $tabs;
-    }
+    return $tabs;
+}
+```
 
 Be sure that you also update your [`install()` function](#adding-publish-tabs) to add your specified tabs.
 
@@ -138,22 +144,24 @@ The `update` method will run code when a user installs an update to our add-on.
 | \$current | `string`  | The last recorded version of the module in the `exp_modules` table |
 | Returns   | `Boolean` | `FALSE` if no update is needed, `TRUE` otherwise
 
-    public function update($current = '')
+```
+public function update($current = '')
+{
+    // Runs migrations
+    parent::update($current);
+
+    // only run the update if the user is currently running a version less than 2.0
+    if (version_compare($current, '2.0', '<'))
     {
-        // Runs migrations
-        parent::update($current);
-
-        // only run the update if the user is currently running a version less than 2.0
-        if (version_compare($current, '2.0', '<'))
-        {
-            // Do your update code here
-            // update database
-            // notify mission control of the update
-        }
-
-
-        return true;
+        // Do your update code here
+        // update database
+        // notify mission control of the update
     }
+
+
+    return true;
+}
+```
 
 ## Uninstall Your Add-On (`uninstall()`)
 The CLI automatically generates our uninstall method. This method will ensure that all extensions and actions declared above will be properly uninstalled. Similarly to installation, if you just need to ensure your actions and extensions are uninstalled, you can leave this method as is. However, you added custom functionality in the `install()` method, then you need to also ensure you clean up after yourself here.
@@ -162,19 +170,23 @@ The CLI automatically generates our uninstall method. This method will ensure th
 | --------- | --------- | ------------------------------------------------------------ |
 | Returns   | `Boolean` | `TRUE` if everything uninstalled properly, `FALSE` otherwise |
 
-    public function uninstall()
-    {
-        parent::uninstall();
+```
+public function uninstall()
+{
+    parent::uninstall();
 
-        // remove my database tables
-        // remove any publish tabs
-        // turn off the lights
+    // remove my database tables
+    // remove any publish tabs
+    // turn off the lights
 
-        return true;
-    }
+    return true;
+}
+```
 
 ### Removing Tabs
 Optionally delete any publish page tab fields saved in publish layouts. This is ONLY used if the module adds a tab to the publish page and it requires the `tabs()` function:
 
-      ee()->load->library('layout');
-      ee()->layout->delete_layout_tabs($this->tabs(), 'module_name');
+```
+ee()->load->library('layout');
+ee()->layout->delete_layout_tabs($this->tabs(), 'module_name');
+```

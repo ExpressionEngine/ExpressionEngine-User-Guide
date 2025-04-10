@@ -25,7 +25,8 @@ A File field allows you to browse through existing files and upload new files.  
 
 ![file field with file selected](_images/field_file_file.png)
 
-Once a file has been selected in the field, that file can be replaced by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_edit.png" alt="edit icon"> icon. The field selection can be cleared by clicking <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_remove.png" alt="remove icon"> icon (this will not remove the file from the system). You can also change the file metadata (such as the title or description) by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_edit_meta.png" alt="settings icon"> icon - please note that file's metadata will be changed globally throughout the system.
+Once a file has been selected in the field, that file can be replaced by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" 
+src="../_images/icon_edit.png" alt="edit icon"> icon. The field selection can be cleared by clicking <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/icon_remove.png" alt="remove icon"> icon (this will not remove the file from the system). You can also change the file metadata (such as the title or description) by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/icon_edit_meta.png" alt="settings icon"> icon - please note that file's metadata will be changed globally throughout the system.
 
 ## Field Settings
 
@@ -169,6 +170,12 @@ The automatically-detected MIME type of the file.
     {modified_date format="%Y %m %d"}
 
 The date the file was last modified. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+One powerful use of the modified_date is 'cache busting', forcing browers to use a new image rather than a cached one when an image is modified but not renamed:
+
+    {image}
+        <img src="{url}?v={modified_date}" />
+    {/image}
 
 ### `{path}`
 

@@ -158,3 +158,17 @@ How it's called:
     ee()->extensions->call('after_channel_entry_bulk_delete', $delete_ids);
 
 TIP: **New in version 4.3.0.**
+
+## `before_channel_entry_version_delete($entry, $delete_versions)`
+
+| Parameter         | Type     | Description                              |
+| ------------      | -------  | ---------------------------------------- |
+| \$entry           | `Object` | Current ChannelEntry model object        |
+| \$delete_versions | `Array`  | Versions to be deleted                   |
+| Returns           | `Array`  | Modified array of Versions to be deleted |
+
+Called after an entry is saved before Versions are deleted if versioning is enabled for the entry's channel.
+
+How it's called:
+
+    $versions = ee()->extensions->call('before_channel_entry_version_delete', $this, $versions);

@@ -32,7 +32,12 @@ To build the theme assets, run `npm run buildAssets`. You can also dynamically r
 
 ### Viewing local changes
 
-Manually load `/build/index.html` in your browser to view your local build. For example, `file:///Users/<username>/Documents/ExpressionEngine-User-Guide/build/index.html`. You can use the side navigation to navigate to different local files, but the search functionality always takes you to the live version at docs.expressionengine.com.
+There are 2 options for viewing your local changes.
+
+1. Run `npx http-server -o` which should make the site available at [http://127.0.0.1:8080/build/](http://127.0.0.1:8080/build/).
+2. Manually view any HTML file in `/build/` in your browser. For example, `file:///Users/<username>/Documents/ExpressionEngine-User-Guide/build/index.html` to view the home page.
+
+You can use the side navigation to navigate to different local files, but the search functionality takes you to the live version at [https://docs.expressionengine.com](https://docs.expressionengine.com) unless you follow the steps at [Using DocSearch Locally](#using-docsearch-locally).
 
 ## Using DocSearch Locally
 

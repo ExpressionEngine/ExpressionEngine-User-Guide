@@ -570,6 +570,8 @@
               href: development/legacy/database/utilities.md
             - name: Database Forge Class
               href: development/legacy/database/forge.md
+            - name: Database Smart Forge Class
+              href: development/legacy/database/smartforge.md
             - name: Connecting to an External Database
               href: development/legacy/database/connecting-to-an-external-database.md
         - name: Helpers
