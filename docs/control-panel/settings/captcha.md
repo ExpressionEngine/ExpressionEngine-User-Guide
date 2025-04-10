@@ -17,7 +17,11 @@ This section of the Control Panel allows you to set the [CAPTCHA](security/captc
 
 ### Require CAPTCHA?
 
-If you enable this preference, then site visitors will be required to pass a CAPTCHA to submit any front-end form, including Channel Form, comment forms, contact forms, and member registrations. If members are logged in, they will not have to enter a CAPTCHA unless the [Require CAPTCHA while logged in?](#require-captcha-while-logged-in) preference is enabled.
+If you enable this preference, then site visitors will be required to pass a CAPTCHA to submit any front-end form, including [channel forms](security/captchas.md#channel-forms), [comment forms](security/captchas.md#comment-forms), contact and tell-a-friend email forms](#contact-and-tell-a-friend-email-forms), and [member registrations](security/captchas.md#member-registration-forms). 
+
+If members are logged in, they will not have to enter a CAPTCHA unless the [Require CAPTCHA while logged in?](#require-captcha-while-logged-in) preference is enabled.
+
+Superadmins are not required to submit a captcha and are never shown one.
 
 ### Require CAPTCHA while logged in?
 
@@ -25,7 +29,7 @@ If you enable this preference, then even members who are logged in will need to 
 
 ### Use reCAPTCHA v3?
 
-If you enable this preference then the system will use reCAPTCHA v3 in place of the built-in image based solution.
+If you enable this preference then the system will use reCAPTCHA v3 in place of the built-in image based solution. You will also want to ensure that you [update any code](security/captchas.md#captcha-code) used to output CAPTCHAs on your site.
 
 ## Built-in CAPTCHA Settings
 
@@ -57,7 +61,9 @@ If you do not know what to use for your full server path, contact your Host or s
 
 ## reCAPTCHA v3 Settings
 
-If you wish to use (Google reCAPTCHA v3)[https://cloud.google.com/security/products/recaptcha#how-it-works] as a replacement for the built-in functionality, you will need to ensure that the site is set up with Google with the required site key and secret. Note that there is currently a monthly limit on the number of free CAPTCHAs that Google provides. See https://www.google.com/recaptcha/admin/create
+If you wish to use (Google reCAPTCHA v3)[https://cloud.google.com/security/products/recaptcha#how-it-works] as a replacement for the built-in functionality, you will need to ensure that the site is set up with Google with the required site key and secret.
+
+Note that there is currently a monthly limit on the number of free CAPTCHAs that Google provides. See https://www.google.com/recaptcha/admin/create
 
 ### reCAPTCHA site key
 
