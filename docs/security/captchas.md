@@ -28,11 +28,11 @@ In ExpressionEngine, CAPTCHAs can be used in several places:
 
 The settings to require CAPTCHAs for these forms are located at [`Settings --> CAPTCHA`](control-panel/settings/captcha.md) in the control panel. 
 
-The CAPTCHA settings are applied site-wide. If other add-ons allow the use of captchas, they will also be controlled by the same settings.
+The CAPTCHA settings are applied site-wide. If you have CAPTCHAS required, they will be required for all of the following uses with the same settings. If other add-ons integrate the use of EE's captcha system, they will also be controlled by the same settings.
 
 ## Comment Forms
 
-If you have the setting turned on, you'll need to add the CAPTCHA code to your [Comment Submission Form](comment/form.md). See below for the [CAPTCHA Code](#captcha-code).
+If you have CAPTCHAS required, you'll need to add the CAPTCHA code to your [Comment Submission Form](comment/form.md). See below for the [CAPTCHA Code](#captcha-code).
 
 ## Member Registration Form
 
@@ -40,11 +40,11 @@ The necessary CAPTCHA code already exists in the Member Templates by default, so
 
 ## Contact and Tell-a-Friend Email Forms
 
-If you have the setting turned on, you'll need to add the CAPTCHA code to the form. See below for the [CAPTCHA Code](#captcha-code).
+If you have CAPTCHAS required, you'll need to add the CAPTCHA code to these forms in order to submit properly. See below for the [CAPTCHA Code](#captcha-code).
 
 ## Channel Forms
 
-If you have the setting turned on, you'll need to add the CAPTCHA code to your [Channel Entry Form](channels/channel-form/overview.md#captcha). See below for the [CAPTCHA Code](#captcha-code).
+If you have CAPTCHAS required, you'll need to add the CAPTCHA code to your [Channel Entry Form](channels/channel-form/overview.md#captcha). See below for the [CAPTCHA Code](#captcha-code).
 
 ## CAPTCHA Code
 
@@ -56,13 +56,15 @@ This is the code for Comment forms, Contact forms, and Channel Entry forms.
         <input type="text" name="captcha" value="{captcha_word}" size="20" maxlength="20" style="width:140px;" /></p>
     {/if}
 
-The contents of the conditional `{if captcha}` tag will appear if you:
+The contents of the conditional `{if captcha}` tag will be displayed if you:
 
 - have the CAPTCHA setting turned on
 - are not logged in as a superadmin (Superadmins never have to pass a CAPTCHA test)
-- are using the built-in CAPTCHA (Google's reCAPTCHA v3 does not display anything)
+- are not logged in (only if you have "Require CAPTCHA while logged in?" enabled)
 
-The code used inside the Member Registration Form is very similar, with only the omission of the {captcha_word} variable:
+The `{captcha}` tag itself will be an image tag if you are using the built-in CAPTCHA. 
+
+The code used in the Member Registration Form is very similar, with only the omission of the {captcha_word} variable:
 
     {if captcha}
         <p>Please enter the word you see in the image below:</p>
@@ -70,7 +72,7 @@ The code used inside the Member Registration Form is very similar, with only the
         <input type="text" name="captcha" value="" size="20" maxlength="20" style="width:140px;" /></p>
     {/if}
 
-If using using [reCAPTCHA v3](security/captchas.md), use this simplified code. It will output the required javascript with the CAPTCHA being otherwise invisible.
+If you are using [Google's  reCAPTCHA v3](security/captchas.md), use this simplified code in all cases. The `{captcha}` tag will output the required JavaScript, the CAPTCHA is invisible, and there is no need for an input field.
 
     {if captcha}
         {captcha}
