@@ -22,7 +22,7 @@ When a user loads a web page with a form protected by a CAPTCHA, EE generates a 
 In ExpressionEngine, CAPTCHAs can be used in several places:
 
 - [To submit a comment](#comment-forms) 
-- [To register a new member](#member-registration-form)
+- [To register a new member](#member-registration-forms)
 - [In the Contact and Tell-a-Friend email forms](#contact-and-tell-a-friend-email-forms) 
 - [In Channel Forms](#channel-forms) 
 
@@ -34,7 +34,7 @@ The CAPTCHA settings are applied site-wide. If you have CAPTCHAS required, they 
 
 If you have CAPTCHAS required, you'll need to add the CAPTCHA code to your [Comment Submission Form](comment/form.md). See below for the [CAPTCHA Code](#captcha-code).
 
-## Member Registration Form
+## Member Registration Forms
 
 The necessary CAPTCHA code already exists in the Member Templates by default, so you should not need to add it. If you have a version of ExpressionEngine from before the CAPTCHA feature was added or if you otherwise need the code, see below for the [CAPTCHA Code](#captcha-code).
 

@@ -17,7 +17,11 @@ This section of the Control Panel allows you to set [CAPTCHA](security/captchas.
 
 ### Require CAPTCHA?
 
-If you enable this preference, then site visitors will be required to pass a CAPTCHA to submit any front-end form, including Channel Form, comment forms, and member registrations. If members are logged in, they will not have to enter a CAPTCHA unless the [Require CAPTCHA while logged in?](#require-captcha-while-logged-in) preference is enabled below.
+If you enable this preference, then site visitors will be required to pass a CAPTCHA to submit any front-end form, including [channel forms](security/captchas.md#channel-forms), [comment forms](security/captchas.md#comment-forms), contact and tell-a-friend email forms](#contact-and-tell-a-friend-email-forms), and [member registrations](security/captchas.md#member-registration-forms). 
+
+If members are logged in, they will not have to enter a CAPTCHA unless the [Require CAPTCHA while logged in?](#require-captcha-while-logged-in) preference is enabled.
+
+Superadmins are not required to submit a captcha and are never shown one.
 
 ### Use TrueType font?
 
@@ -55,7 +59,7 @@ If you wish to use Google reCAPTCH v3 as a replacement you will need to ensure t
 
 ### Use reCAPTCHA v3?
 
-If you enable this preference then the system will use reCAPTCHA v3 in place of the older image based solution.
+If you enable this preference then the system will use reCAPTCHA v3 in place of the older image-based CAPTCHA method built into ExpressionEngine.
 
 ### reCAPTCHA site key
 
