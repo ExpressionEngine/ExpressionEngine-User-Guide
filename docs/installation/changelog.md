@@ -8,6 +8,39 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.11
+(Release: May 5th, 2025)
+
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17785714?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Jonathan Hardisty</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=jHards" target="_BLANK">@jHards</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#4798](https://github.com/ExpressionEngine/ExpressionEngine/issues/4798) where RedactorX text in dark mode is unreadable
+- Resolved [#4793](https://github.com/ExpressionEngine/ExpressionEngine/issues/4793) where member password reset email could have a repeated forward slash in the reset_url
+- Resolved [#4344](https://github.com/ExpressionEngine/ExpressionEngine/issues/4344) where Structure links in RTE could have been missing a trailing slash
+- Resolved [#4783](https://github.com/ExpressionEngine/ExpressionEngine/issues/4783) where sometimes not all custom fields were fetched when using SQL caching
+- Resolved [#4004](https://github.com/ExpressionEngine/ExpressionEngine/issues/4004) where CRLF setting was not properly set to handle quoted-printable emails
+- Resolved [#4632](https://github.com/ExpressionEngine/ExpressionEngine/issues/4632) where test email was not sent using some SMTP servers
+- Resolved [#3768](https://github.com/ExpressionEngine/ExpressionEngine/issues/3768) where `{index}` and `{absolute_index}` variables were missing from `{exp:channel:entries}` tag
+- Resolved [#4762](https://github.com/ExpressionEngine/ExpressionEngine/issues/4762) where in some cases it was not possible to change a site's 404 template
+- Resolved [#4697](https://github.com/ExpressionEngine/ExpressionEngine/issues/4697) where replacing a file did not update dimensions info
+- Resolved [#4366](https://github.com/ExpressionEngine/ExpressionEngine/issues/4366) where Multiple "Save" clicks create multiple identical entries
+- Resolved [#4368](https://github.com/ExpressionEngine/ExpressionEngine/issues/4368) where there is no "Edit entry" button on a newly added related entry
+- Resolved [#4185](https://github.com/ExpressionEngine/ExpressionEngine/issues/4185) where the page scrolled up when the file field modal window was opened
+- Updated textarea validation to send fewer AJAX requests
+- Added ability to edit metadata on images/files for Pro Variables page
+- Standardized forgotten password redirect behavior in Member module
+
 ## Version 7.5.10
 (Release: April 3rd, 2025)
 
