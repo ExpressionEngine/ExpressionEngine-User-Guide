@@ -87,7 +87,7 @@ Notice that the layout is a [hidden template](templates/overview.md#hidden-templ
 
 You can set variables in your templates that can later be used in your layouts. For instance you can set the contents of the page title tag, or breadcrumb navigation, sidebar content, etc. The content can be set in one of three ways, depending on how you need to use it in your layout:
 
-#### {layout:set}
+#### `{layout:set}`
 
 **Setting** a variable works similarly to setting a string variable in a programming language, like JavaScript. The contents are set to the variable name you provide. In your template:
 
@@ -97,7 +97,22 @@ And then in the layout, wherever you need to use this variable, reference it by 
 
     <title>{layout:title}</title>
 
-#### {layout:set:append}
+### `{layout:set:math}`
+
+If your variable needs to be a number, you can use the `{layout:set:math}` tag to perform simple math operations. This is useful for calculations that need to be done before outputting the value in your layout.
+For example, if you want to set a variable to the entry date divided by 1,000,000, you can do it like this:
+
+    {layout:set:math name='math'}{entry_date}/1000000{/layout:set:math}
+
+Then in your layout, you can use `{layout:math}` to output the result:
+
+    <p>Entry Date in Millions: {layout:math}</p>
+
+This will output the entry date divided by 1,000,000.
+
+The `{layout:set:math}` tag supports basic arthmetic operations, such as addition, subtraction, multiplication, division, as well as order of operation, parentheses, negation and some built-in functions - same as [Math Module](add-ons/math.md) and [`:math` variable modifier](templates/variable-modifiers.md#math).
+
+#### `{layout:set:append}`
 
 **Appending** a variable creates lists, and is similar to setting an array in a programming language, like JavaScript. Use this tag in a loop, when you want to capture the contents as individual items:
 
@@ -125,7 +140,7 @@ Like most pair variables, you have access to `{count}`, `{total_results}` as wel
       {/if}
     {/layout:titles}
 
-#### {layout:set:prepend}
+#### `{layout:set:prepend}`
 
 **Prepending** a variable works identical to `{layout:set:append}` above, except the new item gets pushed to the **front** of the list instead of added to the back.
 
