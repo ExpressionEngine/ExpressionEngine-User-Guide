@@ -496,6 +496,8 @@ The "search:" parameter allows you to constrain Channel Entries output based on 
 
 NOTE: **Note:** Some fields store their content in a manner that affects the ability to work with this parameter. Grid fields, for instance, could only use this parameter for columns with "Include in search?" enabled. Relationship fields cannot be searched using the search parameter.
 
+NOTE: **Note:** You can also use search:title and search:url_title in addition to searching field content. Remember that it is best to use url_title="something" if you're looking for an exact url_title match.
+
 #### "Exact" Matching
 
 Use "Exact" matching when you only want entries whose fields match your terms exactly. To trigger "Exact" matching, precede your search terms with an equal sign (=). You may provide a pipe-delimited list of terms:
