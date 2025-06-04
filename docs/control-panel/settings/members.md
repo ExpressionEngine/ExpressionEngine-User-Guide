@@ -77,7 +77,7 @@ Set whether dates and times are localized to each members' own localization pref
 
 ![Default Primary Role](/_images/members_default_role.png)
 
-This allows you to specify the Primary Role to which approved members will be assigned.
+This allows you to specify the Primary Role to which approved members will be assigned. Only roles that don't have "Security Lock" on can be selected.
 
 ### Member profile theme
 
