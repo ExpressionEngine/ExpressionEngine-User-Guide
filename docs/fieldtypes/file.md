@@ -199,6 +199,10 @@ If you have defined any [image manipulations](control-panel/file-manager/upload-
 
     {url:small}
 
+### `{url:thumbs}`
+
+The URL to the thumbnail image that's auto created for the control panel.
+
 ### `{width}`
 
 The width of the image (in pixels) if applicable.
