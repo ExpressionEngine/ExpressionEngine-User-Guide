@@ -338,6 +338,8 @@
           href: development/services/encrypt.md
         - name: Event Service
           href: development/services/event.md
+        - name: MimeType Service
+          href: development/services/mime.md
         - name: CP/FilePicker Service
           href: development/services/filepicker.md
         - name: CP/Filter Service
