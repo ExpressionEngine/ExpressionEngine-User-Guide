@@ -610,7 +610,6 @@
             - name: XML Helper
               href: development/legacy/helpers/xml-helper.md
 
-
         - name: Legacy API Library
           href: development/legacy/api/index.md
           items:
