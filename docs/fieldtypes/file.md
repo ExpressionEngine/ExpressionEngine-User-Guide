@@ -201,7 +201,7 @@ If you have defined any [image manipulations](control-panel/file-manager/upload-
 
 ### `{url:thumbs}`
 
-The URL to the thumbnail image thats auto created for the control panel.
+The URL to the thumbnail image that's auto created for the control panel.
 
 ### `{width}`
 
