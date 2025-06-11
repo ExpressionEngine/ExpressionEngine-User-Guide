@@ -8,10 +8,9 @@
 -->
 
 # Accessing the Database
-You may often want to query or update your database from within your add-on. This can be done using the [Model Service](development/services/model.md) or you can also execute SQL statements by using the legacy [Database Driver](development/legacy/database/index.md). 
+You may often want to query or update your database from within your add-on. This can be done using the [Model Service](development/services/model.md) or you can execute SQL statements by using the  [Database Driver](development/legacy/database/index.md) and its [Active Record](https://docs.expressionengine.com/latest/development/legacy/database/active-record.html) class. 
 
-TIP: The Model Service is much cleaner than the legacy Database Driver. However, it also has limitations on what it can do compared to the Database Driver.
-
+Each approach has its own strengths, and you can use either depending on the specific needs of your code.
 
 Let's use a real example to show how you might access data using both methods:
 
@@ -46,7 +45,7 @@ class Memberlist extends AbstractRoute
 }
 ```
 
-Here is the class syntax using the legacy Database Drive:
+Here is the class syntax using the Database Driver's Active Record class, which provides more portability, cleaner code, and default secuirity enhancementsa versus raw queries:
 
 ```
 namespace ExpressionengineDeveloper\AmazingAddOn\Module\Tags;
@@ -87,5 +86,7 @@ Roy
 Douglas
 Richmond
 ```
+
+The Database driver shines when pulling back raw data from specific sources quickly or making targeted inserts and updates.  Models provide consistency and easy access to complex data. Use both as needed for fast, clean, secure interaction with the database.
 
 This is only the beginning of how you can interact with the database through your add-on. Explore the [Model Service](development/services/model.md) and the legacy [Database Driver](development/legacy/database/index.md) to learn how to add more power to your add-on.
