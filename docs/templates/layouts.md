@@ -89,6 +89,8 @@ You can set variables in your templates that can later be used in your layouts. 
 
 #### {layout:set}
 
+NOTE: **Note:**  {layout:set} cannot be used with {layout:set:append} and {layout:set:prepend}
+
 **Setting** a variable works similarly to setting a string variable in a programming language, like JavaScript. The contents are set to the variable name you provide. In your template:
 
     {layout:set name='title'}My Page Title{/layout:set}
