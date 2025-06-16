@@ -8,6 +8,43 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.13
+(Release: June 16th, 2025)
+
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/53965?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Brian Litzinger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=litzinger" target="_BLANK">@litzinger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1008036?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Eric Lamb</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=mithra62" target="_BLANK">@mithra62</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/11818941?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Matt Johnson</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=matthewjohns0n" target="_BLANK">@matthewjohns0n</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+- Resolved [#4879](https://github.com/ExpressionEngine/ExpressionEngine/issues/4879) where inline error reporting was incorrect on the Reset Password form.
+- Resolved [#4863](https://github.com/ExpressionEngine/ExpressionEngine/issues/4863) where the link to a member's profile in logs was incorrect.
+- Resolved [#4849](https://github.com/ExpressionEngine/ExpressionEngine/issues/4849) where some inline errors in Channel Form were duplicated.
+- Resolved [#4859](https://github.com/ExpressionEngine/ExpressionEngine/pull/4859) where a PHP warning was generated when registering a member without custom fields.
+- Resolved [#4847](https://github.com/ExpressionEngine/ExpressionEngine/issues/4847) where the Entry Manager could become unusable depending on column configuration.
+- Resolved [#4772](https://github.com/ExpressionEngine/ExpressionEngine/issues/4772) where the MFA dialog could still be shown if required for a member but disabled globally.
+- Resolved [#4829](https://github.com/ExpressionEngine/ExpressionEngine/issues/4829) where searching tables in the SQL Manager could generate a false error message.
+- Resolved [#4189](https://github.com/ExpressionEngine/ExpressionEngine/issues/4189) where the `{if logged_in}` variable was parsed later than expected.
+- Resolved [#4800](https://github.com/ExpressionEngine/ExpressionEngine/issues/4800) where the file type filter could cause an error.
+- Resolved [#4429](https://github.com/ExpressionEngine/ExpressionEngine/issues/4429) where setting a Number input to decimal did not allow decimals if the step attribute was not set.
+- Resolved [#4418](https://github.com/ExpressionEngine/ExpressionEngine/pull/4418) where a PHP warning could occur when resetting a password.
+
+
+
+**Developers** 💻
+
+- Added tertiary check on the object in case an Action calls the Template parser. [#4867](https://github.com/ExpressionEngine/ExpressionEngine/pull/4867)
+- Made [`parseLayoutVariables`](https://github.com/ExpressionEngine/ExpressionEngine/pull/4638) method public.
+
+
 ## Version 7.5.12
 (Release: May 15th, 2025)
 
