@@ -11,7 +11,7 @@
 
 [TOC]
 
-STYLE NOTE: Someone "logs out" (verb, two words) using a "logout link" or "logout form" (adjective, one word).
+NOTE: Someone "logs out" (verb, two words) using a "logout link" or "logout form" (adjective, one word).
 
 
 ## Logout Link
@@ -24,14 +24,14 @@ resolves to something like
 
     https://example.com/?ACT=10&csrf_token=3f9045ab558a35b7caf6a8130439758d02b343df
 
-Usually, you place the path variable inside of a link tag. 
+Usually, you place the path variable inside of a link tag.
 
     <a href="{path='logout'}">Log Out</a>
 
 NOTE: The logout path link will generate with a fresh CSRF token every time it is called, even for visitors who are currently logged out. For maximum site efficiency, you should avoid creating logout links for visitors who are not logged in.
 
     {if logged_in}<a href="{path='logout'}">Log Out</a>{/if}
-    
+
 NOTE: Logging out of the front end of the site deletes the session cookie, so it will also potentially log someone out of the admin panel if your site uses cookies to be logged in to the control panel.
 
 ## Logout Form Overview
