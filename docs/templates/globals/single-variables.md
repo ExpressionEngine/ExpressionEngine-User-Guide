@@ -33,15 +33,15 @@ This variable will be substituted for the global character set (UTF-8). It is ty
 
 ### `{cp_session_id}`
 
-The session id for the control panel. This is the value needed in the "S=" portion of the control panel URL. Only output for logged-in members who have access to the Control Panel, for instance to build a front-end URL to an add-on in the control panel:
+The session id for the control panel. This is the value needed in the "S=" portion of the control panel URL, for instance to build a URL from the front-end to an add-on in the control panel. Will only produce output for logged-in members who have access to the Control Panel.
 
-    {if logged_in_role_id == 1}
+    {if logged_in_primary_role_id == 1}
       &bull; <a href="{cp_url}?/cp/addons/settings/my_addon&S={cp_session_id}"></a>
     {/if}
 
 ### `{cp_url}`
 
-The URL to the control panel for this site. Only output for logged-in members who have access to the Control Panel.
+The URL to the control panel for this site. Will only produce output for logged-in members who have access to the Control Panel.
 
 ### `{csrf_token}`
 
