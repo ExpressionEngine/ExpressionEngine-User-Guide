@@ -13,7 +13,46 @@ lang: php
 
 # Email Library Extension Hooks
 
+## `email_from_address($from, $name)`
+
+| Parameter | Type     | Description
+| --------- | -------- | --------------------------------------
+| $from     | `String` | Email `from` address
+| $name     | `String` | Email `name` for `from` address
+| Returns   | `String` | Manipulated Email `from` address
+
+Overwrite an email `from` address.
+
+How it's called:
+
+```
+    if (ee()->extensions->active_hook('email_from_address')) {
+        $from = ee()->extensions->call('email_from_address', $from, $name);
+    }
+```	
+
+## `email_to_address($to)`
+
+| Parameter | Type     | Description
+| --------- | -------- | --------------------------------------
+| $to       | `String` | Email `from` address
+| Returns   | `String` | Manipulated Email `to` address
+
+Overwrite an email `to` address.
+
+How it's called:
+
+```
+    if (ee()->extensions->active_hook('email_to_address')) {
+        $to = ee()->extensions->call('email_to_address', $to);
+    }
+```	
+
+
 ## `email_send(&$data)`
+
+
+
 
 | Parameter | Type      | Description                                                                                                                                                                                     |
 | --------- | --------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

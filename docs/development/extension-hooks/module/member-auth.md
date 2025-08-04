@@ -69,6 +69,27 @@ How it's called:
     $edata = ee()->extensions->call('member_member_logout');
     if (ee()->extensions->end_script === TRUE) return;
 
+## `member_auth_send_reset_token_start($address)`
+
+| Parameter | Type     | Description
+| --------- | -------- | ---------------------------------------------
+| $address  | `String` | Email address posted from reset password form
+| Returns   | `String` | Email address after extension processes it
+
+Additional processing of email address sent via reset password form.  Happens after basic security checks, but before email address check occurs.
+
+How it's called:
+
+```
+    if (ee()->extensions->active_hook('member_auth_send_reset_token_start')) {
+        $address = ee()->extensions->call('member_auth_send_reset_token_start', $address);
+        if (ee()->extensions->end_script === true) {
+            return;
+        }
+    }
+```	
+	
+
 ## `member_process_reset_password()`
 
 | Parameter | Type    | Description                                |
