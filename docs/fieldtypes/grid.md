@@ -35,7 +35,7 @@ Enables moving the Grid rows with drag & drop to change the order
 
 #### Show Row Numbers
 
-Enables the display of row numbers alongside each row in the data grid.
+Enables the display of row count alongside each row in the data grid.
 
 #### Grid layout
 
