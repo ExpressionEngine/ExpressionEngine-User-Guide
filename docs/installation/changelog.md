@@ -44,7 +44,7 @@
 - Confirmed we have an integer before structure updates data [#4928](https://github.com/ExpressionEngine/ExpressionEngine/pull/4928)
 - Updated ft.toggle.php to remove unused variable[#4927](https://github.com/ExpressionEngine/ExpressionEngine/pull/4927)
 - Improved precision when displaying file size in File Manager [#4748](https://github.com/ExpressionEngine/ExpressionEngine/pull/4748)
-- Improved [#4693](https://github.com/ExpressionEngine/ExpressionEngine/issues/4693); show row count on grid fields
+- Added [#4693](https://github.com/ExpressionEngine/ExpressionEngine/issues/4693); show row count on grid fields
 - Added ability to search using file ID in File Manager [#4471](https://github.com/ExpressionEngine/ExpressionEngine/issues/4471)
 
 **Developers** 💻
