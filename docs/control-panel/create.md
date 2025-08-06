@@ -33,7 +33,7 @@ Here you can define a "human readable" URL title for your entry. URL titles may 
 
     https://example.com/channel/comments/joes_first_entry/
 
-If you do not specify a "URL Title," one will automatically be created for you based upon your entry Title. URL Titles must be unique within a channel, so if an entry with the same title already exists in that channel, then the URL Title will have a number appended to the end to make it unique.
+If you do not specify a "URL Title", one will automatically be created for you based upon your entry Title. URL Titles must be unique within a channel, so if an entry with the same title already exists in that channel, then the URL Title will have a number appended to the end to make it unique.
 
 NOTE: **Note:** If you let the system create your URL Title for you, it will convert spaces into underscores by default. For example, if the title of your entry is "Joe's First Entry", it will be converted to "joes_first_entry". If you prefer dashes to be used instead of underscores, you can change this with the **Word Separator for URL Titles** preference under `Admin --> Channel Administration --> Global Channel Preferences`.
 
