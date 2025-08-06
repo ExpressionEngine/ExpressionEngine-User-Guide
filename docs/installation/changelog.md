@@ -8,6 +8,8 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.14
+(Release: August 6th, 2025)
 <div class="max-w-7xl mx-autotext-center">
 <div class="space-y-8 sm:space-y-12">
     <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
@@ -23,10 +25,6 @@
     </ul>
 </div>
 </div>
-
-
-## Version 7.5.14
-(Release: August 6th, 2025)
 
 - Resolved [#4886](https://github.com/ExpressionEngine/ExpressionEngine/issues/4886) where RTE field was not initialized in Member Fields
 - Resolved [#4903](https://github.com/ExpressionEngine/ExpressionEngine/issues/4903) where the log locations for dummy email driver weren't correct
