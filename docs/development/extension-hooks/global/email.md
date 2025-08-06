@@ -25,11 +25,9 @@ Overwrite an email `from` address.
 
 How it's called:
 
-```
     if (ee()->extensions->active_hook('email_from_address')) {
         $from = ee()->extensions->call('email_from_address', $from, $name);
     }
-```	
 
 ## `email_to_address($to)`
 
@@ -42,16 +40,11 @@ Overwrite an email `to` address.
 
 How it's called:
 
-```
     if (ee()->extensions->active_hook('email_to_address')) {
         $to = ee()->extensions->call('email_to_address', $to);
     }
-```	
-
 
 ## `email_send(&$data)`
-
-
 
 
 | Parameter | Type      | Description                                                                                                                                                                                     |

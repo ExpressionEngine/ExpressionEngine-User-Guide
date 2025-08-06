@@ -79,12 +79,10 @@ Additional processing of email address sent via control panel reset password for
 
 How it's called:
 
-```
     if (ee()->extensions->active_hook('member_auth_send_reset_token_start')) {
         $address = ee()->extensions->call('member_auth_send_reset_token_start', $address);
         if (ee()->extensions->end_script === true) {
             return;
         }
     }
-```		
-		
+
