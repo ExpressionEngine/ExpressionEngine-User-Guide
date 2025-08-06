@@ -46,7 +46,7 @@
 - Avoided unnecessary role query for guest users [#4872](https://github.com/ExpressionEngine/ExpressionEngine/pull/4872)
 - Improved precision when displaying file size in File Manager [#4748](https://github.com/ExpressionEngine/ExpressionEngine/pull/4748)
 - Improved [#4693](https://github.com/ExpressionEngine/ExpressionEngine/issues/4693); show row count on grid fields
-- Supported PHP 8.4 & PHP 8.5 [#4527](https://github.com/ExpressionEngine/ExpressionEngine/pull/4527)
+- Support added for PHP 8.4 & PHP 8.5 [#4527](https://github.com/ExpressionEngine/ExpressionEngine/pull/4527)
 - Added ability to search using file ID in File Manager [#4471](https://github.com/ExpressionEngine/ExpressionEngine/issues/4471)
 
 **Developers** 💻
