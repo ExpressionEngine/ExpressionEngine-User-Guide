@@ -33,6 +33,10 @@ Specifies the maximum number of rows this Grid can have. For example, if you ent
 
 Enables moving the Grid rows with drag & drop to change the order
 
+#### Show Row Numbers
+
+Enables the display of row count alongside each row in the data grid.
+
 #### Grid layout
 
 Tip: Grid Field Layout
