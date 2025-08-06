@@ -43,16 +43,14 @@
 - Made credit, description, and location fields searchable in Files [#4930](https://github.com/ExpressionEngine/ExpressionEngine/pull/4930)
 - Confirmed we have an integer before structure updates data [#4928](https://github.com/ExpressionEngine/ExpressionEngine/pull/4928)
 - Updated ft.toggle.php to remove unused variable[#4927](https://github.com/ExpressionEngine/ExpressionEngine/pull/4927)
-- Avoided unnecessary role query for guest users [#4872](https://github.com/ExpressionEngine/ExpressionEngine/pull/4872)
 - Improved precision when displaying file size in File Manager [#4748](https://github.com/ExpressionEngine/ExpressionEngine/pull/4748)
 - Improved [#4693](https://github.com/ExpressionEngine/ExpressionEngine/issues/4693); show row count on grid fields
-- Support added for PHP 8.4 & PHP 8.5 [#4527](https://github.com/ExpressionEngine/ExpressionEngine/pull/4527)
 - Added ability to search using file ID in File Manager [#4471](https://github.com/ExpressionEngine/ExpressionEngine/issues/4471)
 
 **Developers** 💻
 
-- Added tertiary check on the object in case an Action calls the Template parser [#4867](https://github.com/ExpressionEngine/ExpressionEngine/pull/4867)
-- Made `parseLayoutVariables` method public [#4638](https://github.com/ExpressionEngine/ExpressionEngine/pull/4638)
+- Support added for PHP 8.4 & PHP 8.5 [#4527](https://github.com/ExpressionEngine/ExpressionEngine/pull/4527)
+- Avoided unnecessary role query for guest users [#4872](https://github.com/ExpressionEngine/ExpressionEngine/pull/4872)
 
 ## Version 7.5.13
 (Release: June 16th, 2025)
