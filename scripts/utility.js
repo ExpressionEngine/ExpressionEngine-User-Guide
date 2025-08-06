@@ -22,7 +22,7 @@ const bsToFs = (p) => p.replace(/\\/g, '/')
 // Gets the folder depth of the specified path
 const dirDepth = (myDir) => myDir.split(Path.sep).length
 
-const returnEmbedContents = (match, p1, p2, p3, offset, string) => {	
+const returnEmbedContents = (match, p1, p2, p3, offset, string) => {
 		console.log("Found Embed: " + p1);
 	try {
 		embedContents = Fs.readFileSync('./docs/'+p1, { encoding: 'utf8' });
@@ -40,18 +40,18 @@ const renderTemplate = (template, vars, currentPageInfo) => {;
 		template = template.replace(new RegExp('{{\\s*' + key + '\\s*}}', 'gi'), value)
 	}
 
-	
+
 	template = template.replace(new RegExp('(?<!code>){{embed\:([^"\']*?)}}', 'gi'),returnEmbedContents);
 
 	return template
 }
 
-// Gets the relative path to the source dir from a docs page
+// Gets the relative path to the source dir from a docs page, returning a web-safe path
 const getRelativeRootFromPage = (pagePath) => {
 	let depth = dirDepth(pagePath) - dirDepth(Path.resolve(CONFIG.sourceDir))
-	let relPath = ('..' + Path.sep).repeat(depth - 1)
-
-	return relPath
+		if (depth <= 1) return './';
+		let relPath = '../'.repeat(depth - 1);
+	return relPath.replace(/\/+$/, '') + '/';
 }
 
 // Returns a function that will slugify a heading and also handle future duplicate slugs when called again
