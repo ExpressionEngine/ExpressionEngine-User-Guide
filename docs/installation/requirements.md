@@ -364,6 +364,6 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
 
 <span class="ee-fail"></span> - the system will not work under this PHP version, or a significant part of functionality will not work
 
-<span class="ee-maybe"></span> - some of the functionality might work incorrectly, or compatibility has not been checked
+<span class="ee-maybe"></span> - some of the functionality might work incorrectly, or compatibility has not been checked, or PHP release was in alpha or beta at time support was added.
 
 </div>
