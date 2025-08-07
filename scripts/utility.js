@@ -46,12 +46,12 @@ const renderTemplate = (template, vars, currentPageInfo) => {;
 	return template
 }
 
-// Gets the relative path to the source dir from a docs page
+// Gets the relative path to the source dir from a docs page, returning a web-safe path
 const getRelativeRootFromPage = (pagePath) => {
 	let depth = dirDepth(pagePath) - dirDepth(Path.resolve(CONFIG.sourceDir))
-	let relPath = ('..' + Path.sep).repeat(depth - 1)
-
-	return relPath;
+		if (depth <= 1) return './';
+		let relPath = '../'.repeat(depth - 1);
+	return relPath.replace(/\/+$/, '') + '/';
 }
 
 // Returns a function that will slugify a heading and also handle future duplicate slugs when called again
