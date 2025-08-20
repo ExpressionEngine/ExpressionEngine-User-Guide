@@ -27,22 +27,22 @@
 
 **Bug Fixes** 🐛
 
-- Fixed [#4923](https://github.com/ExpressionEngine/ExpressionEngine/issues/4923) where RTE ckeditor unordered list style issue [#4944](https://github.com/ExpressionEngine/ExpressionEngine/pull/4944)
-- Resolved an issue where base_path and theme_path could be incorrectly set when installed with system folder above web root [#4940](https://github.com/ExpressionEngine/ExpressionEngine/pull/4940)
-- Resolved [#4933](https://github.com/ExpressionEngine/ExpressionEngine/issues/4933) changed row getter to account for model object as well [#4939](https://github.com/ExpressionEngine/ExpressionEngine/pull/4939)
-- Fixed [#4891](https://github.com/ExpressionEngine/ExpressionEngine/issues/4891): Removed the "\*" displayed on individual input boxes of a required Grid field [#4912](https://github.com/ExpressionEngine/ExpressionEngine/pull/4912)
+- Fixed [#4923](https://github.com/ExpressionEngine/ExpressionEngine/issues/4923) where RTE ckeditor unordered list style issue
+- Resolved [#4458](https://github.com/ExpressionEngine/ExpressionEngine/issues/4458) an issue where base_path and theme_path could be incorrectly set when installed with system folder above web root
+- Fixed no_results to work in rss parser add-on [#4833](https://github.com/ExpressionEngine/ExpressionEngine/pull/4833)
+- Resolved #4933 changed row getter to account for model object as well [#4933](https://github.com/ExpressionEngine/ExpressionEngine/issues/4933)
 
 **Enhancements** ✨
 
-- Add mime_type parameter to {exp:file:entries} tag [#4942](https://github.com/ExpressionEngine/ExpressionEngine/pull/4942)
-- Add Strict-Transport-Security header to HTTP Header addon [#4934](https://github.com/ExpressionEngine/ExpressionEngine/pull/4934)
-- Bypass on-the-fly manipulations if the image is not editable (e.g. SVG); [#4868](https://github.com/ExpressionEngine/ExpressionEngine/issues/4868) [#4909](https://github.com/ExpressionEngine/ExpressionEngine/pull/4909)
-- Make no_results work in rss parser add-on [#4869](https://github.com/ExpressionEngine/ExpressionEngine/pull/4869)
+- Add mime_type parameter to {exp:file:entries} tag [#4940](https://github.com/ExpressionEngine/ExpressionEngine/pull/4940)
+- Add Strict-Transport-Security header to HTTP Header addon [#4912](https://github.com/ExpressionEngine/ExpressionEngine/pull/4912)
+- Changed [#4891](https://github.com/ExpressionEngine/ExpressionEngine/issues/4891) : Removed the “\*” displayed on individual input boxes of a required Grid field
+-Bypass on-the-fly manipulations if the image is not editable (e.g. SVG); [#4868](https://github.com/ExpressionEngine/ExpressionEngine/discussions/4868)
+
 
 **Developers** 💻
 
-- 4 new hooks for email and forgotten passwords [#4833](https://github.com/ExpressionEngine/ExpressionEngine/pull/4833)
-- Additional developer improvements [#4805](https://github.com/ExpressionEngine/ExpressionEngine/pull/4805)
+- 4 new hooks for email and forgotten passwords [#4805](https://github.com/ExpressionEngine/ExpressionEngine/pull/4805)
 
 ## Version 7.5.14
 (Release: August 6th, 2025)
