@@ -19,14 +19,20 @@ lang: php
 | --------- | -------- | --------------------------------------
 | $from     | `String` | Email `from` address
 | $name     | `String` | Email `name` for `from` address
-| Returns   | `String` | Manipulated Email `from` address
+| Returns   | `Array`  | Associative array 
 
 Overwrite an email `from` address.
 
 How it's called:
 
     if (ee()->extensions->active_hook('email_from_address')) {
-        $from = ee()->extensions->call('email_from_address', $from, $name);
+        $processed_address = ee()->extensions->call('email_from_address', $from, $name);
+        $from = $processed_address['from'] ?? $from;
+        $name = $processed_address['name'] ?? $name;
+		
+        if (ee()->extensions->end_script === true) {
+            return;
+        }
     }
 
 ## `email_to_address($to)`
@@ -42,6 +48,10 @@ How it's called:
 
     if (ee()->extensions->active_hook('email_to_address')) {
         $to = ee()->extensions->call('email_to_address', $to);
+		
+        if (ee()->extensions->end_script === true) {
+            return;
+        }		
     }
 
 ## `email_send(&$data)`
