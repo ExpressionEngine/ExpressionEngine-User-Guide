@@ -28,16 +28,16 @@
 **Bug Fixes** 🐛
 
 - Fixed [#4923](https://github.com/ExpressionEngine/ExpressionEngine/issues/4923) where RTE ckeditor unordered list style issue
-- Fixed no_results to work in rss parser add-on [#4833](https://github.com/ExpressionEngine/ExpressionEngine/pull/4833)
+- Fixed [#4833](https://github.com/ExpressionEngine/ExpressionEngine/pull/4833) no_results to work in rss parser add-on
 - Resolved [#4458](https://github.com/ExpressionEngine/ExpressionEngine/issues/4458) an issue where base_path and theme_path could be incorrectly set when installed with system folder above web root
-- Resolved #4933 changed row getter to account for model object as well [#4933](https://github.com/ExpressionEngine/ExpressionEngine/issues/4933)
+- Resolved [#4933](https://github.com/ExpressionEngine/ExpressionEngine/issues/4933) changed row getter to account for model object as well
 
 **Enhancements** ✨
 
 - Add mime_type parameter to {exp:file:entries} tag [#4940](https://github.com/ExpressionEngine/ExpressionEngine/pull/4940)
 - Add Strict-Transport-Security header to HTTP Header addon [#4912](https://github.com/ExpressionEngine/ExpressionEngine/pull/4912)
 - Changed [#4891](https://github.com/ExpressionEngine/ExpressionEngine/issues/4891) : Removed the “\*” displayed on individual input boxes of a required Grid field
--Bypass on-the-fly manipulations if the image is not editable (e.g. SVG); [#4868](https://github.com/ExpressionEngine/ExpressionEngine/discussions/4868)
+- Bypass on-the-fly manipulations if the image is not editable (e.g. SVG); [#4868](https://github.com/ExpressionEngine/ExpressionEngine/discussions/4868)
 
 
 **Developers** 💻
