@@ -28,8 +28,8 @@
 **Bug Fixes** 🐛
 
 - Fixed [#4923](https://github.com/ExpressionEngine/ExpressionEngine/issues/4923) where RTE ckeditor unordered list style issue
-- Resolved [#4458](https://github.com/ExpressionEngine/ExpressionEngine/issues/4458) an issue where base_path and theme_path could be incorrectly set when installed with system folder above web root
 - Fixed no_results to work in rss parser add-on [#4833](https://github.com/ExpressionEngine/ExpressionEngine/pull/4833)
+- Resolved [#4458](https://github.com/ExpressionEngine/ExpressionEngine/issues/4458) an issue where base_path and theme_path could be incorrectly set when installed with system folder above web root
 - Resolved #4933 changed row getter to account for model object as well [#4933](https://github.com/ExpressionEngine/ExpressionEngine/issues/4933)
 
 **Enhancements** ✨
