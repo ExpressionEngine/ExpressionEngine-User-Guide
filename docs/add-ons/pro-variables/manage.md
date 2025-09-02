@@ -17,11 +17,11 @@ There are a couple of extra properties you can assign to variables, other than t
 
 ### Variable name
 
-Name of the variable you can use in your templates. Example: `lv_my_special_var`.
+Name of the variable you can use in your templates. Example: `pv_my_special_var`. You can use (`{suffix}`)[#variable-creation-options] in this setting.
 
 ### Variable label
 
-The label a user sees when editing the contents of the variable.
+The label a user sees when editing the contents of the variable. You can use (`{suffix}`)[#variable-creation-options] in this setting.
 
 ### Variable notes
 
@@ -37,7 +37,7 @@ You can hide variables from regular users (non-managers) on a per-variable basis
 
 ### Early parsing
 
-You can enable early parsing on a per-variable basis.
+You can enable early parsing on a per-variable basis, if this is enabled overall in Pro Variable settings.
 
 ### Variable type
 
@@ -45,13 +45,19 @@ Choose any variable type that suits your needs best. [Here’s a list of variabl
 
 ## Variable creation options
 
-When creating a new variable, you have two extra options you can use. First, you can **set the initial value** of the variable, so it has a value upon creation. Second, you can enter any amount of **suffixes**, separated by a space. A new variable will be created for each suffix entered, each with identical settings apart from the suffix.
+When creating a new variable, you have two extra options you can use. 
+
+First, you can **set the initial value** of the variable, so it has an existing value upon creation. 
+
+Second, you can enter any amount of **suffixes**, separated by a space. A new variable will be created for each suffix entered, each with identical settings apart from the suffix.
 
 When using the suffix option, you can use `{suffix}` in both the variable name as the variable label. This will be replaced by the actual suffix upon creation.
 
+NOTE: You can use this for language options (en fr de nl), for creating a set of numbered fields (1 2 3 4), for creating a collection of fields for social media links (fb tiktok instagram linkedin), and more. 
+
 ## Variable groups
 
-You can create any number of groups to organize your variables. These groups will appear in the Group drop down for each variable, so you can assign a group to it. On the module home page, variable managers can sort the groups using drag and drop. Variable managers can also edit and delete the groups from here, by clicking on the edit or delete icon next to the group name. You can alter the variable order in a group by editing the group’s properties.
+You can create any number of groups to organize your variables. These groups will appear in the Group dropdown for each variable, so you can assign a group to it. On the module home page, variable managers can sort the groups using drag and drop. Variable managers can also edit and delete the groups from here, by clicking on the edit or delete icon next to the group name. You can alter the variable order in a group by editing the group’s properties.
 
 
 ### Group label
