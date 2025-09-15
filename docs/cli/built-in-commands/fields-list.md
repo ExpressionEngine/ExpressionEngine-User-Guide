@@ -95,8 +95,3 @@ You can combine multiple filters to narrow down your results:
 `php eecli.php fields:list --site=1 --type=text --format=json`
 
 `php eecli.php fields:list -s 1 -t select -g blog_fields -f table`
-
----
-
-ExpressionEngine 7 Docs
-©2002–2025 Packet Tide,LLC. Edit this page

@@ -43,8 +43,3 @@ The following commands will show ExpressionEngine version information in simple 
 `php eecli.php version -e build`
 
 `php eecli.php version --field=php_version`
-
----
-
-ExpressionEngine 7 Docs
-©2002–2025 Packet Tide,LLC. Edit this page

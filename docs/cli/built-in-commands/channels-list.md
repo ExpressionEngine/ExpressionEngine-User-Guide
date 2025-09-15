@@ -65,8 +65,3 @@ You can combine multiple filters to narrow down your results:
 `php eecli.php channels:list --site=1 --format=json`
 
 `php eecli.php channels:list -s 1 -c 5 -f table`
-
----
-
-ExpressionEngine 7 Docs
-©2002–2024 Packet Tide,LLC. Edit this page

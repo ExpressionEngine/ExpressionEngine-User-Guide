@@ -75,8 +75,3 @@ You can combine multiple filters to narrow down your results:
 `php eecli.php fieldtypes:list --installed --addon=pro_search --format=json`
 
 `php eecli.php fieldtypes:list -i -s text,textarea -f table`
-
----
-
-ExpressionEngine 7 Docs
-©2002–2025 Packet Tide,LLC. Edit this page
