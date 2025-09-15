@@ -25,7 +25,7 @@
 </div>
 
 
-**Bug Fixes** ��
+**Bug Fixes** 🐛
 
 - Resolved [#4921](https://github.com/ExpressionEngine/ExpressionEngine/issues/4921) where saving File model from CLI was producing an error [#4949](https://github.com/ExpressionEngine/ExpressionEngine/pull/4949)
 - Resolved [#4918](https://github.com/ExpressionEngine/ExpressionEngine/issues/4918) where some queries were duplicated when using Member field inside of a Grid [#4948](https://github.com/ExpressionEngine/ExpressionEngine/pull/4948)
@@ -46,7 +46,8 @@
 **Developers** 💻
 
 - Added extension hooks for the Updater service [#4951](https://github.com/ExpressionEngine/ExpressionEngine/pull/4951)
-- Added tests for Structure module [#4957](https://github.com/ExpressionEngine/ExpressionEngine/pull/4957)
+- Added PHP unit tests for Structure module [#4957](https://github.com/ExpressionEngine/ExpressionEngine/pull/4957)
+- Added PHP unit tests for Channel module, a whole lot more [#4946](https://github.com/ExpressionEngine/ExpressionEngine/pull/4946)
 
 ## Version 7.5.15
 (Release: August 20th, 2025)
