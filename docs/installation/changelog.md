@@ -38,7 +38,7 @@
 - Added support for AVIF images in File Manager [#4837](https://github.com/ExpressionEngine/ExpressionEngine/pull/4837)
 - Made "View Page" link in Structure open in a new tab [#4383](https://github.com/ExpressionEngine/ExpressionEngine/pull/4383)
 - Changed template no-access language [#4956](https://github.com/ExpressionEngine/ExpressionEngine/pull/4956)
-- Added the `backspace` parameter to `{exp:channel:entries}` tag [#4954](https://github.com/ExpressionEngine/ExpressionEngine/pull/4954)
+- Added the `backspace` parameter to `{exp:comment:entries}` tag [#4954](https://github.com/ExpressionEngine/ExpressionEngine/pull/4954)
 - Allowed Upload Destination adapter to be overridden in config [#4946](https://github.com/ExpressionEngine/ExpressionEngine/pull/4946)
 - Added new CLI commands and JSON output options [#4969](https://github.com/ExpressionEngine/ExpressionEngine/pull/4969)
 - Added additional HTTP status codes [#4976](https://github.com/ExpressionEngine/ExpressionEngine/pull/4976), including 422 [#4975](https://github.com/ExpressionEngine/ExpressionEngine/pull/4975)
