@@ -235,7 +235,7 @@ You can use the native `search:field_name` parameter to target specific fields. 
 
 #### `search:field_name`
 
-Like the [channel search:field_name= parameter](/channel/channel_entries.md#search-field-name).
+Like the [Channel search:field_name= parameter](/channel/entries.md#searchfield_name).
 
 #### `search:field_name:column_name`
 
