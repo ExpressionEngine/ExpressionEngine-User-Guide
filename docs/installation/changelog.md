@@ -46,7 +46,7 @@
 **Developers** 💻
 
 - Added extension hooks for the Updater service [#4951](https://github.com/ExpressionEngine/ExpressionEngine/pull/4951)
-- Added PHP unit  tests for Structure module [#4957](https://github.com/ExpressionEngine/ExpressionEngine/pull/4957)
+- Added PHP unit tests for Structure module [#4957](https://github.com/ExpressionEngine/ExpressionEngine/pull/4957)
 - Added PHP unit tests for Channel module, a whole lot more [#4946](https://github.com/ExpressionEngine/ExpressionEngine/pull/4946)
 
 ## Version 7.5.15
