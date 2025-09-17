@@ -106,9 +106,9 @@ This parameter lets you set a different limit for the category display than the 
 
     category="2"
 
-Categories are specified by ID number (the ID number of each category is displayed in the Control Panel). The reason we use the ID is because categories can be called anything (with spaces, quotes, etc.), and also renamed. It would be much more difficult to have to update the tag parameters every time you updated a category name. Further, you can have multiple categories with the same name either in different Category Groups or in different parts of the hierarchy within the same Category Group.
+Categories are specified by ID number, not name or category_url_title. The reason we use the ID is because categories can be called anything (with spaces, quotes, etc.), and are often renamed. It would be much more difficult to have to update the tag parameters every time you updated a category name. Furthermore, you can have multiple categories with the same name in different Category Groups or even in different parts of the hierarchy within the same Category Group. And category_url_title must be unique within a Category Group, but does not have to be across different Category Groups.
 
-And as with some of the other parameters, you can stack categories to get entries with any of those categories
+As with some of the other parameters, you can stack categories to get entries with any of those categories -- the pipe means OR.
 
     category="2|45|4|9"
 
@@ -116,7 +116,7 @@ Or use "not" to exclude categories
 
     category="not 4|5|7"
 
-And, you can use an inclusive stack to only get entries with _all_ of the categories
+And, you can use an inclusive stack to only get entries matching _all_ of the categories
 
     category="3&7&8"
 
@@ -129,6 +129,8 @@ NOTE: **Note:** When you use the `category="3|4"` parameter (not excluding), you
 NOTE: **Note:** If you are using exclusion (`category="not 3|4"`) and an entry is in a category that is not excluded, the entry will be returned even if it also belongs to an excluded category.
 
 NOTE: **Note:** Using this parameter will automatically cause ExpressionEngine to _ignore_ any category information specified via the URL. For instance, if you are on a "category page" (e.g. a `/C13/` segment in the URL) that will be completely ignored in favor of whatever you have specified via the parameter.
+
+NOTE: **Note:** If you want to list entries related to the current entry by its categories, use the [related_categories_mode](#related_categories_mode) parameter.
 
 ### `category_group=`
 
@@ -159,6 +161,18 @@ Or you can add the word "not" (with a space after it) to exclude channels:
     channel="not channel1|channel2|channel3"
 
 You must specify this parameter if you use the [category name in URL](control-panel/settings/content-design.md) feature.
+
+### `channel_entries_limit=`
+
+    channel_entries_limit="10"
+
+This is used only in [Related Categories Mode](#related_categories_mode). Do not get this confused with the more frequently used [limit=](#limit) parameter. 
+
+### `custom_fields=`
+
+    custom_fields="yes"
+
+This is used only in [Related Categories Mode](#related_categories_mode). Do not get this confused with the more frequently used [disable=](#disable) parameter. 
 
 ### `disable=`
 
@@ -327,15 +341,21 @@ Or exclude roles using "not"
 
     limit="12"
 
-This parameter limits the number of entries on any given page. The limit will default to 100 entries if a value is not specified. If you are using [pagination](templates/pagination.md) then this will determine the number of entries shown per page.
+This common parameter limits the number of entries on any given page. The limit will default to 100 entries if a value is not specified. If you are using [pagination](templates/pagination.md) then this will determine the number of entries shown per page. You can simultaneously set alternative limits for [pages filtered by month](#year-month-day) (`month_limit`) and [pages filtered by category](#category) (`cat_limit`) and [Related Category pages](#related_categories_mode) (`related_categories_mode`). 
+
+### `member_data=`
+
+    member_data="yes"
+
+This is used only in [Related Categories Mode](#related_categories_mode). Do not get this confused with the more frequently used [disable=](#disable) parameter. 
 
 ### `month_limit=`
 
     month_limit="30"
 
-This parameter lets you set a different limit for the month display than the regular display. For example, let's say you normally only want 10 entries on your main channel page, but you want 100 entries shown when viewing a specific month. For that, you could do this:
+This parameter lets you set a different limit for the month display than the regular display. For example, let's say you normally only want 10 entries on your main channel page, but you want 30 entries shown when viewing in the context of a specific month. For that, you could use this code, and the month limit would be used if the URL was something like: `example.com/blog/2025/10`
 
-    {exp:channel:entries limit="10" month_limit="100"}
+    {exp:channel:entries limit="10" month_limit="30"}
 
 ### `offset=`
 
