@@ -12,9 +12,9 @@
 [TOC]
 
 ## Overview 
-For any user logged in with a sufficient level of access permissions, ExpressionEngine Pro adds "front edit" links ( <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/pro_edit.png" alt="pro edit icon"> ) that allow editing an entry's data field by field. When enabled, editing (with live preview!) can be done directly on front-end without needing to go to the Control Panel.
+For any user logged in with a sufficient level of access permissions, ExpressionEngine Pro adds "front edit" links ( <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/pro_edit.png" alt="pro edit icon"> ) that allow editing an entry's data field by field. When enabled, editing can be done directly on front-end without needing to go to the Control Panel.
 
-Clicking the link icon opens a popup for that specific field so that its content can be modified and saved. The user can also switch to a full entry interface for editing with live preview functionality that shows the changes dynamically affecting the page they are currently on.
+Clicking the link icon opens a popup for that specific field so that its content can be modified and saved. The user can also switch to editing with the full entry interface (with live preview functionality if it has been set up for that channel).
 
 ![edit popup](_images/ee-pro-window.png)
 
@@ -55,6 +55,7 @@ $config['autosave_prune_hours'] = '6';
 ## Enable/Disable the Front Edit Links
 
 There are multiple ways to enable or disable front-end editing links:
+
  - Globally with [configuration overrides](/general/system-configuration-overrides.md#enable_frontedit_links)
  - In the [Front-End Editing Settings](/control-panel/settings/front-end-editing.md#enable-automatic-front-end-editing-links) where you control the Dock overall.
  - Per field in the [field settings](control-panel/field-manager/edit-field.md)
