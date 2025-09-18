@@ -277,7 +277,7 @@ You can hard code the channel tag to show a specific channel entry. You may also
 
     entry_id="13|42|147"
 
-Or use "not" to exclude entries::
+Or use "not" to exclude entries:
 
     entry_id="not 45|534|807"
 
@@ -311,7 +311,7 @@ NOTE: **Note:** Using this parameter will automatically constrain the entries ta
 
 ### `group_id=`
 
-NOTE: We recommend using [primary_role_id=](#primary_role_id) parameter instead, which works the same but more clearly conveys that the filtering is happening on primary role ID.
+NOTE: We recommend using the [primary_role_id=](#primary_role_id) parameter instead, which works the same but more clearly conveys that the filtering is happening on primary role ID.
 
     group_id="4"
 
@@ -319,7 +319,7 @@ You can decide from which Member Role (by specifying the role ID) you wish entri
 
     group_id="2|3|4"
 
-Or exclude role using "not"
+Or exclude roles using "not"
 
     group_id="not 2|3|4"
 
@@ -368,9 +368,13 @@ The `orderby` parameter sets the display order of the entries. Setting options f
 - `orderby="view_count_three"`
 - `orderby="view_count_four"`
 
-In addition you can order by a [channel field](control-panel/field-manager/field-manager-settings.md). Use the "short_name" of the field:
+In addition, you can order by a [channel field](control-panel/field-manager/field-manager-settings.md). Use the "short_name" of the field:
 
     orderby="name_of_field"
+
+You can also order results by file names:
+
+    orderby="file_field:filename"
 
 NOTE: **Note:** Ordering by a Relationship field will cause entries to appear in the order the relationships were made, not based on any content from the related entries.
 
@@ -398,17 +402,17 @@ Will result in:
 
     Default Site - Entry One - Albert
     Default Site - Entry Two - Bobby
-    Second Site    - Entry One - Alligator
-    Second Site    - Entry Two - Buffalo
+    Second Site - Entry One - Alligator
+    Second Site - Entry Two - Buffalo
 
 If you have multiple Sites where each site has a field with the same exact short name, then you can specify that short name (without the site specified) and ExpressionEngine will treat those two fields as the same value and be able to order them as if they were the same field:
 
     orderby="body"
 
     Default Site - Entry One - Albert
-    Second Site    - Entry One - Alligator
+    Second Site - Entry One - Alligator
     Default Site - Entry Two - Bobby
-    Second Site    - Entry Two - Buffalo
+    Second Site - Entry Two - Buffalo
 
 Thus, the output will then be ordered by the body, regardless of the originating site.
 
@@ -494,7 +498,10 @@ NOTE: **Note:** You will often use this parameter in conjunction with the [if no
 
 The "search:" parameter allows you to constrain Channel Entries output based on content within your fields. You specify which field to search by using the field's short name immediately after "search:". You can search based on whether a field is an exact match to your provided term or whether or not a field simply contains your term.
 
-NOTE: **Note:** Some fields store their content in a manner that affects the ability to work with this parameter. Grid fields, for instance, could only use this parameter for columns with "Include in search?" enabled. Relationship fields cannot be searched using the search parameter.
+NOTE: **Note:** Some fields store their content in a manner that affects the ability to work with this parameter. Grid fields, for instance, can only use this parameter for columns with "Include in search?" enabled (For performance, EE groups those columns into a searchable blob.). You can, however, search on Grid columns by using Pro Search's [`{exp:pro_search:results}`](add-ons/pro-search/tags.md#exppro_searchresults) tag and the [Field Search filter](/add-ons/pro-search/filters.md#field-search). Pro Search can also be used to filter entries by [title](/add-ons/pro-search/filters.md#searchtitle), [url_title](/add-ons/pro-search/filters.md#searchurltitle), [status](/add-ons/pro-search/filters.md#searchstatus), and [more](/add-ons/pro-search/filters.md#field-search). Relationship fields cannot be searched using the "search:" parameter.
+
+
+NOTE: **Note:** You can also use search:title and search:url_title in addition to searching field content. Remember that it is best to use url_title="something" if you're looking for an exact url_title match.
 
 #### "Exact" Matching
 
@@ -570,7 +577,7 @@ This example would return all results where the body field is empty.
 
     search:body="not IS_EMPTY"
 
-This example would return all results where the body field is **not** empty, i.e. only entries where the body field had content.
+This example would return all results where the body field is **not** empty, i.e., only entries where the body field had content.
 
 The IS_EMPTY search constant can also be used in conjunction with other search terms, for both "Exact" and "Contains" type matching.
 
@@ -590,13 +597,13 @@ NOTE: **Note:** You may use multiple search: parameters in a channel entries tag
 
     {exp:channel:entries search:style="=ale" search:region="germany|belgium" search:rating="=3|4|5"}
 
-When using multiple search parameters, all search parameters must be matched in order for an entry to be included. The above example would pull back only those entries where the style is 'ale', the region is 'germany' or 'belgium' and the rating is 1, 2 or 3.
+When using multiple search parameters, all search parameters must be matched in order for an entry to be included. The above example would pull back only those entries where the style is 'ale', the region is 'germany' or 'belgium', and the rating is 3, 4, or 5.
 
 ### `show_current_week=`
 
     show_current_week="yes"
 
-Requires use of the [display_by=](#display_by) "week" parameter. When set to "yes", it displays the current week by default (i.e. no pagination in the URL) and automatically adjusts the pagination links to indicate the correct page for that week.
+Requires use of the [display_by=](#display_by) "week" parameter. When set to "yes", it displays the current week by default (i.e., no pagination in the URL) and automatically adjusts the pagination links to indicate the correct page for that week.
 
 ### `show_expired=`
 
@@ -739,7 +746,7 @@ This parameter limits the query by username. You can use the pipe character to q
 
     username="tom|dick|harry"
 
-Or you can add "not" to exclude usernames
+Or you can add "not" to exclude usernames:
 
     username="not tom|dick|harry|fred"
 
@@ -747,7 +754,7 @@ You can also use the token `"CURRENT_USER"` to show entries from only the curren
 
     username="CURRENT_USER"
 
-This allow each logged-in user to get only their entries. Users who are not logged in won't see anything. Alternatively, you can use the token `"NOT_CURRENT_USER"` to show entries **except** from the currently logged in user.
+This allows each logged-in user to get only their entries. Users who are not logged in won't see anything. Alternatively, you can use the token `"NOT_CURRENT_USER"` to show entries **except** from the currently logged-in user.
 
     username="NOT_CURRENT_USER"
 
@@ -791,7 +798,7 @@ If five entries are being displayed per page, then for the fourth entry on the s
 
 ### `{absolute_index}`
 
-Similar to `absolute_count` but starts at 0 instead of 1. So the first entry will have value of "0" and the second entry will have a value of "1" etc.
+Similar to `absolute_count` but starts at 0 instead of 1. So the first entry will have a value of "0" and the second entry will have a value of "1", etc.
 
 ### `{absolute_results}`
 
@@ -839,7 +846,7 @@ The name of the channel that the currently displayed entry is assigned to.
 
 ### `{channel_id}`
 
-The ID number of the actual channel (not the _entry_.)
+The ID number of the actual channel (not the _entry_).
 
 ### `{channel_short_name}`
 
@@ -969,7 +976,7 @@ The date on which the entry was last edited in GMT. This variable is **not** loc
 
 ### `{index}`
 
-Similar to `count` but starts at 0 instead of 1. So the first entry will have value of "0" and the second entry will have a value of "1" etc.
+Similar to `count` but starts at 0 instead of 1. So the first entry will have a value of "0" and the second entry will have a value of "1", etc.
 
 ### `{ip_address}`
 
@@ -985,13 +992,13 @@ This variable is replaced by a URL that passes the author's member name to your 
 
 ### `{page_uri}`
 
-If you have the Pages Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page uri for the page. It will typically be used like so:
+If you have the Pages Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page URI for the page. It will typically be used like so:
 
     {if page_uri != ''} <a href="{page_uri}">View this page</a> {/if}
 
 ### `{page_url}`
 
-If you have the Pages Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page url for the page (the site URL + the page URI). It will typically be used like so:
+If you have the Pages Module installed and if you have associated a static page with a channel entry (via the "Pages" section of the Publish tab), this is the page URL for the page (the site URL + the page URI). It will typically be used like so:
 
     {if page_url != ''} <a href="{page_url}">View this page</a> {/if}
 
@@ -1071,7 +1078,7 @@ The width of the signature image associated with the entry's author. Typically u
 
 ### `{status}`
 
-The status of the entry (open, closed, etc.)
+The status of the entry (open, closed, etc.).
 
 ### `{switch}`
 
@@ -1156,19 +1163,19 @@ Conditionals allow you to more precisely control your content.
 
 NOTE: **Note:** A more complete explanation of conditional control structures and operators can be found on the [Conditional Tags](templates/conditionals.md) page.
 
-Here is an example that tests for the "summary" field being not empty
+Here is an example that tests for the "summary" field being not empty:
 
     {if summary != ""}
         The summary is not empty!
     {/if}
 
-An alternate, shorthand syntax can accomplish the same thing
+An alternate, shorthand syntax can accomplish the same thing:
 
     {if summary}
         The summary is not empty!
     {/if}
 
-If only the variable name is in the conditional statement it tests for "not empty".
+If only the variable name is in the conditional statement, it tests for "not empty".
 
 Many of the single variables can be used in a conditional. You may always use the short name of one of your custom entry fields in a conditional. In addition, there are several unique conditionals.
 
@@ -1250,7 +1257,7 @@ Lastly, if you want to simply display your 404 page (with 404 headers) when no e
 
 NOTE: **Note:** If you have several nested tags, each one would need to include a `{if no_results}` pair to be parsed correctly.
 
-For instance, if you have Grid field with `{if no_results}` block, the parent `{exp:channel:entries}` tag pair would need to include `{if no_results}` block as well.
+For instance, if you have a Grid field with an `{if no_results}` block, the parent `{exp:channel:entries}` tag pair would need to include an `{if no_results}` block as well:
 ```
 {exp:channel:entries channel="blog"}
     {if no_results} No entries {/if}
@@ -1297,13 +1304,13 @@ You may test whether an entry is set to be "sticky". You may also test whether i
 
 [TOC=3]
 
-Variable pairs contain an opening and closing tag as well as content in-between. Example:
+Variable pairs contain an opening and closing tag as well as content in between. Example:
 
     {date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
 
 The reason variable pairs have an opening and closing pair is because the information between the pairs can be shown or not shown if the criteria for each tag is met.
 
-In the case of the "date_heading" pair, for example, it only appears at a certain interval that you set (hourly, daily, weekly, monthly, etc.). By using a pair of variables you can put HTML formatting between them that only gets shown when the interval is met. Otherwise, the chunk is not displayed.
+In the case of the "date_heading" pair, for example, it only appears at a certain interval that you set (hourly, daily, weekly, monthly, etc.). By using a pair of variables, you can put HTML formatting between them that only gets shown when the interval is met. Otherwise, the chunk is not displayed.
 
 ### `{date_footer}`
 
@@ -1462,9 +1469,9 @@ The category ID associated with the category's parent (or 0 in the case of a top
 
     {path='channel/index'}
 
-This variable will be replaced by a URL to the specifies Template Group/Template. The category designation information will automatically be added to the end of the URL so that the target page will know which category to display.
+This variable will be replaced by a URL to the specified Template Group/Template. The category designation information will automatically be added to the end of the URL so that the target page will know which category to display.
 
-If you want the category links to point to your site index instead of a particular template group/template you can use SITE_INDEX instead:
+If you want the category links to point to your site index instead of a particular template group/template, you can use SITE_INDEX instead:
 
     {categories}  <a href="{path='SITE_INDEX'}">{category_name}</a>  {/categories}
 

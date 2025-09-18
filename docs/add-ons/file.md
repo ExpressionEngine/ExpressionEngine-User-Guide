@@ -128,6 +128,37 @@ You can hard code the file entries tag to show specific files. You may also spec
 
 If you want to display only the files that are in certain folder within an Upload Directory, specify the folder ID using this parameter.
 
+### `file_type=`
+
+    file_type="img|doc"
+
+Filter returned files by file type group, as classified by the core MIME groups (defined in the mimes configuration). You may specify one or more types; separate multiple values with the pipe character.
+
+Or use "not" to exclude types:
+
+    file_type="not audio|video"
+
+Common examples:
+
+- Images only: `file_type="img"`
+- Documents only: `file_type="doc"`
+
+
+### `mime_type=`
+
+    mime_type="image/jpeg|image/png"
+
+Filter returned files by MIME type. You may specify one or more MIME types; separate multiple values with the pipe character.
+
+Or use "not" to exclude types:
+
+    mime_type="not video/mp4|video/quicktime"
+
+Common examples:
+
+- Images only: `mime_type="image/jpeg|image/png|image/gif"`
+- PDFs only: `mime_type="application/pdf"`
+
 ### `limit=`
 
     limit="30"

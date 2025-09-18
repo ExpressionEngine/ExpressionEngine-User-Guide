@@ -199,6 +199,10 @@ If you have defined any [image manipulations](control-panel/file-manager/upload-
 
     {url:small}
 
+### `{url:thumbs}`
+
+The URL to the thumbnail image that's auto created for the control panel.
+
 ### `{width}`
 
 The width of the image (in pixels) if applicable.
@@ -271,6 +275,20 @@ Convert the image to WEBP format. Additionally all the `:resize` manipulations c
 | maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
 | master_dim        | `auto`/`width`/`height` | `auto`| Master dimension when only width of height is specified |
 
+
+### `:avif`
+
+    {news_image:avif}
+
+Convert the image to AVIF format. Additionally all the `:resize` manipulations can be applied
+
+| Parameter | Values  | Default    | Description                           |
+| --------- | ------- | ---------- | -------------------------------------- |
+| width    | `Number` | | Width to crop to, px |
+| height   | `Number` | | Height to crop to, px |
+| quality  | `0`-`100`| `75`| Image quality, % |
+| maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
+| master_dim        | `auto`/`width`/`height` | `auto`| Master dimension when only width of height is specified |
 
 ### `:resize_crop`
 
