@@ -22,6 +22,7 @@ Apart from the powerful [keywords filter](/add-ons/pro-search/filters.md#keyword
 - Relationships: Filter based on an entry’s [relationship](/add-ons/pro-search/filters.md#relationships) with other entries;
 - Math: Filter by [Grid calculations](https://github.com/low/low_search_table) like min/max values or averages;
 - Author: Filter by [Author fields](https://github.com/low/low_search_members) like screen name or email;
+- SQL: Filter a field based on a [SQL query](/add-ons/pro-search/parameters.html#sql-parameters)
 
 Other features include:
 
