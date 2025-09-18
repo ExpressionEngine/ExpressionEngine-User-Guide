@@ -10,19 +10,23 @@
 
 [TOC]
 
+Different type of Filters are automatically used by the `pro_search:results` tag when the query form uses specific field names, or the results tag includes specific parameters. 
+
+For instance, if a search form contains a `keywords` field, the [Keywords filter](#keywords-filter) will be invoked. If the results tag has a `distance:to="cf_entry_lat|cf_entry_long"` parameter, the [Distance filter](#distance-filter) will be used. If the `search:field_name` parameter or field is used, Pro Search will use the [Field Search filter](#field-search) on the results
 
 ## Keywords Filter
 
-The Keywords filter lets you filter entries by search terms (ie. keywords). You need to create at least one Collection to use the Keywords filter. (You don't need a collection for other types of filters.)
+The Keywords filter lets you filter entries by search terms (ie. keywords) and calculates a relevance score to each item in the search results.
 
-Using the Keywords filter also adds a relevance score to the search results. To further fine-tune a keyword search, the following parameters are available.
+NOTE: **Note:** You need to create at least one [Collection](add-ons/pro-search/collections.md) to use with the Keywords filter. (You don't need to create a collection to use the other types of filters, just when using Keywords.)
 
+To further fine-tune a keyword search, the following parameters are available.
 
 ### Parameters
 
 #### collection
 
-Limit search results to given collection names or IDs. If this is not specified and keywords are given, results will use all collections
+Limit search results to specified [collections](add-ons/pro-search/collections.md) (names or IDs). If this parameter is not used and keywords are being searched, EE will search in all collections, so it's best to use this rather than `channel=` in the results. 
 
     collection="news|staff"
 
