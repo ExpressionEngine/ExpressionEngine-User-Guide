@@ -29,21 +29,25 @@ TIP: **Tip:** For those times where 'Title' isn't really the appropriate title, 
 
 ### URL Title
 
-Here you can define a "human readable" URL title for your entry. URL titles may only contain alpha-numeric characters and no spaces. The purpose of a URL Title is to enable your entries to be accessed using a URL such as:
+Here you can define a "human readable" URL title for your entry. URL titles may only contain alpha-numeric characters, dashes and underscores; no spaces or unicode characters. The purpose of a URL Title is to enable your entries to be accessed using a URL such as:
 
     https://example.com/channel/comments/joes_first_entry/
 
-If you do not specify a "URL Title" one will automatically be created for you based upon your entry Title. URL Titles must be unique within a channel, so if an entry with the same title already exists then the URL Title will have a number appended to the end to make it unique.
+If you do not specify a "URL Title", one will automatically be created for you based upon your entry Title. URL Titles must be unique within a channel, so if an entry with the same title already exists in that channel, then the URL Title will have a number appended to the end to make it unique.
 
-NOTE: **Note:** If you let the system create your URL Title for you it will convert spaces into underscores by default. For example, if the title of your entry is "Joe's First Entry" it will be converted to "joes_first_entry". If you prefer dashes to be used instead of underscores you can change it with the **Word Separator for URL Titles** preference under `Admin --> Channel Administration --> Global Channel Preferences`.
+NOTE: **Note:** If you let the system create your URL Title for you, it will convert spaces into underscores by default. For example, if the title of your entry is "Joe's First Entry", it will be converted to "joes_first_entry". If you prefer dashes to be used instead of underscores, you can change this with the **Word Separator for URL Titles** preference under `Admin --> Channel Administration --> Global Channel Preferences`.
 
 ### Entry Fields
 
-The names and types of entry custom fields displayed will be determined by what [Fields](/fieldtypes/overview.md) you have defined for this channel. 
+The names and types of entry custom fields displayed will be determined by what [Fields](/fieldtypes/overview.md) you have defined for this channel.
 
-If an entry field is set to be "hidden" by default, it will have to be expanded by clicking on the field name before content can be entered.
+If an entry field is set to "Hide field?" in the field settings, it will display as collapsed by default and will have to be expanded by clicking on the field name before content can be entered. This is overridden by the custom Publish Layout setting for that field.
 
-The fields can be [conditionally hidden](control-panel/field-manager/conditional-fields.md).
+If an entry field is set to "Collapse" in a Publish Layout, it will initially display collapsed and will have to be expanded by clicking on the field name before content can be entered.
+
+If an entry field is set to "Hide" in a Publish Layout, it will not display at all, though its content will be preserved and unchanged if someone edits the entry. If the field is set to required, it cannot be hidden via a Publish Layout setting.
+
+Fields can be [conditionally hidden](control-panel/field-manager/conditional-fields.md).
 
 In order for the field to be available when publishing or editing an entry, it needs to be assigned to the channel the entry is in.
 
@@ -51,7 +55,10 @@ This can be done in two ways:
 - assign custom field to a [Field Group](/control-panel/field-manager/field-manager-settings.md#createedit-field-group) which is associated to the Channel
 - assign field directly to channel by editing [Channel preferences](control-panel/channels.md#fields-tab)
 
-When working with [templates](templates/overview.md) you will be referencing the field by its short name. For convenience the short name can be displayed next to the field's name in the publish form (<img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/field_short_name.png" alt="field short name">) and will be copied to the clipboard when clicked. Displaying the short name can be toggled on or off in the [Role](control-panel/member-manager.md) settings.
+TIP: **Tip:** When working with [templates](templates/overview.md) you will be referencing the field by its short name or tag pair. For convenience, the Publish form has a handy way to display the field short name in a click-to-copy format: (<img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/field_short_name.png" alt="field short name">). This is enabled at the role level and controlled with the ["Show field names on Publish" setting](control-panel/member-manager.md#role-tab).
+
+NOTE:
+Due to security restrictions in modern browsers quick copying code via the shortname is only supported when on HTTPS.
 
 Note that some fields can be displayed with just single tags while others would require a tag pair with extra variables. More information can be found in the documentation for the field's specific [field type](fieldtypes/overview.md).
 
@@ -189,6 +196,6 @@ A live preview of the entry is available if the `channel_prefs_preview_url` is s
 
 If neither is set, the preview button will have an exclamation mark (!) and will link to channel preferences page where Preview URL can be set.
 
-The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise. 
+The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise.
 
 When the preview is triggered, it is being displayed side-by-side with edit screen. The size of preview container can be adjusted with mouse dragging its border. The preview is dynamically being updated as you change the fields.

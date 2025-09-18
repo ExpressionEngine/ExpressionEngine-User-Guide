@@ -59,7 +59,7 @@ Run this utility to convert all files stored in the database from sites previous
 
 It is recommended that you make sure all installed add-ons are compatible with ExpressionEngine 7 and newer, and that you have made a backup of your database before running the utility.
 
-After the update operation is completed, visit `Content & Design Settings` to disable [Compatibility Mode](control-panel/file-manager/file-manager.html#compatibility-mode) for File Manager.
+After the update operation is completed, visit `Content & Design Settings` to disable [Compatibility Mode](control-panel/file-manager/file-manager.md#compatibility-mode) for File Manager.
 
 ## Manage Statistics
 

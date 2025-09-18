@@ -13,7 +13,7 @@ lang: php
 
 # Publish Controller Extension Hooks
 
-### `entry_save_and_close_redirect($entry)`
+## `entry_save_and_close_redirect($entry)`
 
 | Parameter | Type                               | Description                                   |
 | --------- | ---------------------------------- | --------------------------------------------- |
@@ -26,7 +26,7 @@ How it's called:
 
     $redirect_url = ee()->extensions->call('entry_save_and_close_redirect', $entry);
 
-### `publish_live_preview_route($entry_data, $uri, $template_id)`
+## `publish_live_preview_route($entry_data, $uri, $template_id)`
 
 | Parameter     | Type     | Description                                                                                                                                                               |
 | ------------- | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

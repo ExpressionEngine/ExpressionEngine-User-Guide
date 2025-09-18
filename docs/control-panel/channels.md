@@ -13,6 +13,11 @@
 
 This section of the Control Panel is where channels are created, edited and deleted.
 
+The channel shortname on the main display supports quick copying the full template tag for the channel, including all fields assigned to the channel. The copied code is ready to use on your [templates](templates/overview.md).  Displaying the short name can be toggled on or off in the [Role](control-panel/member-manager.md) settings.
+
+NOTE:
+Due to security restrictions in modern browsers quick copying code via the shortname is only supported when on HTTPS.
+
 [TOC]
 
 ![Channel Control Panel Page](_images/cp-channel-manager.png)

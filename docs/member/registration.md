@@ -17,34 +17,11 @@ Output a member registration form.
 
 NOTE: **Important:** In order for site visitors to be allowed to register for accounts via front-end forms the [Allow Registrations](control-panel/settings/members.md#allow-registrations) must be set to allow registrations under Settings > Member Settings.
 
+{{embed:_tips/form-validation.md}}
+
 ## Parameters
 
 {{embed:_tips/form-attributes.md}}
-
-### `return=`
-
-    return="member/registration/success"
-
-### `form_class=`
-
-    form_class="register"
-
- ### `primary_role=`
-
-    primary_role="7"
-
-This parameter allows you to specify the primary role to assign the new member, overriding the default member setting.
-
-### `error_handling="inline"`
-    error_handling="inline"
-
-This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error, as used to compose the form.
-
-### `include_assets=`
-
-    include_assets="yes"
-
-Adds the Javascript and CSS that is required by custom member fields to your form. By default, these are **not** included
 
 ### `datepicker=`
 
@@ -53,6 +30,21 @@ Adds the Javascript and CSS that is required by custom member fields to your for
 Adds the datepicker to your date fields. Defaults to "yes".
 
 NOTE: **Note:** If you are manually constructing a date field, in order to apply the date picker you must include `rel="date-picker"`.
+
+### `error_handling="inline"`
+    error_handling="inline"
+
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error, as used to compose the form.
+
+### `form_class=`
+
+    form_class="register"
+
+### `include_assets=`
+
+    include_assets="yes"
+
+Adds the Javascript and CSS that is required by custom member fields to your form. By default, these are **not** included
 
 ### `include_css=`
 
@@ -67,6 +59,22 @@ Allows you to manage the inclusion of required CSS independently from the `inclu
 Includes jQuery automatically. Defaults to "yes".
 
 NOTE: **Note:** If you are using your own copy of jQuery you will need to load it **before** the form.
+
+### `primary_role=`
+
+    primary_role="7"
+
+This parameter allows you to specify the primary role to assign the new member, overriding the default member setting.
+
+### `return=`
+
+    return="member/registration/success"
+	
+### `return_error=`
+
+    return_error="template_group/error"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.
 
 ## Form Inputs
 NOTE: Be sure to include the required JavaScript and CSS to use the native [Password Validation](member/password-validation.md).
@@ -136,6 +144,9 @@ Custom fields can also be output inside the ``{custom_fields}`` variable tag pai
 
                 {form:custom_profile_field}
 
+                {if error}
+                    <span class="error">{error}</span>
+                {/if}
             </p>
          {/custom_fields}
 
@@ -211,7 +222,7 @@ Displays the custom field input form for the given field (substitute `field_name
 
     {exp:member:registration_form
         return="member/registration/success"
-        error_handling="inline"
+        inline_errors="yes"
     }
 
         <p>* Required fields</p>
@@ -259,6 +270,9 @@ Displays the custom field input form for the given field (substitute `field_name
             <label for="captcha">{lang:captcha}*</label>
             {captcha}<br/>
             <input type="text" id="captcha" name="captcha" value="" size="20" maxlength="20" style="width:140px;"/>
+            {if error:captcha}
+                <span class="error">{error:captcha}</span>
+            {/if}
         </p>
         {/if}
     </fieldset>

@@ -52,6 +52,8 @@ The contact form is created similar to a standard web form, only you **do not** 
         </p>
     {/exp:email:contact_form}
 
+{{embed:_tips/form-validation.md}}
+
 ## Parameters
 
 [TOC=3]
@@ -63,6 +65,12 @@ The contact form is created similar to a standard web form, only you **do not** 
     charset="utf-8"
 
 This allows you to set the character set of the email being sent. Use this if your form's template is using a character set other than iso-8859-1.
+
+### `inline_errors=`
+
+    inline_errors="yes"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the type of error reporting: inline or error template.
 
 ### `name=`
 
@@ -119,6 +127,12 @@ If used with the redirect="none" parameter, the link text can be specified by ad
     return="|Return to the Site"
 
 If the `redirect` parameter was set to value of `return`, then the user will be redirected immediately after submission of the form.
+
+### `return_error=`
+
+    return_error="template_group/error"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.
 
 ### `preview=`
 
@@ -330,7 +344,7 @@ In the above example, the Template "friend" contains the Tell-a-Friend form.
 [TOC=3]
 
 ### `allow_attachments=`
-     
+
      allow_attachments="yes"
 
 This allows you to add a file input field to your form, make sure to give your file input field the name of `attachment`. Adding this parameter automatically gives the form the `enctype='multipart/form-data'` attribute.

@@ -9,6 +9,6 @@
 
 # Text Helper Extension Hooks
 
-### `foreign_character_conversion_array`
+## `foreign_character_conversion_array`
 
 See Content_publish's `foreign_character_conversion_array`.

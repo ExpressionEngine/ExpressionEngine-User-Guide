@@ -1,0 +1,1 @@
+TIP: **Tip:** This form utilizes template [form validation and error handling](/templates/form-validation.md).  Refer to the documentation for additional parameters and variables that are available to this tag.

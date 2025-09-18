@@ -160,6 +160,11 @@ The NOT operator (`!`) also can be used at the beginning of the statement to neg
 
 ### Mathematic Operators
 
+Tip: Using Mathematic Operators in Conditionals
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/xNWCiKNNL_w" width="1920" height="1080" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
+
 You can use the following mathematical operators to compute values:
 
 | Operator   | Name                                       |

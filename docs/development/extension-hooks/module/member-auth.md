@@ -13,9 +13,9 @@ lang: php
 
 # Member Module Authorization Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `member_member_login_multi($hook_data)`
+## `member_member_login_multi($hook_data)`
 
 | Parameter   | Type     | Description                                                                                                      |
 | ----------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -29,7 +29,7 @@ How it's called:
     ee()->extensions->call('member_member_login_multi', $this->_hook_data());
     if (ee()->extensions->end_script === TRUE) return;
 
-### `member_member_login_single($hook_data)`
+## `member_member_login_single($hook_data)`
 
 | Parameter   | Type     | Description                                                                                                      |
 | ----------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -43,7 +43,7 @@ How it's called:
     ee()->extensions->call('member_member_login_single', $this->_hook_data());
     if (ee()->extensions->end_script === TRUE) return;
 
-### `member_member_login_start()`
+## `member_member_login_start()`
 
 | Parameter | Type   |
 | --------- | ------ |
@@ -56,7 +56,7 @@ How it's called:
     ee()->extensions->call('member_member_login_start');
     if (ee()->extensions->end_script === TRUE) return;
 
-### `member_member_logout()`
+## `member_member_logout()`
 
 | Parameter | Type   |
 | --------- | ------ |
@@ -69,7 +69,25 @@ How it's called:
     $edata = ee()->extensions->call('member_member_logout');
     if (ee()->extensions->end_script === TRUE) return;
 
-### `member_process_reset_password()`
+## `member_auth_send_reset_token_start($address)`
+
+| Parameter | Type     | Description
+| --------- | -------- | ---------------------------------------------
+| $address  | `String` | Email address posted from reset password form
+| Returns   | `String` | Email address after extension processes it
+
+Additional processing of email address sent via reset password form.  Happens after basic security checks, but before email address check occurs.
+
+How it's called:
+
+    if (ee()->extensions->active_hook('member_auth_send_reset_token_start')) {
+        $address = ee()->extensions->call('member_auth_send_reset_token_start', $address);
+        if (ee()->extensions->end_script === true) {
+            return;
+        }
+    }
+
+## `member_process_reset_password()`
 
 | Parameter | Type    | Description                                |
 | --------- | ------- | ------------------------------------------ |

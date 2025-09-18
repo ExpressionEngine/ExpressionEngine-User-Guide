@@ -13,9 +13,9 @@ lang: php
 
 # Members Fieldtype Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `member_relationships_display_field($entry_id, $field_id, $sql)`
+## `member_relationships_display_field($entry_id, $field_id, $sql)`
 
 | Parameter  | Type     | Description                                             |
 | ---------- | -------- | ------------------------------------------------------- |
@@ -44,7 +44,7 @@ How it's called:
 
 NOTE: **Note:** To use this hook, you can either add to the existing Active Record call, or call `ee()->db->_reset_select()` to cancel the Active Record call and start your own, or modify the passed compiled SQL.
 
-### `member_relationships_post_save($ships, $entry_id, $field_id)`
+## `member_relationships_post_save($ships, $entry_id, $field_id)`
 
 | Parameter  | Type    | Description                                    |
 | ---------- | ------- | ---------------------------------------------- |

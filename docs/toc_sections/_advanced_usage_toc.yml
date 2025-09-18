@@ -338,6 +338,8 @@
           href: development/services/encrypt.md
         - name: Event Service
           href: development/services/event.md
+        - name: MimeType Service
+          href: development/services/mime.md
         - name: CP/FilePicker Service
           href: development/services/filepicker.md
         - name: CP/Filter Service
@@ -394,6 +396,8 @@
           href: development/services/spam.md
         - name: CP/Table Service
           href: development/services/table.md
+        - name: Template Generator Service
+          href: development/services/template-generator.md
         - name: CP/URL Service
           href: development/services/url.md
         - name: Validation Service
@@ -568,6 +572,8 @@
               href: development/legacy/database/utilities.md
             - name: Database Forge Class
               href: development/legacy/database/forge.md
+            - name: Database Smart Forge Class
+              href: development/legacy/database/smartforge.md
             - name: Connecting to an External Database
               href: development/legacy/database/connecting-to-an-external-database.md
         - name: Helpers
@@ -656,36 +662,44 @@
       href: cli/usage.md
     - name: Built In Commands
       items:
-        - name: Add-on Management
-          href: cli/built-in-commands/addons.md
         - name: Add-on Generator
           href: development/addon-development-overview.md
+        - name: Add-on Management
+          href: cli/built-in-commands/addons.md
         - name: Backup Database
           href: cli/built-in-commands/backup-database.md
+        - name: Channels List
+          href: cli/built-in-commands/channels-list.md
         - name: Clear Cache
           href: cli/built-in-commands/cache-clear.md
         - name: Command Generator
           href: cli/built-in-commands/make-command.md
         - name: Config Management
           href: cli/built-in-commands/config-management.md
-        - name: Migrations
-          href: cli/built-in-commands/migrate.md
+        - name: Fields List
+          href: cli/built-in-commands/fields-list.md
+        - name: Fieldtypes List
+          href: cli/built-in-commands/fieldtypes-list.md
         - name: List
           href: cli/built-in-commands/list.md
         - name: Make migration
           href: cli/built-in-commands/make-migration.md
+        - name: Migrations
+          href: cli/built-in-commands/migrate.md
         - name: Model Generator
           href: cli/built-in-commands/make-model.md
+        - name: Prolet Generator
+          href: cli/built-in-commands/make-prolet.md
         - name: Sync Conditional Fields
           href: cli/built-in-commands/sync-conditional-fields.md
         - name: Sync Reindex Content
-          href: cli/built-in-commands/sync-reindex.md	
+          href: cli/built-in-commands/sync-reindex.md
         - name: Sync Upload Directory
-          href: cli/built-in-commands/sync-upload-directory.md		  	  
+          href: cli/built-in-commands/sync-upload-directory.md
         - name: Update ExpressionEngine
           href: cli/built-in-commands/update.md
-        - name: Prolet Generator
-          href: cli/built-in-commands/make-prolet.md
+        - name: Version
+          href: cli/built-in-commands/version.md
         - name: Widget Generator
           href: cli/built-in-commands/make-widget.md
     - name: Creating a Command
@@ -714,9 +728,9 @@
       href: msm/overview.md
     - name: Variables and Parameter
       href: msm/code.md
-	  
+
 - name: ExpressionEngine + Laravel
   items:
     - name: Overview
       href: advanced-usage/coilpack/overview.md
-	  
+

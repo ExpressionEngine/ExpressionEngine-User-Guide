@@ -26,7 +26,8 @@ The Channel Form makes it possible to add and edit channel entries from outside 
 
 ## Basic Usage
 
-TIP: Please visit the [Examples](channels/channel-form/examples.md) page to see a variety of implementations.
+TIP: You can view the [Examples](channels/channel-form/examples.md) page to see a variety of implementations.
+ The Channel Form [Template Generator](templates/generators.md) can also help create a functional template that demonstrates the parameters and variables documented below.
 
 The first thing you will need is a `{exp:channel:form}` tag pair, along with a few [parameters](#parameters) to determine where to submit the entry:
 
@@ -45,13 +46,12 @@ The Channel Form tag will automatically load jQuery for you. If you prefer to in
 
 ### Allowing Guests to Post Entries
 
-Allowing guest posts is controlled in the Channel Form settings at `Developer --> Channels` in the channel's **Settings** tab.
+Allowing guest posts is controlled in the Channel Form settings in `Channels` in the channel's **Settings** tab.
 
-To allow guests to post in a certain channel, locate the options for "Allow Guest Posts" next to the channel you want to allow guest posts for, and choose "Yes".
+You can optionally choose an author that entries entered as guests appear as authored by in the Guest Author field.
 
-You can optionally require the guest to pass a captcha before they submit the Channel Form by choosing "Yes" under "Guest Captcha".
+Requirements regarding use of a captcha for guest posting are controlled in `Settings --> CAPTCHA`.
 
-Finally, you can optionally choose an author that entries entered as guests appear as authored by under Guest Author.
 
 ### Form Validation
 
@@ -265,9 +265,13 @@ If you have chosen [inline error handling](#error_handling), you can display the
 
 Display a custom field's label.
 
+You may also use `{label:title}` to display the label for the title field as defined in Channel settings.
+
 ### `{instructions:my_field_name}`
 
 Display a custom field's instructions.
+
+You may also use `{instructions:title}` to display the instructions for the title field as defined in Channel settings.
 
 ### `{selected_option:my_field_name}`
 

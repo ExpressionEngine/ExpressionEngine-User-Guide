@@ -15,17 +15,48 @@
 
 Outputs a searchable list of members, including form filters to sort and limit the members.
 
+{{embed:_tips/form-validation.md}}
+
 ## Parameters
 
 {{embed:_tips/form-attributes.md}}
 
-### `role_id=`
+### `backspace=`
 
-    role_id="5"
+    backspace="3"
 
-Restrict the output to members that belong to certain [role](control-panel/member-manager.md#member-roles).
+The `backspace=` parameter will remove the specified number of characters, including spaces and line breaks, from the last iteration of the tag pair.
 
-NOTE: This parameter replaces `group_id` which is functionally identical and currently still supported.
+### `error_handling="inline"`
+    error_handling="inline"
+
+This parameter allows you to use inline errors in your registration form. The errors can be displayed using the `{error:field_name}` tag where `field_name` would need to be replaced with the name of the field that has an error, as used to compose the form.	
+
+### `form_class=`
+
+    form_class="login"
+
+This parameter allows you to specify the class attribute for the search &lt;form&gt; tag.
+
+### `form_id=`
+
+    form_id="login"
+
+This parameter allows you to specify the id attribute for the search &lt;form&gt; tag.
+
+### `form_name=`
+
+    form_name="login"
+
+This parameter allows you to specify a name attribute for the search &lt;form&gt; tag.
+
+### `limit=`
+
+    limit="30"
+
+Allows you to limit the number of members displayed.
+When not set, defaults to [Member List - Rows](control-panel/settings/members.md#total-results) setting or [`memberlist_row_limit` configuration override](general/system-configuration-overrides.md#memberlist_row_limit)
+
 
 ### `orderby=`
 
@@ -47,6 +78,15 @@ The "orderby" parameter sets the display order of members. The possible options 
 When not set, defaults to [Member List - Order](control-panel/settings/members.md#order-by)
 setting or [`memberlist_order_by` configuration override](general/system-configuration-overrides.md#memberlist_order_by)
 
+### `role_id=`
+
+    role_id="5"
+
+Restrict the output to members that belong to certain [role](control-panel/member-manager.md#member-roles).
+
+NOTE: This parameter replaces `group_id` which is functionally identical and currently still supported.
+
+
 ### `sort=`
 
     sort="asc"
@@ -55,41 +95,16 @@ setting or [`memberlist_order_by` configuration override](general/system-configu
 Set the order in which members are displayed.
 When not set, defaults to [Member List - Sort By](control-panel/settings/members.md#sort-by) setting or [`memberlist_sort_order` configuration override](general/system-configuration-overrides.md#memberlist_sort_order)
 
-### `limit=`
-
-    limit="30"
-
-Allows you to limit the number of members displayed.
-When not set, defaults to [Member List - Rows](control-panel/settings/members.md#total-results) setting or [`memberlist_row_limit` configuration override](general/system-configuration-overrides.md#memberlist_row_limit)
-
 ### `return=`
 
     return="member/memberlist"
+	
+### `return_error=`
 
-### `form_class=`
+    return_error="template_group/error"
 
-    form_class="login"
-
-This parameter allows you to specify the class attribute for the search &lt;form&gt; tag.
-
-### `form_id=`
-
-    form_id="login"
-
-This parameter allows you to specify the id attribute for the search &lt;form&gt; tag.
-
-### `form_name=`
-
-    form_name="login"
-
-This parameter allows you to specify a name attribute for the search &lt;form&gt; tag.
-
-### `backspace=`
-
-    backspace="3"
-
-The `backspace=` parameter will remove the specified number of characters, including spaces and line breaks, from the last iteration of the tag pair.
-
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.	
+	
 ## Form Variables
 
 ### `{form_declaration}`
@@ -98,7 +113,7 @@ This is a **required** variable in order to use the search form.  It creates the
 
 ### `{role_options}`
 
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
+A list of options for filtering by member role
 
     <select name='role_id' class='select'>
         {role_options}
@@ -106,7 +121,7 @@ Form submission errors are displayed using a "looping pair" as there can be more
 
 ### `{order_by_options}`
 
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
+A list of options for changing the results order
 
     <select name='order_by' class='select'>
         {order_by_options}
@@ -114,7 +129,7 @@ Form submission errors are displayed using a "looping pair" as there can be more
 
 ### `{row_limit_options}`
 
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
+A list of options for changing the number of results returned
 
     <select name='row_limit' class='select'>
         {row_limit_options}
@@ -122,39 +137,13 @@ Form submission errors are displayed using a "looping pair" as there can be more
 
 ### `{sort_order_options}`
 
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
+A list of options for changing the results sort order
 
     <select name='sort_order' class='select'>
         {sort_order_options}
     </select>
 
 ## Variable Pairs
-
-### `{errors}`
-
-Form submission errors are displayed using a "looping pair" as there can be more than 1 error in a form submission.
-
-    {errors}
-        <p>{error}</p>
-    {/errors}
-
-#### Error Tag Pair Parameters
-
-##### `backspace=`
-
-    backspace="3"
-
-The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair.
-
-#### Error Tag Pair Variables
-
-##### `{error}`
-
-    {error}
-
-The error text.
-
-
 
 ### `{member_rows}`
 

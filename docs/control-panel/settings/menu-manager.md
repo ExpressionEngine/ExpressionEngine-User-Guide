@@ -19,7 +19,7 @@ You may create multiple menu sets and assign them to show for specific member ro
 
 **Control Panel Location: `Settings > Menu Sets`**
 
-This section of the Control Panel allows you to define your menu sets and assign them to member roles.
+This section of the Control Panel allows you to define your menu sets and assign them to member roles. Existing menus can be duplicated by choosing "Clone to New Menu Set" from an existing menu's "Save" dropdown.
 
 ### Fields
 

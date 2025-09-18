@@ -152,6 +152,10 @@ Similar to the previous setting, when turned on, this setting requires IP addres
 
 Checks all file uploads for code injection attempts before finalizing the upload. Superadmins are exempt from image XSS filtering.
 
+### Strip Image Metadata?
+
+This setting will remove all metadata from an image during upload, including GPS data. This requires the Imagick PHP extension.
+
 ### Enable Rank Denial to submitted links?
 
 When enabled, all outgoing links are sent to a redirect page. This prevents spammers from [gaining page rank](https://support.google.com/webmasters/answer/96569?hl=en).

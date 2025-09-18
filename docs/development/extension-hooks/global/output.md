@@ -13,7 +13,7 @@ lang: php
 
 # Output Library Extension Hooks
 
-### `output_show_message($data, $output)`
+## `output_show_message($data, $output)`
 
 | Parameter | Type     | Description                                     |
 | --------- | -------- | ----------------------------------------------- |

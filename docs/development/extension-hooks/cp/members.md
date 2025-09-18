@@ -13,9 +13,9 @@ lang: php
 
 # Members Controller Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `cp_members_member_create_start()`
+## `cp_members_member_create_start()`
 
 | Parameter | Type   |
 | --------- | ------ |
@@ -28,7 +28,7 @@ How it's called:
     $this->extensions->call('cp_members_member_create_start');
     if ($this->extensions->end_script === TRUE) return;
 
-### `cp_members_member_create($member_id, $data)`
+## `cp_members_member_create($member_id, $data)`
 
 | Parameter   | Type    | Description       |
 | ----------- | ------- | ----------------- |
@@ -43,7 +43,7 @@ How it's called:
     $this->extensions->call('cp_members_member_create', $member_id, $data);
     if ($this->extensions->end_script === TRUE) return;
 
-### `cp_members_member_delete_end($member_ids)`
+## `cp_members_member_delete_end($member_ids)`
 
 | Parameter    | Type    | Description            |
 | ------------ | ------- | ---------------------- |
@@ -57,7 +57,7 @@ How it's called:
     $this->extensions->call('cp_members_member_delete_end', $member_ids);
     if ($this->extensions->end_script === TRUE) return;
 
-### `cp_members_validate_members()`
+## `cp_members_validate_members()`
 
 | Parameter | Type    | Description                    |
 | --------- | ------- | ------------------------------ |

@@ -15,7 +15,7 @@ For the cookies set in ExpressionEngine, site owners can set the cookie lifetime
 
 `CookieRegistry` is the underlying service that makes saving and using those settings possible.
 
-NOTE: Normally, the add-ons that have their cookies properly [registered](development/addon-setup-php-file.html#cookies) do not need to call this service directly.
+NOTE: Normally, the add-ons that have their cookies properly [registered](development/addon-setup-php-file.md#cookies) do not need to call this service directly.
 
 ## Cookie Registry Constants
 

@@ -180,7 +180,17 @@ You would access the child entry in your template using the following syntax:
       {relationship_field:field2}
     {/exp:channel:entries}
 
-No looping occurs.
+No looping occurs. (If you use this syntax when the field does have multiple child relationships, this will display the content from first item only.)
+
+### Usage: Testing for Child Entries with a Conditional
+
+There are two ways to test if there are any children belonging to the current entry and display content if there are none.
+
+Outside of the `{relationship_field}` loop, use `{relationship_field:count}`, which will be either "" or "1". (Inside the loop, `{relationship_field:count}` always displays the current count.)  You can also consider `{relationship_field:total_results}`, which will display the total count of children.
+
+Therefore, the conditional to test for no child entries is: `{if "{relationship_field:count}" == ""}...{/if}`
+
+Inside the `{relationship_field}` loop, you can use an `{if relationship_field:no_results}...{/if}` conditional.
 
 ## Accessing Siblings
 

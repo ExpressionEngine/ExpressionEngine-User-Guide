@@ -26,6 +26,8 @@ Output a login form.
 
     {/exp:member:login_form}
 
+{{embed:_tips/form-validation.md}}
+
 ## Parameters
 
 {{embed:_tips/form-attributes.md}}
@@ -54,6 +56,13 @@ This parameter allows you to specify the id attribute for the &lt;form&gt; tag.
 
 This parameter allows you to specify a name attribute for the &lt;form&gt; tag.
 
+### `inline_errors=`
+
+    inline_errors="yes"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the type of error reporting: inline or error template.
+
+
 ### `return=`
 
     return="site/index"
@@ -63,7 +72,11 @@ This parameter allows you to define where the user will be returned after succes
 1.  Use the standard Template_Group/Template syntax to specify where to return the user. For instance, if you want the user to be returned to the "local" Template in the "news" Template Group, you would use: return="news/local"
 2.  Use a full URL. For example: return="<https://example.com/return.html>"
 
+### `return_error=`
 
+    return_error="template_group/error"
+
+This parameter is for use with [form validation and error handling](/templates/form-validation.md) and determines the template to return to if validation errors are detected.
 
 ## Form Inputs
 
@@ -114,14 +127,36 @@ It is recommended that you use this variable as indicated in the example code at
 ## Example
 
 
-    {exp:member:login_form return="member/index"}
+    {exp:member:login_form return="member/index" inline_errors="yes"}
+        {!-- You can display all errors at the top of the page or use the individual field {error:} tags shown later --}
+        {!--
+        {if errors}
+            <fieldset class="error">
+                <legend>Errors</legend>
+                {errors}
+                    <p>{error}</p>
+                {/errors}
+            </fieldset>
+        {/if}
+        --}
+
+        {if error:general}
+            <span class="error">{error:general}</span>
+        {/if}
+
         <p>
             <label>Username</label><br />
-            <input type="text" name="username" value="" maxlength="32" size="25" />
+            <input type="text" name="username" value="{if old:username}{old:username}{/if}" maxlength="32" size="25" />
+            {if error:username}
+                <span class="error">{error:username}</span>
+            {/if}
         </p>
         <p>
             <label>Password</label><br />
             <input type="password" name="password" value="" maxlength="32" size="25" />
+            {if error:password}
+                <span class="error">{error:password}</span>
+            {/if}
         </p>
         {if auto_login}
         <p>

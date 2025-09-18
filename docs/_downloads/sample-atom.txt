@@ -4,7 +4,7 @@
 {exp:rss:feed channel="{master_channel_name}"}
 
 <?xml version="1.0" encoding="{encoding}"?>
-<feed xmlns="https://www.w3.org/2005/Atom" xml:lang="{channel_language}">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="{channel_language}">
 
     <title type="text"><![CDATA[{channel_name}]]></title>
     <subtitle type="text"><![CDATA[{channel_name} - {channel_description}]]></subtitle>

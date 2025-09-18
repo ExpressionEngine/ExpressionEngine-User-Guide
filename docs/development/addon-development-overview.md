@@ -11,7 +11,7 @@
 
 With custom add-ons you can add new fieldtypes, features, template tags, and much more to ExpressionEngine. Here we are going to look at different parts of an add-on, and how to define just what our add-on is going to do.
 
-TIP: In this section, we're explaining the parts of an add-on. No need to memorize everything though, the [CLI](cli/intro.html) will generate all the pieces we need based on what functions we want our add-on to have.
+TIP: In this section, we're explaining the parts of an add-on. No need to memorize everything though, the [CLI](cli/intro.md) will generate all the pieces we need based on what functions we want our add-on to have.
 
 [TOC]
 
@@ -32,7 +32,7 @@ Here are some ideas of what you can accomplish with a custom add-on:
 These are just a few ideas of what you can do with custom add-ons. The possibilities are almost endless.
 
 ## Getting Started
-Getting started making an add-on is incredibly easy with the CLI. To begin making an add-on, simply use the [`make:addon` command](/cli/built-in-commands/make-addon.md) from the [CLI](/cli/intro.html).
+Getting started making an add-on is incredibly easy with the CLI. To begin making an add-on, simply use the [`make:addon` command](/cli/built-in-commands/make-addon.md) from the [CLI](/cli/intro.md).
 
 TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md)
 

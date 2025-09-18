@@ -97,7 +97,7 @@ The Template_Group/Template where you would like the search results to be shown.
 
     results="20"
 
-The number of results to show per page on the search results.
+The number of results to show per page. The maximum value of `results` is 255. This means one page of results can't have more than 255 items, though you can have more than 255 results once you paginate the results.
 
 ### `search_in=`
 

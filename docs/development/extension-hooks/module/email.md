@@ -13,9 +13,9 @@ lang: php
 
 # Email Module Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `email_module_send_email_end($subject, $message, $approved_tos, $approved_recipients)`
+## `email_module_send_email_end($subject, $message, $approved_tos, $approved_recipients)`
 
 | Parameter             | Type     | Description                                        |
 | --------------------- | -------- | -------------------------------------------------- |
@@ -32,7 +32,7 @@ How it's called:
     ee()->extensions->call('email_module_send_email_end', $subject, $message, $approved_tos, $approved_recipients);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `email_module_tellafriend_override($qstring, $this)`
+## `email_module_tellafriend_override($qstring, $this)`
 
 | Parameter | Type     | Description                                             |
 | --------- | -------- | ------------------------------------------------------- |

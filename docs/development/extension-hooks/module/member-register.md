@@ -13,9 +13,9 @@ lang: php
 
 # Member Module Registration Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `member_member_register($data, $member_id)`
+## `member_member_register($data, $member_id)`
 
 | Parameter   | Type    | Description                                                          |
 | ----------- | ------- | -------------------------------------------------------------------- |
@@ -30,7 +30,7 @@ How it's called:
     ee()->extensions->call('member_member_register', $data, $member_id);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `member_member_register_errors($this)`
+## `member_member_register_errors($this)`
 
 | Parameter | Type     | Description                        |
 | --------- | -------- | ---------------------------------- |
@@ -44,7 +44,7 @@ How it's called:
     ee()->extensions->call('member_member_register_errors', $this);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `member_member_register_start()`
+## `member_member_register_start()`
 
 | Parameter | Type   |
 | --------- | ------ |
@@ -57,7 +57,7 @@ How it's called:
     ee()->extensions->call('member_member_register_start');
     if (ee()->extensions->end_script === TRUE) return;
 
-### `member_register_validate_members($member_id)`
+## `member_register_validate_members($member_id)`
 
 | Parameter   | Type   | Description          |
 | ----------- | ------ | -------------------- |

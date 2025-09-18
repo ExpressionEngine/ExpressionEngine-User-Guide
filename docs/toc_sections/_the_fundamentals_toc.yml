@@ -142,7 +142,7 @@
       href: templates/variable.md
     - name: Global Template Variables
       items:
-        - name: Single Global Variables
+        - name: Global Variables
           href: templates/globals/single-variables.md
         - name: Linking to Stylesheets
           href: templates/globals/stylesheet.md
@@ -164,8 +164,12 @@
       href: templates/routes.md
     - name: Pagination
       href: templates/pagination.md
+    - name: Form Validation
+      href: templates/form-validation.md
     - name: The Template Engine
       href: templates/engine.md
+    - name: Template Generators
+      href: templates/generators.md
 
 - name: Channels
   items:
@@ -211,6 +215,8 @@
           href: channels/channel-form/categories.md
         - name: Development
           href: channels/channel-form/development.md
+    - name: Channel Field Properties
+      href: channels/fields.md
 
 #If you update fieldtypes besure to update listing on fieldtypes/overview page.
 - name: Fieldtypes
@@ -315,4 +321,3 @@
         href: comment/subscriptions.md
       - name: Control Panel
         href: comment/control-panel.md
-

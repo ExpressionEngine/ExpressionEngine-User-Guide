@@ -13,7 +13,7 @@ lang: php
 
 # Member Module Extension Hooks
 
-### `member_manager($this)`
+## `member_manager($this)`
 
 | Parameter | Type     | Description                                         |
 | --------- | -------- | --------------------------------------------------- |

@@ -7,13 +7,13 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Single Global Variables
+# Global Variables
 
 [TOC]
 
 These Global Variables can be used anywhere within your Templates. Note that they are subject to ExpressionEngine's [parsing order](templates/engine.md), which can affect their availability when used inside other tags.
 
-## Variables
+## Single Variables
 
 [TOC=3 hide]
 
@@ -33,11 +33,13 @@ This variable will be substituted for the global character set (UTF-8). It is ty
 
 ### `{cp_session_id}`
 
-The session id for the control panel. This is the value needed in the "S=" portion of the control panel URL. Only output for logged-in members who have access to the Control Panel, for instance to build a front-end URL to an add-on in the control panel:
+The active session id for the control panel. This is the value needed in the "S=" portion of the control panel URL. Only made available for logged-in members who have access to the Control Panel. Used to build a URL from the front-end to, for instance, an add-on in the control panel. If sessions are not required for control panel login, this variable returns 0.
 
-    {if logged_in_role_id == 1}
-      &bull; <a href="{cp_url}?/cp/addons/settings/my_addon&S={cp_session_id}"></a>
+    {if logged_in_primary_role_id == 1}
+      &bull; <a href="{cp_url}?/cp/addons/settings/my_addon{if cp_session_id}&S={cp_session_id}{/if}">CP Link</a>
     {/if}
+
+NOTE: **Note:** To check non-primary roles, use [exp:member:has_role](/member/member-roles-tags.md#expmemberhas_role)
 
 ### `{cp_url}`
 
@@ -126,7 +128,24 @@ Boolean (TRUE/FALSE) variable representing whether or not the template is being 
 Boolean (TRUE/FALSE) variable representing whether or not the current request is a Live Preview from the control panel. Most commonly you would use this to add/hide information on your preview page for content authors:
 
     {if is_live_preview_request}
-      {!-- include sample rendering of a social share, Twitter card, FB post, etc. --}
+        <span>DRAFT: Verify before publishing.</span>
+    {/if}
+
+You can also use this variable to control parameters within a tag, so that your preview template can show content that might not appear on the live site:
+
+    {if is_live_preview_request}
+        {exp:channel:entries
+            channel="events"
+            limit="1"
+            {if is_live_preview_request}
+            	status="open|archive|draft" show_future_entries="yes" show_expired="yes"
+            {if:else}
+            	status="open"
+            {/if}
+            disable="category_fields|member_data|pagination"
+        }
+            {title}
+        {/exp:channel:entries}
     {/if}
 
 ### `{lang}`
@@ -313,6 +332,8 @@ The Member ID for the currently logged-in user.
 
 The Primary Role ID number for the currently logged-in user.
 
+NOTE: **Note:** To check and display non-primary roles, use [exp:member:has_role](/member/member-roles-tags.md#expmemberhas_role)
+
 ### `{logged_in_primary_role_name}`
 
 The title of the Primary Role for the currently logged-in user.
@@ -356,3 +377,26 @@ The total number of forum topics made by the currently logged-in user.
 ### `{logged_in_username}`
 
 The username for the currently logged-in user.
+
+## Error Variables
+
+ExpressionEngine makes several variables available for handling [Form Validation](/templates/form-validation.md) errors.
+
+### `{if errors}`
+
+Conditionally check if error messages are present.
+
+### `{errors}...{error}...{/errors}`
+
+This variable pair is useful for displaying all errors at once, for example, in a fieldset at the top of the form. Inside the pair, each individual error message is available as `{error}` variable.
+
+    {if errors}
+        <p class="error">Please correct the following errors:</p>
+        <ul>
+            {errors}
+                <li>{error}</li>
+            {/errors}
+        </ul>
+    {if:else}
+        <!-- No errors, or form not submitted yet -->
+    {/if}

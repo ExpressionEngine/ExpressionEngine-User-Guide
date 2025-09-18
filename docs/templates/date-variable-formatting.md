@@ -228,7 +228,7 @@ Would be rendered like this:
 
 #### singular=
 
-The `singular=` parameter determines what text to display when the value of a given unit is 1. The default is "one". For example, assuming a date 1 day in the past this:
+The `singular=` parameter determines what text to display when the value of a given unit is 1. The default is "one", as in, "one hour ago", and notice that all singular units have the plural "s" removed automatically. For example, assuming a date 1 day in the past this:
 
     {entry_date:relative singular="1"}
 
@@ -248,7 +248,7 @@ Or perhaps you would rather show relative dates until midnight:
 
     {entry_date:relative stop="tomorrow" format="%F %d %Y" timezone="Pacific/Tahiti"}
 
-If an invalid value is used for `stop=` a relative date will be displayed.
+If an invalid value is used for `stop=` a relative date will be displayed in all cases.
 
 #### units=
 
@@ -269,6 +269,8 @@ When a unit is omitted the next smallest unit will reflect it. For example, assu
 Would be rendered like this:
 
     one week ago
+
+Note that the plural "s" is automatically removed because it's a single week.
 
 But this:
 

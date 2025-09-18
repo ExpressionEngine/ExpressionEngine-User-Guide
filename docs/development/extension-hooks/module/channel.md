@@ -13,9 +13,9 @@ lang: php
 
 # Channel Module Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `channel_entries_query_result($this, $query_result)`
+## `channel_entries_query_result($this, $query_result)`
 
 | Parameter      | Type     | Description                        |
 | -------------- | -------- | ---------------------------------- |
@@ -30,7 +30,7 @@ How it's called:
     $query_result = $this->extensions->call('channel_entries_query_result', $this, $query_result);
     if ($this->extensions->end_script === TRUE) return $this->TMPL->tagdata;
 
-### `channel_entries_tagdata($tagdata, $row, $this)`
+## `channel_entries_tagdata($tagdata, $row, $this)`
 
 | Parameter | Type     | Description             |
 | --------- | -------- | ----------------------- |
@@ -46,7 +46,7 @@ How it's called:
     $tagdata = $this->extensions->call('channel_entries_tagdata', $tagdata, $row, $this);
     if ($this->extensions->end_script === TRUE) return $tagdata;
 
-### `channel_entries_row($this, $row)`
+## `channel_entries_row($this, $row)`
 
 | Parameter | Type     | Description            |
 | --------- | -------- | ---------------------- |
@@ -61,7 +61,7 @@ How it's called:
     $row = $this->extensions->call('channel_entries_row', $this, $row);
     if ($this->extensions->end_script === TRUE) return $tagdata;
 
-### `channel_entries_tagdata_end($tagdata, $row, $this)`
+## `channel_entries_tagdata_end($tagdata, $row, $this)`
 
 | Parameter | Type     | Description             |
 | --------- | -------- | ----------------------- |
@@ -77,7 +77,7 @@ How it's called:
     $tagdata = $this->extensions->call('channel_entries_tagdata_end', $tagdata, $row, $this);
     if ($this->extensions->end_script === TRUE) return $tagdata;
 
-### `channel_module_calendar_start()`
+## `channel_module_calendar_start()`
 
 | Parameter | Type     | Description            |
 | --------- | -------- | ---------------------- |
@@ -90,7 +90,7 @@ How it's called:
     $edata = $this->extensions->call('channel_module_calendar_start');
     if ($this->extensions->end_script === TRUE) return $edata;
 
-### `channel_module_categories_start()`
+## `channel_module_categories_start()`
 
 | Parameter | Type     | Description               |
 | --------- | -------- | ------------------------- |
@@ -102,7 +102,7 @@ How it's called:
 
     return $this->extensions->call('channel_module_categories_start');
 
-### `channel_module_category_heading_start()`
+## `channel_module_category_heading_start()`
 
 | Parameter | Type     | Description                       |
 | --------- | -------- | --------------------------------- |

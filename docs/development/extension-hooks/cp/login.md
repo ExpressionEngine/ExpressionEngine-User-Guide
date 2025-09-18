@@ -13,9 +13,9 @@ lang: php
 
 # Login Controller Extension Hooks
 
-[TOC=3]
+[TOC=2]
 
-### `login_authenticate_start()`
+## `login_authenticate_start()`
 
 | Parameter | Type   |
 | --------- | ------ |
@@ -28,7 +28,7 @@ How it's called:
     $this->extensions->call('login_authenticate_start');
     if ($this->extensions->end_script === TRUE) return;
 
-### `cp_member_login($hook_data)`
+## `cp_member_login($hook_data)`
 
 | Parameter   | Type     | Description                                                                                                      |
 | ----------- | -------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -42,7 +42,7 @@ How it's called:
     ee()->extensions->call('cp_member_login', $this->_hook_data());
     if (ee()->extensions->end_script === TRUE) return;
 
-### `cp_member_logout()`
+## `cp_member_logout()`
 
 | Parameter | Type   |
 | --------- | ------ |
@@ -54,8 +54,8 @@ How it's called:
 
     $this->extensions->call('cp_member_logout');
     if ($this->extensions->end_script === TRUE) return;
-
-### `cp_member_reset_password()`
+	
+## `cp_member_reset_password()`
 
 | Parameter | Type   |
 | --------- | ------ |
@@ -67,3 +67,22 @@ How it's called:
 
     $this->extensions->call('cp_member_process_reset_password');
     if ($this->extensions->end_script === TRUE) return;
+
+## `cp_member_send_reset_token_start($address)`
+
+| Parameter | Type     | Description
+| --------- | -------- | ---------------------------------------------------------------
+| $address  | `String` | Email address posted from the control panel reset password form
+| Returns   | `String` | Email address after extension processes it
+
+Additional processing of email address sent via control panel reset password form. 
+
+How it's called:
+
+    if (ee()->extensions->active_hook('member_auth_send_reset_token_start')) {
+        $address = ee()->extensions->call('member_auth_send_reset_token_start', $address);
+        if (ee()->extensions->end_script === true) {
+            return;
+        }
+    }
+

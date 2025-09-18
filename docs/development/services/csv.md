@@ -17,7 +17,7 @@ lang: php
 
 ## Simple Example
 
-The CSV library is built to take in rows of data as either associative arrays or as objects and either save the data as a file or return it as a string. Each row of data is added one at a time, but you can provide any combination of associaitve arrays and objects and they can have differing keys and property names:
+The CSV library is built to take in rows of data as either associative arrays or as objects and either save the data as a file or return it as a string. Each row of data is added one at a time, but you can provide any combination of associative arrays and objects and they can have differing keys and property names:
 
     $csv = ee('CSV');
     $csv->addRow(array(
@@ -51,7 +51,7 @@ Add a row of data to the CSV instance.
 
 | Parameter | Type           | Description                                                            |
 | --------- | -------------- | ---------------------------------------------------------------------- |
-| \$rowData | `Array/object` | A single row of data passed in as an object or as an associaitve array |
+| \$rowData | `Array/object` | A single row of data passed in as an object or as an associative array |
 | Returns   | `Object`       | `$this`, the CSV object itself so you can chain `->addRow()` and       |
 
     $csv->addRow(array(

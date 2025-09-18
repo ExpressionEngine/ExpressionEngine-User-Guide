@@ -17,7 +17,7 @@ lang: php
 
 ## Control Panel Hooks (mcp.comment.php)
 
-### `delete_comment_additional($comment_ids)`
+## `delete_comment_additional($comment_ids)`
 
 | Parameter     | Type    | Description               |
 | ------------- | ------- | ------------------------- |
@@ -31,7 +31,7 @@ How it's called:
     ee()->extensions->call('delete_comment_additional', $comment_ids);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `update_comment_additional($comment_id, $data)`
+## `update_comment_additional($comment_id, $data)`
 
 | Parameter    | Type    | Description                      |
 | ------------ | ------- | -------------------------------- |
@@ -48,7 +48,7 @@ How it's called:
 
 ## Frontend Comment Hooks (mod.comment.php)
 
-### `comment_entries_query_result($results)`
+## `comment_entries_query_result($results)`
 
 | Parameter | Type    | Description           |
 | --------- | ------- | --------------------- |
@@ -62,7 +62,7 @@ How it's called:
     $results = ee()->extensions->call('comment_entries_query_result', $results);
     if (ee()->extensions->end_script === TRUE) return ee()->TMPL->tagdata;
 
-### `comment_entries_comment_ids_query($db)`
+## `comment_entries_comment_ids_query($db)`
 
 | Parameter   | Type       | Description                                      |
 | ----------- | ---------- | ------------------------------------------------ |
@@ -76,7 +76,7 @@ How it's called:
     ee()->extensions->call('comment_entries_comment_ids_query', ee()->db);
     if (ee()->extensions->end_script === TRUE) return ee()->TMPL->tagdata;
 
-### `comment_entries_comment_format($row)`
+## `comment_entries_comment_format($row)`
 
 | Parameter | Type     | Description              |
 | --------- | -------- | ------------------------ |
@@ -90,7 +90,7 @@ How it's called:
     $comment = ee()->extensions->call('comment_entries_comment_format', $row);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `comment_entries_tagdata($tagdata, $row)`
+## `comment_entries_tagdata($tagdata, $row)`
 
 | Parameter | Type     | Description                        |
 | --------- | -------- | ---------------------------------- |
@@ -105,7 +105,7 @@ How it's called:
     $tagdata = ee()->extensions->call('comment_entries_tagdata', $tagdata, $row);
     if (ee()->extensions->end_script === TRUE) return $tagdata;
 
-### `comment_form_end($res)`
+## `comment_form_end($res)`
 
 | Parameter | Type     | Description               |
 | --------- | -------- | ------------------------- |
@@ -119,7 +119,7 @@ How it's called:
     $res = ee()->extensions->call('comment_form_end', $res);
     if (ee()->extensions->end_script === TRUE) return $res;
 
-### `comment_form_hidden_fields($hidden_fields)`
+## `comment_form_hidden_fields($hidden_fields)`
 
 | Parameter       | Type    | Description                                |
 | --------------- | ------- | ------------------------------------------ |
@@ -133,7 +133,7 @@ How it's called:
     $hidden_fields = ee()->extensions->call('comment_form_hidden_fields', $hidden_fields);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `comment_form_tagdata($tagdata)`
+## `comment_form_tagdata($tagdata)`
 
 | Parameter | Type     | Description          |
 | --------- | -------- | -------------------- |
@@ -147,7 +147,7 @@ How it's called:
     $tagdata = ee()->extensions->call('comment_form_tagdata', $tagdata);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `comment_preview_comment_format($row)`
+## `comment_preview_comment_format($row)`
 
 | Parameter | Type     | Description                          |
 | --------- | -------- | ------------------------------------ |
@@ -161,7 +161,7 @@ How it's called:
     $data = ee()->extensions->call('comment_preview_comment_format', $query->row());
     if (ee()->extensions->end_script === TRUE) return;
 
-### `comment_preview_tagdata($tagdata)`
+## `comment_preview_tagdata($tagdata)`
 
 | Parameter | Type     | Description             |
 | --------- | -------- | ----------------------- |
@@ -175,7 +175,7 @@ How it's called:
     $tagdata = ee()->extensions->call('comment_preview_tagdata', $tagdata);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `insert_comment_start()`
+## `insert_comment_start()`
 
 | Parameter | Type   |
 | --------- | ------ |
@@ -188,7 +188,7 @@ How it's called:
     ee()->extensions->call('insert_comment_start');
     if (ee()->extensions->end_script === TRUE) return;
 
-### `insert_comment_end($data, $comment_moderate, $comment_id)`
+## `insert_comment_end($data, $comment_moderate, $comment_id)`
 
 | Parameter          | Type      | Description                                    |
 | ------------------ | --------- | ---------------------------------------------- |
@@ -204,7 +204,7 @@ How it's called:
     ee()->extensions->call('insert_comment_end', $data, $comment_moderate, $comment_id);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `insert_comment_insert_array($data)`
+## `insert_comment_insert_array($data)`
 
 | Parameter | Type    | Description              |
 | --------- | ------- | ------------------------ |
@@ -218,7 +218,7 @@ How it's called:
     $data = ee()->extensions->call('insert_comment_insert_array', $data);
     if (ee()->extensions->end_script === TRUE) return;
 
-### `insert_comment_preferences_sql($sql)`
+## `insert_comment_preferences_sql($sql)`
 
 | Parameter | Type     | Description                                              |
 | --------- | -------- | -------------------------------------------------------- |

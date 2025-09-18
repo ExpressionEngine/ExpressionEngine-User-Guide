@@ -13,7 +13,7 @@ lang: php
 
 # Input Library Extension Hooks
 
-### `set_cookie_end($data)`
+## `set_cookie_end($data)`
 
 | Parameter | Type    | Description                                                                                                                                  |
 | --------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------- |

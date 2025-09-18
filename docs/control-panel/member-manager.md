@@ -82,13 +82,13 @@ This tab contains the generic settings for the role. You can also assign the rol
 
 - **Include members in: author/member lists.**
 -- Roles included in the author list are available in the author select field on the entry publish/edit page for any channel the role has permission to publish in.
--- Roles included in the member lists are available to display in the [member list tag](member/memberlist.md).  
+-- Roles included in the member lists are available to display in the [member list tag](member/memberlist.md).
 
 - **Security Lock** -- If enabled, only Super Admin users can add or remove members to the role.
 
 - **Role Groups** -- Assign the role to [role groups](control-panel/member-manager.md#role-groups).
 
-- **Show field names on Publish** -- Enables the display of the field tags on the entry publish/edit page. This option is only available to the Super Admin role.
+- **Show field names on Publish** -- Enables the display of field short names on the entry publish/edit page.
 
 Tip: Hide and Show Field Short Names in the Publish Area
 <div class="video-wrapper">

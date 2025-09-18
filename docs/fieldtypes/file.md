@@ -25,7 +25,8 @@ A File field allows you to browse through existing files and upload new files.  
 
 ![file field with file selected](_images/field_file_file.png)
 
-Once a file has been selected in the field, that file can be replaced by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_edit.png" alt="edit icon"> icon. The field selection can be cleared by clicking <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_remove.png" alt="remove icon"> icon (this will not remove the file from the system). You can also change the file metadata (such as the title or description) by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/icon_edit_meta.png" alt="settings icon"> icon - please note that file's metadata will be changed globally throughout the system.
+Once a file has been selected in the field, that file can be replaced by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" 
+src="../_images/icon_edit.png" alt="edit icon"> icon. The field selection can be cleared by clicking <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/icon_remove.png" alt="remove icon"> icon (this will not remove the file from the system). You can also change the file metadata (such as the title or description) by clicking the <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../_images/icon_edit_meta.png" alt="settings icon"> icon - please note that file's metadata will be changed globally throughout the system.
 
 ## Field Settings
 
@@ -132,6 +133,10 @@ If you have defined any [image manipulations](control-panel/file-manager/upload-
     {file_size:small:human}
     {file_size:small:human_long}
 
+### `{folder_id}`
+
+The ID of the folder the file is in. If the file is in the top level folder of the upload directory, it will return 0.
+
 ### `{height}`
 
 The height of the image (in pixels) if applicable.
@@ -166,6 +171,12 @@ The automatically-detected MIME type of the file.
 
 The date the file was last modified. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
 
+One powerful use of the modified_date is 'cache busting', forcing browers to use a new image rather than a cached one when an image is modified but not renamed:
+
+    {image}
+        <img src="{url}?v={modified_date}" />
+    {/image}
+
 ### `{path}`
 
 The URL to the folder containing the file, including a trailing slash.
@@ -187,6 +198,10 @@ The full URL to the file.
 If you have defined any [image manipulations](control-panel/file-manager/upload-directories.md#constrain-or-crop) you can modify this tag with the Short Name of the manipulation. For example, if you've defined a "small" manipulation, the following will output the URL to that version:
 
     {url:small}
+
+### `{url:thumbs}`
+
+The URL to the thumbnail image that's auto created for the control panel.
 
 ### `{width}`
 
@@ -260,6 +275,20 @@ Convert the image to WEBP format. Additionally all the `:resize` manipulations c
 | maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
 | master_dim        | `auto`/`width`/`height` | `auto`| Master dimension when only width of height is specified |
 
+
+### `:avif`
+
+    {news_image:avif}
+
+Convert the image to AVIF format. Additionally all the `:resize` manipulations can be applied
+
+| Parameter | Values  | Default    | Description                           |
+| --------- | ------- | ---------- | -------------------------------------- |
+| width    | `Number` | | Width to crop to, px |
+| height   | `Number` | | Height to crop to, px |
+| quality  | `0`-`100`| `75`| Image quality, % |
+| maintain_ratio   | `y` / `n` | `y`| Keep image ratio (yes/no)  |
+| master_dim        | `auto`/`width`/`height` | `auto`| Master dimension when only width of height is specified |
 
 ### `:resize_crop`
 
