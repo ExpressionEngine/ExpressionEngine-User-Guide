@@ -32,6 +32,12 @@ NOTE: **Important:** The Comment Entries tag should **not** be nested inside of 
 
     author_id="5"
 
+### `backspace=`
+
+The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair:
+
+    backspace="7"
+
 ### `channel=`
 
     channel="which"
