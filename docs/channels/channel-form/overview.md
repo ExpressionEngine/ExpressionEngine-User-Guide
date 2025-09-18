@@ -265,9 +265,13 @@ If you have chosen [inline error handling](#error_handling), you can display the
 
 Display a custom field's label.
 
+You may also use `{label:title}` to display the label for the title field as defined in Channel settings.
+
 ### `{instructions:my_field_name}`
 
 Display a custom field's instructions.
+
+You may also use `{instructions:title}` to display the instructions for the title field as defined in Channel settings.
 
 ### `{selected_option:my_field_name}`
 
