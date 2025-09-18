@@ -9,20 +9,19 @@
 
 # Pro Search
 
-ExpressionEngine’s native `channel:entries` tag allows you to fetch and filter entries in many ways by setting its parameters. The native Search module allows for filtering by keyword, but is limited in its capabilities. Pro Search combines the two into one module and then throw in extra features, filters, and a performance boost.
+ExpressionEngine’s native `channel:entries` tag allows you to fetch and filter entries in many ways by using its parameters. The native Search module, `search:search_results`,  allows for searching by keyword, and returning results from many channels, but is very limited in its overall capabilities. Pro Search combines the two into one module and then throws in many extra features, powerful filters, and a performance boost.
 
+Pro Search uses a custom [full-text](http://dev.mysql.com/doc/refman/5.5/en/fulltext-search.html) index instead of the raw entry data, which makes searching by keywords **Very Fast**. It also adds **relevance** to search results, which can be custom tuned by assigning **different weights** to any searchable field.
 
-Searching by **keywords** uses a custom [full-text](http://dev.mysql.com/doc/refman/5.5/en/fulltext-search.html) index instead of the raw entry data, which makes Pro Search fast. **Very fast**. It also adds **relevance** to search results which can be influenced by applying **weight** to any searchable field.
+Apart from the powerful [keywords filter](/add-ons/pro-search/filters.md#keywords), and the ability to **use any native parameter as a search filter**, Pro Search adds several other filters to further enhance and refine your entries loop or your search results:
 
-Apart from the powerful [keywords filter](/add-ons/pro-search/filters.md#keywords), and the ability to **use any native parameter as a search filter**, Pro Search adds several other filters to further enhance and refine your search results:
-
-- Select any combination of [categories](/add-ons/pro-search/filters.md#categories);
-- Limit entries by a given [distance](/add-ons/pro-search/filters.md#distance) based on latitude/longitude values;
-- Target [specific fields](/add-ons/pro-search/filters.md#field-search), including Titles and Grid columns;
-- Define numeric or date [ranges](/add-ons/pro-search/filters.md#ranges);
-- Filter based on an entry’s [relationship](/add-ons/pro-search/filters.md#relationships) with other entries;
-- Filter by [Grid calculations](https://github.com/low/low_search_table) like min/max values or averages;
-- Filter by [Author fields](https://github.com/low/low_search_members) like screen name or email;
+- Category: Select any combination of [categories](/add-ons/pro-search/filters.md#categories);
+- Distance: Limit entries by a given [distance](/add-ons/pro-search/filters.md#distance) based on latitude/longitude values;
+- Fields: Target [specific fields](/add-ons/pro-search/filters.md#field-search), including Titles and Grid columns;
+- Number Ranges: Define numeric or date [ranges](/add-ons/pro-search/filters.md#ranges);
+- Relationships: Filter based on an entry’s [relationship](/add-ons/pro-search/filters.md#relationships) with other entries;
+- Math: Filter by [Grid calculations](https://github.com/low/low_search_table) like min/max values or averages;
+- Author: Filter by [Author fields](https://github.com/low/low_search_members) like screen name or email;
 
 Other features include:
 
