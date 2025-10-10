@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Variable types
+# Pro Variable Types
 
 
 Pro Variables comes with **over a dozen variable types**. Each type has its own specific settings. You can select which types are available by (de)selecting them in the [settings](/add-ons/pro-variables/settings.md).
@@ -257,10 +257,10 @@ The short name of the Image Manipulation you want to output. Alternatively, you 
 
 ### Code examples
 
-    {exp:pro_variables:single var="lv_files_var" manipulation="squared"}
+    {exp:pro_variables:single var="pv_files_var" manipulation="squared"}
 
-    {exp:pro_variables:pair var="lv_files_var"}
-      <img src="{lv_files_var:squared}" alt="">
+    {exp:pro_variables:pair var="pv_files_var"}
+      <img src="{pv_files_var:squared}" alt="">
     {/exp:pro_variables:pair}
 
 ## Table
@@ -292,13 +292,13 @@ Limit the number of rows displayed.
 
 ### Code examples
 
-    {exp:pro_variables:pair var="lv_table_var"}
+    {exp:pro_variables:pair var="pv_table_var"}
       {if count == 1}<ul>{/if}
         <li><a href="{cell_1}">{cell_2}</a></li>
       {if count == total_results}</ul>{/if}
     {/exp:pro_variables:pair}
 
-    {exp:pro_variables:pair var="lv_table_var" sort="random" limit="1"}
+    {exp:pro_variables:pair var="pv_table_var" sort="random" limit="1"}
       Random link: <a href="{cell_1}">{cell_2}</a>
     {/exp:pro_variables:pair}
 
@@ -343,6 +343,7 @@ If enabled, it will display the textarea as a monospaced, light-on-dark input fi
 If set to _Yes_, the field will be shown in full width.
 
 ### Parameters
+
 When using the module tags to display a Textarea variable, you can use additional parameters to further customize the output:
 
 #### `formatting`
@@ -359,7 +360,7 @@ If the variable content contains variables that need to be parsed before it is p
 
 #### `preparse_prefix`
 
-See above, change the default variable prefix from `preparse` to something else. For example, the parameters `preparse:foo="bar" preparse_prefix="lv"` will replace the variable `{lv:foo}` with `bar` inside the variable content.
+See above, change the default variable prefix from `preparse` to something else. For example, the parameters `preparse:foo="bar" preparse_prefix="pv"` will replace the variable `{pv:foo}` with `bar` inside the variable content.
 
 ### Code examples
 
