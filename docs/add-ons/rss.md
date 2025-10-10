@@ -100,7 +100,7 @@ ID number of the channel (not the channel entry, the actual channel).
 
 The code for the language the channel is in (en-us, etc.).
 
-### `channel_name}`
+### `{channel_name}`
 
 The name of the channel.
 
