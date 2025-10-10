@@ -23,6 +23,8 @@ In addition, the File module supports [Pagination](templates/pagination.md).
 
 NOTE: **Note:** If you're looking for how to use file fields in your channel entries loops, you should look at [the file field variable usage documentation](fieldtypes/file.md#template-tags) in the channel fields documentation.
 
+NOTE: **Note:** If you uploaded the file using the Textarea, Text Input or RTE fields, you should look at [the textarea field documentation](fieldtypes/textarea.md#filexxurl-tag--inserting-a-file).
+
 The File Entries tag allows you to display files and their associated meta-data on the frontend through the use of standard ExpressionEngine tags.
 
 Here is a simple example of a possible usage of this tag:
@@ -35,7 +37,7 @@ Here is a simple example of a possible usage of this tag:
       {/categories}
 
       {if url:small}
-        <p><a href="{id_path='gallery/comments'}"><img src="{url:small}" width="{width:small}" height="{height:small}" alt="{title}" title="{title}" /></a></p>
+        <p><a href="{id_path='gallery/comments'}" title="{title}"><img src="{url:small}" width="{width:small}" height="{height:small}" alt="{title}" /></a></p>
       {/if}
 
       {description}
@@ -314,7 +316,7 @@ Multiple instances of the {switch=} tag may be used and the system will intellig
 
 ### `{title}`
 
-The title of the entry.
+The title of the file.
 
 ### `{total_results}`
 
