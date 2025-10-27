@@ -26,7 +26,7 @@
 
 **Bug Fixes** 🐛
 
-- Resolved [#5022](https://github.com/ExpressionEngine/ExpressionEngine/issues/5022) where Store fieldtype used as an excerpt could throw an error [#5027](https://github.com/ExpressionEngine/ExpressionEngine/pull/5027)
+- Resolved [#5022](https://github.com/ExpressionEngine/ExpressionEngine/issues/5022) where fieldtypes used as an excerpt could throw an error when passing an array [#5027](https://github.com/ExpressionEngine/ExpressionEngine/pull/5027)
 - Resolved [#5012](https://github.com/ExpressionEngine/ExpressionEngine/issues/5012) where searching for files with 3 digit IDs did not work [#5015](https://github.com/ExpressionEngine/ExpressionEngine/pull/5015)
 - Fixed a Pro Variable bug where date setting options did not stick [#5000](https://github.com/ExpressionEngine/ExpressionEngine/pull/5000)
 - Fixed [#4979](https://github.com/ExpressionEngine/ExpressionEngine/issues/4979) where Live preview button did not trigger when closing preview [#4981](https://github.com/ExpressionEngine/ExpressionEngine/pull/4981)
