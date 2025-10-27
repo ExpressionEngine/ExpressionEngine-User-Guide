@@ -8,6 +8,49 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.17
+(Release: October 27th, 2025)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+    
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/6020323?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Doug Black Jr</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=dougblackjr" target="_BLANK">@dougblackjr</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 🐛
+
+- Resolved [#5022](https://github.com/ExpressionEngine/ExpressionEngine/issues/5022) where Store fieldtype used as an excerpt could throw an error [#5027](https://github.com/ExpressionEngine/ExpressionEngine/pull/5027)
+- Resolved [#5012](https://github.com/ExpressionEngine/ExpressionEngine/issues/5012) where searching for files with 3 digit IDs did not work [#5015](https://github.com/ExpressionEngine/ExpressionEngine/pull/5015)
+- Fixed a Pro Variable bug where date setting options did not stick [#5000](https://github.com/ExpressionEngine/ExpressionEngine/pull/5000)
+- Fixed [#4979](https://github.com/ExpressionEngine/ExpressionEngine/issues/4979) where Live preview button did not trigger when closing preview [#4981](https://github.com/ExpressionEngine/ExpressionEngine/pull/4981)
+- Fixed bug where using `entry_status` in Comment form threw a PHP error [#4986](https://github.com/ExpressionEngine/ExpressionEngine/pull/4986)
+- Resolved [#4900](https://github.com/ExpressionEngine/ExpressionEngine/issues/4900) where `maxlength` for text field in Channel Form could have been set to 0 [#4965](https://github.com/ExpressionEngine/ExpressionEngine/pull/4965)
+- Resolved [#4881](https://github.com/ExpressionEngine/ExpressionEngine/issues/4881) where "No access redirect" was not performed if a restricted template is used as layout [#4883](https://github.com/ExpressionEngine/ExpressionEngine/pull/4883)
+- Resolved [#4346](https://github.com/ExpressionEngine/ExpressionEngine/issues/4346) where double slashes could appear in URLs [#4347](https://github.com/ExpressionEngine/ExpressionEngine/pull/4347)
+- Addressed [#4996](https://github.com/ExpressionEngine/ExpressionEngine/issues/4996) by removing unintended spaces in channel notifications [#4997](https://github.com/ExpressionEngine/ExpressionEngine/pull/4997)
+
+**Enhancements** ✨
+
+- Improved performance of forms displaying many nested categories [#5014](https://github.com/ExpressionEngine/ExpressionEngine/pull/5014)
+- Improved performance of the author filter on the Entry listing page [#5009](https://github.com/ExpressionEngine/ExpressionEngine/pull/5009)
+- Improved performance of the category filter on the Entry listing page [#5008](https://github.com/ExpressionEngine/ExpressionEngine/pull/5008)
+- Improved performance of the Categories column on the Entry listing page [#5007](https://github.com/ExpressionEngine/ExpressionEngine/pull/5007)
+- Refactored Pro Variable "Select Entries" to use the Relationship field [#4999](https://github.com/ExpressionEngine/ExpressionEngine/pull/4999)
+- Improved delete member flow with explicit confirmation toggle [#5002](https://github.com/ExpressionEngine/ExpressionEngine/pull/5002), addressing [#4998](https://github.com/ExpressionEngine/ExpressionEngine/issues/4998)
+- Hid text to show only icons for default HTML buttons [#4980](https://github.com/ExpressionEngine/ExpressionEngine/pull/4980)
+- Made Notes fieldtype compatible with Grid and third-party fieldtypes [#4964](https://github.com/ExpressionEngine/ExpressionEngine/pull/4964), addressing [#4955](https://github.com/ExpressionEngine/ExpressionEngine/issues/4955)
+
+**Developers** 💻
+
+- Added unit tests for Template library; small fixes in Template and Api libraries [#5021](https://github.com/ExpressionEngine/ExpressionEngine/pull/5021)
+
 ## Version 7.5.16
 (Release: September 15th, 2025)
 <div class="max-w-7xl mx-autotext-center">
