@@ -1471,6 +1471,19 @@ Example Usage:
 
     $config['filename_increment'] = 'y';
 
+## `filesystem_case_sensitive`
+
+Set whether the filesystem should treat file names as case-sensitive when performing database queries. When enabled, file name comparisons use binary casting for case-sensitive matching, which may improve performance on case-sensitive filesystems but could impact performance on case-insensitive filesystems.
+
+| Value | Behavior                                      |
+| ----- | --------------------------------------------- |
+| y     | Enable case-sensitive file name comparisons  |
+| n     | Disable case-sensitive file name comparisons |
+
+Example Usage:
+
+    $config['filesystem_case_sensitive'] = 'y';
+
 ## `force_query_string`
 
 If enabled, ExpressionEngine will render URLs with a question mark following `index.php` in order to pass along segment information as a standard query string:
