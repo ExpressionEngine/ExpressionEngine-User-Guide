@@ -1473,7 +1473,7 @@ Example Usage:
 
 ## `filesystem_case_sensitive`
 
-Set whether the filesystem should treat file names as case-sensitive when performing database queries. When enabled, file name comparisons use binary casting for case-sensitive matching, which may improve performance on case-sensitive filesystems but could impact performance on case-insensitive filesystems.
+Setting this config variable to y will enforce case-sensitive filtering on File Models.  This preserves a legacy behavior, however we recommend using MySQL 8 and a case-sensitive database collation for better performance.
 
 | Value | Behavior                                      |
 | ----- | --------------------------------------------- |
