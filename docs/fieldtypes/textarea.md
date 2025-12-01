@@ -51,6 +51,8 @@ The supported fields for file tags include:
 - `title`: The title of the file.
 - `description`: The description of the file.
 - `file_size`: The size of the file in bytes.
+- `width`: The width of the file in pixels.
+- `height`: The height of the file in pixels.
 - `mime_type`: The MIME type of the file.
 - `location`: Where the photo was taken
 - `credits`: Photo credits
