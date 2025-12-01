@@ -42,11 +42,11 @@ Character to separate multiple values. Either a new line (`\n`), a pipe (`|`) or
 
 Displays a date picker. To output anything other than a timestamp, use the `{exp:pro_variables:single}` tag. This takes the same parameters as the native Date field. Additionally, use `modifier="relative"` to output a relative date string.
 
-### Code examples
+### Code example
 
-    {exp:pro_variables:single var="my_var" format="%Y-%m-%d"}
+    {exp:pro_variables:single var="my_date_var" format="%Y-%m-%d"}
 
-    {exp:pro_variables:single var="my_var" modifier="relative"}
+    {exp:pro_variables:single var="my_date_var" modifier="relative"}
 
 ## File
 
@@ -58,6 +58,16 @@ Uses the native [File field](/fieldtypes/file.md). To output the variable, alway
 
 Allows applying modifiers, which, among other, are used to apply [on-the-fly image manipulations](/fieldtypes/file.md#on-the-fly-image-manipulations) to files
 
+### Code example
+
+    {exp:pro_variables:pair var="my_file_var"}
+    	<figure>
+    		<img src="{my_file_var:image}">
+    		<figcaption>Photo by {my_file_var:credit}</figcaption>
+    	</figure>
+    	{my_file_var:description}
+    {/exp:pro_variables:pair}
+
 ## Grid
 
 Uses the native [Grid field](/fieldtypes/grid.md). All native types are available, _except for Relationships and Members_. To output the variable, use the `{exp:pro_variables:pair}` or `{exp:pro_variables:single}` tag where appropriate. You can use any of Grid’s [parameters](/fieldtypes/grid.md#parameters) and [variables](/fieldtypes/grid.md#variables) using these tags. Additionally, one more parameter is available:
@@ -68,17 +78,9 @@ Uses the native [Grid field](/fieldtypes/grid.md). All native types are availabl
 
 Any of the available [modifiers](/fieldtypes/grid.md#modifiers), which will trigger the output the modifier provides.
 
-### Code examples
+### Code example
 
-    {exp:pro_variables:pair var="my_var"}
-    	<figure>
-    		<img src="{my_var:image}">
-    		<figcaption>Photo by {my_var:credit}</figcaption>
-    	</figure>
-    	{my_var:description}
-    {/exp:pro_variables:pair}
-
-    {exp:pro_variables:single var="my_var" modifier="total_rows"}
+    {exp:pro_variables:single var="my_grid_var" modifier="total_rows"}
 
 ## Radio Group
 
@@ -257,10 +259,11 @@ The short name of the Image Manipulation you want to output. Alternatively, you 
 
 ### Code examples
 
-    {exp:pro_variables:single var="pv_files_var" manipulation="squared"}
+    {exp:pro_variables:single var="my_files_var" manipulation="squared"}
 
-    {exp:pro_variables:pair var="pv_files_var"}
-      <img src="{pv_files_var:squared}" alt="">
+    {exp:pro_variables:pair var="my_files_var"}
+      <img src="{my_files_var:squared}" alt="">
+
     {/exp:pro_variables:pair}
 
 ## Table
@@ -292,13 +295,15 @@ Limit the number of rows displayed.
 
 ### Code examples
 
-    {exp:pro_variables:pair var="pv_table_var"}
+    {exp:pro_variables:pair var="my_table_var"}
+
       {if count == 1}<ul>{/if}
         <li><a href="{cell_1}">{cell_2}</a></li>
       {if count == total_results}</ul>{/if}
     {/exp:pro_variables:pair}
 
-    {exp:pro_variables:pair var="pv_table_var" sort="random" limit="1"}
+
+    {exp:pro_variables:pair var="my_table_var" sort="random" limit="1"}
       Random link: <a href="{cell_1}">{cell_2}</a>
     {/exp:pro_variables:pair}
 
@@ -356,14 +361,16 @@ To be used in combination with `format`. Possible values: `none`, `safe` or `all
 
 #### `preparse:_my_var_`
 
-If the variable content contains variables that need to be parsed before it is put in the template, you can use this parameter, similar to [embed variables](/templates/embedding.md#embedding-variables). For example: setting the parameter `preparse:foo="bar"` will replace the variable `{preparse:foo}` with `bar` in the variable content.
+If the variable content itself contains variables that ought to be parsed before the Pro Variable is put in the template, you can use this parameter. It's similar to [embed variables](/templates/embedding.md#embedding-variables). For example: setting the parameter `preparse:foo="bar"` will replace `{preparse:foo}` with `bar` in the variable content.
 
 #### `preparse_prefix`
 
-See above, change the default variable prefix from `preparse` to something else. For example, the parameters `preparse:foo="bar" preparse_prefix="pv"` will replace the variable `{pv:foo}` with `bar` inside the variable content.
+Used with pre-parsing, this changes the default variable prefix from `preparse` to something else. For example, the parameters `preparse_prefix="pv" preparse:foo="bar"` will replace `{pv:foo}` with `bar` inside the variable content.
 
 ### Code examples
 
     {exp:pro_variables:single var="my_var" formatting="xhtml" html="all"}
 
-    {exp:pro_variables:single var="my_var" preparse:entry_id="12"}
+    {!-- for a variable that has {pv:entry_id} and {pv:cat_id} in its content --}
+    {exp:pro_variables:single var="my_var" preparse:entry_id="12" preparse:cat_id="9" preparse_prefix="pv"}
+
