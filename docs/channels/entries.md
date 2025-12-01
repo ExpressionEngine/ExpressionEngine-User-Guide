@@ -177,7 +177,7 @@ The syntax for the disable parameter is this: `disable="ITEM YOU WANT TO DISABLE
 - `relationship_custom_fields`
 - `relationship_categories`
 
-NOTE: **Note:** If you disable categories, category fields will automatically be disabled.
+NOTE: **Note:** If you disable categories, category fields will automatically be disabled. If you disable custom_fields, that includes relationships. If you disable relationships, [relationship_custom_fields and relationship_categories](fieldtypes/relationships.md#optimizing-relationships-performance) will automatically be disabled. 
 
 You may specify multiple items to disable by separating them with the pipe character:
 
@@ -191,7 +191,7 @@ For example, let's say you are using an instance of your channel tag to show you
         <a href="{title_permalink='channel/comments'}">{title}</a><br>
     {/exp:channel:entries}
 
-In this example you are only showing the title of your entries and nothing else; yet, the channel tag automatically fetches categories and other data. Using the disable= parameter you can turn off the unneeded features from being queried. In this case, you don't need any of the features that can be disabled.
+In this example you are only showing the title of your entries and nothing else; yet, the channel tag automatically fetches categories and other data. Using the disable= parameter you can turn off the unneeded features from being queried. In this case, you don't need any of the features and they all can be disabled.
 
     {exp:channel:entries orderby="date" sort="desc" limit="10" disable="categories|custom_fields|member_data|pagination"}
         <a href="{title_permalink='channel/comments'}">{title}</a><br>
