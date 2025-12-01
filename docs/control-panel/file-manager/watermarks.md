@@ -31,6 +31,6 @@ Text Watermarks have the following extra options:
 
 Image Watermarks have the following extra options:
 
-- **Path** -- If you wish to test your watermark settings, then you may specify the server path to a test image. This will allow you to see how it would actually appear on a real image. A server path is typically something similar to `/home/domain.com/http_docs/cp_images/watermark_test.jpg`. The specific setting will vary from server to server, so you may need to contact your Host or server admin to determine what your correct "server path" is.
+- **Path** -- The path to the image to use in the watermark, including the image name. **Note:** SVG images will not work as watermarks.
 - **Opacity** -- The opacity (i.e. transparency) of the watermark image. This allows the watermark to be faint and not completely obscure details from the original image behind it. A 50% opacity is typical.
 - **Image transparency map** -- Specify a color on the image to be "transparent" for PNG or GIF images. This works by specifying the "X" and "Y" coordinate pixel (measured from the upper left) within the image that corresponds to a pixel representative of the color you want to be transparent.

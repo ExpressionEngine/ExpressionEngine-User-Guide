@@ -336,7 +336,7 @@ Would output in the format:
 
 ## Optimizing Relationships Performance
 
-If you are heavily using relationship fields, it is recommended that you disable certain features, such as custom fields or categories on related entries, to speed up template loading. That can be done by applying `disable` parameter to the `exp:channel:entries` tag that includes relationship field tag (or siblings / parents tag).
+If you are heavily using relationship fields, it is recommended that you disable certain features such as custom fields or categories on the related entries to speed up template loading. That can be done by applying the [`disable` parameter](/channels/entries.md#disable) to the `exp:channel:entries` tag that includes the relationship field tag (or siblings / parents tag).
 
 The following items can be turned off:
 

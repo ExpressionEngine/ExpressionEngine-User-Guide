@@ -7,7 +7,7 @@
     @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
 -->
 
-# Variable types
+# Pro Variable Types
 
 
 Pro Variables comes with **over a dozen variable types**. Each type has its own specific settings. You can select which types are available by (de)selecting them in the [settings](/add-ons/pro-variables/settings.md).
@@ -263,6 +263,7 @@ The short name of the Image Manipulation you want to output. Alternatively, you 
 
     {exp:pro_variables:pair var="my_files_var"}
       <img src="{my_files_var:squared}" alt="">
+
     {/exp:pro_variables:pair}
 
 ## Table
@@ -295,10 +296,12 @@ Limit the number of rows displayed.
 ### Code examples
 
     {exp:pro_variables:pair var="my_table_var"}
+
       {if count == 1}<ul>{/if}
         <li><a href="{cell_1}">{cell_2}</a></li>
       {if count == total_results}</ul>{/if}
     {/exp:pro_variables:pair}
+
 
     {exp:pro_variables:pair var="my_table_var" sort="random" limit="1"}
       Random link: <a href="{cell_1}">{cell_2}</a>
@@ -345,6 +348,7 @@ If enabled, it will display the textarea as a monospaced, light-on-dark input fi
 If set to _Yes_, the field will be shown in full width.
 
 ### Parameters
+
 When using the module tags to display a Textarea variable, you can use additional parameters to further customize the output:
 
 #### `formatting`
@@ -369,3 +373,4 @@ Used with pre-parsing, this changes the default variable prefix from `preparse` 
 
     {!-- for a variable that has {pv:entry_id} and {pv:cat_id} in its content --}
     {exp:pro_variables:single var="my_var" preparse:entry_id="12" preparse:cat_id="9" preparse_prefix="pv"}
+
