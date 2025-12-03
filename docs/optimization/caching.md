@@ -55,7 +55,7 @@ Enable this feature only if you **do not** use future entries, expiring entries,
 
 ## Query Disabling
 
-The disable= parameter is available in the {exp:channel:entries} tag. It allows you to turn off aspects of the tag that you might not be using in order to improve performance. The channel tag is designed to fetch a lot of information by default: Categories, fields, member data, etc. Depending on how you use the tag, some of this data may not be needed. Through the use of the "disable" parameter you can turn off aspects of the tag in order to make it more lightweight.
+The disable= parameter is available in the [{exp:channel:entries} tag](channels/entries.md#disable). It allows you to turn off aspects of the tag that you might not be using in order to improve performance. The channel tag is designed to fetch a lot of information by default: Categories, fields, member data, etc. Depending on how you use the tag, some of this data may not be needed. Through the use of the "disable" parameter you can turn off aspects of the tag in order to make it more lightweight.
 
 The syntax for the disable parameter is this: disable="ITEM YOU WANT TO DISABLE". There are five items that can be turned off:
 
