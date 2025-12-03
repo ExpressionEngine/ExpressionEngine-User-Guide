@@ -57,7 +57,6 @@
 - Added caching tests [#5043](https://github.com/ExpressionEngine/ExpressionEngine/pull/5043)
 - Added PHP CLI script for bumping EE version [#5045](https://github.com/ExpressionEngine/ExpressionEngine/pull/5045)
 - Added Pro Search tests [#5078](https://github.com/ExpressionEngine/ExpressionEngine/pull/5078)
-- Moved table creation to the normal process [#5080](https://github.com/ExpressionEngine/ExpressionEngine/pull/5080)
 
 ## Version 7.5.17
 (Release: October 27th, 2025)
