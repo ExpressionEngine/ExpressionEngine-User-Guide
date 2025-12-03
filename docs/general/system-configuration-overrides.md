@@ -1471,6 +1471,19 @@ Example Usage:
 
     $config['filename_increment'] = 'y';
 
+## `filesystem_case_sensitive`
+
+Setting this config variable to y will enforce case-sensitive filtering on File Models.  This preserves a legacy behavior, however we recommend using MySQL 8 and a case-sensitive database collation for better performance.
+
+| Value | Behavior                                      |
+| ----- | --------------------------------------------- |
+| y     | Enable case-sensitive file name comparisons  |
+| n     | Disable case-sensitive file name comparisons |
+
+Example Usage:
+
+    $config['filesystem_case_sensitive'] = 'y';
+
 ## `force_query_string`
 
 If enabled, ExpressionEngine will render URLs with a question mark following `index.php` in order to pass along segment information as a standard query string:
