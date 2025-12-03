@@ -2987,6 +2987,8 @@ Example Usage:
 
     $config['strict_urls'] = 'n';
 
+NOTE: **Note:** The pagination indicator Px is considered a valid first segment and will not trigger a 404 in order to allow pagination on the index page. Thus https://example.com/P5 will not trigger a 404 withe strict_urls enabled.
+
 **Also found in CP:** `Settings --> Template Settings`: [Enable Strict URLs](control-panel/settings/template.md#enable-strict-urls)
 
 ## `template`
