@@ -112,6 +112,8 @@ Offsets the number of rows output by the tag pair to the number specified here.
 
 Allows the output of the tag pair to be ordered by a specific column, defaults to row order as set on the channel entry publish form. Entering `random` will return the rows in a random order.
 
+NOTE: **Note:** Unlike `exp:channel:entries`, you can only use one column at a time for sorting.
+
 ### `row_id=`
 
     row_id="5"
