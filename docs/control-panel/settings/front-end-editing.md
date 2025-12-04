@@ -25,4 +25,6 @@ Enabling front-end editing allows users with respective permissions to edit chan
 
 ## **Enable automatic front-end editing links**
 (Default: On, Matching Config Override: [`automatic_frontedit_links`](general/system-configuration-overrides.md#automatic_frontedit_links))
+
 By default ExpressionEngine Pro automatically inserts edit links ( <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/pro_edit.png" alt="pro edit icon"> ) where editable content is found in templates. These can be disabled on a per field basis or globally when using this toggle. When toggled off, ExpressionEngine Pro will no longer automatically generate edit links and links will need to be [added manually](/advanced-usage/front-end/frontend.md#customizing-the-link-location) where needed in templates.
+
