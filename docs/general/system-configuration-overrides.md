@@ -511,6 +511,7 @@ Specify a different [caching driver](optimization/caching.md#caching-drivers) to
 | Values    | Description                                        |
 | --------- | -------------------------------------------------- |
 | file      | File driver, /system/user/cache/ (default)         |
+| database  | Database driver, uses the DB for caching           |
 | memcached | Memcached driver, configured with memcached config |
 | redis     | Redis driver, configured with redis config         |
 | dummy     | Dummy driver, will not cache                       |
@@ -1202,7 +1203,7 @@ Example Usage:
 
 ### `enable_entry_cloning`
 
-When set to `n`, disables "Clone to New Entry" option and entry cloning globally. 
+When set to `n`, disables "Clone to New Entry" option and entry cloning globally.
 
 | Value | Behavior                                       |
 | ----- | ---------------------------------------------- |
@@ -1423,7 +1424,7 @@ Example Usage:
 
 ### `favicon`
 
-URL to file used as favicon in Control Panel. 
+URL to file used as favicon in Control Panel.
 
 Example Usage:
 
@@ -3040,7 +3041,7 @@ Stream encryption method, when using TLS for sending emails over SMTP.
 | STREAM_CRYPTO_METHOD_TLSv1_2_CLIENT        | TLS v1.2 (default)         |
 | STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT        | TLS v1.3 (as of PHP 7.4.0) |
 
- 
+
 Example Usage:
 
     $config['tls_crypto_method'] = STREAM_CRYPTO_METHOD_TLSv1_3_CLIENT;
