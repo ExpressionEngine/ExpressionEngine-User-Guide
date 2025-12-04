@@ -1283,7 +1283,7 @@ Example Usage:
 
     $config['enable_frontedit'] = 'n';
 
-## `enable_frontedit_links`
+## `automatic_frontedit_links`
 
 When set to `n`, disables automatic creation of content management links on front-end. The links can still be [added manually](advanced-usage/front-end/frontend.md#customizing-the-link-location).
 
@@ -1294,7 +1294,7 @@ When set to `n`, disables automatic creation of content management links on fron
 
 Example Usage:
 
-    $config['enable_frontedit_links'] = 'y';
+    $config['automatic_frontedit_links'] = 'y';
 
 ## `enable_hit_tracking`
 

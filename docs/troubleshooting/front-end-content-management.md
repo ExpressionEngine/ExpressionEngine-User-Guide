@@ -40,7 +40,7 @@ There are several settings that could prevent the Dock from showing on the front
 
 - Automatic front-end editing links are disabled via settings or config override. By default, ExpressionEngine automatically generates front edit links for all entry fields. This can be turned on or off, requiring a developer to [manually insert front edit links](advanced-usage/front-end/frontend.md#customizing-the-link-location) via template tags. If only manually inserted links are showing, this could be the cause.
     - Via Pro's [general settings](control-panel/settings/front-end-editing.md), ensure that the "Enable automatic front-end editing links" setting is toggled on.
-    - Via the [`enable_frontedit_links` config override](general/system-configuration-overrides.md#enable_frontedit_links). If in use, this override must be set to `'y'` to automatically insert front edit links.
+    - Via the [`automatic_frontedit_links` config override](general/system-configuration-overrides.md#automatic_frontedit_links). If in use, this override must be set to `'y'` to automatically insert front edit links.
 
 - Front edit links are disabled via HTML comments, EE template comments, or `disable` parameter. There are 3 ways to disable Pro's automatic generation of front edit links. Ensure that the template code your inspecting isn't surrounded by template comments or wrapped in a field tag using `disable="frontedit`. For details on these methods read the [docs regarding disabling front-edit links](advanced-usage/front-end/frontend.md#enabledisable-the-front-edit-link)
 
