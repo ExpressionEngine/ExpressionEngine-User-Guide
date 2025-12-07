@@ -1670,6 +1670,14 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Content & Design`: [Image Resizing Protocol](control-panel/settings/content-design.md#protocol)
 
+## `image_manipulation_quality`
+
+Default quality for [on-the-fly image manipulations](fieldtypes/file.md#on-the-fly-image-manipulations) (resizing, cropping, etc.). Value should be greater than 0 (lowest quality, smallest file size) and below or equal to 100 (highest quality, largest file size). When not set, the default quality is 75.
+
+Example Usage:
+
+    $config['image_manipulation_quality'] = 90;
+
 ## `include_seconds`
 
 Set the system to include seconds when time is displayed in the interface.
