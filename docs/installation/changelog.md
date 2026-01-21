@@ -25,8 +25,9 @@
 
 **Enhancements** 🚀
 
-- Add ability to specify SMTP SSL peer name in config
-- Update LivePreview to maintain scroll position during updates
+- Added ability to specify SMTP SSL peer name in config
+- Updated LivePreview to maintain scroll position during updates
+- Added indexes for Module Actions
 
 **Bug Fixes** 💃🐛
 
