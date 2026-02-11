@@ -31,6 +31,12 @@ Adds the datepicker to your date fields. Defaults to "yes".
 
 NOTE: **Note:** If you are manually constructing a date field, in order to apply the date picker you must include `rel="date-picker"`.
 
+
+### `email_as_username="yes"`
+    email_as_username="yes"
+
+When set to `yes`, if the username is not specified in the submitted form, the value of the submitted email will be automatically used as the username as well.  The username field is not required, but is optional, when this parameter is used.
+
 ### `error_handling="inline"`
     error_handling="inline"
 
