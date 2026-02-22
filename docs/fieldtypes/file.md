@@ -187,6 +187,36 @@ One powerful use of the modified_date is 'cache busting', forcing browers to use
         <img src="{url}?v={modified_date}" />
     {/image}
 
+### `{modified_by_member_id}`
+
+    {modified_by_member_id}
+
+ID of member who last modified the file
+
+### `{modified_by_username}`
+
+    {modified_by_username}
+
+Username of member who last modified the file 
+
+### `{modified_by_screen_name}`
+
+    {modified_by_screen_name}
+
+Screen name of member who last modified the file 
+
+### `{modified_by_email}`
+
+    {modified_by_email}
+
+Email address of member who last modified the file 
+
+### `{modified_by_avatar_filename}`
+
+    <img src="{modified_by_avatar_filename}" width="{modified_by_avatar_width}" height="{modified_by_avatar_height}" />
+
+Avatar of member who last modified the file 
+
 ### `{path}`
 
 The URL to the folder containing the file, including a trailing slash.
@@ -200,6 +230,36 @@ The title assigned to the file.
     {upload_date format="%Y %m %d"}
 
 The date the file was first uploaded. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+
+### `{uploaded_by_member_id}`
+
+    {uploaded_by_member_id}
+
+ID of member who uploaded the file originally
+
+### `{uploaded_by_username}`
+
+    {uploaded_by_username}
+
+Username of member who uploaded the file originally
+
+### `{uploaded_by_screen_name}`
+
+    {uploaded_by_screen_name}
+
+Screen name of member who uploaded the file originally
+
+### `{uploaded_by_email}`
+
+    {uploaded_by_email}
+
+Email address of member who uploaded the file originally
+
+### `{uploaded_by_avatar_filename}`
+
+    <img src="{uploaded_by_avatar_filename}" width="{uploaded_by_avatar_width}" height="{uploaded_by_avatar_height}" />
+
+Avatar of member who uploaded the file originally
 
 ### `{url}`
 
