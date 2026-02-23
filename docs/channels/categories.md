@@ -166,6 +166,14 @@ Determines whether entries dated in the "future" to are included when calculatin
 
 By default, future dated entries will **not** count when determining whether a category is empty.
 
+### `sort=`
+
+    sort="asc"
+    
+The sort order can be ascending (asc) or descending (desc). The order will default to “descending” if nothing is specified.
+
+This parameter is only applicable when using the "[orderby](#orderby)" parameter to specify the sort order.
+
 ### `status=`
 
     status="open"
