@@ -432,7 +432,7 @@ If you have chosen [inline error handling](#error_handling), you can display the
 
 ### `{field_errors}`
 
-    {field_errors}{error}{/field_errors}
+    {field_errors}{field}: {error}{/field_errors}
 
 If you have chosen [inline error handling](#error_handling), you can display field-related entry submission errors.
 
