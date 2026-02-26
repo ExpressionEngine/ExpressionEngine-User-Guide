@@ -74,6 +74,12 @@ You can hard code the comment form tag to display a comment form for a specific 
 
 NOTE: **Note:** This parameter takes precedence over any entry specified dynamically in the URL, so when using this parameter you will want to make sure it is clear to the user which entry the displayed comment form belongs to.
 
+### `entry_status=`
+
+    entry_status="Featured"
+
+NOTE: **Note:** If this parameter is not specified, the form display will not be affected by an entry's status, unless the entry is set to "closed".
+
 #### `form_class=`
 
     form_class="news_comment_form"

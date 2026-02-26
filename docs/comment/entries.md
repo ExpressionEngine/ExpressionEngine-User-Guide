@@ -84,6 +84,8 @@ NOTE: **Note:** This parameter takes precedence over any entry specified dynamic
 
     entry_status="Featured"
 
+NOTE: **Note:** If this parameter is not specified, comments for entries with any status other than "closed" will be returned.	
+	
 ### `limit=`
 
     limit="30"
