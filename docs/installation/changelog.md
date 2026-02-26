@@ -10,7 +10,7 @@
 
 
 ## Version 7.5.20
-(Release: February 25th, 2026)
+(Release: February 26th, 2026)
 
 NOTE: **Important:** This version includes important security updates.
 
