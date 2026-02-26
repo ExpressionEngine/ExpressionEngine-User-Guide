@@ -121,7 +121,7 @@
                 <li>{error}</li>
                 {/global_errors}
                 {field_errors}
-                <li>{error}</li>
+                <li>{field}: {error}</li>
                 {/field_errors}
             </ul>
         {/if}
