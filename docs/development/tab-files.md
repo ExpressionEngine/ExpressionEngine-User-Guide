@@ -98,11 +98,11 @@ NOTE: **Note:** if your module includes a tab, do not forget to indicate this in
 
 ### `display($channel_id, $entry_id = '')`
 
-| Parameter    | Type    | Description                                           |
-| ------------ | ------- | ----------------------------------------------------- |
-| \$channel_id | `int`   | Channel ID where the entry is being created or edited |
-| \$entry_id   | `int`   | Entry ID if this is an edit, empty otherwise          |
-| Returns      | `Array` | Settings (see below)                                  |
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+| \$channel_id | `int` | Channel ID where the entry is being created or edited |
+| \$entry_id | `int` | Entry ID if this is an edit, empty otherwise |
+| Returns | `Array` | Settings (see below) |
 
 This function creates the fields that will be displayed on the publish page. It must return `$settings`, an associative array specifying the display settings and values associated with each of your fields.
 
@@ -128,11 +128,11 @@ The settings array elements:
 
 ### `validate($entry, $values)`
 
-| Parameter | Type                                                                         | Description                                                                                                                                                                                                            |
-| --------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \$entry   | <small>`ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity                                                                                                                                                                                               |
-| \$values  | `array`                                                                      | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derived from the data returned by `display()`. |
-| Returns   | <small>`ExpressionEngine\Service\Validation\Result`</small>         | A result object                                                                                                                                                                                                        |
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+| \$entry | <small>`ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity |
+| \$values | `array` | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derived from the data returned by `display()`. |
+| Returns | <small>`ExpressionEngine\Service\Validation\Result`</small> | A result object |
 
 Allows you to validate the data after the publish form has been submitted but before any additions to the database:
 
@@ -148,11 +148,11 @@ Allows you to validate the data after the publish form has been submitted but be
 
 ### `cloneData($entry, $values)`
 
-| Parameter | Type                                                                | Description                         |
-| --------- | ------------------------------------------------------------------- | ------ ----------------------------- |
-| \$entry   | <small>`ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity            |
-| \$values  | `array`         | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derived from the data returned by `display()`. |
-| Returns   | `array`         | $values modified array of values  |
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+| \$entry | <small>`ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity |
+| \$values | `array` | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'All your hard work will soon pay off.'))`. The keys are derived from the data returned by `display()`. |
+| Returns | `array` | $values modified array of values |
 
 Code that needs to be executed when an entry is being [cloned](/channels/entry_cloning.md). This function is called before `validate`, so if you need to modify the data that will be passed to validation service (as well as `$_POST` array), this is the place to do it.
 
@@ -182,11 +182,11 @@ Code that needs to be executed when an entry is being [cloned](/channels/entry_c
 
 ### `save($entry, $values)`
 
-| Parameter | Type                                                                         | Description                                                                                                                                                                                                           |
-| --------- | ---------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \$entry   | <small>`ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity                                                                                                                                                                                              |
-| \$values  | `array`                                                                      | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'Do not make extra work for yourself.'))`. The keys are derived from the data returned by `display()`. |
-| Returns   | `Void`                                                                       |                                                                                                                                                                                                                       |
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+| \$entry | <small>`ExpressionEngine\Module\Channel\Model\ChannelEntry`</small> | The channel entry entity |
+| \$values | `array` | an associative array with field names as keys and form submission data as the value (i.e. `array('fortune' => 'Do not make extra work for yourself.'))`. The keys are derived from the data returned by `display()`. |
+| Returns | `Void` | |
 
 Called during a `ChannelEntry` entity's `afterSave` event, this allows you to insert data/update data:
 
@@ -207,10 +207,10 @@ Called during a `ChannelEntry` entity's `afterSave` event, this allows you to in
 
 ### `delete($entry_ids)`
 
-| Parameter   | Type    | Description                                           |
-| ----------- | ------- | ----------------------------------------------------- |
+| Parameter | Type | Description |
+| --------- | ---- | ----------------------------------------------------- |
 | \$entry_ids | `array` | Channel ID where the entry is being created or edited |
-| Returns     | `Void`  |                                                       |
+| Returns | `Void` | |
 
 Called during a `ChannelEntry` entity's `beforeDelete` event, this allows you to sync your records if any are tied to channel entry_ids.
 
@@ -218,12 +218,12 @@ Called during a `ChannelEntry` entity's `beforeDelete` event, this allows you to
 
 Display the tab data as column in the Entry Manager
 
-| Parameter | Type     | Description                               |
-| --------- | -------- | ----------------------------------------- |
-| \$data    | `Array`  | Ignored by tab files                      |
-| \$field_id| `Int`    | Ignored by tab files                      |
-| \$entry   | `Array`  | Current `ChannelEntry` object             |
-| Returns   | `String` | The string to display in Entry Manager column  |
+| Parameter | Type | Description |
+| --------- | ---- | ----------- |
+| \$data | `Array` | Ignored by tab files |
+| \$field_id | `Int`  | Ignored by tab files |
+| \$entry | `Array` | Current `ChannelEntry` object |
+| Returns | `String` | The string to display in Entry Manager column |
 
 #### `getTableColumnConfig()`
 

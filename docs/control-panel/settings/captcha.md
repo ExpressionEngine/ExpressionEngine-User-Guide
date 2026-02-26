@@ -11,13 +11,27 @@
 
 **Control Panel Location: `Settings > CAPTCHA`**
 
-This section of the Control Panel allows you to set [CAPTCHA](security/captchas.md) preferences for your website.
+This section of the Control Panel allows you to set the [CAPTCHA](security/captchas.md) preferences for your website.
 
 ## Settings
 
 ### Require CAPTCHA?
 
-If you enable this preference, then site visitors will be required to pass a CAPTCHA to submit any front-end form, including Channel Form, comment forms, and member registrations. If members are logged in, they will not have to enter a CAPTCHA unless the [Require CAPTCHA while logged in?](#require-captcha-while-logged-in) preference is enabled below.
+If you enable this preference, then site visitors will be required to pass a CAPTCHA to submit any front-end form, including [channel forms](security/captchas.md#channel-forms), [comment forms](security/captchas.md#comment-forms), contact and tell-a-friend email forms](#contact-and-tell-a-friend-email-forms), and [member registrations](security/captchas.md#member-registration-forms). 
+
+If members are logged in, they will not have to enter a CAPTCHA unless the [Require CAPTCHA while logged in?](#require-captcha-while-logged-in) preference is enabled.
+
+Superadmins are not required to submit a captcha and are never shown one.
+
+### Require CAPTCHA while logged in?
+
+If you enable this preference, then even members who are logged in will need to fill out CAPTCHA information in order to post, for example, comments (assuming you've enabled CAPTCHA support for comment posting). If you disable this setting, then members who are logged in will bypass the CAPTCHA check.
+
+### Use reCAPTCHA v3?
+
+If you enable this preference then the system will use reCAPTCHA v3 in place of the built-in image based solution. You will also want to ensure that you [update any code](security/captchas.md#captcha-code) used to output CAPTCHAs on your site.
+
+## Built-in CAPTCHA Settings
 
 ### Use TrueType font?
 
@@ -26,10 +40,6 @@ If your server supports TrueType Fonts, then you can enable this setting. If you
 ### Add random number?
 
 Specify whether to add a random three-digit number to the end of each generated CAPTCHA word. This makes it more difficult for scripts to guess or brute-force the form submission.
-
-### Require CAPTCHA while logged in?
-
-If you enable this preference, then members who are logged in will need to fill out CAPTCHA information in order to post comments (assuming you've enabled CAPTCHA support for comment posting). If you disable this setting, then members who are logged in can bypass the CAPTCHA check.
 
 ### CAPTCHA directory
 
@@ -51,11 +61,9 @@ If you do not know what to use for your full server path, contact your Host or s
 
 ## reCAPTCHA v3 Settings
 
-If you wish to use Google reCAPTCH v3 as a replacement you will need to ensure that the site is set up with Google to gain the required site key and secret. See https://www.google.com/recaptcha/admin/create
+If you wish to use (Google reCAPTCHA v3)[https://cloud.google.com/security/products/recaptcha#how-it-works] as a replacement for the built-in functionality, you will need to ensure that the site is set up with Google with the required site key and secret.
 
-### Use reCAPTCHA v3?
-
-If you enable this preference then the system will use reCAPTCHA v3 in place of the older image based solution.
+Note that there is currently a monthly limit on the number of free CAPTCHAs that Google provides. See https://www.google.com/recaptcha/admin/create
 
 ### reCAPTCHA site key
 

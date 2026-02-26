@@ -34,6 +34,8 @@ These are just a few ideas of what you can do with custom add-ons. The possibili
 ## Getting Started
 Getting started making an add-on is incredibly easy with the CLI. To begin making an add-on, simply use the [`make:addon` command](/cli/built-in-commands/make-addon.md) from the [CLI](/cli/intro.md).
 
+NOTE: Add-ons generated in the latest version of ExpressionEngine are not guaranteed to be backwards compatible with other major versions of ExpressionEngine.  If you need to support an older major version it is best to create the Add-on from that version of ExpressionEngine.
+
 TIP: If you are working with an existing add-on, we recommend you start with [Modernizing add-ons](development/modernizing-existing-add-ons.md)
 
 ```

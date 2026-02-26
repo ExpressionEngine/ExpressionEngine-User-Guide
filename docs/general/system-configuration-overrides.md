@@ -1283,7 +1283,7 @@ Example Usage:
 
     $config['enable_frontedit'] = 'n';
 
-## `enable_frontedit_links`
+## `automatic_frontedit_links`
 
 When set to `n`, disables automatic creation of content management links on front-end. The links can still be [added manually](advanced-usage/front-end/frontend.md#customizing-the-link-location).
 
@@ -1294,7 +1294,7 @@ When set to `n`, disables automatic creation of content management links on fron
 
 Example Usage:
 
-    $config['enable_frontedit_links'] = 'y';
+    $config['automatic_frontedit_links'] = 'y';
 
 ## `enable_hit_tracking`
 
@@ -1470,6 +1470,19 @@ Forces filenames of uploaded files to be unique. Secondary uploads of existing f
 Example Usage:
 
     $config['filename_increment'] = 'y';
+
+## `filesystem_case_sensitive`
+
+Setting this config variable to y will enforce case-sensitive filtering on File Models.  This preserves a legacy behavior, however we recommend using MySQL 8 and a case-sensitive database collation for better performance.
+
+| Value | Behavior                                      |
+| ----- | --------------------------------------------- |
+| y     | Enable case-sensitive file name comparisons  |
+| n     | Disable case-sensitive file name comparisons |
+
+Example Usage:
+
+    $config['filesystem_case_sensitive'] = 'y';
 
 ## `force_query_string`
 
@@ -1657,6 +1670,14 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Content & Design`: [Image Resizing Protocol](control-panel/settings/content-design.md#protocol)
 
+## `image_manipulation_quality`
+
+Default quality for [on-the-fly image manipulations](fieldtypes/file.md#on-the-fly-image-manipulations) (resizing, cropping, etc.). Value should be greater than 0 (lowest quality, smallest file size) and below or equal to 100 (highest quality, largest file size). When not set, the default quality is 75.
+
+Example Usage:
+
+    $config['image_manipulation_quality'] = 90;
+
 ## `include_seconds`
 
 Set the system to include seconds when time is displayed in the interface.
@@ -1840,12 +1861,21 @@ Set the system's method for sending email.
 | mail     | PHP Mail |
 | smtp     | SMTP     |
 | sendmail | Sendmail |
+| dummy    | Log      |
 
 Example Usage:
 
     $config['mail_protocol'] = 'smtp';
 
 **Also found in CP:** `Settings --> Outgoing Email`: [Email Protocol](control-panel/settings/email.md#protocol)
+
+## `dummy_mail_path`
+
+Used when mail_protocol is set to dummy. This is the path to write the email logs to. Default is `/tmp`
+
+Example Usage:
+
+    $config['dummy_mail_path'] = '/mail-log';
 
 ## `max_logged_searches`
 
@@ -2964,6 +2994,8 @@ Set whether the system will allow templates from your default template group to 
 Example Usage:
 
     $config['strict_urls'] = 'n';
+
+NOTE: **Note:** The pagination indicator, upper-case P#, is considered a valid first segment and will not trigger a 404 in order to allow pagination on the index page. Thus https://example.com/P5 will not trigger a 404 with strict_urls enabled.
 
 **Also found in CP:** `Settings --> Template Settings`: [Enable Strict URLs](control-panel/settings/template.md#enable-strict-urls)
 

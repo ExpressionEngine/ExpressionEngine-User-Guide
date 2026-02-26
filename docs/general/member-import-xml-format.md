@@ -92,7 +92,7 @@ NOTE: **Note:** If you import encrypted passwords of one type and your Expressio
 - `<display_signatures>`
 - `<email>`
 - `<forum_theme>`
-- `<group_id>`
+- `<role_id>`
 - `<in_authorlist>`
 - `<ip_address>`
 - `<join_date>`

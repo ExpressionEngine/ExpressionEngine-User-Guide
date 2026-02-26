@@ -33,6 +33,10 @@ Specifies the maximum number of rows this Grid can have. For example, if you ent
 
 Enables moving the Grid rows with drag & drop to change the order
 
+#### Show Row Numbers
+
+Enables the display of row count alongside each row in the data grid.
+
 #### Grid layout
 
 Tip: Grid Field Layout
@@ -107,6 +111,8 @@ Offsets the number of rows output by the tag pair to the number specified here.
     orderby="column_name"
 
 Allows the output of the tag pair to be ordered by a specific column, defaults to row order as set on the channel entry publish form. Entering `random` will return the rows in a random order.
+
+NOTE: **Note:** Unlike `exp:channel:entries`, you can only use one column at a time for sorting.
 
 ### `row_id=`
 

@@ -13,7 +13,7 @@ In addition to `config.php` ExpressionEngine has a number of other configuration
 
 As a general rule, the values provided in those config files (located in `system/ee/ExpressionEngine/Config` folder) are good for most sites, however there might be cases where certain setup would need to override some of the values.
 
-In order to do that, simply copy the corresponding file to `system/user/config` folder and change or add the values that are needed. There is no need to keep the full copy of config file, just keep the properties that need to be changed and remove the ones that you are fine with - the default values will be used for those.
+In order to do that, simply copy the corresponding file to `system/user/config` folder and change or add the values that are needed. 
 
 [TOC=4]
 
@@ -33,15 +33,20 @@ This file contains an array of foreign characters for transliteration conversion
 
 `valid_form_attributes.php`
 
-A list of HTML attributes that are allowed to be passed via EE template tag parameters to the `form` tag when creating forms with `ee()->functions->form_declaration()`. Additionally, attributes prefixed with `data-` and `aria-` can be used.
+A list of HTML attributes that are allowed to be passed via EE template tag parameters to the `form` tag when creating forms with `ee()->functions->form_declaration()`. Additionally, attributes prefixed with `data-` and `aria-` can be used without being specified in the config settings.
 
 #### Allowed Mime Types
 
 `mimes.php`
 
-These are the mime types that are allowed to be uploaded using the upload class. For security reasons the list is kept as small as possible.  If you need to upload types that are not in the list you can add them.
+This file sets the mime types that are allowed to be uploaded using the upload class. For security reasons the list is kept as small as possible.  The `mimes.php` file in your `system/user/config` folder will override the system `mimes.php` entirely.  If you need to upload mime types that are not in the list you can add them. If you want to disallow a mime type that is allowed by default, you can remove it from your mimes.php file and it will be disallowed.  
 
-The mime types are grouped by file type. You can add the allowed mime types directly or you can add new file types containing multiple mimes.
+The mime types are grouped by file type. These file types make up the 'Allowed File Types' options in the [upload directory](control-panel/file-manager/upload-directories.md#allowed-file-types) settings. You can add new mimes to an existing file type or create a new file type and add to that. Your new file type will be included as an option in the file upload preferrence file types.
+
+Tip: Customizing Allowed File Types in ExpressionEngine
+<div class="video-wrapper">
+<iframe src="https://www.youtube.com/embed/W6-NEmd7Urk" width="1920" height="1080" title="Customizing Allowed File Types in ExpressionEngine" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+</div>
 
 #### Reverse Proxy IP addresses
 

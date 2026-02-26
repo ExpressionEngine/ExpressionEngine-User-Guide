@@ -32,6 +32,12 @@ NOTE: **Important:** The Comment Entries tag should **not** be nested inside of 
 
     author_id="5"
 
+### `backspace=`
+
+The `backspace=` parameter will remove characters, including spaces and line breaks, from the last iteration of the tag pair:
+
+    backspace="7"
+
 ### `channel=`
 
     channel="which"
@@ -78,6 +84,8 @@ NOTE: **Note:** This parameter takes precedence over any entry specified dynamic
 
     entry_status="Featured"
 
+NOTE: **Note:** If this parameter is not specified, comments for entries with any status other than "closed" will be returned.	
+	
 ### `limit=`
 
     limit="30"

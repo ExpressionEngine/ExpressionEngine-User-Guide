@@ -152,9 +152,28 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <th><img src="../_images/php-logo.svg" class="php-logo"><strong>8.0</strong></th>
                     <th><img src="../_images/php-logo.svg" class="php-logo"><strong>8.2</strong></th>
                     <th><img src="../_images/php-logo.svg" class="php-logo"><strong>8.3</strong></th>
+                    <th><img src="../_images/php-logo.svg" class="php-logo"><strong>8.4</strong></th>
+                    <th><img src="../_images/php-logo.svg" class="php-logo"><strong>8.5</strong></th>
                 </tr>
             </thead>
             <tbody>
+                <tr>
+                    <td class="ee-version">
+                        <span>
+                            <img src="../_assets/images/ee-logo-black.svg" alt="ExpressionEngine 7.5.14"><strong>7.5.14</strong>
+                        </span>
+                    </td>
+                    <td class="ee-fail"><span>PHP 4.0</span></td>
+                    <td class="ee-fail"><span>PHP 5.6</span></td>
+                    <td class="ee-maybe"><span>PHP 7.0</span></td>
+                    <td class="ee-maybe"><span>PHP 7.2</span></td>
+                    <td class="ee-works"><span>PHP 7.4</span></td>
+                    <td class="ee-works"><span>PHP 8.0</span></td>
+                    <td class="ee-works"><span>PHP 8.2</span></td>
+                    <td class="ee-works"><span>PHP 8.3</span></td>
+                    <td class="ee-works"><span>PHP 8.4</span></td>
+                    <td class="ee-maybe"><span>PHP 8.5</span></td>
+                </tr>
                 <tr>
                     <td class="ee-version">
                         <span>
@@ -169,6 +188,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-works"><span>PHP 8.0</span></td>
                     <td class="ee-works"><span>PHP 8.2</span></td>
                     <td class="ee-works"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
                 <tr>
                     <td class="ee-version">
@@ -185,6 +206,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-works"><span>PHP 8.0</span></td>
                     <td class="ee-works"><span>PHP 8.2</span></td>
                     <td class="ee-maybe"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
                 <tr>
                     <td class="ee-version">
@@ -201,6 +224,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-works"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
                     <td class="ee-fail"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
                 <tr>
                     <td class="ee-version">
@@ -217,6 +242,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-works"><span>PHP 8.0</span></td>
                     <td class="ee-works"><span>PHP 8.2</span></td>
                     <td class="ee-maybe"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
                 <tr>
                     <td class="ee-version">
@@ -233,6 +260,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-works"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
                     <td class="ee-fail"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
                 <tr>
                     <td class="ee-version">
@@ -249,6 +278,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-works"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
                     <td class="ee-fail"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
                 <tr>
                     <td class="ee-version">
@@ -265,6 +296,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
                     <td class="ee-fail"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
                 <tr>
                     <td class="ee-version">
@@ -281,6 +314,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
                     <td class="ee-fail"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
                 <tr>
                     <td class="ee-version">
@@ -297,6 +332,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
                     <td class="ee-fail"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
                 <tr>
                     <td class="ee-version">
@@ -313,6 +350,8 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
                     <td class="ee-fail"><span>PHP 8.0</span></td>
                     <td class="ee-fail"><span>PHP 8.2</span></td>
                     <td class="ee-fail"><span>PHP 8.3</span></td>
+                    <td class="ee-fail"><span>PHP 8.4</span></td>
+                    <td class="ee-fail"><span>PHP 8.5</span></td>
                 </tr>
             </tbody>
         </table>
@@ -325,6 +364,6 @@ NOTE: **Note:** When setting up your local environment, you must make sure it st
 
 <span class="ee-fail"></span> - the system will not work under this PHP version, or a significant part of functionality will not work
 
-<span class="ee-maybe"></span> - some of the functionality might work incorrectly, or compatibility has not been checked
+<span class="ee-maybe"></span> - some of the functionality might work incorrectly, or compatibility has not been checked, or PHP release was in alpha or beta at time support was added.
 
 </div>
