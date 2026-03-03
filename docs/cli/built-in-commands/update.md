@@ -31,3 +31,10 @@ Update -- Updates ExpressionEngine
 ## Examples:
 
 `php eecli.php update --verbose`
+
+## Related: `update:db`
+
+Use [`update:db`](cli/built-in-commands/update-db.md) when you need to run only database update steps.
+
+- `update` updates files and database.
+- `update:db` updates only the database steps.
