@@ -164,10 +164,12 @@ NOTE: **Note:** Calling this method manually without aborting script execution w
 | Parameter | Type     | Description          |
 | --------- | -------- | -------------------- |
 | \$msg  | `Array` | Object to be sent to the client. |
-| \$error  | `Bool|Int` | HTTP status code. If `false`, status code is `200`. If `true`, status code is 500 |
+| \$statusCode  | `Bool|Int` | HTTP status code. If `false`, status code is `200`. If `true`, status code is 500 |
 | Returns   | `Void`   | void                 |
 
-Calling this method encode the given `$msg` parameter and will set the header `Content-Type: application/json`.
+Calling this method encodes the given `$msg` parameter and sets the header `Content-Type: application/json`.
+
+Any headers previously set with `set_header()` are also sent with the AJAX response.
 
 Example:
 
@@ -195,6 +197,15 @@ $output = array(
     'message' => 'not allowed',
 );
 ee()->output->send_ajax_response($output, true);
+```
+
+With a custom response header:
+
+```php
+ee()->output
+    ->set_header('X-Example: value')
+    ->send_ajax_response(['success' => true], 200);
+```
 
 ### `show_message($data, $xhtml = true, $redirect_url = false, $template_name = 'generic')`
 

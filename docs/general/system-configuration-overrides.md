@@ -511,6 +511,7 @@ Specify a different [caching driver](optimization/caching.md#caching-drivers) to
 | Values    | Description                                        |
 | --------- | -------------------------------------------------- |
 | file      | File driver, /system/user/cache/ (default)         |
+| database  | Database driver, stores cache in `exp_cache`       |
 | memcached | Memcached driver, configured with memcached config |
 | redis     | Redis driver, configured with redis config         |
 | dummy     | Dummy driver, will not cache                       |
@@ -518,6 +519,10 @@ Specify a different [caching driver](optimization/caching.md#caching-drivers) to
 Example Usage:
 
     $config['cache_driver'] = 'memcached';
+
+Database-backed caching is also available:
+
+    $config['cache_driver'] = 'database';
 
 ## `cache_driver_backup`
 

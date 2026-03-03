@@ -89,9 +89,11 @@ You can also use disable="category_fields" in the [channel categories](channels/
 
 **Control Panel Location:** `Settings --> Debugging & Output`
 
-By default, ExpressionEngine uses a file-based caching driver, meaning cached items are written to disk. This is the most-compatible option for all servers and works well in most cases. However, the traffic on your site may reach a point where the file-based caching becomes a bottleneck due to disk I/O, or may cause issues in some Network File System instances, in which case you may want to use a memory-based caching driver.
+By default, ExpressionEngine uses a file-based caching driver, meaning cached items are written to disk. This is the most-compatible option for all servers and works well in most cases. However, the traffic on your site may reach a point where file-based caching becomes a bottleneck due to disk I/O, or may cause issues in some Network File System instances.
 
-ExpressionEngine currently supports Memcached and Redis for memory-based caching. You can set which driver is being used in the control panel or via the [cache_driver](general/system-configuration-overrides.md#cache_driver) config override. [Memcached](general/system-configuration-overrides.md#memcached) and [Redis](general/system-configuration-overrides.md#redis) server information can also be set in `config.php`, otherwise ExpressionEngine will try to connect to the default respective ports on localhost.
+ExpressionEngine also supports database, Memcached, and Redis caching drivers. You can set which driver is being used in the control panel or via the [cache_driver](general/system-configuration-overrides.md#cache_driver) config override. [Memcached](general/system-configuration-overrides.md#memcached) and [Redis](general/system-configuration-overrides.md#redis) server information can also be set in `config.php`, otherwise ExpressionEngine will try to connect to the default respective ports on localhost.
+
+The database driver stores cache rows in `exp_cache`, which can reduce filesystem I/O but adds read/write load to your database server. For higher-throughput workloads, Memcached or Redis are generally better choices.
 
 A [backup driver](general/system-configuration-overrides.md#cache_driver_backup) can also be specified in the case your primary driver is unavailable. By default, the backup driver is the file driver and it's likely the best failover option due to its reliability, but the backup driver is configurable.
 
