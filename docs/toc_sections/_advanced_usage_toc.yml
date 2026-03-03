@@ -698,6 +698,8 @@
           href: cli/built-in-commands/sync-upload-directory.md
         - name: Update ExpressionEngine
           href: cli/built-in-commands/update.md
+        - name: Update Database
+          href: cli/built-in-commands/update-db.md
         - name: Version
           href: cli/built-in-commands/version.md
         - name: Widget Generator

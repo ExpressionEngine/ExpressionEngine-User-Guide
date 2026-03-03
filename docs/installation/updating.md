@@ -47,9 +47,13 @@ NOTE: **Website Online Status:** In some versions of ExpressionEngine the curren
 
 You can also update ExpressionEngine via the command line on your server. This allows you to keep your installation's files only writable by your user and not also by your web service.
 
-To update via the [eecli](cli/intro.md) tool, run:
+### Full update (files + database)
 
-    php eecli.php update
+Use [`update`](cli/built-in-commands/update.md) when you need to update both files and database changes.
+
+Example:
+
+    php eecli.php update --verbose
 
 #### Options
 
@@ -57,6 +61,33 @@ To update via the [eecli](cli/intro.md) tool, run:
 - **verbose,v**: Verbose output
 - **force-addon-upgrades**: Automatically runs all addon updaters at end of update (advanced)
 - **y**: Skip all confirmations. (advanced)
+
+### Database-only update
+
+Use [`update:db`](cli/built-in-commands/update-db.md) when files are already in place and you only need to run database update steps.
+
+Examples:
+
+    php eecli.php update:db
+
+    php eecli.php update:db --to-version=7.5.3 -y
+
+#### Options
+
+- **rollback**: Rollback last database update
+- **verbose,v**: Verbose output
+- **y**: Skip all confirmations. (advanced)
+- **skip-cleanup**: Skip cleanup steps after update
+- **to-version**: Target database version to upgrade to
+- **from-version**: Starting database version to upgrade from
+
+#### Notes and caveats
+
+- `--to-version` cannot be greater than the installed app version.
+- If the current database version is already at or above the target version, no update steps are run.
+- If `--from-version` does not match the detected database version, a warning is shown.
+- Rollback requires `system/user/cache/ee_update/database.sql` to exist.
+- If you are running against a local installer payload, `EE_INSTALL_MODE` must be set to `TRUE` in `.env.php`.
 
 ## Updating Manually
 

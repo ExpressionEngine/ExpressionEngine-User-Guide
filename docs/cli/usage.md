@@ -49,6 +49,7 @@ $ php system/ee/eecli.php list
 | hello               | The most basic of commands               |
 | list                | Lists all available commands             |
 | update              | Updates ExpressionEngine                 |
+| update:db           | Runs ExpressionEngine database updates   |
 | cache:clear         | Clears all ExpressionEngine caches       |
 ...
 ```
