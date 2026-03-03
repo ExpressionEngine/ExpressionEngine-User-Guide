@@ -688,6 +688,8 @@
           href: cli/built-in-commands/migrate.md
         - name: Model Generator
           href: cli/built-in-commands/make-model.md
+        - name: Service Generator
+          href: cli/built-in-commands/make-service.md
         - name: Prolet Generator
           href: cli/built-in-commands/make-prolet.md
         - name: Sync Conditional Fields
