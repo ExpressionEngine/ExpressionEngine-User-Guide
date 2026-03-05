@@ -470,7 +470,7 @@ NOTE: **Important:** This version includes important security updates.
 - Resolved an issue where curl requests on Windows could not use the native root certificate store
 - Resolved an issue where updates from the CLI would not increment the version number
 
-NOTE: **Important:** If your site uses any textareas that contain multiple image links, you should [Update File Usage Information](/latest/control-panel/utilities/data-operations.md#update-file-usage-information) after upgrading to trigger a re-count of file usage statistics.
+NOTE: **Important:** If your site uses any textareas that contain multiple image links, you should [Update File Usage Information](control-panel/utilities/data-operations.md#update-file-usage-information) after upgrading to trigger a re-count of file usage statistics.
 
 
 ## Version 7.5.8
@@ -2238,7 +2238,7 @@ NOTE: **Important:** This version includes important security updates.
 
 
 - **Developers** 💻
-  - New [Add-on Classes](development/best-practices/about.md)
+  - New [Add-on Classes](development/addon-development-overview.md)
   - `make:addon` CLI command now generates add-on's with Add-on controller classes
 
 ## Version 7.1.6
@@ -2526,7 +2526,7 @@ NOTE:**Note:** If multiple members are needed, an ExpressionEngine Pro license i
   - Ability to organize content into [subfolders](/control-panel/file-manager/subfolders.md)
   - Folders can now be created directly on the filesystem through the File Manager
   - Implemented [FlySystem PHP library](https://flysystem.thephpleague.com/docs/) to add more extensiblity to the File Manager.
-  - Added support for cloud based file storage through [Adapters](/control-panel/file-manager/adapters.md)
+  - Added support for cloud based file storage through [Adapters](control-panel/file-manager/upload-directories.md#adapter)
   - Changed how files are referenced in the database. Previously files were referenced using `{filedir_X}filename.ext`. Files are now referenced using `{file:XX:url}`. [Compatibility Mode](/control-panel/file-manager/file-manager.md#compatibility-mode) is recommended for upgrades until there is confirmation that all add-ons will work with new file data format.
   - File usage is now available in the File Manager to display where a file is used throughout the Control Panel as well as notify users if a file is in use before deleting the file
 

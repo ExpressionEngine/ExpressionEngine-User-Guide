@@ -15,7 +15,7 @@ lang: php
 
 [TOC]
 
-This guide is an overview of the changes you will need to make to have your add-ons up and running under 3.0. The most notable changes to add-ons are the [addon.setup.php file](development/addon-setup-php-file.md) and the new [Control Panel Style Reference](#control-panel-styles).
+This guide is an overview of the changes you will need to make to have your add-ons up and running under 3.0. The most notable changes to add-ons are the [addon.setup.php file](development/addon-setup-php-file.md) and the new [Control Panel Style Reference](#module-changes).
 
 There are some deprecated features and code, so be sure to check the [Developer Logs](control-panel/system-logs.md#developer-logs) in the control panel for messages regarding method deprecation to make sure your add-on is not calling any deprecated code.
 
@@ -23,7 +23,7 @@ If you're just getting started, we recommend reviewing some of the new service d
 
 - [The addon.setup.php File](development/addon-setup-php-file.md)
 - [General Syntax Changes](#syntax-changes)
-- [Control Panel Pages](#control-panel-styles)
+- [Control Panel Pages](#module-changes)
 
 ## Required Changes
 
@@ -95,7 +95,7 @@ ExpressionEngine 3.0 adopts [PSR-1](https://www.php-fig.org/psr/psr-1/) and [PSR
 
 #### CP URLs
 
-`cp_url(...)` has been deprecated, please use `ee('CP/URL', '...')`. For the full documentation see [Control Panel Styles](#control-panel-styles).
+`cp_url(...)` has been deprecated, please use `ee('CP/URL', '...')`. For the full documentation see [Control Panel Styles](#module-changes).
 
 #### Model Service
 

@@ -177,7 +177,7 @@ You can use the native `category` parameter to filter by category. For more adva
 
 ### `category`
 
-Like the [native category= parameter](/channel/channel_entries.md#category), but it also accepts category URL titles.
+Like the [native category= parameter](channels/entries.md#category), but it also accepts category URL titles.
 
 ### `category:group_name`
 
@@ -235,7 +235,7 @@ You can use the native `search:field_name` parameter to target specific fields. 
 
 #### `search:field_name`
 
-Like the [Channel search:field_name= parameter](/channel/entries.md#searchfield_name).
+Like the [Channel search:field_name= parameter](channels/entries.md#searchfield_name).
 
 #### `search:field_name:column_name`
 
@@ -255,7 +255,7 @@ Works just like the `search:field_name` parameter, but targets statuses.
 
 #### `contains_words`
 
-Accepts search field parameter names. Force the given parameter values to match the full term, to ensure that the values are [not contained within other words](/channel/channel_entries.md#contains-matching). Similar to forcing full term matching by using `search:field_name="value\W"`.
+Accepts search field parameter names. Force the given parameter values to match the full term, to ensure that the values are [not contained within other words](channels/entries.md#contains-matching). Similar to forcing full term matching by using `search:field_name="value\W"`.
 
     contains_words="search:field_name"
 
