@@ -15,9 +15,9 @@ lang: php
 
 [TOC]
 
-ExpressionEngine's Cache Class gives developers easy ways to cache data (strings, arrays, objects) in a key-value store. The storage driver can be either file-based or memory-based. More about supported drivers and configuration can be found under [Data Caching and Performance](optimization/caching.md#caching-drivers).
+ExpressionEngine's Cache Class gives developers easy ways to cache data (strings, arrays, objects) in a key-value store. The storage driver can be file-based, database-backed, or memory-based. More about supported drivers and configuration can be found under [Data Caching and Performance](optimization/caching.md#caching-drivers).
 
-Unlike the [Session Cache](development/legacy/libraries/session.md#cache-access), items stored using the Cache class can persist across multiple page loads because cache items are either stored on disk or in a memory-based cache store not dependent on ExpressionEngine.
+Unlike the [Session Cache](development/legacy/libraries/session.md#cache-access), items stored using the Cache class can persist across multiple page loads because cache items are stored on disk, in the database, or in a memory-based cache store not dependent on ExpressionEngine.
 
 It's highly recommended you use the Cache Class when possible instead of manually writing to a cache directory so that cache items can be easily managed and seamlessly moved to a memory-based cache store so those with high traffic or network file systems can take advantage of the speed and versatility a memory-based cache offers and not be bogged down by file locks and I/O limitations on the disk.
 
@@ -149,3 +149,7 @@ Returns metadata about a particular item in the cache:
 Checks to see if appropriate extensions and resources are available for a driver to determine if it is usable for caching:
 
     ee()->cache->memcached->is_supported();
+
+You can also check database driver support (it returns `FALSE` if the cache table is unavailable):
+
+    ee()->cache->database->is_supported();
