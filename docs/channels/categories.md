@@ -128,6 +128,20 @@ You may alternatively specify which categories to not show
 
 If you specify that a parent category is not shown, then any children of that parent category are then unable to be shown by the tag. The parent category is required for any and all children categories.
 
+### `orderby=`
+
+This parameter allows you to specify the order in which the categories are displayed. Only applicable when using the "[linear](#style)" style. The default is to display the categories in the order they are displayed in the CP, where also they can be reordered. You can order by any of the following:
+
+    orderby="category_name"
+
+    orderby="category_url_title"
+
+    orderby="category_description"
+
+You can also the name of the custom field as the parameter value. If you have a custom field called "my_custom_field" you would use
+
+    orderby="my_custom_field"
+
 ### `show_empty=`
 
     show_empty="no"
@@ -151,6 +165,14 @@ By default, expired entries will **not** count when determining whether a catego
 Determines whether entries dated in the "future" to are included when calculating whether a category has entries when the [show_empty parameter](#show_empty) is set to not show empty categories.
 
 By default, future dated entries will **not** count when determining whether a category is empty.
+
+### `sort=`
+
+    sort="asc"
+    
+The sort order can be ascending (asc) or descending (desc). The order will default to “descending” if nothing is specified.
+
+This parameter is only applicable when using the "[orderby](#orderby)" parameter to specify the sort order.
 
 ### `status=`
 

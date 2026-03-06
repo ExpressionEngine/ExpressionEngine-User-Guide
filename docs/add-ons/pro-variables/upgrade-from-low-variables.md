@@ -14,4 +14,6 @@ In the ExpressionEngine v7.0.0 release, Pro Variables was added added as a nativ
 However, best practice in this situation requires 2 additional steps:
 
 - Remove the old add-on folder system/user/addons/low_variables.  
-- Replace the old format `{exp:low_variables:` tags with new `{exp:pro_variables:` format.  This can be done with the Find and Replace utility found in  `Tools - Utilities - Search and Replace`. It is recommended that you save a database backup before making this change.  Then simply search for `{exp:low_variables:` and replace with `{exp:pro_variables:`. 
+- Replace the old format `{exp:low_variables:` tags with new `{exp:pro_variables:` format.
+
+This can be done with the (Find and Replace utility)[control-panel/utilities/data-operations.md#data-search-and-replace] found in  `Tools - Utilities - Search and Replace`. It is highly recommended that you save a database backup before making this change.  Then search in ALL templates for `{exp:low_variables:` and replace with `{exp:pro_variables:` and for `{/exp:low_variables:` and replace with `{/exp:pro_variables:`

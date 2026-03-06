@@ -55,7 +55,7 @@ Enable this feature only if you **do not** use future entries, expiring entries,
 
 ## Query Disabling
 
-The disable= parameter is available in the {exp:channel:entries} tag. It allows you to turn off aspects of the tag that you might not be using in order to improve performance. The channel tag is designed to fetch a lot of information by default: Categories, fields, member data, etc. Depending on how you use the tag, some of this data may not be needed. Through the use of the "disable" parameter you can turn off aspects of the tag in order to make it more lightweight.
+The disable= parameter is available in the [{exp:channel:entries} tag](channels/entries.md#disable). It allows you to turn off aspects of the tag that you might not be using in order to improve performance. The channel tag is designed to fetch a lot of information by default: Categories, fields, member data, etc. Depending on how you use the tag, some of this data may not be needed. Through the use of the "disable" parameter you can turn off aspects of the tag in order to make it more lightweight.
 
 The syntax for the disable parameter is this: disable="ITEM YOU WANT TO DISABLE". There are five items that can be turned off:
 
@@ -92,6 +92,8 @@ You can also use disable="category_fields" in the [channel categories](channels/
 By default, ExpressionEngine uses a file-based caching driver, meaning cached items are written to disk. This is the most-compatible option for all servers and works well in most cases. However, the traffic on your site may reach a point where the file-based caching becomes a bottleneck due to disk I/O, or may cause issues in some Network File System instances, in which case you may want to use a memory-based caching driver.
 
 ExpressionEngine currently supports Memcached and Redis for memory-based caching. You can set which driver is being used in the control panel or via the [cache_driver](general/system-configuration-overrides.md#cache_driver) config override. [Memcached](general/system-configuration-overrides.md#memcached) and [Redis](general/system-configuration-overrides.md#redis) server information can also be set in `config.php`, otherwise ExpressionEngine will try to connect to the default respective ports on localhost.
+
+You can also set caching to Database, which uses the same database for cache data as the rest of your site data. There are pros and cons to this approach. If you can't easily use memcached or redis, database caching can be another way to use RAM-based caching; on the other hand, this can create additional database read and write calls that can be slower than file or memory-based caching choices. Database works well in load balanced environments, where memcache and redis are more difficult to work with due to the difficulty in synchronizing across servers. Test out database caching performance and compare your specific results before committing to it.
 
 A [backup driver](general/system-configuration-overrides.md#cache_driver_backup) can also be specified in the case your primary driver is unavailable. By default, the backup driver is the file driver and it's likely the best failover option due to its reliability, but the backup driver is configurable.
 

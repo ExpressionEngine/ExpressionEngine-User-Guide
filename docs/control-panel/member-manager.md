@@ -84,7 +84,7 @@ This tab contains the generic settings for the role. You can also assign the rol
 -- Roles included in the author list are available in the author select field on the entry publish/edit page for any channel the role has permission to publish in.
 -- Roles included in the member lists are available to display in the [member list tag](member/memberlist.md).
 
-- **Security Lock** -- If enabled, only Super Admin users can add or remove members to the role.
+- **Security Lock** -- If enabled, only Super Admin users can add or remove members to the role. Locked roles cannot be set as default role, so if you have open member registration, you need to have at least one role that is not locked, and set it as default in [Member Settings](control-panel/settings/members.md#default-primary-role).
 
 - **Role Groups** -- Assign the role to [role groups](control-panel/member-manager.md#role-groups).
 

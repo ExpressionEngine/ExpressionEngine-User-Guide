@@ -75,3 +75,9 @@ We generally recommend using [Template Routes](templates/routes.md) and not modi
 `stopwords.php`
 
 This file contains an array of words that the search functions in EE will ignore in order to a) reduce load, and b) generate better results.
+
+### Reserved field names
+
+`reserved_field_names.php`
+
+This file contains an array of variable names that are reserved by ExpressionEngine and cannot be used as custom field names. 

@@ -58,6 +58,16 @@ If you have defined any [image manipulations](control-panel/file-manager/upload-
 
     {news_image:small}
 
+### Conditional Content Check
+
+If you want to see if there is a file selected, the easiest method is to check for the file URL:
+
+    {if news_image == ""}There is no news image selected.{/if}
+
+or even
+
+    {if news_image}File URL: {news_image}{/if}
+
 ### Wrap Parameter
 
 You will frequently want to link to the file in your entry. Using the wrap parameter can simplify this process:

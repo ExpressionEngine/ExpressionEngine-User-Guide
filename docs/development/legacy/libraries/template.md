@@ -17,7 +17,7 @@ lang: php
 
 If you are not familiar with the ExpressionEngine template language, you may wish to read the [Template Overview](templates/overview.md).
 
-When you create a [Plugin](development/plugins.md) or [Module](development/modules.md), the name of your add-on and any of its public methods become available as ExpressionEngine tags for use in templates:
+When you create a [Plugin](development/custom-template-tags.md) or [Module](development/modules.md), the name of your add-on and any of its public methods become available as ExpressionEngine tags for use in templates:
 
     {exp:addon:method} some template data {/exp:addon:method}
 

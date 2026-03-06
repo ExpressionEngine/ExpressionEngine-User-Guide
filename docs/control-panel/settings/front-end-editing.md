@@ -24,5 +24,7 @@ Enabling the Dock controls whether ExpressionEngine Pro is turned on for the fro
 Enabling front-end editing allows users with respective permissions to edit channel entries and content on the front-end of your website using provided edit links ( <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/pro_edit.png" alt="pro edit icon"> ) .
 
 ## **Enable automatic front-end editing links**
-(Default: On, Matching Config Override: [`enable_frontedit_links`](general/system-configuration-overrides.md#enable_frontedit_links))
+(Default: On, Matching Config Override: [`automatic_frontedit_links`](general/system-configuration-overrides.md#automatic_frontedit_links))
+
 By default ExpressionEngine Pro automatically inserts edit links ( <img style="margin-bottom: 0px; vertical-align: middle; display:inline-block;" src="../../_images/pro_edit.png" alt="pro edit icon"> ) where editable content is found in templates. These can be disabled on a per field basis or globally when using this toggle. When toggled off, ExpressionEngine Pro will no longer automatically generate edit links and links will need to be [added manually](/advanced-usage/front-end/frontend.md#customizing-the-link-location) where needed in templates.
+

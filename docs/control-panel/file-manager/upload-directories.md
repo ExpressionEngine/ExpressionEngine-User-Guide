@@ -66,6 +66,8 @@ Default view type for this upload directory.
 
 Enables creating subfolders within this upload directory and placing files within those.
 
+NOTE: **Note:** Subfolders are available only when File Manager Compatibility Mode is disabled in [Settings -> Content & Design](control-panel/settings/content-design.md#run-file-manager-in-compatibility-mode).
+
 #### Keep subfolders on top?
 
 Group subfolders at the top of the files list when browsing, irrespective of sorting order. When turned off, the folders will be mixed with the files list.
