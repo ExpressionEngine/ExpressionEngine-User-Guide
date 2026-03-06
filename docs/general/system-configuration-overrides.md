@@ -511,6 +511,7 @@ Specify a different [caching driver](optimization/caching.md#caching-drivers) to
 | Values    | Description                                        |
 | --------- | -------------------------------------------------- |
 | file      | File driver, /system/user/cache/ (default)         |
+| database  | Database driver, uses the DB for caching           |
 | memcached | Memcached driver, configured with memcached config |
 | redis     | Redis driver, configured with redis config         |
 | dummy     | Dummy driver, will not cache                       |
