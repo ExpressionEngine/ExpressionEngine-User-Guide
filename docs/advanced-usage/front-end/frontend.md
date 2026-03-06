@@ -95,7 +95,7 @@ The edit link icon for each field can be output in another part of the HTML by u
 
 Inside `{exp:channel:entries}` tag, using a field name postfixed with `:frontedit` will generate an edit link icon for that field, regardless of that field's usual setting.
 
-This is additionally useful if `disable_frontedit_links` configuration override is set and you need to place the links individually.
+This is additionally useful if `automatic_frontedit_links` is set to `n` and you need to place the links individually.
 
 Example usage:
 
@@ -110,7 +110,7 @@ Can be used to place edit link in arbitrary place (also outside or `exp:channel:
 | entry_id   | ID of entry to edit. Required. |
 | field_name | Short name of field to edit. Required unless `field_id` is specified. |
 | field_id   | ID of field to edit. Required unless `field_name` is specified. |
-| site_id    | Required when using MSM and a field name that is not unique. |
+| site_id    | Optional. If omitted, it is derived from `entry_id`. |
 | class      | Extra CSS class to apply to link. |
 
 Example usage:
