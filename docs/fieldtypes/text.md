@@ -21,7 +21,7 @@ The maximum number of characters this field should allow.
 
 ### Text Formatting
 
-Specifies how the entered-text will be formatted when rendered on the front-end. Choices include replacing each linebreak with a `BR` tag, automatically surrounding paragraphs with `P` tags, or Markdown processing. [Additional plugins](development/plugins.md) may be installed to provide more text formatting options.
+Specifies how the entered-text will be formatted when rendered on the front-end. Choices include replacing each linebreak with a `BR` tag, automatically surrounding paragraphs with `P` tags, or Markdown processing. [Additional plugins](development/text-formatting.md) may be installed to provide more text formatting options.
 
 ### Allow Override?
 
