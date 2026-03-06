@@ -185,14 +185,22 @@ Use this parameter to pass through a previously executed encoded search query. N
 
 [TOC=4 hide]
 
-The Results tag supports all parameters from the native channel:entries tag and any parameters made available by the Filters. In addition to those, the following parameters are available. Any parameters set in the tag will override the ones in the given query.
+The Results tag supports:
+* all parameters from the native `channel:entries` tag, and
+* the parameters listed below, and
+* any additional parameters made available by the Filters referenced by your query.
 
-    {exp:pro_search:results query="{segment_3}" default:limit="10"}
+Any parameters set in the `pro_search:results` tag will override the ones in the provided query.
+
+    {exp:pro_search:results query="{segment_3}" default:limit="10" }
+     <p>You searched for "{pro_search_keywords}".</p>
      {if count ==  1}<ol>{/if}
-      <li><a href="{comment_url_title_auto_path}">{title}</a></li>
+      <li><a href="{auto_path}">{title}</a></li>
      {if count == total_results}</ol>{/if}
      {if no_results}No search results{/if}
     {/exp:pro_search:results}
+
+NOTE: **Note:** The Keywords filter has a unique parameter: `collection`. If the `collection` parameter is not set, the keywords Filter will search ALL collections. The `channel` parameter is available to limit any results set, including a result set that used the keywords Filter. But for keywords searches, it is much more efficient to define the specific collection(s) you want to search via the `collection` parameter, rather than limit the results by `channel` after searching EVERY collection.
 
 #### `alias:parameter=`
 
