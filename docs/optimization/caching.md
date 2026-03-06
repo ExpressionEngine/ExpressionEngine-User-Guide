@@ -95,6 +95,8 @@ ExpressionEngine also supports database, Memcached, and Redis caching drivers. Y
 
 The database driver stores cache rows in `exp_cache`, which can reduce filesystem I/O but adds read/write load to your database server. For higher-throughput workloads, Memcached or Redis are generally better choices.
 
+You can also set caching to Database, which uses the same database for cache data as the rest of your site data. There are pros and cons to this approach. If you can't easily use memcached or redis, database caching can be another way to use RAM-based caching; on the other hand, this can create additional database read and write calls that can be slower than file or memory-based caching choices. Database works well in load balanced environments, where memcache and redis are more difficult to work with due to the difficulty in synchronizing across servers. Test out database caching performance and compare your specific results before committing to it.
+
 A [backup driver](general/system-configuration-overrides.md#cache_driver_backup) can also be specified in the case your primary driver is unavailable. By default, the backup driver is the file driver and it's likely the best failover option due to its reliability, but the backup driver is configurable.
 
 Add-on developers can find more information about using caching drivers to store and retrieve items in the [Cache Class](development/legacy/libraries/cache.md) documentation.

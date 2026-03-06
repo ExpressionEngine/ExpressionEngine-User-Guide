@@ -8,6 +8,29 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.21
+(Release: March 2nd, 2026)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Resolved an issue where file usage parsing could fail when content contained bare legacy filedir tokens (for example `{filedir_7}` without a relative path), preventing errors in nested content contexts [#5171](https://github.com/ExpressionEngine/ExpressionEngine/pull/5171)
+- Hardened the Translate utility save flow to only persist expected translation keys and reject unexpected/non-scalar posted values [#5173](https://github.com/ExpressionEngine/ExpressionEngine/pull/5173)
+- Improved Translate utility resilience when language files are invalid or malformed by surfacing CP issue alerts and safely falling back [#5173](https://github.com/ExpressionEngine/ExpressionEngine/pull/5173)
+
+**Developers** 💻
+
+- Added extensive tests for Translate utility validation, file generation safety, and error handling [#5173](https://github.com/ExpressionEngine/ExpressionEngine/pull/5173)
+- Added tests for `FileUsageTrait` handling of bare filedir tokens [#5171](https://github.com/ExpressionEngine/ExpressionEngine/pull/5171)
+- Updated GitHub Actions test workflows to support Cypress dashboard toggling and full-suite fallback behavior [#5176](https://github.com/ExpressionEngine/ExpressionEngine/pull/5176)
+
 
 ## Version 7.5.20
 (Release: February 26th, 2026)
@@ -447,7 +470,7 @@ NOTE: **Important:** This version includes important security updates.
 - Resolved an issue where curl requests on Windows could not use the native root certificate store
 - Resolved an issue where updates from the CLI would not increment the version number
 
-NOTE: **Important:** If your site uses any textareas that contain multiple image links, you should [Update File Usage Information](/latest/control-panel/utilities/data-operations.md#update-file-usage-information) after upgrading to trigger a re-count of file usage statistics.
+NOTE: **Important:** If your site uses any textareas that contain multiple image links, you should [Update File Usage Information](control-panel/utilities/data-operations.md#update-file-usage-information) after upgrading to trigger a re-count of file usage statistics.
 
 
 ## Version 7.5.8
@@ -2215,7 +2238,7 @@ NOTE: **Important:** This version includes important security updates.
 
 
 - **Developers** 💻
-  - New [Add-on Classes](development/best-practices/about.md)
+  - New [Add-on Classes](development/addon-development-overview.md)
   - `make:addon` CLI command now generates add-on's with Add-on controller classes
 
 ## Version 7.1.6
@@ -2503,7 +2526,7 @@ NOTE:**Note:** If multiple members are needed, an ExpressionEngine Pro license i
   - Ability to organize content into [subfolders](/control-panel/file-manager/subfolders.md)
   - Folders can now be created directly on the filesystem through the File Manager
   - Implemented [FlySystem PHP library](https://flysystem.thephpleague.com/docs/) to add more extensiblity to the File Manager.
-  - Added support for cloud based file storage through [Adapters](/control-panel/file-manager/adapters.md)
+  - Added support for cloud based file storage through [Adapters](control-panel/file-manager/upload-directories.md#adapter)
   - Changed how files are referenced in the database. Previously files were referenced using `{filedir_X}filename.ext`. Files are now referenced using `{file:XX:url}`. [Compatibility Mode](/control-panel/file-manager/file-manager.md#compatibility-mode) is recommended for upgrades until there is confirmation that all add-ons will work with new file data format.
   - File usage is now available in the File Manager to display where a file is used throughout the Control Panel as well as notify users if a file is in use before deleting the file
 
