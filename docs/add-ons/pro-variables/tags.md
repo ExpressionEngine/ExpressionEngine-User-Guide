@@ -17,7 +17,7 @@ In most cases, the simple global variable syntax, eg. `{my_var}` will do. Global
 
     {exp:pro_variables:parse var="my_var"}
 
-Use the Parse, Single or Pair tag to parse variables during the Module & Plugin stage. You can also use parameters, which will allow for more options than just using the variable syntax. Some variable types, like RTE and Grid, require using the tag syntax to trigger additional processing.
+Use the Parse, Single or Pair tags to parse variables during the Module & Plugin stage of template parsing. Parse can be used as either a single or a pair tag - but that can sometimes confuse the EE parser if it's in use both ways in a template. Like all `exp:` tags, these can be assigned parameters, which will allow for more options than just using the variable syntax. Some variable types, like File, RTE and Grid, require using the tag syntax to trigger additional processing.
 
 TIP: TIP: **{ee:u}** Learn more about the parsing stages at [ExpressionEngine University](https://u.expressionengine.com/course/ee-conf-spring-summit-2021/eeconf-spring-2021-but-first-parse-order-and-php-in-expressionengines-templates).
 
@@ -27,7 +27,7 @@ NOTE: **Note:** Whenever you need parameters or additional processing, use the *
 
 #### `var`
 
-Name of the variable you want to parse. Use a colon to separate site name and variable name if you want to parse a variable belonging to a specific site, eg. `my_site:my_var`. If this parameter is omitted, all Pro Variables inside the tag pair are simply replaced with their values.
+Name of the variable you want to parse. If you're using multi-site manager, use a colon to separate site name and variable name if you want to parse a variable belonging to a specific site, e.g. `my_site:my_var`. If the var parameter is omitted (it is optional with a tag pair), all Pro Variables inside the tag pair are replaced with their values.
 
 #### `multiple`
 
@@ -37,30 +37,31 @@ If set to `yes`, the tag will loop through the different values of the variable.
 
 Use in combination with `multiple="yes"` to limit the number of results displayed.
 
-
 #### _3rd party_
 
 If you’re displaying a 3rd party field type, you can use all parameters you would normally use for the field channel variable pair.
 
-### Variables
+### Variable Options
 
-#### `{_my_var_:data}`
+NOTE: **Note:** Some of these `{my_var:…}` variable options are available _only_ when using the Parse tag pair or Pair tag pair, _and_ if the variable type allows multiple items to be selected. For more options on the native variable types, [check their properties](/add-ons/pro-variables/type.md).
+
+#### `{my_var:data}`
 
 The variable value.
 
-#### `{_my_var_:data_label}`
+#### `{my_var:data_label}`
 
 The variable value’s label, when displaying a Checkbox Group, Radio Group or Select variable type.
 
-#### `{_my_var_:label}`
+#### `{my_var:label}`
 
 The variable label, as displayed in the Control Panel.
 
-#### `{_my_var_:count}`
+#### `{my_var:count}`
 
 Current count of the loop.
 
-#### `{_my_var_:total_results}`
+#### `{my_var:total_results}`
 
 Total of iterations of the loop.
 
@@ -68,7 +69,15 @@ Total of iterations of the loop.
 
 If you’re displaying a 3rd party field type, you can use all variables you would normally use inside the field channel variable pair.
 
-NOTE: **Note:** the `{_my_var_:…}` variables are _only_ available when using the Parse tag pair or Pair tag pair, _and_ if the variable type allows multiple items to be selected. For more options on the native variable types, [check their properties](/add-ons/pro-variables/type.md).
+### Variable Modifiers
+
+You can use [variable modifiers](templates/variable-modifiers.md) on Pro Variables when using them in a tag pair.
+
+    {exp:pro_variables:parse}
+      Encrypted text var: {my_text:encrypt}
+    {/exp:pro_variables:parse}
+
+### Code Examples
 
     {exp:pro_variables:parse var="my_site:my_var"}
 
@@ -97,15 +106,15 @@ In order to avoid conflicts with multiple instances of the Parse tag, both singl
 
 ## Pair tag
 
-    {exp:pro_variables:pair var="my_var"}{/exp:pro_variables:pair}
+    {exp:pro_variables:pair var="my_var"}{my_var:data}{/exp:pro_variables:pair}
 
 In order to avoid conflicts with multiple instances of the Parse tag, both single and paired, you can use the alias `{exp:pro_variables:pair}` for tag pair use. It is identical to the Parse tag, but meant for tag pair use only.
 
-You can also use [variable modifiers](templates/variable-modifiers.md) on pro variables when using them in a tag pair:
+You can also use [variable modifiers](templates/variable-modifiers.md) on Pro Variables when using them in a tag pair:
 
-    {exp:pro_variables:parse}
+    {exp:pro_variables:pair var="my_text"}
       Encrypted text var: {my_text:encrypt}
-    {/exp:pro_variables:parse}
+    {/exp:pro_variables:pair}
 
 ## Label tag
 
@@ -117,29 +126,33 @@ You can display the label of any variable by using this tag. Use as single tag o
 
 #### `var`
 
-Name of the variable you want to fetch the label from. Use a colon to separate site name and variable name if you want to parse a variable belonging to a specific site, eg. `my_site:my_var`. _This is a required parameter_.
+Name of the variable you want to fetch the label from. Use a colon to separate site name and variable name if you want to parse a variable belonging to a specific site, e.g. `my_site:my_var`. _This is a required parameter_.
 
 ## Options tag
 
+      {exp:pro_variables:options var="my_site:my_multi_var"}
+        <label><input type="checkbox" value="{my_multi_var:data}" {checked} /> {my_multi_var:data_label}</label>
+      {/exp:pro_variables:options}
+      
 This tag pair allows you to display the options for a given variable. Use this in combination with the **Checkbox Group**, **Radio Group** and **Select** variable types.
 
 ### Parameters
 
 #### `var`
 
-Name of the variable you want to parse. Use a colon to separate site name and variable name if you want to parse a variable belonging to a specific site, eg. `my_site:my_var`. _This is a required parameter_.
+Name of the variable you want to parse e.g. `var="my_var"` . Use a colon to separate site name and variable name if you want to parse a variable belonging to a specific site, eg. `my_site:my_var`. _This is a required parameter_.
 
-### Variables
+### Variables and Variable Options
 
-#### `{_my_var_:data}`
+#### `{my_var:data}`
 
 Value of the option.
 
-#### `{_my_var_:data_label}`
+#### `{my_var:data_label}`
 
 Associated label of the value.
 
-#### `{_my_var_:label}`
+#### `{my_var:label}`
 
 Label of the variable itself.
 
@@ -161,7 +174,9 @@ The total amount of options.
 
 #### `{count}`
 
-The count out of the current option.
+The count of the current option.
+
+### Code Examples
 
     {exp:pro_variables:options var="my_multi_var"}
       {if count == 1}<ul>{/if}

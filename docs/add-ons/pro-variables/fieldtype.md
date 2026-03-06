@@ -27,7 +27,9 @@ The value of the field will be the _variable name_, for example: `my_var`. To ou
 
 ## Examples
 
-Say you have 5 different testimonial quotes stored as variables in the variable group Quotes, named `lv_quote_1` to `lv_quote_5`. To each News entry, you want to add one of those quotes. Then add a Pro Variables field to your News field group, eg. `news_quote`. Then select the Quotes group in the field settings. To output the quote, you’d need code like this:
+Say you have 5 different testimonial quotes stored as variables in the variable group Quotes, named `pv_quote_1` to `pv_quote_5`. (Remember, you can create these in one pass using the (suffix option)[/add-ons/pro-variables/manage.md#variable-creation-options].)
+
+To each News entry, you want to add one of those quotes. Then add a Pro Variables field to your News field group, eg. `news_quote`. Then select the Quotes group in the field settings. To output the quote, you’d need code like this:
 
     {exp:channel:entries channel="news"}
       <h2>{title}</h2>

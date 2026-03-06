@@ -64,8 +64,6 @@ There are multiple ways to enable or disable front-end editing links:
  - In the template by using [ExpressionEngine template comments](#expressionengine-comment), [HTML comments](#html-comment), or the [`disable` field parameter](#field-tag-parameter)
  - By granting or removing editing access to a user role
 
-### Enable/Disable the Front Edit Link in the Template
-
 #### Using ExpressionEngine Comments
 
 Any content wrapped in these EE comments will not have edit links in it.

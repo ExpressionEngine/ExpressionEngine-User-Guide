@@ -21,7 +21,7 @@ The Text Helper file contains functions that assist in working with text. This h
 
 [TOC=3]
 
-### `word_limiter($str[, $limit = 100[, $end_char = '&#8230;']])`
+### `word_limiter($str[, $limit = 100[, $end_char = '...']])`
 
 | Parameter  | Type     | Description                         |
 | ---------- | -------- | ----------------------------------- |
@@ -38,7 +38,7 @@ Truncates a string to the number of _words_ specified. Example:
 
 The third parameter is an optional suffix added to the string. By default it adds an ellipsis.
 
-### `character_limiter($str[, $n = 500[, $end_char = '&#8230;']])`
+### `character_limiter($str[, $n = 500[, $end_char = '...']])`
 
 | Parameter  | Type     | Description                         |
 | ---------- | -------- | ----------------------------------- |

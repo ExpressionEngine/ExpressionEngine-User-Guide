@@ -132,6 +132,23 @@ Now when a user selects some content in the table, the bulk action controls shou
 
 ## Advanced functionality
 
+### Required interaction
+
+By default, clicking the close button, the escape key, or anywhere outside of the modal will close it, acting similar to cancelling the action the modal was prompting for. But if you want to prevent this default behavior and instead want to require the modal to be interacted with, you can add the `must-interact` class as part of the `name` parameter.
+
+    $modal_vars = array(
+      'name' => 'hello must-interact',
+      // ... other settings
+    );
+    $modal_html = ee('View')->make('ee:_shared/modal_confirm_delete')->render($modal_vars);
+
+NOTE: Note: you will also need to add custom JS to remove `.must-interact`, and then trigger the `modal:close` event in order to close it.
+
+    $('.modal-wrap .dialog__buttons button').on('click', function() {
+        $(this).closest('.must-interact').removeClass('must-interact');
+        $(this).closest('.modal').trigger('modal:close');
+    });
+    
 ### Automatically open a modal
 
 If you manually build a modal view, you can add `.app-modal` and a `rev` attribute like:
