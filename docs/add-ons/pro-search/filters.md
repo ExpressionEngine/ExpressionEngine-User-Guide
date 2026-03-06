@@ -18,7 +18,7 @@ For instance, if a search form contains a `keywords` field, the [Keywords filter
 
 The Keywords filter lets you filter entries by search terms (ie. keywords) and calculates a relevance score for each item in the search results.
 
-NOTE: **Note:** You need to create at least one [Collection](add-ons/pro-search/collections.md) to use with the Keywords filter. (You don't need to create a collection to use the other types of filters, just when using Keywords.)
+NOTE: **Note:** You need to create at least one [Collection](/add-ons/pro-search/collections.md) to use with the Keywords filter. (You don't need to create a collection to use the other types of filters, just when using Keywords.)
 
 To further fine-tune a keyword search, the following parameters are available.
 
@@ -26,7 +26,7 @@ To further fine-tune a keyword search, the following parameters are available.
 
 #### collection
 
-Limit search results to specified [collections](add-ons/pro-search/collections.md) (names or IDs). If this parameter is not used and keywords are being searched, EE will search in all collections, so it's best to use this rather than `channel=` in the results. 
+Limit search results to specified [collections](/add-ons/pro-search/collections.md) (names or IDs). If this parameter is not used and keywords are being searched, EE will search in all collections, so it's best to use this rather than `channel=` in the results. 
 
     collection="news|staff"
 
@@ -228,11 +228,11 @@ The unit for the distances, either km, mi, m or yd. Defaults to km.
 
 The calculated distance in the given unit for this entry. The Distance filter makes this variable available in the [Results tag](/add-ons/pro-search/tags.md#exppro_searchresults).
 
-NOTE: **Note:** Using the Distance filter will return the search results ordered by distance instead of keyword relevance (if applicable). You can override this by explicitly setting the orderby parameter to `relevance`.
+NOTE: **Note:** Using the Distance filter will return the search results ordered by distance instead of keyword relevance (if applicable). You can override this by explicitly setting the orderby parameter to `pro_search_score`.
 
 ## Field Search
 
-Use the native `search:field_name` parameter to target specific fields, just like `channel:entry` does already. Additionally, Pro Search's `pro_search:results` can target the entry’s ***title***, ***url_title***, ***status***, and target [Grid](/fieldtypes/grid.md) columns. It can also use multiple values for [numeric matching](/channels/entries.md#numeric-matching) (in combination with the `gt`, `gte`, `lt` and `lte` params), and use ***starts / ends with*** matching.
+Use the native `search:field_name` parameter to target specific fields, just like `channel:entries` does already. Additionally, Pro Search's `pro_search:results` can target the entry’s ***title***, ***url_title***, ***status***, and target [Grid](/fieldtypes/grid.md) columns. It can also use multiple values for [numeric matching](/channels/entries.md#numeric-matching) (in combination with the `gt`, `gte`, `lt` and `lte` params), and use ***starts / ends with*** matching.
 
 ### Parameters
 
