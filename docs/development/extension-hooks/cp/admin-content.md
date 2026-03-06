@@ -42,6 +42,20 @@ How it's called:
 
     ee()->extensions->call('category_save', $cat_id, $category_data);
 
+## `category_reorder_end($changed_rows, $group_id)`
+
+| Parameter       | Type    | Description                                                                 |
+| --------------- | ------- | --------------------------------------------------------------------------- |
+| \$changed_rows  | `Array` | Changed category rows saved during reorder. Each row includes `cat_id`, `parent_id`, and `cat_order`. |
+| \$group_id      | `Int`   | Category group ID being reordered                                           |
+| Returns         | `Void`  |                                                                             |
+
+This hook is executed after category reordering is successfully saved in the Control Panel. It only runs after the reorder transaction completes and receives only the rows that changed.
+
+How it's called:
+
+    ee()->extensions->call('category_reorder_end', $changed_rows, (int) $group_id);
+
 ## `foreign_character_conversion_array`
 
 See Content_publish's `foreign_character_conversion_array`.
