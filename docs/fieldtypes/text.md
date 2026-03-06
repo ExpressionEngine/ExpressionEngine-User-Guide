@@ -17,11 +17,21 @@ Text Input is a single-lined free-form writing space where you can enter text or
 
 ### Maximum Characters
 
-The maximum number of characters this field should allow.
+The maximum number of characters this field should allow. This will not affect existing entries, but the limit will be in effect when you try to edit them.
 
 ### Text Formatting
 
-Specifies how the entered-text will be formatted when rendered on the front-end. Choices include replacing each linebreak with a `BR` tag, automatically surrounding paragraphs with `P` tags, or Markdown processing. [Additional plugins](development/text-formatting.md) may be installed to provide more text formatting options.
+Specifies how the entered text will be formatted when rendered on the front-end. Choices include:
+
+* **None** - content will be output exactly as entered
+* [**Auto line break**](/general/text-formatting.html#auto-br) - simply replaces each linebreak with a `<br>` tag
+* [**Markdown**](/general/text-formatting.html#markdown) - processes content as Markdown and outputs HTML
+* **XML Encode** - content is formatted and escaped for safe use in an XML document like an RSS feed
+* [**XHTML**](/general/text-formatting.html#auto-xhtml) - Encloses paragraphs with `<p>` tags, adds curly quotes, and does other more advanced processing to make plain text into proper HTML while leaving any HTML intact.
+
+For a text input field, the output may not seem to vary too much. [Additional plugins](development/plugins.md) may be installed to provide more text formatting options.
+
+NOTE: **Note:** To see the Markdown or XML Encode options, those add-ons on must be installed.
 
 ### Allow Override?
 

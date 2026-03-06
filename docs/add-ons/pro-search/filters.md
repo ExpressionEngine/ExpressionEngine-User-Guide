@@ -10,19 +10,23 @@
 
 [TOC]
 
+Different type of Filters are automatically used by the `pro_search:results` tag when the query form uses specific field names, or the results tag includes specific parameters. 
+
+For instance, if a search form contains a `keywords` field, the [Keywords filter](#keywords-filter) will be invoked. If the results tag has a `distance:to="cf_entry_lat|cf_entry_long"` parameter, the [Distance filter](#distance-filter) will be used. If the `search:field_name` parameter or field is used, Pro Search will use the [Field Search filter](#field-search) on the results
 
 ## Keywords Filter
 
-The Keywords filter lets you filter entries by search terms (ie. keywords). You need to create at least one Collection to use the Keywords filter. (You don't need a collection for other types of filters.)
+The Keywords filter lets you filter entries by search terms (ie. keywords) and calculates a relevance score for each item in the search results.
 
-Using the Keywords filter also adds a relevance score to the search results. To further fine-tune a keyword search, the following parameters are available.
+NOTE: **Note:** You need to create at least one [Collection](/add-ons/pro-search/collections.md) to use with the Keywords filter. (You don't need to create a collection to use the other types of filters, just when using Keywords.)
 
+To further fine-tune a keyword search, the following parameters are available.
 
 ### Parameters
 
 #### collection
 
-Limit search results to given collection names or IDs. If this is not specified and keywords are given, results will use all collections
+Limit search results to specified [collections](/add-ons/pro-search/collections.md) (names or IDs). If this parameter is not used and keywords are being searched, EE will search in all collections, so it's best to use this rather than `channel=` in the results. 
 
     collection="news|staff"
 
@@ -173,7 +177,7 @@ NOTE: **Note:** When enabled, inflections and stems are only applied to keyword 
 
 ## Categories
 
-You can use the native `category` parameter to filter by category. For more advanced filtering by category, you can also divide categories into groups. The group syntax lets you combine AND and OR filtering (category 1 or 2 and category 3 or 4), as parameters are always combined with AND.
+Use the native `category` parameter to filter by category. For more advanced filtering by category, you can also divide categories into groups. The group syntax lets you combine AND and OR filtering (category 1 or 2 and category 3 or 4), as parameters are always combined with AND.
 
 ### `category`
 
@@ -187,27 +191,28 @@ NOTE: **Note:** Use category IDs instead of URL titles for better performance.
 
 ## Distance
 
-You can use the Distance filter to limit results by a given maximum distance. This filter prefers for you to use two channel fields where latitude and longitude values are stored. Alternatively, you can use a single field where the two values are separated by a comma. Using the Distance filter will limit results to entries that actually have latitude and longitude values entered.
+Use the Distance filter to limit results by a given maximum distance. This filter prefers for you to use two channel fields where latitude and longitude values are stored. Alternatively, you can use a single field where the two values are separated by a comma. Using the Distance filter will limit results to entries that actually have latitude and longitude values entered.
 
 ### Parameters
 
 #### `distance:from`
 
-Latitude and longitude values separated by a vertical bar, used to calculate the distance.
+The spot you're using to calculate the distance from. Must be latitude and longitude values separated by a vertical bar.
 
     distance:from="52.163298|4.505547"
 
 #### `distance:to`
 
-The one or two channel field names that contain the latitude and longitude values separated by a vertical bar, used to calculate the distance.
+The one or two channel field names that contain the latitude and longitude values you're comparing distance to, separated by a vertical bar if two fields.
 
+    distance:to="store_geocode"
     distance:to="cf_entry_lat|cf_entry_long"
 
 NOTE: **Note:** Use two separate fields instead of a single one for better performance.
 
 #### `distance:radius`
 
-The maximum distance between the from and to values. Leave blank for no maximum.
+The maximum distance allowable between the from and to values. Leave blank for no maximum.
 
     distance:radius="50"
 
@@ -219,17 +224,15 @@ The unit for the distances, either km, mi, m or yd. Defaults to km.
 
 ### Variables
 
-The Distance filter makes this variable available in the [Results tag](/add-ons/pro-search/tags.md#exppro_searchresults):
-
 #### `{pro_search_distance}`
 
-The calculated distance in the given unit for this entry.
+The calculated distance in the given unit for this entry. The Distance filter makes this variable available in the [Results tag](/add-ons/pro-search/tags.md#exppro_searchresults).
 
-NOTE: **Note:** Using the Distance filter will return the search results ordered by distance, ignoring keyword relevance if applicable. Override by explicitly setting the orderby parameter.
+NOTE: **Note:** Using the Distance filter will return the search results ordered by distance instead of keyword relevance (if applicable). You can override this by explicitly setting the orderby parameter to `pro_search_score`.
 
 ## Field Search
 
-You can use the native `search:field_name` parameter to target specific fields. Additionally, Pro Search can target the entry’s ***title***, ***url_title***, ***status***, target [Grid](/fieldtypes/grid.md) columns, use multiple values for [numeric matching](/channels/entries.md#numeric-matching) (in combination with the `gt`, `gte`, `lt` and `lte` params), and use ***starts / ends with*** matching.
+Use the native `search:field_name` parameter to target specific fields, just like `channel:entries` does already. Additionally, Pro Search's `pro_search:results` can target the entry’s ***title***, ***url_title***, ***status***, and target [Grid](/fieldtypes/grid.md) columns. It can also use multiple values for [numeric matching](/channels/entries.md#numeric-matching) (in combination with the `gt`, `gte`, `lt` and `lte` params), and use ***starts / ends with*** matching.
 
 ### Parameters
 
@@ -295,25 +298,33 @@ NOTE: **Note:** using `smart_field_search="yes"` can affect performance, dependi
 
 ## Ranges
 
-You can use the Ranges filter to limit results by a given range, targeting a numeric or date field. If Pro Search detects that the given channel field for the range is a date field, it will try and convert the given range values to timestamps. This will allow custom date ranges as well.
+Use the Ranges filter to target a numeric or date field and limit results by a given range. If Pro Search detects that the given channel field for the range is a date field, it will try and convert the given range values to timestamps. This will allow custom date ranges as well.
 
 ### Parameters
 
 #### `range:field_name`
 
-Takes a from and to value, separated by a vertical bar: |. Use `field_name:column_name` to target Grid/Matrix columns (v4.2.0+).
+Takes both a from and to value, separated by a vertical bar: |. Use `field_name:column_name` to target Grid/Matrix columns (v4.2.0+).
+
+    range:ticket_price="20|80"
 
 #### `range-from:field_name`
 
 Takes a single from value. Use `field_name:column_name` to target Grid/Matrix columns (v4.2.0+).
 
+    range-from:hire_date="2020-01-01"
+
 #### `range-to:field_name`
 
 Takes a single to value. Use field_name:column_name to target Grid/Matrix columns (v4.2.0+).
 
+    range-to:age="65"
+
 #### `range:min_field:max_field`
 
 Where min and max are two separate (non-Grid/Matrix) fields. If a single value is given, entries will be returned where the value is between the min and max fields. If a from and to value is given, entries will be returned where the min and max fields overlap the given range.
+
+    range:min-deposit:max-deposit="1000"
 
 #### `range-from:min_field:max_field`
 
@@ -325,7 +336,7 @@ Where min and max are two separate fields. Takes a single to value.
 
 #### `exclude`
 
-Accepts parameter names. Excludes a given parameter value from the range itself. For example, `range:field_name="0|10" exclude="range:field_name"` will result in values `> 0` and `< 10` rather than `>= 0` and `<= 10`.
+Accepts parameter names. Excludes a given parameter value from the range itself. For example, `range:field_name="0|10" exclude="range:field_name"` will result in search values `> 0` and `< 10` rather than `>= 0` and `<= 10`.
 
 NOTE: **Note:** For numeric fields, make sure the Field Content option in the field’s settings is set to Number, Integer or Decimal.
 
@@ -346,7 +357,7 @@ Apart from any custom numeric or date field, the following standard channel fiel
 
 ## Relationships
 
-You can use the Relationships filter to limit results by given parent or child entry IDs. The filter works for [Relationships fieldtypes](/fieldtypes/relationships.md).
+Use the Relationships filter to limit results by given parent or child entry IDs. The filter works for [Relationships fieldtypes](/fieldtypes/relationships.md).
 
 ### Parameters
 
@@ -370,7 +381,7 @@ NOTE: **Note:** Use entry IDs instead of URL titles for better performance.
 
 ## Tags
 
-You can use the Tags filter to limit results by given tag names or IDs. For more advanced filtering by tags, you can also divide tags into groups. The group syntax lets you combine AND and OR filtering (tag 1 or 2 and tag 3 or 4), as parameters are always combined with AND.
+Use the Tags filter to limit results by given tag names or IDs. For more advanced filtering by tags, you can also divide tags into groups. The group syntax lets you combine AND and OR filtering (tag 1 or 2 and tag 3 or 4), as parameters are always combined with AND.
 
 ### Parameters
 

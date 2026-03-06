@@ -119,6 +119,10 @@ This variable simply displays the content from the "Descriptive name of upload d
 
 The file's extension, if it has one.
 
+### `{file:XX:url}`
+
+This is not actually a template tag. It appears in the contents of an entry's field to reference a file. See [Textarea Fieldtype](/fieldtypes/textarea.md#filexxurl-tag--inserting-a-file).
+
 ### `{file_id}`
 
 The unique id of the file.
