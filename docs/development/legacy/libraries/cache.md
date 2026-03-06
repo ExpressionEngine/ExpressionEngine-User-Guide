@@ -150,6 +150,6 @@ Checks to see if appropriate extensions and resources are available for a driver
 
     ee()->cache->memcached->is_supported();
 
-You can also check database driver support:
+You can also check database driver support (it returns `FALSE` if the cache table is unavailable):
 
     ee()->cache->database->is_supported();

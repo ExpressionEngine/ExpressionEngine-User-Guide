@@ -163,8 +163,8 @@ NOTE: **Note:** Calling this method manually without aborting script execution w
 
 | Parameter | Type     | Description          |
 | --------- | -------- | -------------------- |
-| \$msg  | `Array` | Object to be sent to the client. |
-| \$statusCode  | `Bool|Int` | HTTP status code. If `false`, status code is `200`. If `true`, status code is 500 |
+| \$msg  | `Mixed` | Value to be encoded and sent to the client. |
+| \$statusCode  | `Bool|Int` | HTTP status code. If `false`, status code is `200`. If `true`, status code is `500`. |
 | Returns   | `Void`   | void                 |
 
 Calling this method encodes the given `$msg` parameter and sets the header `Content-Type: application/json`.
@@ -179,11 +179,11 @@ Example:
     );
     ee()->output->send_ajax_response($output);
 
-With status code (401):
+With status code (`401`):
 
-```
+```php
 $output = array(
-    'sucess' => 'false',
+    'success' => false,
     'message' => 'not allowed',
 );
 ee()->output->send_ajax_response($output, 401);
@@ -191,9 +191,9 @@ ee()->output->send_ajax_response($output, 401);
 
 As error with standard 500 error code:
 
-```
+```php
 $output = array(
-    'sucess' => 'false',
+    'success' => false,
     'message' => 'not allowed',
 );
 ee()->output->send_ajax_response($output, true);
