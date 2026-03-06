@@ -1,106 +1,94 @@
 # Creating a Command
 
-Commands are created to live within add-ons, and are registered as part of the add-on process.
+Commands are created inside add-ons and registered through the add-on setup file.
 
-## addon.setup.php
+[TOC]
 
-In order to add commands to your addon, you should add the `commands` parameter as an associative array to your `addon.setup.php` file with the handle as the key, and the class of your command as the value.
+## Prerequisite: Existing Add-on
 
-```
-return array(
-    'author'             => 'Awesome Developer',
-    'author_url'         => 'https://example.com/',
-    'name'               => 'My Amazing Module',
-    'description'        => 'Does amazing things',
-    'version'            => '1.0',
-    'namespace'          => 'Awesome\AmazingModule',
-    'settings_exist'     => true,
-    'commands'            => [
-        'amazing:run'            => Awesome\AmazingModule\Commands\DoThings::class,
-        'amazing:more-things'    => 'Awesome\AmazingModule\Commands\DoMoreThings',
-    ]
-);
-```
+Before creating a command, make sure you already have an add-on directory in `system/user/addons/[addon_short_name]`. If needed, create one first with [`make:addon`](cli/built-in-commands/make-addon.md).
 
-It is best practice to namespace your commands, so as not to conflict with other addons.
+## Generate a Command with `make:command`
 
-## Anatomy of a Command
-
-Creating commands is simple. Each commands is built in a similar way as part of a custom add-on:
-
-### Class Structure
-
-Your class can have any name, and should be namespaced to your addon. When creating your class, make sure to include:
-`use ExpressionEngine\Cli\Cli;`
-
-You class should also extend the `Cli` class.
+The recommended workflow is to use the command generator:
 
 ```
-use EllisLab\ExpressionEngine\Cli\Cli;
-
-class CommandHelloWorld extends Cli {
-}
+php eecli.php make:command "Sync Orders" --addon=my_example_addon --description="Sync orders from an API" --signature="sync-orders"
 ```
 
-### Required Variables
-
-Each command is required to have a number of public variables that are required for finding and executing, as well as displaying pertinent information.
-
-`$name`: The name of your Command.
-`$description`: The basic gist of what your command does. This should be limited to one line
-`$summary`: This is a more detailed explanation of what your command does or how to use it. This is displayed in the `--help` calls.
-`$usage`: A oneline explanation of how to use your command.
-`$commandOptions = []`: An array of available arguments and options, along with their description, as a key:value pair. ie. `'verbose,v' => 'Show all output'`
-
-In addition, the `handle` function is required, and does all of the work when the command is run.
+You can also run it interactively:
 
 ```
-use EllisLab\ExpressionEngine\Cli\Cli;
+php eecli.php make:command
+Let's build your command!
+Command name? Sync Orders
+What add-on do you want to add this to? my_example_addon
+Command description? Sync orders from an API
+Command signature? (i.e. make:magic) sync-orders
+Let's build!
+Your command has been created successfully!
+```
 
-class CommandHelloWorld extends Cli {
+NOTE: The generator prefixes the command signature with the add-on short name.  
+For example, `sync-orders` becomes `my_example_addon:sync-orders`.
 
-    /**
-     * name of command
-     * @var string
-     */
-    public $name = 'Hello World';
+For all options, see [`make:command`](cli/built-in-commands/make-command.md).
 
-    /**
-     * Public description of command
-     * @var string
-     */
-    public $description = 'The most basic of commands';
+## What Gets Generated
 
-    /**
-     * Summary of command functionality
-     * @var [type]
-     */
-    public $summary = 'This is a sample command used to test the CLI';
+`make:command` creates a command class file in your add-on:
 
-    /**
-     * How to use command
-     * @var string
-     */
-    public $usage = 'php eecli.php hello';
+```
+system/user/addons/my_example_addon/Commands/CommandSyncOrders.php
+```
 
-    /**
-     * options available for use in command
-     * @var array
-     */
-    public $commandOptions = [
-        'verbose,v'    => 'Hello world, but longer',
-    ];
+It also updates `addon.setup.php` by adding your command to the `commands` array:
 
-    /**
-     * Run the command
-     * @return mixed
-     */
+```
+return [
+    // ...
+    'namespace' => 'Vendor\MyExampleAddon',
+    'commands' => [
+        'my_example_addon:sync-orders' => Vendor\MyExampleAddon\Commands\CommandSyncOrders::class,
+    ],
+];
+```
+
+## Anatomy of the Generated Class
+
+The generated class extends `ExpressionEngine\Cli\Cli` and includes all required properties:
+
+```php
+<?php
+
+namespace Vendor\MyExampleAddon\Commands;
+
+use ExpressionEngine\Cli\Cli;
+
+class CommandSyncOrders extends Cli
+{
+    public $name = 'Sync Orders';
+    public $signature = 'my_example_addon:sync-orders';
+    public $description = 'Sync orders from an API';
+    public $summary = 'Sync orders from an API';
+    public $usage = 'php eecli.php my_example_addon:sync-orders';
+    public $commandOptions = [];
+
     public function handle()
     {
-
-        // This is where the magic happens
-
+        $this->info('Hello World!');
     }
-    
 }
+```
+
+You can now replace the `handle()` contents with your command logic and add options to `$commandOptions` as needed.
+
+## Advanced: Manual Registration
+
+Manual registration is optional, but if you add command classes yourself, register them in `addon.setup.php` under the `commands` key using `::class` values:
+
+```php
+'commands' => [
+    'my_example_addon:sync-orders' => Vendor\MyExampleAddon\Commands\CommandSyncOrders::class,
+],
 ```
