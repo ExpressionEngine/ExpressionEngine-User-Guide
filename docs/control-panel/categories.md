@@ -23,7 +23,7 @@ Category groups are _collections_ of categories that can be assigned to channels
 
 On the category listing screen, you can drag and drop categories to change order or nesting within the selected category group.
 
-When you save a reordered tree, ExpressionEngine validates the full reorder payload before writing changes. If the payload is incomplete, no partial reorder is saved.
+The category listing is saved as soon as you are done reordering, ExpressionEngine validates the full reorder payload before writing changes. If the payload is incomplete, no partial reorder is saved.
 
 ## Create/Edit Category
 
