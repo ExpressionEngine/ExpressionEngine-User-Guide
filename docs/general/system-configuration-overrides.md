@@ -1393,6 +1393,8 @@ Example Usage:
 
 This setting toggles whether or not Template Routes are used. If this is set to no, templates will not be accessible by their routes. When disabled the Template Route options will not appear in the Template Manager.
 
+This setting applies to both Template Routes managed in the Control Panel and config-defined routes in `$config['routes']` / `$config['routes:<site_id>']`. If this is `n`, route matching is disabled.
+
 | Value | Behavior                         |
 | ----- | -------------------------------- |
 | y     | Enable Template Routes (default) |
@@ -1401,6 +1403,8 @@ This setting toggles whether or not Template Routes are used. If this is set to 
 Example Usage:
 
     $config['enable_template_routes'] = 'y';
+
+For config-defined route mappings, see [Template Routes](templates/routes.md#config-defined-routes).
 
 ## `enable_throttling`
 

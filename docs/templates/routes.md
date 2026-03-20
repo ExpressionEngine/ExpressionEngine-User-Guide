@@ -39,6 +39,47 @@ An issue arises if ExpressionEngine parses your routes in the above order when t
 
 NOTE: **Important:** Template Routes overrides the default behavior of URLs, if you wish to use a Channel Entries Tag in your template you must manually provide segments for any parameters that are normally set in the URL. You must provide a segment for pagination, categories, and entry titles if you wish to use those in your Channel Entries Tag. Additionally, be careful when using `dynamic="yes"` with Template Routes, this can cause issues if your route does not have an appropriate segment set.
 
+## Config-Defined Routes
+
+In addition to managing routes in the Control Panel, you can define Template Routes directly in `system/user/config/config.php`.
+
+Template Route matching requires [`enable_template_routes`](general/system-configuration-overrides.md#enable_template_routes) to be enabled. This setting defaults to `y`, so you only need to set it if it was previously disabled.
+
+    $config['enable_template_routes'] = 'y';
+
+Define routes as an associative array where:
+
+- the key is `template_group/template_name`
+- the value is the route pattern string
+
+Example:
+
+    $config['routes'] = [
+        'blog/index' => '/blarg',
+        'blog/entry' => '/blarg/{url_title}',
+    ];
+
+Regex rules use the same syntax as any other Template Route rule:
+
+    $config['routes'] = [
+        'blog/article' => '/news/{slug:regex[([a-z0-9-]+)]}',
+        'blog/year'    => '/archive/{year:regex[((19|20)\d{2})]}',
+    ];
+
+These routes use the same rule engine as routes created in the Template Manager.
+
+NOTE: **Note:** When `$config['routes']` is present, the Template Route Manager is not available in the Control Panel. Manage those routes in config as the source of truth.
+
+NOTE: **Advanced (MSM):** For site-specific route definitions, use `$config['routes:<site_id>']`. ExpressionEngine checks this key first and falls back to `$config['routes']` if no site-specific routes are defined.
+
+    $config['routes:1'] = [
+        'blog/index' => '/site-one-blog',
+    ];
+
+    $config['routes'] = [
+        'blog/index' => '/blog',
+    ];
+
 ### Template Route
 
 This route determines the URLs that will match your template. The format is as follows:
