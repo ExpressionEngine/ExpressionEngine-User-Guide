@@ -68,7 +68,12 @@ This file holds the duration of user session when 'remember me' checkbox is chec
 
 This file lets you re-map URI requests to specific controller functions.
 
-We generally recommend using [Template Routes](templates/routes.md) and not modify this file, unless you know you need to.
+This is different from Template Routes for templates.
+
+- Controller routes (`routes.php`) map requests to controller methods.
+- Template Routes map requests to templates and are documented in [Template Routes](templates/routes.md).
+
+If you want to define Template Routes in config, use `$config['routes']` (or `$config['routes:<site_id>']`) in `system/user/config/config.php` and keep [`enable_template_routes`](general/system-configuration-overrides.md#enable_template_routes) enabled.
 
 #### Stop Words
 
