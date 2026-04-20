@@ -51,7 +51,7 @@ ExpressionEngine returns the following error message when attempting to use [Liv
 
 ### Troubleshooting
 
-The Authorization header is stripped by some Apache servers, causing an error rendering the Live Preview. This behavior may be overriden in your [.htaccess file](installation/best-practices.md#1-create-an-htaccess-file) by adding the following line:
+The Authorization header is stripped by some Apache servers, causing an error rendering the Live Preview. This behavior may be overridden in your [.htaccess file](installation/best-practices.md#1-create-an-htaccess-file) by adding the following line:
 
 ```php
 SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1

@@ -117,7 +117,7 @@ If you are hosted on an Apache server, the `AcceptPathInfo` option needs to be e
 - Ask your web host or server admin to enable the option
 - Set your site's URLs to use [query strings](general/url-structure.md#query-strings)
 
-If on an Apache server and [Live Preview](control-panel/create.md#preview) shows an error message 'HTTP Authorization Header Missing', you will need to add this line of code to your your [.htaccess file](installation/best-practices.md#1-create-an-htaccess-file)
+If on an Apache server and [Live Preview](control-panel/create.md#preview) shows an error message 'HTTP Authorization Header Missing', you will need to add this line of code to your [.htaccess file](installation/best-practices.md#1-create-an-htaccess-file)
 
 ```php
 SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1

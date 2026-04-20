@@ -192,11 +192,11 @@ Saves the entry and returns the [Entry Manager](control-panel/entry-manager.md) 
 
 ### Preview
 
-A live preview of the entry is available if the relavant Channel's [Preview URL](control-panel/channels.md#settings-tab) is set **or** the [Pages Module](add-ons/pages.md) is installed and a Page URI and template have been set.
+A live preview of the entry is available if the relevant channel's [Preview URL](control-panel/channels.md#settings-tab) is set **or** the [Pages Module](add-ons/pages.md) or [Structure](add-ons/structure/overview.md) is installed and configured with a URI and template.
 
 If neither is set, the preview button will have an exclamation mark (!) and will link to channel preferences page where Preview URL can be set.
 
-The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on the Page fields if set and the channel preview URL otherwise.
+The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on configured Pages/Structure fields if set and the channel preview URL otherwise.
 
 When the preview is triggered, it is being displayed side-by-side with edit screen. The size of preview container can be adjusted with mouse dragging its border. The preview is dynamically being updated as you change the fields.
 
