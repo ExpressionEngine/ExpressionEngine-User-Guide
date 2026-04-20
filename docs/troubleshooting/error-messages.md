@@ -45,6 +45,17 @@ This error---and similar warnings such as **"Warning: imagettftext(): Could not 
 
 If that is not an option, **Use TrueType Font for Captcha?** should be set to _No_ under `Settings --> CAPTCHA` or CAPTCHAs should be disabled altogether.
 
+## HTTP Authorization Header Missing
+
+ExpressionEngine returns the following error message when attempting to use [Live Preview](control-panel/create.md#preview): **"HTTP Authorization Header Missing"**
+
+### Troubleshooting
+
+The Authorization header is stripped by some Apache servers, causing an error rendering the Live Preview. This behavior may be overridden in your [.htaccess file](installation/best-practices.md#1-create-an-htaccess-file) by adding the following line:
+
+```php
+SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+```
 ## Warning: Cannot modify header information
 
 ExpressionEngine returns the following warning: **"Cannot modify header information."**
