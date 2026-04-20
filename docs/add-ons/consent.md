@@ -72,6 +72,17 @@ Specify the HTML `id=` attribute.
 
 Specify a path to redirect the user to after submission. If not specified, they will be returned to the current page. Unused for Ajax-submitted forms.
 
+#### `submit_to=`
+
+    submit_to='site_index'
+
+Specify where the form should post. If not specified, the form posts to the current URL.
+
+| value       | result                                                                 |
+| ----------- | ---------------------------------------------------------------------- |
+| site_index  | Post to your site index URL (for example, `/index.php`)               |
+| action_id   | Post directly to the Consent action URL (for example, `/index.php?ACT=123`) |
+
 #### `user_created=`
 
     user_created='only'
@@ -228,6 +239,7 @@ If this tag would not output any consent requests due to your filters, the conte
         {exp:consent:form
           consent='ee:cookies_functionality|ee:cookies_performance|ee:cookies_targeting'
           form_id='cookieConsentForm'
+          submit_to='action_id'
         }
         <p>This website uses a variety of cookies, which you consent to if you continue to use this site. You can read our <a href="{path='privacy'}">Privacy Policy</a> for details about how these cookies are used, and to grant or withdraw your consent for certain types of cookies.</p>
 
