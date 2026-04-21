@@ -106,6 +106,10 @@ Open domain2's new index.php file and make the following changes:
        $assign_to_config['cp_url']    = 'https://domain2.com/admin.php';
        $assign_to_config['site_url']  = 'https://domain2.com';
 
+## Switching Sites in the Control Panel
+
+When switching between sites in the dropdown, whether or not you need to login between sites depends on several factors. The sites must be using the same control panel session type. If using cookies, the cookies need to have the same settings and the control panel url must have the same domain. The site URLs can have different domains, the `admin.php` files may have different domains for the control panel, but the control panel URL in the site settings must be on the same domain.  A site will only show in the dropdown if the user has permission to access the control panel for that site. 
+
 ## Multi Site Login
 
 If you have multiple sites, you may prefer that when a user logs into one site, they are logged into all sites.
