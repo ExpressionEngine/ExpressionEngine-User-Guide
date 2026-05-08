@@ -50,6 +50,22 @@ The `category_url_title=` parameter allows you to specify the URL title of a spe
 
 NOTE: **Note:** You must specify the [`channel` parameter](channels/category-heading.md#channel) when using this parameter.
 
+### `category_group=`
+
+    category_group="2"
+
+Category Groups are specified by ID number. This parameter can be used with [`category_url_title=`](#category_url_title) to limit matching categories to a specific category group.
+
+As with many other parameters, you can stack category groups:
+
+    category_group="1|2|4"
+
+Or use "not" to exclude category groups:
+
+    category_group="not 2"
+
+Category URL titles are unique within a category group, but not across all category groups. If multiple eligible category groups contain the same category URL title, the first matching category is used unless you use `category_group=` to narrow the match.
+
 ### `disable=`
 
     disable="category_fields"
