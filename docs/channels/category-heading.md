@@ -66,6 +66,12 @@ Or use "not" to exclude category groups:
 
 Category URL titles are unique within a category group, but not across all category groups. If multiple eligible category groups contain the same category URL title, the first matching category is used unless you use `category_group=` to narrow the match.
 
+### `parent_only=`
+
+    parent_only="yes"
+
+This parameter allows you to limit the Category Heading tag to only top-level categories. Child categories will not be displayed.
+
 ### `disable=`
 
     disable="category_fields"
