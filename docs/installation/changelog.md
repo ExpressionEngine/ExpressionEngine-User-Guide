@@ -23,30 +23,30 @@
 
 **Enhancements** 🚀
 
-- Added a clearer title treatment on the Edit Entry page, including a dedicated entry title row [#3864](https://github.com/ExpressionEngine/ExpressionEngine/pull/3864)
-- Added support for multiple `orderby` and `sort` options when ordering Grid field rows [#5250](https://github.com/ExpressionEngine/ExpressionEngine/pull/5250)
-- Added support for including or excluding entry IDs in Search form results [#5259](https://github.com/ExpressionEngine/ExpressionEngine/pull/5259)
-- Added `category_group` and `parent_only` support to category heading output [#5270](https://github.com/ExpressionEngine/ExpressionEngine/pull/5270)
+- Added a clearer title treatment on the Edit Entry page, including a dedicated entry title row [#2906](https://github.com/ExpressionEngine/ExpressionEngine/discussions/2906)
+- Added support for multiple `orderby` and `sort` options when ordering Grid field rows
+- Added support for including or excluding entry IDs in Search form results
+- Added `category_group` and `parent_only` support to category heading output [#5269](https://github.com/ExpressionEngine/ExpressionEngine/issues/5269)
 
 **Bug Fixes** 💃🐛
 
-- Resolved [#5205](https://github.com/ExpressionEngine/ExpressionEngine/issues/5205) where member field instructions were not displayed [#5206](https://github.com/ExpressionEngine/ExpressionEngine/pull/5206)
-- Fixed WEBP and AVIF alpha transparency preservation in GD image manipulations [#5243](https://github.com/ExpressionEngine/ExpressionEngine/pull/5243)
-- Resolved [#5252](https://github.com/ExpressionEngine/ExpressionEngine/issues/5252) where File Entries pagination could break with category filters [#5254](https://github.com/ExpressionEngine/ExpressionEngine/pull/5254)
-- Resolved [#5253](https://github.com/ExpressionEngine/ExpressionEngine/issues/5253) where the File Manager category column could display incorrect data [#5255](https://github.com/ExpressionEngine/ExpressionEngine/pull/5255)
-- Prevented fatal errors in legacy exception handling when the request constant is unavailable [#5266](https://github.com/ExpressionEngine/ExpressionEngine/pull/5266)
-- Fixed PHP deprecation notices across Channel Form, Structure, Translate, Channel Set imports, template/model services, and related legacy paths [#5241](https://github.com/ExpressionEngine/ExpressionEngine/pull/5241) [#5261](https://github.com/ExpressionEngine/ExpressionEngine/pull/5261) [#5268](https://github.com/ExpressionEngine/ExpressionEngine/pull/5268)
-- Resolved [#5225](https://github.com/ExpressionEngine/ExpressionEngine/issues/5225) where image manipulation tabs could be shown for corrupt files [#5271](https://github.com/ExpressionEngine/ExpressionEngine/pull/5271)
-- Resolved [#5213](https://github.com/ExpressionEngine/ExpressionEngine/issues/5213) where a missing `site_pages` entry could throw a deprecation notice [#5272](https://github.com/ExpressionEngine/ExpressionEngine/pull/5272)
-- Resolved [#4705](https://github.com/ExpressionEngine/ExpressionEngine/issues/4705) where the Control Panel log Search field could not be cleared [#5273](https://github.com/ExpressionEngine/ExpressionEngine/pull/5273)
-- Fixed Markdown link normalization so Unicode links and protocols are handled correctly without changing visible link text [#5275](https://github.com/ExpressionEngine/ExpressionEngine/pull/5275) [#5276](https://github.com/ExpressionEngine/ExpressionEngine/pull/5276)
+- Resolved [#5205](https://github.com/ExpressionEngine/ExpressionEngine/issues/5205) where member field instructions were not displayed
+- Fixed WEBP and AVIF alpha transparency preservation in GD image manipulations [#5242](https://github.com/ExpressionEngine/ExpressionEngine/issues/5242)
+- Resolved [#5252](https://github.com/ExpressionEngine/ExpressionEngine/issues/5252) where File Entries pagination could break with category filters
+- Resolved [#5253](https://github.com/ExpressionEngine/ExpressionEngine/issues/5253) where the File Manager category column could display incorrect data
+- Prevented fatal errors in legacy exception handling when the request constant is unavailable [#5265](https://github.com/ExpressionEngine/ExpressionEngine/issues/5265)
+- Fixed PHP deprecation notices across Channel Form, Structure, Translate, Channel Set imports, template/model services, and related legacy paths
+- Resolved [#5225](https://github.com/ExpressionEngine/ExpressionEngine/issues/5225) where image manipulation tabs could be shown for corrupt files
+- Resolved [#5213](https://github.com/ExpressionEngine/ExpressionEngine/issues/5213) where a missing `site_pages` entry could throw a deprecation notice
+- Resolved [#4705](https://github.com/ExpressionEngine/ExpressionEngine/issues/4705) where the Control Panel log Search field could not be cleared
+- Fixed Markdown link normalization so Unicode links and protocols are handled correctly without changing visible link text
 
 **Developers** 💻
 
-- Added extensive tests for Member Register, Template parsing, legacy database drivers, installer flows, SimplePie cache, Pages, Structure, File Manager, File field, Grid parser, and Grid model behavior [#5165](https://github.com/ExpressionEngine/ExpressionEngine/pull/5165) [#5178](https://github.com/ExpressionEngine/ExpressionEngine/pull/5178) [#5185](https://github.com/ExpressionEngine/ExpressionEngine/pull/5185) [#5186](https://github.com/ExpressionEngine/ExpressionEngine/pull/5186) [#5196](https://github.com/ExpressionEngine/ExpressionEngine/pull/5196) [#5216](https://github.com/ExpressionEngine/ExpressionEngine/pull/5216) [#5226](https://github.com/ExpressionEngine/ExpressionEngine/pull/5226) [#5232](https://github.com/ExpressionEngine/ExpressionEngine/pull/5232) [#5234](https://github.com/ExpressionEngine/ExpressionEngine/pull/5234) [#5247](https://github.com/ExpressionEngine/ExpressionEngine/pull/5247) [#5249](https://github.com/ExpressionEngine/ExpressionEngine/pull/5249) [#5251](https://github.com/ExpressionEngine/ExpressionEngine/pull/5251) [#5256](https://github.com/ExpressionEngine/ExpressionEngine/pull/5256) [#5257](https://github.com/ExpressionEngine/ExpressionEngine/pull/5257)
-- Expanded core test coverage and deprecation cleanup for PHP 7.4 through PHP 8.5 [#5241](https://github.com/ExpressionEngine/ExpressionEngine/pull/5241) [#5261](https://github.com/ExpressionEngine/ExpressionEngine/pull/5261) [#5262](https://github.com/ExpressionEngine/ExpressionEngine/pull/5262)
-- Normalized Search module conditionals for clearer operator precedence [#5264](https://github.com/ExpressionEngine/ExpressionEngine/pull/5264)
-- Refactored Structure nav parser tests to avoid special bootstrapping [#5263](https://github.com/ExpressionEngine/ExpressionEngine/pull/5263)
+- Added extensive tests for Member Register, Template parsing, legacy database drivers, installer flows, SimplePie cache, Pages, Structure, File Manager, File field, Grid parser, and Grid model behavior
+- Expanded core test coverage and deprecation cleanup for PHP 7.4 through PHP 8.5
+- Normalized Search module conditionals for clearer operator precedence
+- Refactored Structure nav parser tests to avoid special bootstrapping
 
 ## Version 7.5.22
 (Release: April 21st, 2026)
