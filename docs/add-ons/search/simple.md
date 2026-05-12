@@ -161,6 +161,20 @@ Or you can add the word "not" (with a space after it) to exclude channels:
 
     channel="not channel1|channel2|channel3"
 
+### `entry_id=`
+
+    entry_id="147"
+
+You can hard code the search form to only include specific entries. You may also specify multiple entries by separating them with the pipe character:
+
+    entry_id="13|42|147"
+
+Or use "not" to exclude entries:
+
+    entry_id="not 45|534|807"
+
+If you set the entry_id parameter to no value, the parameter will be ignored.
+
 ### `where=`
 
     where="all"
