@@ -8,12 +8,52 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.23
+(Release: May 12th, 2026)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added a clearer title treatment on the Edit Entry page, including a dedicated entry title row [#3864](https://github.com/ExpressionEngine/ExpressionEngine/pull/3864)
+- Added support for multiple `orderby` and `sort` options when ordering Grid field rows [#5250](https://github.com/ExpressionEngine/ExpressionEngine/pull/5250)
+- Added support for including or excluding entry IDs in Search form results [#5259](https://github.com/ExpressionEngine/ExpressionEngine/pull/5259)
+- Added `category_group` and `parent_only` support to category heading output [#5270](https://github.com/ExpressionEngine/ExpressionEngine/pull/5270)
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#5205](https://github.com/ExpressionEngine/ExpressionEngine/issues/5205) where member field instructions were not displayed [#5206](https://github.com/ExpressionEngine/ExpressionEngine/pull/5206)
+- Fixed WEBP and AVIF alpha transparency preservation in GD image manipulations [#5243](https://github.com/ExpressionEngine/ExpressionEngine/pull/5243)
+- Resolved [#5252](https://github.com/ExpressionEngine/ExpressionEngine/issues/5252) where File Entries pagination could break with category filters [#5254](https://github.com/ExpressionEngine/ExpressionEngine/pull/5254)
+- Resolved [#5253](https://github.com/ExpressionEngine/ExpressionEngine/issues/5253) where the File Manager category column could display incorrect data [#5255](https://github.com/ExpressionEngine/ExpressionEngine/pull/5255)
+- Prevented fatal errors in legacy exception handling when the request constant is unavailable [#5266](https://github.com/ExpressionEngine/ExpressionEngine/pull/5266)
+- Fixed PHP deprecation notices across Channel Form, Structure, Translate, Channel Set imports, template/model services, and related legacy paths [#5241](https://github.com/ExpressionEngine/ExpressionEngine/pull/5241) [#5261](https://github.com/ExpressionEngine/ExpressionEngine/pull/5261) [#5268](https://github.com/ExpressionEngine/ExpressionEngine/pull/5268)
+- Resolved [#5225](https://github.com/ExpressionEngine/ExpressionEngine/issues/5225) where image manipulation tabs could be shown for corrupt files [#5271](https://github.com/ExpressionEngine/ExpressionEngine/pull/5271)
+- Resolved [#5213](https://github.com/ExpressionEngine/ExpressionEngine/issues/5213) where a missing `site_pages` entry could throw a deprecation notice [#5272](https://github.com/ExpressionEngine/ExpressionEngine/pull/5272)
+- Resolved [#4705](https://github.com/ExpressionEngine/ExpressionEngine/issues/4705) where the Control Panel log Search field could not be cleared [#5273](https://github.com/ExpressionEngine/ExpressionEngine/pull/5273)
+- Fixed Markdown link normalization so Unicode links and protocols are handled correctly without changing visible link text [#5275](https://github.com/ExpressionEngine/ExpressionEngine/pull/5275) [#5276](https://github.com/ExpressionEngine/ExpressionEngine/pull/5276)
+
+**Developers** 💻
+
+- Added extensive tests for Member Register, Template parsing, legacy database drivers, installer flows, SimplePie cache, Pages, Structure, File Manager, File field, Grid parser, and Grid model behavior [#5165](https://github.com/ExpressionEngine/ExpressionEngine/pull/5165) [#5178](https://github.com/ExpressionEngine/ExpressionEngine/pull/5178) [#5185](https://github.com/ExpressionEngine/ExpressionEngine/pull/5185) [#5186](https://github.com/ExpressionEngine/ExpressionEngine/pull/5186) [#5196](https://github.com/ExpressionEngine/ExpressionEngine/pull/5196) [#5216](https://github.com/ExpressionEngine/ExpressionEngine/pull/5216) [#5226](https://github.com/ExpressionEngine/ExpressionEngine/pull/5226) [#5232](https://github.com/ExpressionEngine/ExpressionEngine/pull/5232) [#5234](https://github.com/ExpressionEngine/ExpressionEngine/pull/5234) [#5247](https://github.com/ExpressionEngine/ExpressionEngine/pull/5247) [#5249](https://github.com/ExpressionEngine/ExpressionEngine/pull/5249) [#5251](https://github.com/ExpressionEngine/ExpressionEngine/pull/5251) [#5256](https://github.com/ExpressionEngine/ExpressionEngine/pull/5256) [#5257](https://github.com/ExpressionEngine/ExpressionEngine/pull/5257)
+- Expanded core test coverage and deprecation cleanup for PHP 7.4 through PHP 8.5 [#5241](https://github.com/ExpressionEngine/ExpressionEngine/pull/5241) [#5261](https://github.com/ExpressionEngine/ExpressionEngine/pull/5261) [#5262](https://github.com/ExpressionEngine/ExpressionEngine/pull/5262)
+- Normalized Search module conditionals for clearer operator precedence [#5264](https://github.com/ExpressionEngine/ExpressionEngine/pull/5264)
+- Refactored Structure nav parser tests to avoid special bootstrapping [#5263](https://github.com/ExpressionEngine/ExpressionEngine/pull/5263)
+
 ## Version 7.5.22
 (Release: April 21st, 2026)
 <div class="max-w-7xl mx-autotext-center">
 <div class="space-y-8 sm:space-y-12">
     <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
-    
+
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/17580512?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Andrew s</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=blunket" target="_BLANK">@blunket</a></p></div></div></div></li>
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
 <li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1008036?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Eric Lamb</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=eric-lamb62" target="_BLANK">@eric-lamb62</a></p></div></div></div></li>
