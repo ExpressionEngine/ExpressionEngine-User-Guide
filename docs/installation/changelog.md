@@ -23,10 +23,10 @@
 
 **Enhancements** 🚀
 
-- Added a clearer title treatment on the Edit Entry page, including a dedicated entry title row
+- Added a clearer title treatment on the Edit Entry page, including a dedicated entry title row [#2906](https://github.com/ExpressionEngine/ExpressionEngine/discussions/2906)
 - Added support for multiple `orderby` and `sort` options when ordering Grid field rows
 - Added support for including or excluding entry IDs in Search form results
-- Added `category_group` and `parent_only` support to category heading output
+- Added `category_group` and `parent_only` support to category heading output [#5269](https://github.com/ExpressionEngine/ExpressionEngine/issues/5269)
 
 **Bug Fixes** 💃🐛
 
