@@ -2401,7 +2401,7 @@ Example Usage:
       'username' => NULL,
       'port' => 6379,
       'timeout' => 0,
-      'scheme' => 'tcp' // Use 'tls' for Auth connection(username & password required) 
+      'scheme' => NULL // Use 'tls' for Auth connection(username & password required) 
     );
 
 ## `relaxed_track_views`
