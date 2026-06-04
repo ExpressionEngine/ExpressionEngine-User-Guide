@@ -8,6 +8,41 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.24
+(Release: June 4th, 2026)
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/49483?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Travis 'Nep' Smith</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=nep" target="_BLANK">@nep</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/178574644?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">doneill</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=DONEILL-emp" target="_BLANK">@DONEILL-emp</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added `status` support to the `{exp:stats}` tag for entry totals, comment totals, and latest entry/comment dates [#5301](https://github.com/ExpressionEngine/ExpressionEngine/issues/5301)
+- Added Redis cache driver support for TLS connections, connection context options, and ACL username/password authentication [#5280](https://github.com/ExpressionEngine/ExpressionEngine/issues/5280)
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#4902](https://github.com/ExpressionEngine/ExpressionEngine/issues/4902) where Channel Form could show a PHP error when displaying a Grid field on an MSM site
+- Resolved public exception display behavior so logged-out visitors in non-debug mode see a generic error while detailed output remains available for debug, CLI, and logged-in contexts [#5291](https://github.com/ExpressionEngine/ExpressionEngine/pull/5291)
+- Fixed `{exp:stats}` cache bleed when channel-filtered and unfiltered Stats tags are used on the same template [#5305](https://github.com/ExpressionEngine/ExpressionEngine/pull/5305)
+- Fixed member manager Date filter rendering when no join date filter is selected, preventing a PHP deprecation notice [#5297](https://github.com/ExpressionEngine/ExpressionEngine/issues/5297)
+- Improved upload filename validation for hidden, path-like, blocked, and control-character filenames, including configured filename overrides and conflict-resolution renames [#5306](https://github.com/ExpressionEngine/ExpressionEngine/pull/5306)
+- Fixed member subscription updates to validate posted selections and bind forum unsubscribe IDs before deletion
+- Fixed a typo in the File Manager move modal destination language key [#5294](https://github.com/ExpressionEngine/ExpressionEngine/pull/5294)
+
+**Developers** 💻
+
+- Added automated coverage for Stats status filtering/cache behavior, Redis TLS/ACL options, member subscription updates, and upload filename validation [#5280](https://github.com/ExpressionEngine/ExpressionEngine/issues/5280) [#5301](https://github.com/ExpressionEngine/ExpressionEngine/issues/5301) [#5305](https://github.com/ExpressionEngine/ExpressionEngine/pull/5305) [#5306](https://github.com/ExpressionEngine/ExpressionEngine/pull/5306) [#5307](https://github.com/ExpressionEngine/ExpressionEngine/pull/5307)
+
 ## Version 7.5.23
 (Release: May 12th, 2026)
 <div class="max-w-7xl mx-autotext-center">
