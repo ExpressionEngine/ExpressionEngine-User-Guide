@@ -2398,8 +2398,10 @@ Example Usage:
     $config['redis'] = array(
       'host' => '127.0.0.1',
       'password' => NULL,
+      'username' => NULL,
       'port' => 6379,
-      'timeout' => 0
+      'timeout' => 0,
+      'scheme' => NULL // Use 'tls' for Auth connection(username & password required) 
     );
 
 ## `relaxed_track_views`
