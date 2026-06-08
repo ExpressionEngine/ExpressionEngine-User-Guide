@@ -49,6 +49,26 @@ Here is an example of the tag with the parameter in use:
         statistics content
     {/exp:stats}
 
+### `status=`
+
+    status="open"
+
+This parameter can be used to restrict statistics reporting to entries assigned to a particular [status](control-panel/channels.md#statuses-tab). Status-filtered statistics include entries that are not expired and do not have a future entry date. You can choose multiple statuses using a pipe:
+
+    status="draft|reviewed|published"
+
+Or exclude statuses using "not"
+
+    status="not submitted|processing|closed"
+
+If the `status=` parameter does not include `closed`, closed entries are excluded from the statistics.
+
+Here is an example of the tag with the parameter in use:
+
+    {exp:stats channel="news" status="published|reviewed"}
+        statistics content
+    {/exp:stats}
+
 ## Variables
 
 [TOC=3]
@@ -57,13 +77,13 @@ Here is an example of the tag with the parameter in use:
 
     {last_comment_date format="%m/%d/%Y %h:%i %a"}
 
-The date of the most recent comment. This variable can be affected by the channel= parameter. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+The date of the most recent comment. This variable can be affected by the `channel=` and `status=` parameters. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
 
 ### `{last_entry_date}`
 
     {last_entry_date format="%m/%d/%Y %h:%i %a"}
 
-The date of the most recent entry. This variable can be affected by the channel= parameter. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
+The date of the most recent entry. This variable can be affected by the `channel=` and `status=` parameters. See [Date Variable Formatting](templates/date-variable-formatting.md) for more information.
 
 ### `{last_visitor_date}`
 
@@ -87,11 +107,11 @@ The total number of people currently online who have chosen to be "anonymous" an
 
 ### `{total_comments}`
 
-The combined total number of comments for all entries. This variable can be affected by the channel= parameter.
+The combined total number of comments for all entries. This variable can be affected by the `channel=` and `status=` parameters.
 
 ### `{total_entries}`
 
-The total number of active entries in the database (not closed and not expired). This variable can be affected by the `channel=` parameter.
+The total number of active entries in the database. This variable can be affected by the `channel=` and `status=` parameters. If the `status=` parameter includes `closed`, closed entries are included in this total.
 
 ### `{total_guests}`
 
