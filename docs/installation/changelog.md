@@ -41,13 +41,12 @@ NOTE: **Important:** This version includes important security updates.
 - Improved upload filename validation for hidden, path-like, blocked, and control-character filenames, including configured filename overrides and conflict-resolution renames [#5306](https://github.com/ExpressionEngine/ExpressionEngine/pull/5306)
 - Fixed member subscription updates to validate posted selections and bind forum unsubscribe IDs before deletion
 - Fixed a typo in the File Manager move modal destination language key [#5294](https://github.com/ExpressionEngine/ExpressionEngine/pull/5294)
-- Fixed member logout return validation and rejected GET member search actions [#5309](https://github.com/ExpressionEngine/ExpressionEngine/pull/5309)
-- Fixed `status` filtered `{exp:stats}` queries to include entries at the current timestamp boundary [#5313](https://github.com/ExpressionEngine/ExpressionEngine/pull/5313)
+- Fixed member logout return validation and rejected GET member search actions
 - Fixed File Manager date sorting so same-date files use a deterministic ID tie-breaker [#5314](https://github.com/ExpressionEngine/ExpressionEngine/pull/5314)
 
 **Developers** 💻
 
-- Added automated coverage for Stats status filtering/cache behavior, Redis TLS/ACL options, member subscription updates, member logout and search handling, and upload filename validation [#5280](https://github.com/ExpressionEngine/ExpressionEngine/issues/5280) [#5301](https://github.com/ExpressionEngine/ExpressionEngine/issues/5301) [#5305](https://github.com/ExpressionEngine/ExpressionEngine/pull/5305) [#5306](https://github.com/ExpressionEngine/ExpressionEngine/pull/5306) [#5307](https://github.com/ExpressionEngine/ExpressionEngine/pull/5307) [#5309](https://github.com/ExpressionEngine/ExpressionEngine/pull/5309) [#5313](https://github.com/ExpressionEngine/ExpressionEngine/pull/5313)
+- Added automated coverage for Stats status filtering/cache behavior, Redis TLS/ACL options, member subscription updates, member logout and search handling, and upload filename validation [#5280](https://github.com/ExpressionEngine/ExpressionEngine/issues/5280) [#5301](https://github.com/ExpressionEngine/ExpressionEngine/issues/5301) [#5305](https://github.com/ExpressionEngine/ExpressionEngine/pull/5305) [#5306](https://github.com/ExpressionEngine/ExpressionEngine/pull/5306) [#5307](https://github.com/ExpressionEngine/ExpressionEngine/pull/5307)
 
 ## Version 7.5.23
 (Release: May 12th, 2026)
