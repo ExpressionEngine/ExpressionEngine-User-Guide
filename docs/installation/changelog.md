@@ -10,6 +10,9 @@
 
 ## Version 7.5.25
 (Release: June 23rd, 2026)
+
+NOTE: **Important:** This version includes important security updates.
+
 <div class="max-w-7xl mx-autotext-center">
 <div class="space-y-8 sm:space-y-12">
     <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
