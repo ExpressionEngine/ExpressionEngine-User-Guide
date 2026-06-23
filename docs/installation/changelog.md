@@ -8,6 +8,47 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.25
+(Release: June 23rd, 2026)
+
+NOTE: **Important:** This version includes important security updates.
+
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/49483?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Travis 'Nep' Smith</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=nep" target="_BLANK">@nep</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/752126?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yuri Salimovskiy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=intoeetive" target="_BLANK">@intoeetive</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added field IDs to Search and Replace Utility channel field choices to make similarly named fields easier to identify [#4807](https://github.com/ExpressionEngine/ExpressionEngine/pull/4807)
+
+**Bug Fixes** 💃🐛
+
+- Fixed Pro license check instructions to avoid a duplicated period [#5285](https://github.com/ExpressionEngine/ExpressionEngine/pull/5285)
+- Fixed CP Table row handling for database results with a `columns` field, such as File Manager saved views [#5311](https://github.com/ExpressionEngine/ExpressionEngine/pull/5311)
+- Added missing MIME equivalents so allowed uploads like gzip, RAR, tar, FLAC, WAV, M4A, M4V, BMP, and PSD files validate reliably [#5321](https://github.com/ExpressionEngine/ExpressionEngine/pull/5321)
+- Resolved [#5320](https://github.com/ExpressionEngine/ExpressionEngine/issues/5320) where Channel Form `{field_id}` inside `{custom_fields}` could remain unparsed on PHP 8.1+ with native numeric database values
+- Resolved [#963](https://github.com/ExpressionEngine/ExpressionEngine/issues/963) by using stronger random byte generation for random strings and encryption keys
+- Resolved [#5325](https://github.com/ExpressionEngine/ExpressionEngine/issues/5325) where unchanged File fields inside Grid could fail upload-directory permission checks for non-super-admin users
+- Fixed date-only date picker selections so timestamp timezone conversion does not move the active calendar day [#5332](https://github.com/ExpressionEngine/ExpressionEngine/pull/5332)
+- Fixed Channel Field API validation callbacks on PHP 8 by passing positional field values instead of named array keys [#4987](https://github.com/ExpressionEngine/ExpressionEngine/pull/4987)
+- Improved Structure publish tab handling when creating new entries [#5331](https://github.com/ExpressionEngine/ExpressionEngine/pull/5331)
+- Improved add-on removal action handling [#5330](https://github.com/ExpressionEngine/ExpressionEngine/pull/5330)
+
+**Developers** 💻
+
+- Improved Moblog field handling and expanded related test coverage [#5327](https://github.com/ExpressionEngine/ExpressionEngine/pull/5327)
+- Improved member breadcrumb and ignore-list handling with expanded test coverage [#5333](https://github.com/ExpressionEngine/ExpressionEngine/pull/5333)
+- Added automated coverage for Channel Form field variables, File field Grid validation, Structure parent IDs, add-on removal, random string generation, member tag queries, and Moblog handling [#5322](https://github.com/ExpressionEngine/ExpressionEngine/pull/5322) [#5326](https://github.com/ExpressionEngine/ExpressionEngine/pull/5326) [#5331](https://github.com/ExpressionEngine/ExpressionEngine/pull/5331) [#5330](https://github.com/ExpressionEngine/ExpressionEngine/pull/5330) [#5324](https://github.com/ExpressionEngine/ExpressionEngine/pull/5324) [#5333](https://github.com/ExpressionEngine/ExpressionEngine/pull/5333) [#5327](https://github.com/ExpressionEngine/ExpressionEngine/pull/5327)
+
 ## Version 7.5.24
 (Release: June 8th, 2026)
 
