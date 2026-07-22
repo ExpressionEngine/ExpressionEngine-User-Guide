@@ -8,6 +8,44 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.26
+(Release: July 22nd, 2026)
+
+NOTE: **Important:** This version includes important security updates.
+
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/55450744?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Remco Kersten</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=kerstenremco" target="_BLANK">@kerstenremco</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Improved accessibility for standard Channel Form File fields by associating generated labels with their upload inputs [#4897](https://github.com/ExpressionEngine/ExpressionEngine/issues/4897)
+
+**Bug Fixes** 💃🐛
+
+- Resolved [#5335](https://github.com/ExpressionEngine/ExpressionEngine/issues/5335) where Channel Form `{field_data}` could remain unparsed for fields backed by numeric columns
+- Resolved [#4600](https://github.com/ExpressionEngine/ExpressionEngine/issues/4600) where image manipulations using reserved short names could cause file upload errors
+- Fixed warnings when file width and height data is empty or malformed [#5347](https://github.com/ExpressionEngine/ExpressionEngine/pull/5347)
+- Fixed PHP 8 compatibility issues in legacy database backup shortcuts, database function calls, and native error displays [#5348](https://github.com/ExpressionEngine/ExpressionEngine/pull/5348)
+- Resolved [#4925](https://github.com/ExpressionEngine/ExpressionEngine/issues/4925) where Control Panel form group toggles configured by name could cause JavaScript errors
+- Resolved [#4718](https://github.com/ExpressionEngine/ExpressionEngine/issues/4718) where invalid Live Preview extension route data could produce warnings instead of falling back to the original preview route
+- Improved member field instruction display in the Control Panel [#5355](https://github.com/ExpressionEngine/ExpressionEngine/pull/5355)
+- Improved Pro Search query handling [#5356](https://github.com/ExpressionEngine/ExpressionEngine/pull/5356)
+- Improved template PHP setting save handling [#5357](https://github.com/ExpressionEngine/ExpressionEngine/pull/5357)
+- Improved template group removal handling [#5358](https://github.com/ExpressionEngine/ExpressionEngine/pull/5358)
+
+**Developers** 💻
+
+- Added comprehensive Pro Search helper unit test coverage [#5339](https://github.com/ExpressionEngine/ExpressionEngine/pull/5339)
+- Expanded regression coverage for Channel Form, File handling, Control Panel forms, Live Preview, member forms, legacy database compatibility, and template management [#5359](https://github.com/ExpressionEngine/ExpressionEngine/pull/5359)
+
 ## Version 7.5.25
 (Release: June 23rd, 2026)
 
