@@ -198,7 +198,9 @@ The template used to display the preview is based on configured Pages/Structure 
 
 If neither of these is set, the preview button will have an exclamation mark (!) and it will link to channel preferences page where Preview URL can be set.
 
-You will usually want this preview template to be the same template as the live page uses, but in certain cases you may want to use a customized, admin-only preview template.
+NOTE: **Note:** Commonly, the channel preview template is set to be the same template that the live entry, but in certain cases it's useful to use a different, customized preview template. Pages/Structure do not have this flexibility.
+
+NOTE: **Note:** Use the [`{is_live_preview_request}`](globals/single-variables.md#is_live_preview_request) conditional to only display certain content or to modify certain attributes only when previewing an entry. For example, `{if is_live_preview_request}status="open|closed" show_future_entries="yes"{/if}` will preview an entry that is closed or set to publish in the future.
 
 Once the preview is triggered, it will continue to be displayed side-by-side with edit screen until you close it. The size of preview window can be adjusted with the mouse by dragging its border. The preview contents will dynamically update as you change the contents of any field. 
 
