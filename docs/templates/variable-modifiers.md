@@ -145,6 +145,24 @@ Note that all HTML formatting will be stripped out automatically before applying
     {excerpt:limit characters='20'}
     {!-- A discussion&#8230; --}
 
+### `:math`
+
+| Parameter            | Default   |                                                         |
+| -------------------- | --------- | ------------------------------------------------------- |
+| expression=          |           | second part of math expression                          |
+| function=            |           | additional function to apply to expression as a whole   |
+| decimals=            | `0`       | Number of decimal precision                 |
+| decimal_point=       | `.`       | character to use as decimal point |
+| thousands_separator= | `,`       | character to use as thousands separator |
+
+
+`expression` is the arithmetic expression to be evaluated, as addition to the variable.
+If your code is `{variable:math expression="/2"}`, the expression will be evaluated as `"{variable}/2"`, so if `{variable}` is `10`, the result will be `5`.
+Expression is required to start with a mathematical operand. You may only use numbers and operators in variable modifier's `expression` (no other variables).
+`function` is an additional function to apply to the resulting expression as a whole, such as `abs`, `ceil`, `floor`, `round`, `sqrt`, `sin`, `cos`, `tan`, `arcsin`, `arccos`, `arctan`, or `log`.
+
+See also [`{layout:set:math}`](templates/layouts.md) tag and [Math Module](add-ons/math.md).
+
 ### `:number_format`
 
 | Parameter              | Default   |                                             |
