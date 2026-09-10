@@ -258,6 +258,14 @@ This variable simply displays the name of the category.
 
 This variable displays the URL title of the category
 
+### `{category_group_id}`
+
+The ID of category group that the category belongs to.
+
+### `{category_group_name}`
+
+The name of the category group that the category belongs to.
+
 ### `{count}`
 
 The "count" out of the current categories being displayed. If five categories are being displayed, then for the fourth category the {count} variable would have a value of "4".

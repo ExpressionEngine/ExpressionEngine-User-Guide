@@ -126,6 +126,14 @@ The name of the category being viewed.
 
 The URL title of the category.
 
+### `{category_group_id}`
+
+The ID of category group that the category belongs to.
+
+### `{category_group_name}`
+
+The name of the category group that the category belongs to.
+
 ### Custom Category Fields
 
 All custom fields assigned to a category can be accessed using the "short name" of the field:
