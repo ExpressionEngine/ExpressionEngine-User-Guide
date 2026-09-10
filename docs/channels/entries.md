@@ -1261,32 +1261,49 @@ Handy conditional for displaying markup or content based on whether or not the e
 
 ### `{if no_results}`
 
-    {if no_results} content {/if}
+    {if no_results} There are no entries available {/if}
 
-You may use this conditional for displaying a message in the case when no entries are returned. The contents inside of the conditional will be displayed in cases where there are no results returned for the tag.
+You will use this conditional frequently to display alternative content when no entries are returned. The content inside the conditional will be displayed when no results are returned for the tag with the given parameters.
 
-    {if no_results}  <p>There are no entries available.</p>  {/if}
-
-Further, you may specify that another Template be shown in a case when there are no results. In order to do that, you must use the redirect=variable
+Further, you may specify that another page should be shown when there are no results. In order to do that, you use the [redirect= variable](templates/globals/single-variables.md#redirect).
 
     {if no_results} {redirect="channel/noresult"} {/if}
 
-Lastly, if you want to simply display your 404 page (with 404 headers) when no entries are returned, simply use "404" as the template name.
+Lastly, if you want to simply display your [custom Not Found page](general/404pages.md#404-pages) (with proper 404 headers) when no entries are returned, simply use "404" as the template name.
 
     {if no_results} {redirect="404"} {/if}
 
-NOTE: **Note:** If you have several nested tags, each one would need to include a `{if no_results}` pair to be parsed correctly.
+NOTE: **Note:** If you have nested tag loops that each check for no results, the outer one will "claim" and process the first (and only the first) `{if no_results}` block before the inner tag loop has a chance, unless the conditional is prefixed (which not every tag provides).
 
-For instance, if you have a Grid field with an `{if no_results}` block, the parent `{exp:channel:entries}` tag pair would need to include an `{if no_results}` block as well:
+For instance, if you have a Relationship field with an `{if no_results}` block, and the parent `{exp:channel:entries}` tag pair needs to include an `{if no_results}` block as well, you should use this format:
 ```
 {exp:channel:entries channel="blog"}
+    {my_relationship_field}
+        {if my_relationship_field:no_results} Relationship is empty {/if}
+        {my_relationship_field:title}
+    {/my_relationship_field}
     {if no_results} No entries {/if}
-    {my_grid_field}
-        {if no_results} Grid is empty {/if}
-        {my_grid_field:text}
-    {/my_grid_field}
 {/exp:channel:entries}
 ```
+
+NOTE: **Note:** Grid, File Grid, and Member fields do not have a `{if no_results}` conditional. Use [:total_rows](/fieldtypes/grid.md#total_rows-1).
+Fluid fields do not have a `{if no_results}` conditional. Use [:total_fields](/fieldtypes/fluid.md#total_fields)
+```
+{exp:channel:entries channel="blog"}
+    {if my_grid_field:total_rows == 0} Grid is empty {/if}
+    {my_grid_field}
+        {my_grid_field:text}
+    {/my_grid_field}
+    {if my_fluid_field:total_fields == 0} Fluid field is empty {/if}
+    {my_fluid_field}
+        {my_grid_field:text}
+    {/my_fluid_field}
+    {if no_results} No entries {/if}
+{/exp:channel:entries}
+```
+
+NOTE: **Note:** It is invalid syntax to use `{if:else}` with the `{if no_results}` conditional. Results (no pun intended) may be unpredictable.
+
 
 ### `{if not_category_request}`
 
@@ -1326,7 +1343,7 @@ You may test whether an entry is set to be "sticky". You may also test whether i
 
 Variable pairs contain an opening and closing tag as well as content in between. Example:
 
-    {date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
+    {date_heading} <h1>{entry_date format="%Y %m %d"}</h1> {/date_heading}
 
 The reason variable pairs have an opening and closing pair is because the information between the pairs can be shown or not shown if the criteria for each tag is met.
 
@@ -1334,7 +1351,7 @@ In the case of the "date_heading" pair, for example, it only appears at a certai
 
 ### `{date_footer}`
 
-    {date_footer display="daily"}  <p>That's all from today!</p>  {/date_footer}
+    {date_footer display="daily"} <p>That's all from today!</p> {/date_footer}
 
 The date footer can be used to show a footer at certain intervals. The interval can be set to show hourly, daily, weekly, monthly, or yearly. An optional "display" parameter can be used to set the display interval:
 
@@ -1354,7 +1371,7 @@ NOTE: **Note:** You can use as many date_footers as you want in the same tag. Th
 
 ### `{date_heading}`
 
-    {date_heading}  <h1>{entry_date format="%Y %m %d"}</h1>  {/date_heading}
+    {date_heading} <h1>{entry_date format="%Y %m %d"}</h1> {/date_heading}
 
 The date heading can be used to show a heading at certain intervals. The interval can be set to show hourly, daily, weekly, monthly, or yearly.
 
@@ -1493,7 +1510,7 @@ This variable will be replaced by a URL to the specified Template Group/Template
 
 If you want the category links to point to your site index instead of a particular template group/template, you can use SITE_INDEX instead:
 
-    {categories}  <a href="{path='SITE_INDEX'}">{category_name}</a>  {/categories}
+    {categories} <a href="{path='SITE_INDEX'}">{category_name}</a> {/categories}
 
 #### Custom Category Fields
 

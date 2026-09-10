@@ -15,7 +15,7 @@ lang: ee
 
 [TOC]
 
-The Grid field in ExpressionEngine provides a way to group fieldtypes in repeatable rows. This is useful for when you need to group a subset of data in your channel entry form that may or may not have a varying number of rows. You can select a minimum and a maximum amount of rows to allow data entry for, or it can be virtually infinite.
+The Grid field in ExpressionEngine provides a way to enter and organize content in repeatable rows using many of the other fieldtypes. This is useful when you need to group a subset of information in your channel entry form in a logical manner, especially when that infomation may have varying numbers of rows. You can set a minimum and/or a maximum number of rows, or it can be virtually infinite.
 
 ![grid field](_images/field_grid.png)
 
@@ -23,21 +23,21 @@ The Grid field in ExpressionEngine provides a way to group fieldtypes in repeata
 
 #### Minimum Rows
 
-Specifies the minimum number of rows this Grid will have. For example, if you enter `3`, the publish form will load with three rows ready to be populated and will not allow the publisher to have less than three rows in this Grid field.
+Specifies the minimum number of rows this grid will have. For example, if you enter `3`, the publish form will load with three empty rows ready to be populated and will not allow the publisher to delete any rows if there are only three. 
 
 #### Maximum Rows
 
-Specifies the maximum number of rows this Grid can have. For example, if you enter `10`, the publish form will not allow the publisher to add any more than ten rows to this Grid field.
+Specifies the maximum number of rows this grid can have. For example, if you enter `10`, the publish form will not allow the publisher to add any more than ten rows to this grid field.
 
-#### Allow reordering
+#### Allow Reordering
 
-Enables moving the Grid rows with drag & drop to change the order
+Enables moving the grid rows with drag & drop to change the order.
 
 #### Show Row Numbers
 
 Enables the display of row count alongside each row in the data grid.
 
-#### Grid layout
+#### Grid Layout
 
 Tip: Grid Field Layout
 <div class="video-wrapper">
@@ -52,23 +52,40 @@ Tip: Grid Field Layout
 
 ### Grid Fields
 
-Here, you specify the columns you want in your Grid field. All [native fieldtypes](fieldtypes/overview.md) are available to add and have many of the [same configuration options](control-panel/field-manager/field-manager-settings.md#createedit-field) as full fields do.
+Here, you specify the columns (a.k.a. Grid Fields) you want in your main grid field. All [native fieldtypes](fieldtypes/overview.md) are available to be part of a Grid field -- with the exception of Grid itself, [File Grid](fieldtypes/file-grid.md) and [Fluid](fieldtypes/fluid.md). Grid Fields within a grid may have [slightly different configuration options available](control-panel/field-manager/field-manager-settings.md#createedit-field) than they do as full fields.
+
+#### Creating and Editing Grid Fields
+
+To add a new Grid Field (column) click the "plus" icon. You must always have one field in your grid.
+
+You can collapse or show the settings for each field by clicking on the triangle in the box.
+
+Re-order the fields by grabbing the drag handle (three horizontal lines).
+
+Make a copy of the field by clicking the "copy" icon -- two superimposed squares.
+
+#### Grid Field General Options
+
+Just as with other field types, you can specify whether a grid field is required or not. This applies to every row in the grid.
+
+For some fieldtypes, you can choose whether its content should be included in search. The overall grid field must also be set to Include in Search, or else this setting will not have any effect. If you change the search inclusion status of an existing grid Field -- or make other changes to the field settings -- you will need to [re-index your content](control-panel/utilities/data-operations.md#search-reindex)
+
+You may set a minimum width for each grid field. When the grid is set to display horizontally, any grid field with a minimum width will have that width applied to it; fields without any minimum width will be given the remaining space.
+
 
 ## Template Tags
 
-Contents of a Grid field are accessed via a variable pair surrounding prefixed variables representing each column. For example, if you have a field `gallery` with an `image` and `credit` fields, your template code may look like this:
+Contents of a Grid Field are accessed via prefixed variables representing each column, surrounded by a variable pair. For example, if you have a grid field called `awards` with `name`, `details`, and `year_awarded` fields, your template code may look like this:
 
-    {gallery}
-        <figure>
-            <img src="{gallery:image}">
-            <figcaption>Photo by {gallery:credit}</figcaption>
-        </figure>
-        {gallery:description}
-    {/gallery}
+    {awards}
+        <h3>{awards:name} - {awards:year_awarded}<h3>
+        {awards:details}
+    {/awards}
 
-Grid has a number of parameters and other variables available in order to get the information you need out of it.
 
 ## Parameters
+
+Grid has a number of parameters and other variables available in order to get the information you need out of it.
 
 [TOC=3]
 
@@ -82,7 +99,7 @@ Just like the backspace parameter on the [Channel Entries](channels/entries.md) 
 
     dynamic_parameters="orderby|limit|sort"
 
-The [Dynamic Parameters](channels/dynamic-parameters.md) feature permits a Grid field tag's parameters to be set "on the fly" using POST data data submitted via a form. A practical use for this is to create some display options in a form on your page that your visitors can use to select their preferred page view.
+The [Dynamic Parameters](channels/dynamic-parameters.md) feature permits a grid field tag's parameters to be set "on the fly" using POST data submitted via a form. A practical use for this is to offer display options in a form on your page that your visitors can then use to select their preferred page view.
 
 NOTE: **Note:** This feature will only work if page caching is turned OFF for the template in which it is being used.
 
@@ -98,13 +115,13 @@ Allows the output of the tag pair to order rows in a fixed order of row IDs.
 
     limit="5"
 
-Limits the number of rows output by the tag pair to the number specified here. The limit will default to 100 rows if a value is not specified.
+Limits the number of rows output by the tag pair to the number specified. The limit will default to 100 rows if a value is not specified.
 
 ### `offset=`
 
     offset="1"
 
-Offsets the number of rows output by the tag pair to the number specified here.
+Offsets the number of rows output by the tag pair by the number specified.
 
 ### `orderby=`
 
@@ -112,7 +129,7 @@ Offsets the number of rows output by the tag pair to the number specified here.
 
 Allows the output of the tag pair to be ordered by a specific column, defaults to row order as set on the channel entry publish form. Entering `random` will return the rows in a random order.
 
-NOTE: **Note:** Unlike `exp:channel:entries`, you can only use one column at a time for sorting.
+NOTE: **Note:** Unlike `exp:channel:entries`, you can only use one column at a time for sorting -- though this limitation was removed in 7.5.23.
 
 ### `row_id=`
 
@@ -144,71 +161,71 @@ Specifies the direction of the sorting of the tag output. Defaults to ascending.
 
 ### `count`
 
-    {gallery:count}
+    {grid_field:count}
 
-The "count" out of the current rows being displayed. If five rows are being displayed, then for the fourth entry the `count` variable would have a value of "4".
+The "count" of the current row being displayed. If five rows are being displayed, then for the fourth entry the `count` variable would have a value of "4".
 
 ### `field_row_count`
 
-    {gallery:field_row_count}
+    {grid_field:field_row_count}
 
 The count of the row inside the field regardless of tag output.
 
 ### `field_row_index`
 
-    {gallery:field_row_index}
+    {grid_field:field_row_index}
 
 The index of the row inside the field regardless of tag output.
 
 ### `field_total_rows`
 
-    {gallery:field_total_rows}
+    {grid_field:field_total_rows}
 
-The total number of rows in the field regardless of tag output criteria.
+The total number of rows in the field regardless of tag output.
 
 ### `index`
 
-    {gallery:index}
+    {grid_field:index}
 
-The count of the rows but starting at zero.
+The count of the row being displayed but starting at zero.
 
 ### `prev_row`
 
-    {gallery:prev_row}
-        <a href="/gallery/lumenhaus/{gallery:row_id}">Previous photo</a>
-    {/gallery:prev_row}
+    {grid_field:prev_row}
+        <a href="{title_permalink}/{grid_field:row_id}">Previous Award</a>
+    {/grid_field:prev_row}
 
-Used as a tag pair within the parent Grid field tag pair, provides access to data in the previous row in the dataset.
+When used as a tag pair within the parent grid field tag pair, provides access to data in the previous row in the dataset. 
 
 ### `next_row`
 
-    {gallery:next_row}
-        <a href="/gallery/lumenhaus/{gallery:row_id}">Next photo</a>
-    {/gallery:next_row}
+    {grid_field:next_row}
+        <a href="/awards/{url_title}/{grid_field:row_id}">Next Award</a>
+    {/grid_field:next_row}
 
-Used as a tag pair within the parent Grid field tag pair, provides access to data in the next row in the dataset.
+When used as a tag pair within the parent grid field tag pair, provides access to data in the next row in the dataset.
 
 ### `row_id`
 
-    {gallery:row_id}
+    {grid_field:row_id}
 
 The database ID of the current row.
 
 ### `switch=`
 
-    {gallery:switch="odd|even"}
+    {grid_field:switch="odd|even"}
 
-Identical to the [switch variable](channels/entries.md#switch) available in the [Channel Entries](channels/entries.md) tag pair, but prefixed for your Grid field.
+Identical to the [switch variable](channels/entries.md#switch) available in the [Channel Entries](channels/entries.md) tag pair, but prefixed for your grid field.
 
 ### `total_rows`
 
-    {gallery:total_rows}
+    {grid_field:total_rows}
 
 The total number of rows being returned by the current display criteria.
 
 ## Modifiers
 
-All modifiers have access to the tag parameters available to the primary tag which are listed above.
+All these modifiers can be used with the tag parameters available to the primary tag, which are listed above.
 
 ### `:average`
 
@@ -236,9 +253,9 @@ Given a column name containing numeric data, returns the sum of the column value
 
 ### `:table`
 
-    {grid_field:table cellspacing="0" cellpadding="0"}
+    {grid_field:table cellspacing="0" cellpadding="0" set_classes="y"}
 
-Outputs the data in the Grid field as a table. All parameters available to the primary tag are available in addition to these:
+Outputs the data in the grid field as a table. All parameters available to the primary tag are available in addition to these:
 
 - **border=** Sets border attribute on the table's HTML element
 - **cellspacing=** Sets cellspacing attribute on the table's HTML element
@@ -246,19 +263,21 @@ Outputs the data in the Grid field as a table. All parameters available to the p
 - **class=** Sets class attribute on the table's HTML element
 - **id=** Sets ID attribute on the table's HTML element
 - **set_classes=** If set to 'y', adds column name to the class attribute of each cell.
-- **set_widths=** If set to 'y', sets the same column widths configured for each column in the Grid field's settings.
+- **set_widths=** If set to 'y', sets the same column widths configured for each column in the grid field's settings.
 - **width=** Sets width attribute on the table's HTML element
 
 ### `:total_rows`
 
     {grid_field:total_rows search:height=">55"}
 
-When outside of a Grid field tag pair, this modifier can be used to get the total number of rows in a field given a specific criteria.
+When outside of a grid field tag pair, this modifier can be used to get the total number of rows in a field given a specific criteria. Useful for determining if there are any grid rows at all: `{if grid_field:total_rows == 0} Grid is empty {/if}`. Note that `no_results` is not a valid conditional for the Grid field. Also note that you need to wrap the tag in quotes and curly braces if you are using any parameters:
+
+    {if "{grid_field:total_rows search:height='>55'}" == 0} No rows with tall things {/if}
 
 ### `:next_row`
 
     {grid_field:next_row row_id="{segment_3}"}
-        Next up: <a href="/gallery/photo/{grid_field:row_id}">{grid_field:title}</a>
+        Next up: <a href="/awards/{url_title}/{grid_field:row_id}">{grid_field:title}</a>
     {/grid_field:next_row}
 
 Given a row ID, this tag pair will provide access to the next row in the field criteria. The `row_id` may be populated via a segment variable.
@@ -266,7 +285,7 @@ Given a row ID, this tag pair will provide access to the next row in the field c
 ### `:prev_row`
 
     {grid_field:prev_row row_id="5"}
-        Previous: <a href="/gallery/photo/{grid_field:row_id}">{grid_field:title}</a>
+        Previous: <a href="/awards/{url_title}/{grid_field:row_id}">{grid_field:title}</a>
     {/grid_field:prev_row}
 
 Given a row ID, this tag pair will provide access to the previous row in the field criteria. The `row_id` may be populated via a segment variable.
