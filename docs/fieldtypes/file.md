@@ -70,6 +70,7 @@ or even
 
 ### Wrap Parameter
 
+#### `wrap="link"`
 You will frequently want to link to the file in your entry. Using the wrap parameter can simplify this process:
 
     {news_image wrap="link"}
@@ -78,6 +79,8 @@ Will render as:
 
     <a href="https://example.com/dir/filename.ext">filename</a>
 
+#### `wrap="image"`
+
 It can also be used to create image tags. In this case the filename will be used to create the alt parameter.
 
     {news_image wrap="image"}
@@ -85,6 +88,28 @@ It can also be used to create image tags. In this case the filename will be used
 Which will output as:
 
     <img src="https://example.com/dir/filename.ext" alt="filename" />
+
+Additionally, you can use some HTML attributes with the `wrap="image"` parameter. These include `class`, `id`, `style`, `title`, `alt`, `width`, and `height`. For example:
+
+    {news_image wrap="image" class="my-image" id="my-image" style="border: 1px solid #000;" title="My Image" alt="My Image" width="100" height="100"}
+
+For the width and height attributes, you can use the `width="width"` and `height="height"` to output the actual width and height of the image. For example:
+
+    {news_image wrap="image" width="width" height="height"}
+
+#### `wrap="svg"`
+
+If the file is SVG, you can use the `inline` wrap parameter to render the SVG inline:
+
+    {news_image wrap="svg"}
+
+You can use `width` and `height` parameters to set the width and height of the SVG. Note that both need to be set. For example:
+
+    {news_image wrap="svg" width="100" height="100"}
+
+Additionally, you can use `class`, `id` and `style` HTML attributes with the `wrap="svg"` parameter.
+
+    {news_image wrap="svg" class="my-svg" id="my-svg" style="border: 1px solid #000;" title="My SVG" alt="My SVG" width="100" height="100"}
 
 ### Variable Pair Usage
 
