@@ -19,6 +19,12 @@ Category groups are _collections_ of categories that can be assigned to channels
 
 ![Category Manager Control Panel Page](_images/cp-category-manager.png)
 
+## Reorder Categories
+
+On the category listing screen, you can drag and drop categories to change order or nesting within the selected category group.
+
+The category listing is saved as soon as you are done reordering, ExpressionEngine validates the full reorder payload before writing changes. If the payload is incomplete, no partial reorder is saved.
+
 ## Create/Edit Category
 
 **Control Panel Location: `Content > Categories > New/Edit Category`**
