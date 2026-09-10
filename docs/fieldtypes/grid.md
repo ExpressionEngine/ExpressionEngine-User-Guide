@@ -68,7 +68,7 @@ Make a copy of the field by clicking the "copy" icon -- two superimposed squares
 
 Just as with other field types, you can specify whether a grid field is required or not. This applies to every row in the grid.
 
-For some fieldtypes, you can choose whether its content should be included in search. The overall grid field must also be set to Include in Search, or else this setting will not have any effect. If you change the search inclusion status of an existing grid Field -- or make other changes to the field settings -- you will need to [re-index your content](control-panel/utilities/data-operations.md#search-reindex)
+For some fieldtypes, you can choose whether its content should be included in search. The overall grid field must also be set to Include in Search, or else this setting will not have any effect. If you change the search inclusion status of an existing grid field or column, you will need to [re-index your content](control-panel/utilities/data-operations.md#search-reindex).
 
 You may set a minimum width for each grid field. When the grid is set to display horizontally, any grid field with a minimum width will have that width applied to it; fields without any minimum width will be given the remaining space.
 
@@ -78,7 +78,7 @@ You may set a minimum width for each grid field. When the grid is set to display
 Contents of a Grid Field are accessed via prefixed variables representing each column, surrounded by a variable pair. For example, if you have a grid field called `awards` with `name`, `details`, and `year_awarded` fields, your template code may look like this:
 
     {awards}
-        <h3>{awards:name} - {awards:year_awarded}<h3>
+        <h3>{awards:name} - {awards:year_awarded}</h3>
         {awards:details}
     {/awards}
 
@@ -270,9 +270,11 @@ Outputs the data in the grid field as a table. All parameters available to the p
 
     {grid_field:total_rows search:height=">55"}
 
-When outside of a grid field tag pair, this modifier can be used to get the total number of rows in a field given a specific criteria. Useful for determining if there are any grid rows at all: `{if grid_field:total_rows == 0} Grid is empty {/if}`. Note that `no_results` is not a valid conditional for the Grid field. Also note that you need to wrap the tag in quotes and curly braces if you are using any parameters:
+When outside of a grid field tag pair, this modifier can be used to get the total number of rows in a field given a specific criteria. Useful for determining if there are any grid rows at all: `{if grid_field:total_rows == 0} Grid is empty {/if}`. When using parameters, wrap the tag in curly braces. Quotes around the numeric result are optional:
 
     {if "{grid_field:total_rows search:height='>55'}" == 0} No rows with tall things {/if}
+
+NOTE: **Note:** Grid can process `{if no_results}` when existing rows are excluded by parameters such as `offset`, but a field with no stored rows returns without processing it. Use `:total_rows` to check whether the field has any rows. When nested in `{exp:channel:entries}`, put the Channel Entries `{if no_results}` block before the Grid tag pair.
 
 ### `:next_row`
 

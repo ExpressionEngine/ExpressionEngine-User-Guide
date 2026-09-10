@@ -1286,8 +1286,8 @@ For instance, if you have a Relationship field with an `{if no_results}` block, 
 {/exp:channel:entries}
 ```
 
-NOTE: **Note:** Grid, File Grid, and Member fields do not have a `{if no_results}` conditional. Use [:total_rows](/fieldtypes/grid.md#total_rows-1).
-Fluid fields do not have a `{if no_results}` conditional. Use [:total_fields](/fieldtypes/fluid.md#total_fields)
+NOTE: **Note:** To test whether a Grid or File Grid field is empty, use [:total_rows](fieldtypes/grid.md#total_rows-1). For a Members field, use [:total_rows](fieldtypes/member.md#total_rows). For a Fluid field, use [:total_fields](fieldtypes/fluid.md#total_fields).
+
 ```
 {exp:channel:entries channel="blog"}
     {if my_grid_field:total_rows == 0} Grid is empty {/if}
@@ -1296,7 +1296,9 @@ Fluid fields do not have a `{if no_results}` conditional. Use [:total_fields](/f
     {/my_grid_field}
     {if my_fluid_field:total_fields == 0} Fluid field is empty {/if}
     {my_fluid_field}
-        {my_grid_field:text}
+        {my_fluid_field:text}
+            {content}
+        {/my_fluid_field:text}
     {/my_fluid_field}
     {if no_results} No entries {/if}
 {/exp:channel:entries}
