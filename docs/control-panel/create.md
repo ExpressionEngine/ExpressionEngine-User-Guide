@@ -192,12 +192,16 @@ Saves the entry and returns the [Entry Manager](control-panel/entry-manager.md) 
 
 ### Preview
 
-A live preview of the entry is available if the relevant channel's [Preview URL](control-panel/channels.md#settings-tab) is set **or** the [Pages Module](add-ons/pages.md) or [Structure](add-ons/structure/overview.md) is installed and configured with a URI and template.
+A dynamic, live preview of an entry can be simultaneously displayed while you edit. The preview button opens a split browser window that displays a live preview of the entry you are editing.
 
-If neither is set, the preview button will have an exclamation mark (!) and will link to channel preferences page where Preview URL can be set.
+The template used to display the preview is based on configured Pages/Structure fields if the [Pages Module](add-ons/pages.md) or [Structure](add-ons/structure/overview.md) is installed and configured with a URI and template -- or the relevant channel's [Preview URL](control-panel/channels.md#settings-tab) setting otherwise.
 
-The preview will open a split screen that allows a live preview of edits. The template used to display the preview is based on configured Pages/Structure fields if set and the channel preview URL otherwise.
+If neither of these is set, the preview button will have an exclamation mark (!) and it will link to channel preferences page where Preview URL can be set.
 
-When the preview is triggered, it is being displayed side-by-side with edit screen. The size of preview container can be adjusted with mouse dragging its border. The preview is dynamically being updated as you change the fields.
+NOTE: **Note:** Commonly, the channel preview template is set to be the same template that the live entry, but in certain cases it's useful to use a different, customized preview template. Pages/Structure do not have this flexibility.
+
+NOTE: **Note:** Use the [`{is_live_preview_request}`](globals/single-variables.md#is_live_preview_request) conditional to only display certain content or to modify certain attributes only when previewing an entry. For example, `{if is_live_preview_request}status="open|closed" show_future_entries="yes"{/if}` will preview an entry that is closed or set to publish in the future.
+
+Once the preview is triggered, it will continue to be displayed side-by-side with edit screen until you close it. The size of preview window can be adjusted with the mouse by dragging its border. The preview contents will dynamically update as you change the contents of any field. 
 
 Live Preview does require the [HTTP Authorization Header be enabled](troubleshooting/error-messages.md#http-authorization-header-missing).
