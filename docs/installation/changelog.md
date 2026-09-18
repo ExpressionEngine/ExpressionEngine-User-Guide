@@ -8,6 +8,49 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.27
+(Release: September 21st, 2026)
+
+<!-- Release preparation: Includes open milestone PRs #5373, #5391, #5398, and #5400. Confirm their inclusion and refresh contributor credits before publishing. -->
+
+NOTE: **Important:** This version includes important security updates.
+
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/224037?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">creativearc-paul</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=creativearc-paul" target="_BLANK">@creativearc-paul</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Fixed layout loop indexes and indexed array lookups after rendering a Multi Select pair without `{index}` [#5389](https://github.com/ExpressionEngine/ExpressionEngine/pull/5389)
+- Fixed Grid and File Grid cloning after a validation error so retrying the save does not reassign the original field's columns [#5391](https://github.com/ExpressionEngine/ExpressionEngine/pull/5391)
+- Fixed watermarks being applied to auto-generated thumbnails and other image manipulations that were not configured to use them [#5373](https://github.com/ExpressionEngine/ExpressionEngine/pull/5373)
+- Fixed the Control Panel email newline setting so selecting CRLF also applies to quoted-printable email encoding when no explicit `email_crlf` override is configured [#5398](https://github.com/ExpressionEngine/ExpressionEngine/pull/5398)
+- Fixed unnecessary filesystem exceptions when optional global variable directories do not exist [#5400](https://github.com/ExpressionEngine/ExpressionEngine/pull/5400)
+- Fixed database backup progress moving backward when MySQL underestimates a table's row count [#5401](https://github.com/ExpressionEngine/ExpressionEngine/pull/5401)
+- Fixed the default post-install message template to display the current copyright year on new installations [#5371](https://github.com/ExpressionEngine/ExpressionEngine/pull/5371)
+- Improved updater authorization and compatibility across Control Panel session types [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Improved member profile variable handling and conditional parsing in member profile and member list templates [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Improved member import validation and role assignment handling, including rejecting member IDs that are already in use [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Updated Control Panel permissions for database backups, SQL queries, Search and Replace, and Pro Search shortcut management. Submitting SQL queries and using Search and Replace now require a Super Admin [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Improved rendering of Pro Search labels, channel title instructions, and custom Control Panel homepage settings [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Improved comment author links and text handling when saving comment edits [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Improved request validation when removing menu items and MSM sites [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Improved Structure page title handling in template variables [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Improved Pro Variables Table data handling while preserving support for existing stored values [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+
+**Developers** 💻
+
+- Added the `ee_html_escape()` helper for escaping literal text in HTML content and quoted attributes, and an `inlineHtml()` text formatter for limited inline formatting [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Expanded regression coverage for layout parsing, Grid cloning, email configuration, installer and updater flows, member management, Control Panel permissions, comments, Pro Search, Pro Variables, and Structure [#5389](https://github.com/ExpressionEngine/ExpressionEngine/pull/5389) [#5391](https://github.com/ExpressionEngine/ExpressionEngine/pull/5391) [#5398](https://github.com/ExpressionEngine/ExpressionEngine/pull/5398) [#5405](https://github.com/ExpressionEngine/ExpressionEngine/pull/5405)
+- Updated the project README with a clearer overview of ExpressionEngine, installation guidance, and links to documentation and community resources [#5402](https://github.com/ExpressionEngine/ExpressionEngine/pull/5402)
+
 ## Version 7.5.26
 (Release: July 22nd, 2026)
 
