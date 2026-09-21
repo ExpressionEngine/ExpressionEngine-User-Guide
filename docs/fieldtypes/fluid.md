@@ -341,9 +341,11 @@ A fluid field can handle the output of all of those fields, as many as they add,
 
 ## Fluid Field Notes
 
-- The `{if no_results}` tag is not valid within the prefixed variable pairs.
-- Count variables available in some variable pairs (grid and relationship) restart at 1 each loop. So the total_results for a relationship tag pair would refer to the total number of relationships for that specific instance of the relationship field.
 - All native fields aside from a Fluid field can be included in a Fluid field.
+
+- The `{if no_results}` conditional tag is not valid for use in controlling the display of fluid fields. To test if the overall field has any content, use [:total_fields](/fieldtypes/fluid.md#total_fields) outside of the fluid field loop: `{if my_fluid_field:total_fields == 0} Fluid field is empty {/if}`
+
+- Count variables available in some variable pairs (grid and relationship) restart at 1 each loop. So the total_results for a relationship tag pair would refer to the total number of relationships for that specific instance of the relationship field.
 
 ## Field Examples
 
