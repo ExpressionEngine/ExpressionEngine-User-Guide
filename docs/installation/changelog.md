@@ -11,8 +11,6 @@
 ## Version 7.5.27
 (Release: September 21st, 2026)
 
-<!-- Release preparation: Includes open milestone PRs #5373, #5391, #5398, and #5400. Confirm their inclusion and refresh contributor credits before publishing. -->
-
 NOTE: **Important:** This version includes important security updates.
 
 <div class="max-w-7xl mx-autotext-center">
@@ -128,7 +126,7 @@ NOTE: **Important:** This version includes important security updates.
 
 - Improved Moblog field handling and expanded related test coverage [#5327](https://github.com/ExpressionEngine/ExpressionEngine/pull/5327)
 - Improved member breadcrumb and ignore-list handling with expanded test coverage [#5333](https://github.com/ExpressionEngine/ExpressionEngine/pull/5333)
-- Added automated coverage for Channel Form field variables, File field Grid validation, Structure parent IDs, add-on removal, random string generation, member tag queries, and Moblog handling 
+- Added automated coverage for Channel Form field variables, File field Grid validation, Structure parent IDs, add-on removal, random string generation, member tag queries, and Moblog handling
 
 ## Version 7.5.24
 (Release: June 8th, 2026)
