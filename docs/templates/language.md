@@ -129,6 +129,8 @@ You may change the parsing order of plugins and instruct ExpressionEngine to par
 
     parse="inward"
 
+TIP: **{ee:u}** Download a [one-page reference guide](expressionengine_parse_order_quick_reference_guide) or dive into the details of parsing order in this presentation from EEConf 2021, [But First... Parse Order and PHP in ExpressionEngine Templates](https://u.expressionengine.com/course/ee-conf-spring-summit-2021/eeconf-spring-2021-but-first-parse-order-and-php-in-expressionengines-templates), at ExpressionEngine University.
+
 ### Examples
 
 Here are some examples to help illustrate the parsing order.:
