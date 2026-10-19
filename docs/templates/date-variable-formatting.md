@@ -43,6 +43,14 @@ The `timezone=` parameter will convert a date to the specified timezone:
 
 This will override the timezone specified in the [localization settings](control-panel/settings/general.md) in the control panel, and the member's localization settings. PHP.net has a [list of supported timezones](https://php.net/manual/en/timezones.php).
 
+### Translating Dates
+
+By default, the dates are shown according to user preferred language or the system language. You can override this by using the `lang=` parameter:
+
+    lang="french"
+
+Please note that the [language file](localization/languages.md) must be present in the `system/user/language/` directory. If the language file is not found, the date will be displayed in the default language.
+
 ## Date Formatting Codes
 
 These are all the available formatting codes. If you are familiar with PHP, then these will look [remarkably similar](https://php.net/manual/en/function.date.php#refsect1-function.date-parameters):
