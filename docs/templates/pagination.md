@@ -93,6 +93,22 @@ The opening and closing tags for pagination. This can to be used in conjunction 
 
     {paginate}  {/paginate}
 
+### paginate:top
+
+This tag pair is used to display pagination content at the top of your entries. It is functionally identical to using `{paginate}` with the parameter `paginate="top"`, but allows you to also have different pagination content at the top and bottom of your entries.
+
+    {paginate:top} Showing {current_page} of {total_pages} {/paginate:top}
+    ...
+    {paginate:bottom} {pagination_links} {/paginate:bottom}
+
+### paginate:bottom
+
+This tag pair is used to display pagination content at the bottom of your entries. It is functionally identical to using `{paginate}` with the parameter `paginate="bottom"`, but allows you to also have different pagination content at the top and bottom of your entries.
+
+    {paginate:top} Showing {current_page} of {total_pages} {/paginate:top}
+    ...
+    {paginate:bottom} {pagination_links} {/paginate:bottom}
+
 ### pagination_links
 
 This variable shows the current page you are on as well as "surrounding" pages in addition to links for next/previous pages and first/last pages.
