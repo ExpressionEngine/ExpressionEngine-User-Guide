@@ -324,6 +324,8 @@ Resize the image and then crop it.
 | crop:x        | `Number` | `0`| Horizontal crop offset, px |
 | crop:y        | `Number` | `0`| Vertical crop offset, px |
 
+The output of this tag might differ from "Crop" pre-defined image manipulation as set in Upload Directory settings. To achieve exact same behaviour you need to set `width` and `height` parameters to the same values for both resize and crop.
+
 ### Using as modifier tags pairs
 
     {news_image:resize width="100" height="100"}
