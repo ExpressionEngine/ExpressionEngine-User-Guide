@@ -273,6 +273,12 @@ The "human" name of the previous field group. This will be blank when on the fir
 
 The short name of the previous field group. This will be blank when on the first group.
 
+### `group_id`
+
+    {fluid_content:group_id}
+
+The unique numeric ID of the current field group. Stable across edits and reorders.
+
 ## Displaying a Pair variable
 
 Fields that use a variable pair to output content work like they would outside of a Fluid field, with the the `{content}` variable taking the place of the field shortname.
