@@ -21,7 +21,7 @@ Use the `get()` method with a model name to begin a query:
 
     $builder = ee('Model')->get('Template');
 
-This will return a builder object, which we will use narrow down the selection. When you're ready to retrieve the matching data, call `all()`. You will be returned a [Collection](development/services/model/collection.md):
+This will return a [Query Builder](development/services/model/query-builder.md) object, which we will use narrow down the selection. When you're ready to retrieve the matching data, call `all()`. You will be returned a [Collection](development/services/model/collection.md):
 
     $templates = $builder->all();
 
@@ -29,7 +29,7 @@ Usually these calls are chained for brevity:
 
     $templates = ee('Model')->get('Template')->all();
 
-NOTE: **Note:** Please see [Collection](development/services/model/collection.md) for list of methods to operate returned data.
+NOTE: **Note:** Please see [Query Builder](development/services/model/query-builder.md) for list of methods to build model query and [Collection](development/services/model/collection.md) for list of methods to operate returned data.
 
 ## Filters
 
@@ -203,3 +203,11 @@ In order to reduce memory usage, you can ask for only a subset of the available 
       ->first();
 
 NOTE: **Note:** This method should only be used for querying data. It should not be used for models that will be edited, deleted, or passed to other code for processing.
+
+## Caching
+
+The queries are not cached by default. If you'll need to reuse same model query at a later time, you can specify boolean `true` as parameter for `->all()` or `->first()` methods:
+
+    $templates = ee('Model')->get('Template')->all(true);
+
+    $template = ee('Model')->get('Template')->first(true);
