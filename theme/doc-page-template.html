@@ -14,6 +14,22 @@
 
 		<title>{{page_title}} — ExpressionEngine {{current_version}} Documentation</title>
 
+		<script>
+			// Apply the saved color theme before first paint to avoid a flash of the wrong theme.
+			// Values: "light", "dark", "system" (default). Managed by the toggle in the header.
+			(function () {
+				var pref = 'system';
+				try { pref = localStorage.getItem('ee-docs-theme') || 'system'; } catch (e) {}
+
+				var isDark = pref === 'dark' ||
+					(pref !== 'light' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
+				if (isDark) {
+					document.documentElement.className += ' dark';
+				}
+			})();
+		</script>
+
         <link rel="stylesheet" href="https://unpkg.com/meilisearch-docsearch@latest/dist/index.css"/>
 
 		<link rel="stylesheet" href="{{root_dir}}_assets/default.min.css">
@@ -79,6 +95,19 @@
 							</div>
 						</div>
 						<a href="https://docs.expressionengine.com/downloads/EEDocs7.latest.zip" class="download-button"><img src="{{root_dir}}_assets/images/download.svg" alt=""></a>
+					</div>
+
+					<div class="theme-toggle dropdown" id="theme-toggle">
+						<a href="#" class="theme-toggle__button" title="Switch color theme" aria-label="Switch color theme">
+							<i class="fas fa-desktop" id="theme-toggle-icon"></i>
+						</a>
+						<div class="dropdown-menu">
+							<div class="dropdown-menu-inner">
+								<a href="#" data-theme-value="light"><i class="fas fa-sun"></i> Light</a>
+								<a href="#" data-theme-value="dark"><i class="fas fa-moon"></i> Dark</a>
+								<a href="#" data-theme-value="system"><i class="fas fa-desktop"></i> System</a>
+							</div>
+						</div>
 					</div>
 				</nav>
 
