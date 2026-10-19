@@ -251,9 +251,16 @@ Resize the image.
 
 ### `:crop`
 
-    {news_image:crop width="100" height="100" position="center"}
+    {news_image:crop width="100" height="100" position="focal"}
 
 Crop the image. By default, cropping uses top left corner of image as starting position. You can specify `x` and `y` offset, if needed, or `position="center"` parameter to make crop happen close to image center.
+
+If you specify `position="focal"` the cropping will be done close to the focal point of the image as set in the Control Panel.
+
+You can also specify numeric values for position, separated by a pipeline, e.g. `position="0.2|0.2"`. The numbers are between `0` and `1`, where `0` is the left/top edge of the image and `1` is the right/bottom edge of the image. The first number is for the x-axis, the second for the y-axis.
+The numbers are relative to the image size, so `0.5|0.5` would be the center of the image.
+
+You also can use words instead of numbers, e.g. `position="left|top"` or `position="right|bottom"`.
 
 | Parameter | Values  | Default    | Description                           |
 | --------- | ------- | ---------- | -------------------------------------- |
@@ -262,6 +269,7 @@ Crop the image. By default, cropping uses top left corner of image as starting p
 | quality  | `0`-`100`| `75`       | Image quality, % |
 | maintain_ratio      | `y` / `n`  | `y`| Keep image ratio (yes/no)  |
 | position | `center` |            | Crop close to image center  |
+| position | `focal`  |            | Crop close to image focal point as set in CP  |
 | x        | `Number` | `0`        | Horizontal offset, px |
 | y        | `Number` | `0`        | Vertical offset, px |
 
