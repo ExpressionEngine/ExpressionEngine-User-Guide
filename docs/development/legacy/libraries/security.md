@@ -21,9 +21,9 @@ lang: php
 
 This class is initialized automatically.
 
-## Cross Site Scripting Protection
+## Cross-Site Scripting Protection
 
-For general XSS protection handling, please refer to the [Cross Site Scripting](development/guidelines/security.md#cross-site-scripting-xss) section of the security guidelines.
+For general XSS protection handling, please refer to the [Cross-Site Scripting](development/guidelines/security.md#cross-site-scripting-xss) section of the security guidelines.
 
 ### `xss_clean($str[, $is_image = FALSE])`
 
@@ -33,13 +33,13 @@ For general XSS protection handling, please refer to the [Cross Site Scripting](
 | \$is_image | `Boolean` | Set to `TRUE` if you want to test images for XSS attacks.                                                                            |
 | Returns    | `Mixed`   | Either a string or an array of sanitized strings. If `$is_image` is set to `TRUE`, will return `FALSE` if the image fails the check. |
 
-`xss_clean()` is the built in ExpressionEngine XSS sanitization method, which is constantly tweaked for improved security and performance:
+`xss_clean()` is the built-in ExpressionEngine XSS sanitization method, which is constantly tweaked for improved security and performance:
 
     $str = ee()->security->xss_clean($str);
 
-## Cross Site Request Forgery Protection
+## Cross-Site Request Forgery Protection
 
-For general CSRF protection handling, please refer to the [Cross Site Request Forgery](development/guidelines/security.md#cross-site-request-forgery) section of the security guidelines.
+For general CSRF protection handling, please refer to the [Cross-Site Request Forgery](development/guidelines/security.md#cross-site-request-forgery) section of the security guidelines.
 
 ## Other Class Methods
 

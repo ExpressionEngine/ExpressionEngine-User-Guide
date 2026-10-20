@@ -8,6 +8,48 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.5.28
+(Release: October 20th, 2026)
+
+NOTE: **Important:** This version includes important security updates.
+
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/15254345?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Charles Garrison</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Charles-Garrison" target="_BLANK">@Charles-Garrison</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/39419325?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Rowan Sentesy</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=rowansentesy" target="_BLANK">@rowansentesy</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/49483?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Travis 'Nep' Smith</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=nep" target="_BLANK">@nep</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Bug Fixes** 💃🐛
+
+- Fixed UTF-8 display name encoding in email Reply-To headers [#5429](https://github.com/ExpressionEngine/ExpressionEngine/pull/5429)
+- Restored links in channel entry title field instructions [#5430](https://github.com/ExpressionEngine/ExpressionEngine/pull/5430)
+- Fixed validation errors for child fields inside Fluid field groups and cleared resolved error messages after corrections [#5397](https://github.com/ExpressionEngine/ExpressionEngine/pull/5397)
+- Fixed Grid and File Grid fields switching back to horizontal layout when space is available, while keeping row controls accessible for collapsed rows and Live Preview [#5369](https://github.com/ExpressionEngine/ExpressionEngine/pull/5369)
+- Fixed file usage tracking to retain references from every file-bearing column in a Grid row [#5410](https://github.com/ExpressionEngine/ExpressionEngine/pull/5410)
+- Fixed entry deletion leaving behind Grid and File Grid rows belonging to Fluid field items [#5420](https://github.com/ExpressionEngine/ExpressionEngine/pull/5420)
+- Fixed cloning entries whose original IP address fails validation [#5362](https://github.com/ExpressionEngine/ExpressionEngine/pull/5362)
+- Fixed PHP warnings when relationship results are missing an `orderby` field [#5386](https://github.com/ExpressionEngine/ExpressionEngine/pull/5386)
+- Fixed a PHP deprecation notice when clearing Memcached namespaces, including during one-click updates [#5423](https://github.com/ExpressionEngine/ExpressionEngine/pull/5423)
+- Fixed File field `:resize_crop` manipulations regenerating images instead of reusing cached results [#5424](https://github.com/ExpressionEngine/ExpressionEngine/pull/5424)
+- Fixed stale dynamic image caches after replacing an image or regenerating image manipulations [#5424](https://github.com/ExpressionEngine/ExpressionEngine/pull/5424)
+- Fixed image manipulation errors during concurrent requests and improved temporary file cleanup and fallback image URLs [#5424](https://github.com/ExpressionEngine/ExpressionEngine/pull/5424)
+- Fixed a date picker error in Chrome 153 and 154 [#5424](https://github.com/ExpressionEngine/ExpressionEngine/pull/5424)
+- Improved Structure navigation and listing lookup handling [#5431](https://github.com/ExpressionEngine/ExpressionEngine/pull/5431)
+- Improved SQL utility request handling [#5431](https://github.com/ExpressionEngine/ExpressionEngine/pull/5431)
+
+**Developers** 💻
+
+- Expanded regression coverage for image processing, Fluid fields, email handling, title instructions, and Structure [#5424](https://github.com/ExpressionEngine/ExpressionEngine/pull/5424) [#5420](https://github.com/ExpressionEngine/ExpressionEngine/pull/5420) [#5431](https://github.com/ExpressionEngine/ExpressionEngine/pull/5431)
+
 ## Version 7.5.27
 (Release: September 21st, 2026)
 

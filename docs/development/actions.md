@@ -14,12 +14,12 @@ TIP: If you are working with an existing add-on, we recommend you start with [Mo
 [TOC]
 
 ## Overview
-Actions in ExpressionEngine are URL endpoints that are reached with the `ACT` query parameter. An example of this might be `http://myamazingsite.com/?ACT=43` where 43 is the ID given to an action registered in the `exp_actions` database table. These actions are tied to methods in an add-on which can be used to accept input from forms or run some sort of other functionality defined in the add-on.
+Actions in ExpressionEngine are URL endpoints that are reached with the `ACT` query parameter. An example of this might be `http://myamazingsite.com/?ACT=43`, where 43 is the ID given to an action registered in the `exp_actions` database table. These actions are tied to methods in an add-on that can be used to accept input from forms or to run other functionality defined in the add-on.
 
-NOTE:Before adding an action to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
+NOTE: Before adding an action to your add-on, you need to already have an add-on in place. See [Building An Add-On: Getting Started](development/addon-development-overview.md#getting-started) for how to generate the starter files for your add-on.
 
 ## Creating An Amazing Action
-To generate an action we use the CLI to add the action to our existing add-on named "Amazing Add-on".
+To generate an action, we use the CLI to add the action to our existing add-on named "Amazing Add-on".
 
 ```
 php system/ee/eecli.php make:action
@@ -28,7 +28,7 @@ php system/ee/eecli.php make:action
 Follow the prompts to add an action file to your add-on.
 
 
-This will create an `Actions` folder inside our add-on's folder where will build out the code we want to run when a user hits our `ACT` URL. Inside our `Actions` folder the CLI will create a file with the same name as the method we defined when creating our action.
+This will create an `Actions` folder inside our add-on's folder, where we will build out the code we want to run when a user hits our `ACT` URL. Inside our `Actions` folder, the CLI will create a file with the same name as the method we defined when creating our action.
 
 ```
 amazing_add_on
@@ -37,7 +37,7 @@ amazing_add_on
  ┗...
 ```
 
-We also notice that a migration is created in our `database/migrations` folder. This migration is ran when your add-on is installed or uninstalled to tell ExpressionEngine what actions we needed added or removed with our add-on.
+We also notice that a migration is created in our `database/migrations` folder. This migration is run when your add-on is installed or uninstalled to tell ExpressionEngine what actions we needed added or removed with our add-on.
 
 ```
 //database/migrations/[timestamp]_[mirgrationname].php
@@ -80,20 +80,20 @@ Actions are not available for use until they have been added to the `exp_actions
 |-----------|----------------|----------------|------------|
 |        41 | Amazing_add_on | ExampleAction  |          0 |
 
-If you want your action to be accessible immediately, you can either run the migration that was created by the CLI or set a flag in the CLI when creating the add-on.
+If you want your action to be accessible immediately, you can either run the migration created by the CLI or set a flag in the CLI when creating the add-on.
 
 ### Run Migration To Activate
-After creating your action using the CLI run `$ php system/ee/eecli.php migrate`. When asked for the location, type in the name of your add-on. This will run all migrations that have not been ran for your add-on including entering the action into `exp_actions`.
+After creating your action using the CLI, run `$ php system/ee/eecli.php migrate`. When asked for the location, type in the name of your add-on. This will run all migrations that have not been run for your add-on, including entering the action into `exp_actions`.
 
 
 ### Setting Flag To Activate On Creation
-On creation of an action, you can also specify to add it to the database after the CLI creates it. You can do this with the `--install` or `-i` flag by running your `make:action` command like so: `$ php system/ee/eecli.php make:action --install`.
+When creating an action, you can also specify that it be added to the database after the CLI creates it. You can do this with the `--install` or `-i` flag by running your `make:action` command like so: `$ php system/ee/eecli.php make:action --install`.
 
 
 
 ## Anatomy of An Action
 
-Once we've added an action to our add-on, an `Actions` folder is created for us. The CLI will generate a class and respective file for us based on the action name we passed to the CLI when creating our action. In this case we added an action named  "ExampleAction" to Amazing Add-on.
+Once we've added an action to our add-on, an `Actions` folder is created for us. The CLI will generate a class and its corresponding file for us based on the action name we pass to the CLI when creating our action. In this case, we added an action named  "ExampleAction" to Amazing Add-on.
 
 ```
 php system/ee/eecli.php make:action
@@ -131,7 +131,7 @@ class ExampleAction extends AbstractRoute
 
 As we can see, the CLI has correctly created a new class using our action's name in PascalCase as the class name.
 
-Inside of our class is the `process()` method. Anything we want to happen when a user reaches our action should be placed inside this `process()` function.
+Inside our class is the `process()` method. Anything we want to happen when a user reaches our action should be placed inside this `process()` function.
 
 ## The `exp_actions` Database Table
 ExpressionEngine's `exp_actions` table is used to provide URL endpoints connected with actions in the core and in add-ons.
@@ -146,11 +146,11 @@ The `exp_actions` table is comprised of 4 columns:
 |csrf_exempt     | tinyint(1)  | Is this endpoint csrf exempt or not                          |
 
 
-## Cross Site Request Forgery(CSRF) Exemption
+## Cross-Site Request Forgery (CSRF) Exemption
 
-WARN:**Security Alert:**Setting your action to CSRF Exempt, also makes this endpoint less secure though as you are allowing outside connections to your application.
+WARN:**Security Alert:** Setting your action to CSRF Exempt makes this endpoint less secure, as you are allowing outside connections to your application without requiring them to have established a session.
 
-For security reasons, actions are protected by [Cross Site Request Forgery(CSRF)](/development/guidelines/security.md#cross-site-request-forgery). If you want users to be able to reach this endpoint from outside your site (e.g. using cURL to from another domain or application to reach this endpoint and expect data to be returned ) then you will most likely need to make your action CSRF exempt.
+For security reasons, all actions are protected by default by [Cross-Site Request Forgery (CSRF)](/development/guidelines/security.md#cross-site-request-forgery). If you want users to be able to reach this endpoint from outside your site (e.g., using cURL to connect from another domain or application to reach this endpoint and expect data to be returned), then you will most likely need to make your action CSRF exempt.
 
 - To make your action immediately CSRF exempt, update the `csrf_exempt` value in the `exp_actions` table to be a value of `1`.
 - To ensure your action is CSRF exempt for future installations, update the corresponding migration by setting the `csrf_exempt` property to `true`:
@@ -179,9 +179,9 @@ $ php system/ee/eecli.php make:action --csrf_exempt
 Let's do something with our action to demonstrate how this would work.
 
 ### Form Data
-In this example we want to insert a row into our database when a user submits a form.
+In this example, we want to insert a row into our database when a user submits a form.
 
-For this example we'll use a really basic form that would be found in our template which uses our action's endpoint as the action for the form. We know our action's ID from the `exp_actions` table and we're just going to collect the user's first name and last name. We'll then take that information and store it in our database. For the purpose of this example, we'll insert this into a custom table we've added to ExpressionEngine which just has columns `ID`, `first_name`, `last_name`.
+For this example, we'll use a really basic form that would be found in our template, which uses our action's endpoint as the action for the form. We know our action's ID from the `exp_actions` table, and we're just going to collect the user's first name and last name. We'll then take that information and store it in our database. For the purpose of this example, we'll insert this into a custom table we've added to ExpressionEngine, which just has columns `ID`, `first_name`, `last_name`.
 
 
 Create our action:
@@ -193,7 +193,7 @@ What add-on is the action being added to? [amazing_add_on,...]: amazing_add_on
 
 This creates our required files.
 
-Now we had some functionality to our action which will add the first and last name submitted from a form to our custom database table.
+Now we add some functionality to our action that will add the first and last name submitted from a form to our custom database table.
 
 Our action's code (`Actions/ExampleAction.php`):
 
@@ -252,7 +252,7 @@ $aid = ee()->cp->fetch_action_id(`Amazing_add_on`, `ExampleAction`);
 
 ### Return Data
 
-In this next example we are just creating an endpoint which will be reachable from servers outside of our domain. We are going to expect the application to use cURL or similar library to post an ID to our endpoint. Upon receiving the request our action will return the name of the entry matching the ID if it exists.
+In this next example, we are just creating an endpoint which will be reachable from servers outside of our domain. We are going to expect the application to use cURL or similar library to post an ID to our endpoint. Upon receiving the request, our action will return the name of the entry matching the ID if it exists.
 
 Create our action:
 ```
@@ -298,7 +298,7 @@ class ExampleAction extends AbstractRoute
 }
 ```
 
-However, when I attempt to reach this endpoint from another application I get an error returned.
+However, when I attempt to reach this endpoint from another application, I get an error returned.
 
 The request:
 ```
@@ -319,7 +319,7 @@ The response:
 </div>
 ...
 ```
-This is because of the [`csrf_exempt` value](#cross-site-request-forgerycsrf-exemption) mentioned above. To fix this we can go into the `exp_actions` table of our database and update the `csrf_exempt` column to `1`.
+This is because of the [`csrf_exempt` value](#cross-site-request-forgery-csrf-exemption) mentioned above. To fix this, we can go into the `exp_actions` table of our database and update the `csrf_exempt` column to `1`.
 
 Now when I send that same request, I simply get the entry title I requested:
 
