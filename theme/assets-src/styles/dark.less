@@ -1,0 +1,365 @@
+/*!
+ * This source file is part of the open source project
+ * ExpressionEngine User Guide (https://github.com/ExpressionEngine/ExpressionEngine-User-Guide)
+ *
+ * @link      https://expressionengine.com/
+ * @copyright Copyright (c) 2003-2020, EllisLab, Inc. (https://ellislab.com)
+ * @license   https://expressionengine.com/license Licensed under Apache License, Version 2.0
+ */
+
+// Dark theme overrides.
+// Activated by the `dark` class on <html>, set by the theme toggle (see main.js)
+// either from the user's saved preference or from `prefers-color-scheme`.
+
+@dark-bg: #17161f;         // Page background
+@dark-surface: #201e2a;    // Sidebar, dropdowns, cards
+@dark-surface-2: #282636;  // Inputs, inline code, table headers
+@dark-border: #383550;
+@dark-text: #e6e4f2;
+@dark-text-muted: #a6a2be;
+@dark-link: #8fa9f7;
+
+html.dark {
+	background-color: @dark-bg !important; // Overrides the !important in base.less
+	color-scheme: dark;
+
+	body {
+		color: @dark-text;
+	}
+
+	// -------------------------------------------------------------------
+	// Sidebar
+
+	.sidebar-container,
+	.sidebar {
+		background-color: @dark-surface;
+	}
+
+	.search-input {
+		background-color: @dark-surface-2;
+		border-color: @dark-border;
+		color: @dark-text;
+
+		&:focus {
+			border-color: #6d86ff;
+			box-shadow: 0 0 0 3px rgba(109, 134, 255, 0.15);
+		}
+
+		&::placeholder {
+			color: @dark-text-muted;
+		}
+	}
+
+	.sidebar-toc li {
+		color: @dark-text-muted;
+	}
+
+	.sidebar-toc li ul {
+		border-left-color: @dark-border;
+	}
+
+	.sidebar-toc > ul > li > a {
+		color: #b3aee0;
+	}
+
+	.sidebar-toc li.active > a,
+	.sidebar-toc li[data-active-page="true"] > a,
+	.sidebar-toc li a:hover {
+		color: #ff5c7f;
+	}
+
+	.sidebar h2 {
+		color: #7d7996;
+	}
+
+	// -------------------------------------------------------------------
+	// Dropdown menus (version switcher, theme toggle)
+
+	.dropdown-menu-inner {
+		background-color: @dark-surface;
+		border-color: @dark-border;
+	}
+
+	.dropdown-menu a {
+		color: @dark-text !important;
+
+		&:hover,
+		&.active {
+			color: @dark-link !important;
+		}
+	}
+
+	// -------------------------------------------------------------------
+	// Buttons and utility elements
+
+	.button,
+	a.button {
+		color: @dark-link !important;
+		border-color: @dark-link !important;
+	}
+
+	// -------------------------------------------------------------------
+	// Documentation content
+
+	.docs-content-wrapper .content {
+
+		.ee-version-compatiblity td.ee-version {
+			background-color: @dark-surface-2;
+
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+
+		.ee-version-compatiblity .php-logo {
+			filter: brightness(0) invert(1);
+		}
+
+		a {
+			color: @dark-link;
+
+			&:hover {
+				border-bottom-color: @dark-link;
+			}
+		}
+
+		.copyright {
+			color: @dark-text-muted;
+
+			a:hover {
+				color: @dark-link;
+			}
+		}
+
+		h2 {
+			border-top-color: @dark-border;
+		}
+
+		code {
+			background-color: @dark-surface-2;
+			color: #cfcbe6;
+		}
+
+		// Code blocks reuse the dark highlight.js palette already in the theme
+		pre {
+			.hljs.dark-theme;
+			background: @dark-surface-2;
+		}
+
+		.table-wrapper {
+			border-color: @dark-border;
+		}
+
+		table {
+			td, th {
+				border-color: @dark-border;
+			}
+
+			th {
+				background-color: @dark-surface-2;
+			}
+		}
+
+		blockquote {
+			&, p {
+				color: @dark-text-muted;
+				border-left-color: @dark-border;
+			}
+		}
+
+		hr {
+			border-top-color: @dark-border;
+		}
+
+		.table-of-contents li::before {
+			color: fadeout(@dark-link, 10%);
+		}
+
+		.table-of-contents .toc-overview-button {
+			border-color: @dark-link;
+			color: @dark-link;
+		}
+
+		.docs-contribute-to-page-button {
+			background: @dark-surface-2;
+		}
+	}
+
+	// -------------------------------------------------------------------
+	// Code example blocks
+
+	.code-example__example {
+		border-color: @dark-border;
+	}
+
+	.code-example__title {
+		background: @dark-surface-2;
+		color: @dark-text-muted;
+	}
+
+	.code-parameter + .code-parameter {
+		border-top-color: @dark-border;
+	}
+
+	// -------------------------------------------------------------------
+	// Alerts
+
+	.alert {
+		color: @dark-text;
+	}
+
+	.alert.alert--hint,
+	.alert.alert--success {
+		border-color: rgba(91, 189, 71, 0.45);
+		background: rgba(91, 189, 71, 0.08);
+
+		.alert__title {
+			color: rgb(145, 219, 124);
+		}
+	}
+
+	.alert.alert--warn {
+		border-color: rgba(255, 195, 15, 0.45);
+		background: rgba(255, 195, 15, 0.08);
+
+		.alert__title {
+			color: rgb(255, 214, 92);
+		}
+	}
+
+	.alert.alert--error {
+		border-color: rgba(250, 82, 82, 0.45);
+		background: rgba(250, 82, 82, 0.08);
+
+		.alert__title {
+			color: rgb(255, 132, 132);
+		}
+	}
+
+	.alert.alert--empty {
+		border-color: rgba(85, 127, 216, 0.55);
+		background: rgba(85, 127, 216, 0.08);
+
+		.alert__title {
+			color: rgb(143, 169, 247);
+		}
+	}
+
+	// -------------------------------------------------------------------
+	// Search dropdowns
+
+	.algolia-autocomplete .ds-dropdown-menu {
+		background-color: @dark-surface;
+		border-color: @dark-border;
+	}
+
+	.algolia-autocomplete {
+		.algolia-docsearch-suggestion--category-header {
+			color: @dark-text-muted;
+		}
+
+		.algolia-docsearch-footer {
+			border-top-color: @dark-border;
+			color: @dark-text-muted;
+		}
+
+		.ds-suggestion:not(:first-child) .algolia-docsearch-suggestion--category-header {
+			border-top-color: @dark-border;
+		}
+	}
+
+	// Meilisearch DocSearch modal
+	.DocSearch-Overlay,
+	.DocSearch-Container {
+		background-color: rgba(10, 9, 16, 0.75) !important;
+	}
+
+	.DocSearch-Modal {
+		background-color: @dark-surface !important;
+		color: @dark-text;
+		box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55);
+	}
+
+	.DocSearch-Input {
+		background-color: @dark-surface-2 !important;
+		color: @dark-text !important;
+	}
+
+	.DocSearch-Input::placeholder,
+	.DocSearch-Label,
+	.DocSearch-Help,
+	.DocSearch-Footer,
+	.DocSearch-NoResults,
+	.DocSearch-Hit-Container,
+	.DocSearch-Hit-title,
+	.DocSearch-Hit-path {
+		color: @dark-text-muted !important;
+	}
+
+	.DocSearch-Hit a {
+		background-color: @dark-surface-2 !important;
+	}
+
+	.DocSearch-Hit a:hover,
+	.DocSearch-Hit[aria-selected="true"] a {
+		background-color: #322f45 !important;
+	}
+
+	.DocSearch-Hit-mark {
+		color: #ffd75e !important;
+		background: none !important;
+	}
+
+	.DocSearch-Title,
+	.DocSearch-Hit-title,
+	.DocSearch-Hit-path {
+		color: @dark-text !important;
+	}
+
+	.DocSearch-Button,
+	.DocSearch-Close,
+	.DocSearch-Reset {
+		color: @dark-text-muted !important;
+	}
+
+	.DocSearch-Container,
+	.DocSearch-Container * {
+		scrollbar-color: @dark-border transparent;
+	}
+
+	// -------------------------------------------------------------------
+	// Homepage cards (Tailwind utility classes).
+	// Tailwind is built with `important: true`, so these need !important.
+
+	.bg-white {
+		background-color: @dark-surface !important;
+	}
+
+	.bg-purple-new {
+		background-color: #4a3aa0 !important;
+	}
+
+	.bg-purple-regular {
+		background-color: #6055d6 !important;
+	}
+
+	.bg-purple-lightest {
+		background-color: #2c2842 !important;
+	}
+
+	.bg-purple-tint {
+		background-color: #3b3754 !important;
+	}
+
+	.text-brand {
+		color: #c1b8f5 !important;
+	}
+
+	.border-gray {
+		border-color: @dark-border !important;
+	}
+
+	.shadow-custom-black {
+		box-shadow: 0 2px 25px rgba(0, 0, 0, 0.45) !important;
+	}
+}

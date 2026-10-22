@@ -291,3 +291,123 @@ function scrollActiveTocLinkIntoView() {
 		})
 	});
 })();
+
+// -------------------------------------------------------------------
+// Theme Toggle (light / dark / system)
+// -------------------------------------------------------------------
+
+;(function() {
+	var THEME_PREF_KEY = 'ee-docs-theme';
+	var VALID_PREFS = ['light', 'dark', 'system'];
+
+	var systemPrefersDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+
+	// Gets the saved theme preference ('light', 'dark', or 'system')
+	function getThemePreference() {
+		try {
+			var pref = localStorage.getItem(THEME_PREF_KEY);
+
+			if (VALID_PREFS.indexOf(pref) != -1) {
+				return pref;
+			}
+		} catch (e) {}
+
+		return 'system';
+	}
+
+	function saveThemePreference(pref) {
+		try {
+			localStorage.setItem(THEME_PREF_KEY, pref);
+		} catch (e) {}
+	}
+
+	// Resolves a preference to whether the dark theme should be active
+	function isThemeDark(pref) {
+		if (pref == 'dark') {
+			return true;
+		}
+
+		if (pref == 'light') {
+			return false;
+		}
+
+		// System preference
+		return systemPrefersDark ? systemPrefersDark.matches : false;
+	}
+
+	// Applies the theme preference to the page and updates the toggle UI
+	function applyThemePreference(pref) {
+		var root = document.documentElement;
+
+		if (isThemeDark(pref)) {
+			root.classList.add('dark');
+		} else {
+			root.classList.remove('dark');
+		}
+
+		// Highlight the active option in the toggle menu
+		var options = document.querySelectorAll('.theme-toggle [data-theme-value]');
+
+		for (var i = 0; i < options.length; i++) {
+			var isActive = options[i].getAttribute('data-theme-value') == pref;
+			options[i].classList.toggle('active', isActive);
+		}
+
+		// Show an icon matching the current preference
+		var icon = document.getElementById('theme-toggle-icon');
+
+		if (icon) {
+			var iconClass = 'fa-desktop';
+
+			if (pref == 'light') {
+				iconClass = 'fa-sun';
+			} else if (pref == 'dark') {
+				iconClass = 'fa-moon';
+			}
+
+			icon.className = 'fas ' + iconClass;
+		}
+	}
+
+	// -------------------------------------------------------------------
+
+	applyThemePreference(getThemePreference());
+
+	var options = document.querySelectorAll('.theme-toggle [data-theme-value]');
+
+	for (var i = 0; i < options.length; i++) {
+		;(function(option) {
+			option.addEventListener('click', function(e) {
+				e.preventDefault();
+				e.stopPropagation();
+
+				var pref = option.getAttribute('data-theme-value');
+
+				saveThemePreference(pref);
+				applyThemePreference(pref);
+
+				// Close the dropdown menu
+				var dropdown = option.closest('.dropdown');
+
+				if (dropdown) {
+					dropdown.classList.remove('show');
+				}
+			});
+		})(options[i]);
+	}
+
+	// Follow the OS preference live while the "system" option is active
+	if (systemPrefersDark && systemPrefersDark.addEventListener) {
+		systemPrefersDark.addEventListener('change', function() {
+			if (getThemePreference() == 'system') {
+				applyThemePreference('system');
+			}
+		});
+	} else if (systemPrefersDark && systemPrefersDark.addListener) {
+		systemPrefersDark.addListener(function() {
+			if (getThemePreference() == 'system') {
+				applyThemePreference('system');
+			}
+		});
+	}
+})();
