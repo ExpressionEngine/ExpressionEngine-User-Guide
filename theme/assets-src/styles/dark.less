@@ -98,14 +98,22 @@ html.dark {
 		border-color: @dark-link !important;
 	}
 
-	.ee-version-compatiblity td.ee-version {
-		background-color: @dark-surface-2;
-	}
-
 	// -------------------------------------------------------------------
 	// Documentation content
 
 	.docs-content-wrapper .content {
+
+		.ee-version-compatiblity td.ee-version {
+			background-color: @dark-surface-2;
+
+			img {
+				filter: brightness(0) invert(1);
+			}
+		}
+
+		.ee-version-compatiblity .php-logo {
+			filter: brightness(0) invert(1);
+		}
 
 		a {
 			color: @dark-link;

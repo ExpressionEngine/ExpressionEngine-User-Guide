@@ -19,8 +19,8 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
     </div>
     <div class="mb-0">
         <span class="text-red font-bold uppercase text-xs mb-4 block tracking-wider">Starter Courses</span>
-        <h2 class="text-purple-dark mb-4 leading-snug p-0 mt-0 border-none text-2">Build your first ExpressionEngine site.</h2>
-        <p class="text-purple-dark text-base pb-7 mb-0">Walk through step-by-step how to build your own ExpressionEngine site from scratch. Choose from either a video or written course.</p>
+        <h2 class="text-purple-dark mb-4 leading-snug p-0 mt-0 border-none text-2 dark:text-white">Build your first ExpressionEngine site.</h2>
+        <p class="text-purple-dark text-base pb-7 mb-0 dark:text-white">Walk through step-by-step how to build your own ExpressionEngine site from scratch. Choose from either a video or written course.</p>
         <p class="links-wrapper flex mb-0 flex-wrap xl:flex-nowrap">
             <a href="https://u.expressionengine.com/course/getting-started-with-expressionengine-video-course" class="inline-flex text-base h-12 leading-none justify-center items-center bg-red mb-4 xl:mb-0 mr-2.5 rounded-5 border border-solid border-red hover:bg-white hover:text-red text-white" target="_BLANK">
                 <strong>Video</strong>&nbsp;Course
@@ -76,69 +76,69 @@ Welcome to the official ExpressionEngine Docs! In addition to the documentation,
 </div>
 
 <div id="welcome-resources">
-    <h2 class="bold text-black mb-4 mt-0 pt-0 border-none">Additional Resources</h2>
+    <h2 class="bold text-black mb-4 mt-0 pt-0 border-none dark:text-white">Additional Resources</h2>
     <div class="resources grid rid-cols-1 lg:grid-cols-3 gap-x-6 gap-y-4 lg:gap-y-8 pt-6 border-t border-gray">
         <div class="item relative pl-7 mb-0 border-none">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fas fa-bolt"></i></span>
             <div class="mb-0">
                 <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://docs.expressionengine.com/latest/getting-started/the-big-picture.html">Quick Start</a></h3>
-                <p class="text-sm mb-0 text-black text-opacity-45">The big picture of EE.</p>
+                <p class="text-sm mb-0 text-black text-opacity-45 dark:text-white">The big picture of EE.</p>
             </div>
         </div>
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fas fa-download"></i></span>
             <div class="mb-0">
                 <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://docs.expressionengine.com/latest/installation/installation.html" class="text-current">Installation</a></h3>
-                <p class="text-sm mb-0 text-black text-opacity-45">EE installed in 1-2-3.</p>
+                <p class="text-sm mb-0 text-black text-opacity-45 dark:text-white">EE installed in 1-2-3.</p>
             </div>
         </div>
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fab fa-stack-exchange"></i></span>
             <div class="mb-0">
                 <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://expressionengine.stackexchange.com/" class="text-current" target="_BLANK">StackExchange</a></h3>
-                <p class="text-sm mb-0 text-black text-opacity-45">Ask questions and get answers.</p>
+                <p class="text-sm mb-0 text-black text-opacity-45 dark:text-white">Ask questions and get answers.</p>
             </div>
         </div>
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fab fa-youtube"></i></span>
             <div class="mb-0">
                 <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://www.youtube.com/ExpressionEngineTV" class="text-current" target="_BLANK">ExpressionEngine TV</a></h3>
-                <p class="text-sm mb-0 text-black text-opacity-45">The latest instructional videos.</p>
+                <p class="text-sm mb-0 text-black text-opacity-45 dark:text-white">The latest instructional videos.</p>
             </div>
         </div>
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fab fa-twitter-square"></i></span>
             <div class="mb-0">
                 <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://twitter.com/eecms" class="text-current" target="_BLANK">EE on Twitter</a></h3>
-                <p class="text-sm mb-0 text-black text-opacity-45">Follow the #eecms hastag.</p>
+                <p class="text-sm mb-0 text-black text-opacity-45 dark:text-white">Follow the #eecms hastag.</p>
             </div>
         </div>
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fas fa-credit-card"></i></span>
             <div class="mb-0">
                 <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://u.expressionengine.com/course/building-an-e-commerce-website-with-expressionengine" class="text-current" target="_BLANK">E-commerce for EE</a></h3>
-                <p class="text-sm mb-0 text-black text-opacity-45">Build an e-commerce site.</p>
+                <p class="text-sm mb-0 text-black text-opacity-45 dark:text-white">Build an e-commerce site.</p>
             </div>
         </div>
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fas fa-puzzle-piece"></i></span>
             <div class="mb-0">
                 <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://expressionengine.com/add-ons" class="text-current" target="_BLANK">EE Add-Ons Store</a></h3>
-                <p class="text-sm mb-0 text-black text-opacity-45">Extend EE’s capabilities.</p>
+                <p class="text-sm mb-0 text-black text-opacity-45 dark:text-white">Extend EE’s capabilities.</p>
             </div>
         </div>
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fas fa-pencil-alt"></i></span>
             <div class="mb-0">
                 <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://expressionengine.com/blog" class="text-current" target="_BLANK">ExpressionEngine Blog</a></h3>
-                <p class="text-sm mb-0 text-black text-opacity-45">Follow the latest EE news.</p>
+                <p class="text-sm mb-0 text-black text-opacity-45 dark:text-white">Follow the latest EE news.</p>
             </div>
         </div>
         <div class="item relative pl-7 mb-0">
             <span class="absolute text-lg text-purple-light top-0.5 left-0"><i class="fas fa-clipboard"></i></span>
             <div class="mb-0">
                 <h3 class="text-lg text-purple-light font-semibold m-0"><a href="https://docs.expressionengine.com/latest/installation/changelog.html" class="text-current">Change Log</a></h3>
-                <p class="text-sm mb-0 text-black text-opacity-45">Details of the latest updates.</p>
+                <p class="text-sm mb-0 text-black text-opacity-45 dark:text-white">Details of the latest updates.</p>
             </div>
         </div>
     </div>
