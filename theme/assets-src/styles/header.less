@@ -102,6 +102,53 @@
 
 // -------------------------------------------------------------------
 
+.theme-toggle {
+	margin-left: 20px;
+
+	.theme-toggle__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 32px;
+		height: 32px;
+		border-radius: @corner-radius;
+		color: #fff;
+		cursor: pointer;
+		transition: background 150ms ease;
+
+		&:hover {
+			background: #664084;
+		}
+	}
+
+	.dropdown-menu {
+		left: auto;
+		right: 0;
+	}
+
+	.dropdown-menu-inner {
+		min-width: 132px;
+		padding: 4px 0;
+	}
+
+	.dropdown-menu a {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+
+		i {
+			width: 16px;
+			text-align: center;
+		}
+
+		&.active {
+			color: @highlight !important;
+		}
+	}
+}
+
+// -------------------------------------------------------------------
+
 .version-button-wrapper {
 	margin-left: 20px;
 	display: flex;

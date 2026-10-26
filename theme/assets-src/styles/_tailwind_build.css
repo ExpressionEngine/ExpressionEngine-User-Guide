@@ -1859,6 +1859,10 @@ html {
   display: contents !important;
 }
 
+.list-item {
+  display: list-item !important;
+}
+
 .hidden {
   display: none !important;
 }
@@ -2392,8 +2396,152 @@ html {
   transition-duration: 150ms !important;
 }
 
+.\[addons\:list\] {
+  addons: list;
+}
+
+.\[addons\:install\] {
+  addons: install;
+}
+
+.\[addons\:update\] {
+  addons: update;
+}
+
+.\[addons\:uninstall\] {
+  addons: uninstall;
+}
+
+.\[backup\:database\] {
+  backup: database;
+}
+
+.\[cache\:clear\] {
+  cache: clear;
+}
+
+.\[channels\:list\] {
+  channels: list;
+}
+
+.\[config\:config\] {
+  config: config;
+}
+
+.\[config\:env\] {
+  config: env;
+}
+
+.\[fields\:list\] {
+  fields: list;
+}
+
+.\[fieldtypes\:list\] {
+  fieldtypes: list;
+}
+
+.\[generate\:templates\] {
+  generate: templates;
+}
+
+.\[make\:action\] {
+  make: action;
+}
+
+.\[make\:addon\] {
+  make: addon;
+}
+
+.\[make\:command\] {
+  make: command;
+}
+
+.\[make\:cp-route\] {
+  make: cp-route;
+}
+
+.\[make\:extension-hook\] {
+  make: extension-hook;
+}
+
+.\[make\:fieldtype\] {
+  make: fieldtype;
+}
+
+.\[make\:jump\] {
+  make: jump;
+}
+
 .\[make\:migration\] {
   make: migration;
+}
+
+.\[make\:model\] {
+  make: model;
+}
+
+.\[make\:prolet\] {
+  make: prolet;
+}
+
+.\[make\:service\] {
+  make: service;
+}
+
+.\[make\:sidebar\] {
+  make: sidebar;
+}
+
+.\[make\:template-tag\] {
+  make: template-tag;
+}
+
+.\[make\:widget\] {
+  make: widget;
+}
+
+.\[migrate\:addon\] {
+  migrate: addon;
+}
+
+.\[migrate\:all\] {
+  migrate: all;
+}
+
+.\[migrate\:core\] {
+  migrate: core;
+}
+
+.\[migrate\:reset\] {
+  migrate: reset;
+}
+
+.\[migrate\:rollback\] {
+  migrate: rollback;
+}
+
+.\[sync\:conditional-fields\] {
+  sync: conditional-fields;
+}
+
+.\[sync\:file-usage\] {
+  sync: file-usage;
+}
+
+.\[sync\:reindex\] {
+  sync: reindex;
+}
+
+.\[sync\:upload-directory\] {
+  sync: upload-directory;
+}
+
+.\[update\:prepare\] {
+  update: prepare;
+}
+
+.\[update\:run-hook\] {
+  update: run-hook;
 }
 
 .container {
@@ -2489,6 +2637,32 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-duration: 200ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  height: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding-left: 0.563rem;
+  padding-right: 0.563rem;
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--n) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--n) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--nc) / var(--tw-text-opacity));
+  border-radius: var(--rounded-badge, 1.9rem);
 }
 
 .breadcrumbs {
@@ -2707,6 +2881,29 @@ html {
   input[type="checkbox"]:checked
   ~ .collapse-content {
   max-height: 9000px;
+}
+
+:root .countdown {
+  line-height: 1em;
+}
+
+.countdown {
+  display: inline-flex;
+}
+
+.countdown > * {
+  height: 1em;
+  display: inline-block;
+  overflow-y: hidden;
+}
+
+.countdown > *:before {
+  position: relative;
+  content: "00\A 01\A 02\A 03\A 04\A 05\A 06\A 07\A 08\A 09\A 10\A 11\A 12\A 13\A 14\A 15\A 16\A 17\A 18\A 19\A 20\A 21\A 22\A 23\A 24\A 25\A 26\A 27\A 28\A 29\A 30\A 31\A 32\A 33\A 34\A 35\A 36\A 37\A 38\A 39\A 40\A 41\A 42\A 43\A 44\A 45\A 46\A 47\A 48\A 49\A 50\A 51\A 52\A 53\A 54\A 55\A 56\A 57\A 58\A 59\A 60\A 61\A 62\A 63\A 64\A 65\A 66\A 67\A 68\A 69\A 70\A 71\A 72\A 73\A 74\A 75\A 76\A 77\A 78\A 79\A 80\A 81\A 82\A 83\A 84\A 85\A 86\A 87\A 88\A 89\A 90\A 91\A 92\A 93\A 94\A 95\A 96\A 97\A 98\A 99\A";
+  white-space: pre;
+  top: calc(var(--value) * -1em);
+  text-align: center;
+  transition: all 1s cubic-bezier(1, 0, 0, 1);
 }
 
 .divider {
@@ -3286,6 +3483,13 @@ html {
   border-color: hsl(var(--b1) / var(--tw-border-opacity));
 }
 
+.btn-outline .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--nf, var(--n)) / var(--tw-border-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--nc) / var(--tw-text-opacity));
+}
+
 .btn-outline.btn-primary .badge {
   --tw-border-opacity: 1;
   border-color: hsl(var(--p) / var(--tw-border-opacity));
@@ -3293,6 +3497,24 @@ html {
   background-color: hsl(var(--p) / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: hsl(var(--pc) / var(--tw-text-opacity));
+}
+
+.btn-outline.btn-secondary .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--s) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--s) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--sc) / var(--tw-text-opacity));
+}
+
+.btn-outline.btn-accent .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--a) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--a) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--ac) / var(--tw-text-opacity));
 }
 
 .btn-outline .badge.outline {
@@ -3307,6 +3529,15 @@ html {
   background-color: transparent;
   --tw-text-opacity: 1;
   color: hsl(var(--p) / var(--tw-text-opacity));
+}
+
+.btn-outline:hover .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--b2, var(--b1)) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--b2, var(--b1)) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--bc) / var(--tw-text-opacity));
 }
 
 .btn-outline:hover .badge.outline {
@@ -3334,6 +3565,15 @@ html {
   color: hsl(var(--pc) / var(--tw-text-opacity));
 }
 
+.btn-outline.btn-secondary:hover .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--sc) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--sc) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--s) / var(--tw-text-opacity));
+}
+
 .btn-outline.btn-secondary:hover .badge.outline {
   --tw-border-opacity: 1;
   border-color: hsl(var(--sc) / var(--tw-border-opacity));
@@ -3341,6 +3581,15 @@ html {
   background-color: hsl(var(--sf, var(--s)) / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: hsl(var(--sc) / var(--tw-text-opacity));
+}
+
+.btn-outline.btn-accent:hover .badge {
+  --tw-border-opacity: 1;
+  border-color: hsl(var(--ac) / var(--tw-border-opacity));
+  --tw-bg-opacity: 1;
+  background-color: hsl(var(--ac) / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: hsl(var(--a) / var(--tw-text-opacity));
 }
 
 .btn-outline.btn-accent:hover .badge.outline {
@@ -4629,6 +4878,11 @@ html {
 .hover\:text-red:hover {
   --tw-text-opacity: 1 !important;
   color: rgb(246 41 88 / var(--tw-text-opacity)) !important;
+}
+
+.dark .dark\:text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 @media (min-width: 640px) {
