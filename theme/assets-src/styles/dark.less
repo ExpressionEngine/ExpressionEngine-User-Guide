@@ -362,4 +362,111 @@ html.dark {
 	.shadow-custom-black {
 		box-shadow: 0 2px 25px rgba(0, 0, 0, 0.45) !important;
 	}
+
+	// Search block
+
+	.docsearch-btn:hover,
+	.docsearch-btn:active,
+	.docsearch-btn:focus {
+		background-color: @dark-surface-2;
+		box-shadow: inset 0 0 0 2px #ff5c7f, 0 0 0 3px rgba(255, 92, 127, 0.16);
+		color: @dark-text;
+	}
+
+	.docsearch-btn-key {
+		background: @dark-border;
+		box-shadow: none;
+		color: @dark-text;
+	}
+
+	// Search modal
+
+	.docsearch-modal {
+		background: @dark-bg;
+	}
+
+	.docsearch-modal-footer {
+		background: @dark-surface-2;
+		box-shadow: 0 -1px 0 @dark-border, 0 -4px 12px rgba(0, 0, 0, 0.3);
+	}
+
+	.docsearch-modal-footer-commands,
+	.docsearch-modal-footer-logo,
+	.docsearch-modal-footer-commands-label,
+	.docsearch-modal-footer-logo-label {
+		color: @dark-text;
+	}
+
+	.docsearch-modal-footer-commands-key {
+		background: @dark-border;
+		box-shadow: none;
+		color: @dark-text;
+	}
+
+	.docsearch-modal-footer-logo-icon { display: none; }
+
+	.docsearch-modal-footer-logo-dark { display: block; }
+
+	.docsearch-modal-search-input-form {
+		background: @dark-surface-2;
+	}
+
+	.docsearch-modal-search-input {
+		color: @dark-text;
+
+		&::placeholder {
+			color: @dark-text-muted;
+		}
+	}
+
+	.docsearch-modal-search-input-icon {
+		color: #ff5c7f;
+	}
+
+	.docsearch-modal-search-input-reset {
+		color: @dark-text-muted;
+	}
+
+	.docsearch-modal-search-cancel-btn {
+		color: @dark-link;
+	}
+
+	.docsearch-modal-search-hits-container {
+		background: @dark-bg;
+		color: @dark-text;
+	}
+
+	.docsearch-modal-search-hits-category {
+		background: @dark-surface-2;
+		color: #ff6f8e;
+	}
+
+	.docsearch-modal-search-hits-item {
+		background-color: @dark-surface;
+		color: @dark-text;
+		box-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
+
+		&--active,
+		&[aria-selected="true"] {
+			background-color: #3b3456;
+			box-shadow: inset 0 0 0 1px rgba(143, 169, 247, 0.25), 0 1px 3px rgba(0, 0, 0, 0.35);
+		}
+	}
+
+	.docsearch-modal-search-hits-item-title {
+		color: @dark-text;
+	}
+
+	.docsearch-modal-search-hits-item-text {
+		color: @dark-text-muted;
+	}
+
+	.docsearch-modal-search-hits-item--highlight {
+		background: rgba(255, 92, 127, 0.16);
+		color: #ff8da5;
+	}
+
+	.docsearch-modal-search-hits-item-trailing-icon {
+		color: @dark-text-muted;
+	}
 }
