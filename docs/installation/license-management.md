@@ -12,7 +12,7 @@
 [TOC]
 
 ## When Is A Pro License Needed?
-All of ExpressionEngine's features are available to any sites where only a single member (no matter the role) is being used. When more than one member is needed, a Pro license is required before the site is able to be used in a production environment.
+All of ExpressionEngine's features are available to any sites where only a single member is allowed control panel access. Multiple members are allowed under a free license, but if more than 1 member is in a role with access to the control panel, a Pro license is required before the site is able to be used in a production environment.
 
 ## Trial use of ExpressionEngine Pro
 When used in a local development environment with an [approved top-level domain](installation/license-management.md#approved-top-level-domains) or hosted in an [approved PaaS environment](installation/license-management.md#approved-platform-as-a-service-paas-domains), ExpressionEngine Pro can be used freely.
