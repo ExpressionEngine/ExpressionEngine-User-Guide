@@ -297,7 +297,15 @@ This displays the name of the category.
 
 ### `{category_url_title}`
 
-This variable displays the URL title of the category:
+This variable displays the URL title of the category
+
+### `{category_group_id}`
+
+The ID of category group that the category belongs to.
+
+### `{category_group_name}`
+
+The name of the category group that the category belongs to.
 
 ### `{path}`
 
