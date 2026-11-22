@@ -15,37 +15,37 @@ lang: php
 
 [TOC]
 
-## Cross Site Scripting (XSS)
+## Cross-Site Scripting (XSS)
 
-Cross Site Scripting is a type of security vulnerability that allows code injection by malicious users onto a page. You can find some educational reading and examples on the following site: [https://owasp.org](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet).
+Cross-site scripting is a type of security vulnerability that allows code injection by malicious users into a page. You can find some educational reading and examples on the following site: [https://owasp.org](https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet).
 
-Cross Site Scripting should be taken very seriously as you would never want your add-on to be the source of an attack vector.
+Cross-Site Scripting should be taken very seriously, as you would never want your add-on to be the source of an attack vector.
 
 ### `ee('Security/XSS')->clean()`
 
-`ee('Security/XSS')->clean()` is the built in ExpressionEngine XSS sanitization method, which is constantly tweaked for improved security and performance. It accepts both a `string` and an `array` and will return sanitized text:
+`ee('Security/XSS')->clean()` is the built-in ExpressionEngine XSS sanitization method, which is constantly tweaked for improved security and performance. It accepts both a `string` and an `array` and will return sanitized text:
 
     $str = ee('Security/XSS')->clean($str);
 
 ### Sanitized Variables on Input
 
-Keys are converted to UTF-8 and new lines in data are normalized **automatically** by the Input Class for the following variables:
+Keys are converted to UTF-8 and newlines in data are normalized **automatically** by the Input Class for the following variables:
 
 - `$_GET`
 - `$_COOKIE`
 - `$_POST`
 
-However, for performance reasons, data are not automatically run through the xss filter. If you are storing or displaying data from these variables, you should use the [Input class's get(), post(), or get_post() methods](development/legacy/libraries/input.md) and pass `TRUE` as the second parameter so the value will be XSS cleaned.
+However, for performance reasons, data are not automatically run through the XSS filter. If you are storing or displaying data from these variables, you should use the [Input class's get(), post(), or get_post() methods](development/legacy/libraries/input.md) and pass `TRUE` as the second parameter so the value will be XSS cleaned.
 
 If the user input is in the Control Panel, such as a module's back end, it is at your discretion based on the needs of the module for whether or not administrative input is sanitized. Always err on the side of caution, and never assume that your end user will only allow access to the back end of your module to trusted members.
 
 ### INSERT and UPDATE Queries
 
-As ExpressionEngine assumes that all information in the database is sanitized against XSS, the responsibility for sanitization falls on **input** to the database. Active Record methods will escape your data, but will not XSS clean it.Therefore, all data should be run through either `ee('Security/XSS')->clean()` or `ee()->input->get_post('key', TRUE)` before being stored in the database.
+As ExpressionEngine assumes that all information in the database is sanitized against XSS, the responsibility for sanitization falls on **input** to the database. Active Record methods will escape your data, but will not XSS clean it. Therefore, all data should be run through either `ee('Security/XSS')->clean()` or `ee()->input->get_post('key', TRUE)` before being stored in the database.
 
 ### Outputting Data to the Page
 
-Use the [Typography class](development/legacy/libraries/typography.md) whenever outputting blocks of content from user submitted data. It is regularly updated to improve security and performance, saving you both time and energy.
+Use the [Typography class](development/legacy/libraries/typography.md) whenever outputting blocks of content from user-submitted data. It is regularly updated to improve security and performance, saving you both time and energy.
 
 - It protects against PHP and ExpressionEngine tags from being parsed
 - BBCode is sanitized, even if Allow All HTML is enabled
@@ -53,11 +53,11 @@ Use the [Typography class](development/legacy/libraries/typography.md) whenever 
 
 ### When In Doubt...
 
-If there is any doubt on the safety of a variable that you are outputting or inserting into the database, use XSS Clean: `ee('Security/XSS')->clean($value)`.
+If there is any doubt about the safety of a variable that you are outputting or inserting into the database, use XSS Clean: `ee('Security/XSS')->clean($value)`.
 
 ## SQL Injection Prevention
 
-SQL Injection is a special type of attack in which data is used in a query without being properly filtered, allowing a user to execute their own queries on the database. Example:
+SQL Injection is a type of attack in which data is used in a query without being properly sanitized, allowing a user to execute their own queries against the database. Example:
 
     $evil = "brett'; DELETE FROM exp_members;";
     $query = ee()->db->query("SELECT * FROM exp_members WHERE username='{$evil}'");
@@ -110,7 +110,7 @@ NOTE: **Note:** If you send the third argument (the `WHERE` clause) as an array 
 
 ### Never Assume Tag Parameters are "Good" Input
 
-Do not make security exceptions for tag parameters. With PHP on Input, nested tags, other plugins, or variables being possible sources for parameter values, you cannot be sure that the data is safe.
+Do not make security exceptions for tag parameters. With PHP on Input, nested tags, other plugins, or variables all being possible sources for parameter values, you cannot be sure that the data is safe.
 
 ### Validate Values Before Using
 
@@ -143,7 +143,7 @@ Or even:
 
     $foo = (ctype_digit($foo = ee()->TMPL->fetch_param('foo'))) ? FALSE : $foo;
 
-NOTE: **Note:** You no doubt notice that `ctype_digit` is being used here to validate the parameter as a numeric value. Why? [is_numeric()](https://us3.php.net/manual/en/function.is-numeric.php) returns `TRUE` for some non-integer numbers, including notation, e.g. "-0123.45e6". [is_int()](https://us2.php.net/manual/en/function.is-int.php) only returns `TRUE` on actual integer variable types, and tag parameters are always strings. Note that [ctype_digit()](https://us3.php.net/manual/en/function.ctype-digit.php), will return `TRUE` on an empty string in pre-5.1.0 versions of PHP.
+NOTE: **Note:** You no doubt notice that `ctype_digit` is used here to validate the parameter as a numeric value. Why? [is_numeric()](https://us3.php.net/manual/en/function.is-numeric.php) returns `TRUE` for some non-integer numbers, including notation, e.g. "-0123.45e6". [is_int()](https://us2.php.net/manual/en/function.is-int.php) only returns `TRUE` on actual integer variable types, and tag parameters are always strings. Note that [ctype_digit()](https://us3.php.net/manual/en/function.ctype-digit.php), will return `TRUE` on an empty string in pre-5.1.0 versions of PHP.
 
 ### Default Values
 
@@ -166,25 +166,27 @@ Always have default values if you plan to allow the code to execute without para
     // Each variable would still need to be validated as instructed above
     // before using them in the code.
 
-## Cross Site Request Forgery
+## Cross-Site Request Forgery
 
-To help prevent spam and protect against Cross-site Request Forgery (CSRF), ExpressionEngine adds a random string to a hidden field on all forms. A copy of this string - also know as a CSRF token - is stored in the database along with the session id for which that form was generated. When the form is submitted this field is checked before any processing is done. If no CSRF token is present or no match is found, then the submission is rejected.
+To help prevent spam and protect against Cross-Site Request Forgery (CSRF), ExpressionEngine adds a random string to a hidden field on all forms it generates. A copy of this string - known as a CSRF token - is recorded in the database along with the session id for which that form was generated. When the form is submitted, this token is checked for validity before any processing occurs. If no CSRF token is present or no match is found, then the submission is rejected.
 
 ### CSRF Tokens in Templates
 
-If you are manually creating templates that send POST requests you must include the CSRF token as part of the form. This is easily done using the `csrf_token` [variable](templates/globals/single-variables.md) as a value for a hidden field called `csrf_token`:
+If you are manually creating a form that sends a POST request, you must include a CSRF token in the form. This is easily done using the `csrf_token` [variable](templates/globals/single-variables.md) as a value for a hidden field called `csrf_token`:
 
     <input type="hidden" name="csrf_token" value="{csrf_token}">
 
+ExpressionEngine adds a fresh CSRF token whenever a page is served, even if that page has EE's built-in [tag caching](optimization/caching.md#tag-caching) or [template caching](optimization/caching.md#template-caching) enabled.
+
 ### Creating Template Forms from Add-ons
 
-If your add-on is creating a form for the template, you should use `ee()->functions->form_declaration() <form_declaration>`. This automatically adds the CSRF token as a hidden input field. It also allows any extensions the site may have installed to modify the form before it is served, thus creating a more uniform experience for the end user.
+If your add-on is creating a form for the template, you should use `ee()->functions->form_declaration() <form_declaration>`. This automatically adds the CSRF token in a hidden input field. It also allows any extensions installed on the site to modify the form before it is served, creating a more uniform experience for the end user.
 
     ee()->functions->form_declaration(array(
       'action'  => ''
     ));
 
-If your form submits to a different site you should ensure that you are not leaking the user's CSRF token. You can either do this by manually creating the form open tag or setting the 'secure' option for the `form_declaration()` method to `FALSE`.
+If your form submits to a different site, ensure you are not leaking the user's CSRF token. You can either manually create the form's open tag or set the 'secure' option in the `form_declaration()` method to `FALSE`, which omits the CSRF token.
 
     ee()->functions->form_declaration(array(
       'secure'  => FALSE
@@ -194,19 +196,19 @@ If your form submits to a different site you should ensure that you are not leak
 
 ExpressionEngine will automatically check the CSRF token of all requests before handing the request off to your add-on. This means that all forms and requests must include the `csrf_token` field.
 
-There are several ways in which you can control this validation behavior of the CSRF tokens.
+There are several ways to control the validation behavior of CSRF tokens.
 
 #### Disabling the check
 
-For action requests you can disable all CSRF token checks. This is done by setting the `csrf_exempt` column in the actions table to 1 for that action.
+For action requests, you can disable all CSRF token checks. This is done by setting the `csrf_exempt` column in the actions table to 1 for that action.
 
-You should only do this for actions that do not add, delete, or otherwise modify data (e.g. search) or requests that are expect to be initiated by another site (e.g. webhooks, payment gateways, etc).
+You should only do this for actions that do not add, delete, or otherwise modify data (e.g. search) or requests that are expected to be initiated by another site (e.g. webhooks, payment gateways, etc).
 
 #### Forcing AJAX Validation
 
-While the same origin restriction for AJAX requests provides a good level of security from cross-site request forgery, compromised browser add-ons can send these requests.
+While the same-origin restriction for AJAX requests provides a good level of security from cross-site request forgery, compromised browser add-ons can send these requests.
 
-If you have AJAX action requests that are performing sensitive operations, then you should consider forcing AJAX CSRF validation for your add-on. This happens on per-class basis using a marker interface. You simply implement the _Strict_XID_ interface on your action receiving class:
+If you have AJAX action requests that are performing sensitive operations, then you should consider forcing AJAX CSRF validation for your add-on. This happens on a per-class basis using a marker interface. You simply implement the _Strict_XID_ interface on your action-receiving class:
 
     class My_module implements Strict_XID { ... }
 
@@ -214,13 +216,13 @@ You can still disable the check on a per-action basis.
 
 ### Forms in the Control Panel
 
-The Control Panel's Display class automatically adds hashes to any form using the _form_open()_ helper. CSRF tokens are a requirement in the Control Panel and as such the check cannot be disabled. The Control Panel includes a jQuery ajax prefilter that takes care of CSRF tokens on all AJAX requests and also handles periodic token refreshing for additional security.
+The Control Panel's Display class automatically adds hashes to any form using the _form_open()_ helper. CSRF tokens are required in the Control Panel, and as such, the check cannot be disabled. The Control Panel includes a jQuery AJAX prefilter that handles CSRF tokens for all AJAX requests and also refreshes tokens periodically for additional security.
 
-You should use `EE.CSRF_TOKEN` if you require the token in your JavaScript. Due to the ephemeral nature of CSRF tokens you should access this property when you need it. It should not be copied or cached.
+You should use `EE.CSRF_TOKEN` if you require the token in your JavaScript. Due to the ephemeral nature of CSRF tokens, you should access this property when you need it. It should not be copied or cached.
 
 ## Handling Form Submissions
 
-Form submissions are the most common form of user input you will handle in your add-ons, so it is important to understand how to deal with them securely.
+Form submissions are the most common type of user input you will handle in your add-ons, so it is important to understand how to handle them securely.
 
 ### Outputting Form Data to the Screen
 
@@ -232,10 +234,10 @@ Treat all input as potentially dangerous, even from within the control panel.
 
 ### Use a Logic Map for Processing
 
-In your methods that will be handling form data, create a logic map that you can use to ensure that you are handling all validation and security checks prior to performing any actions. The following list contains common things to use; your add-on may have fewer or additional requirements.
+In your methods that handle form data, create a logic map to ensure you handle all validation and security checks before performing any actions. The following list contains common things to use; your add-on may have fewer or additional requirements.
 
 - What is validated and in what order?
-  - Does the user need to be a logged in member?
+  - Does the user need to be a logged-in member?
   - Does the user need to be in a specific member role for the action?
   - [Deny Duplicate Data](security/spam-protection.md) Check?
 - What security checks are performed?
@@ -261,7 +263,7 @@ After processing, make sure submitted data that might be sent to the screen for 
 
 ### include() and require()
 
-Many servers have the ability to include files from offsite or anywhere in the local server, so when using `include()` or `require()` with user submitted data you need to be extremely careful. The best practice is to not design your add-on in such a way that would make this necessary in the first place, but if you do, either:
+Many servers have the ability to include files from offsite or from anywhere on the local server, so when using `include()` or `require()` with user-submitted data, you need to be extremely careful. The best practice is to not design your add-on in such a way that would make this necessary in the first place, but if you do, either:
 
 - Validate the filename based on possible options, OR
 - Use `ee()->security->sanitize_filename()` to remove naughty characters
