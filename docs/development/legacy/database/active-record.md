@@ -162,7 +162,7 @@ NOTE: **Note:** As shown earlier, the `FROM` portion of your query can be specif
 | --------- | --------------------- | --------------------------------------------------------------------------------------------- |
 | \$table   | `String`              | The table to `JOIN`                                                                           |
 | \$cond    | `String`              | The condition to join `ON`                                                                    |
-| \$type    | `String`              | The type of `JOIN` to perform: `LEFT`, `RIGHT`, `OUTER`, `INNER`, `LEFT OUTER`, `RIGHT OUTER` |
+| \$type    | `String`              | The type of `JOIN` to perform: `LEFT`, `RIGHT`, `OUTER`, `INNER`, `LEFT OUTER`, `RIGHT OUTER` `STRAIGHT`|
 | Returns   | `CI_DB_active_record` | The Active Record object                                                                      |
 
 Permits you to write the `JOIN` portion of your query:
