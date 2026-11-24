@@ -170,18 +170,20 @@ The input library contains two methods for manipulating cookies. One for setting
 
 | Parameter | Type      | Description                                                                                                     |
 | --------- | --------- | --------------------------------------------------------------------------------------------------------------- |
-| \$name    | `String`  | Name of the cookie                                                                                              |
+| \$name    | `String` or `Array` | Cookie name or an array of cookie options, including `name`. |
 | \$value   | `String`  | Value of the cookie                                                                                             |
 | \$expire  | `Integer` | When the cookie should expire, if left blank the time is set to the past and the cookie will expire immediately |
 | Returns   | `Void`    |                                                                                                                 |
 
 Sets cookie based on name and value. The advantage of using this function over the standard PHP function is EE will automatically add the cookie domain, cookie prefix, and cookie path as specified in the preferences. Those are helpful for making these cookies unique to EE and not interfering with other cookies set for your site by other software.
 
+When passing an array with `name`, `value`, and `expire`, you can also include `policy_name` to select a registered cookie policy. The `policy_name` option is available in ExpressionEngine 7.6 and later. It defaults to `name`. The browser cookie still uses `name` with the configured prefix.
+
 ### `delete_cookie($name)`
 
 | Parameter | Type     | Description        |
 | --------- | -------- | ------------------ |
-| \$name    | `String` | Name of the cookie |
-| Returns   | `Void`   |                    |
+| \$name    | `String` or `Array` | Cookie name or an array with `name` and optional `policy_name`. |
+| Returns   | `Boolean` | Whether the cookie deletion header was set. |
 
-Cleanly delete a cookie. The advantage of using this function over the standard PHP function is EE will automatically add the cookie domain, cookie prefix, and cookie path as specified in the preferences.
+Cleanly delete a cookie. The advantage of using this function over the standard PHP function is EE will automatically add the cookie domain, cookie prefix, and cookie path as specified in the preferences. If you set the cookie with a separate `policy_name`, supply the same `name` and `policy_name` when deleting it.

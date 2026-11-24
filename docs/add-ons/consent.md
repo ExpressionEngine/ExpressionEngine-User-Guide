@@ -496,7 +496,7 @@ If you need to exclude one or several providers from display, use `not ` before 
 
 #### `{cookie_name}`
 
-Cookie name
+Registered cookie policy name with the installation's cookie prefix. A policy can cover several browser cookie names. With the default prefix, the **MFA Session** policy appears as `exp_mfa_session` and covers the two [MFA cookies](general/cookies.md#mfa-cookies).
 
 #### `{cookie_title}`
 
@@ -512,4 +512,4 @@ Cookie provider (`ee` or add-on short name)
 
 #### `{cookie_lifetime}`
 
-Cookie lifetime in seconds. `0` represents session cookies (killed after browsing session ends).
+Cookie lifetime in seconds. Session cookies use `0`. For the **MFA Session** policy, the value comes from `mfa_session_length` and `0` means remembered MFA verification is disabled.

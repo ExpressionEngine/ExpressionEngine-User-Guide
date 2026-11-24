@@ -13,8 +13,6 @@
 
 HTTP cookies are small bits of data set by a website or app and stored on the user's computer while the user is browsing. ExpressionEngine uses a number of cookies to help create a nicer user experience, both for guests and logged in members.
 
-Cookies that are necessary to the functioning
-
 By default, ExpressionEngine cookies are prefixed with `exp_`, so the session cookie would be named `exp_sessionid`. However, the prefix can be configured in [Security & Privacy](control-panel/settings/security-privacy.md).
 
 NOTE: **Note:** This should not be considered an exhaustive list of cookies that might be in use on a given site. Third party add-ons may have their own cookies and cookies may be set outside of ExpressionEngine entirely.
@@ -37,9 +35,20 @@ NOTE: **Note:** This should not be considered an exhaustive list of cookies that
 | ee_cp_viewmode    | Indicates whether "navigation-less" mode should be used in Control Panel.                                  | 360 days   | Functionality      |
 | collapsed_nav     | Indicates whether main sidebar navigation in Control Panel should be collapsed.                           | 360 days   | Functionality      |
 
-NOTE: **Note:** If you need to define how long the user will stay logged in for, you can change the lifetime of the remember cookie by copying [`system/ee/ExpressionEngine/Config/remember.php`](https://github.com/ExpressionEngine/ExpressionEngine/blob/6.dev/system/ee/ExpressionEngine/Config/remember.php) to `/system/user/config/stopwords.php` and changing the value of the `remember_me_ttl` property in that file.
+NOTE: **Note:** If you need to define how long the user will stay logged in for, you can change the lifetime of the remember cookie by copying [`system/ee/ExpressionEngine/Config/remember.php`](https://github.com/ExpressionEngine/ExpressionEngine/blob/6.dev/system/ee/ExpressionEngine/Config/remember.php) to `system/user/config/remember.php` and changing the value of the `remember_me_ttl` property in that file.
 
 
+
+## MFA Cookies
+
+After a member verifies [multi-factor authentication](member/mfa.md), ExpressionEngine sets these strictly necessary cookies if `mfa_session_length` enables reuse. Each name uses the installation's cookie prefix.
+
+| Name | Purpose | Expiration |
+| --- | --- | --- |
+| `mfa_session_<site_id>` | Remembers successful MFA verification for this site and hostname. | Up to the configured window from verification. |
+| `mfa_session_logout` | Helps ExpressionEngine revoke the applicable approval on logout when login cookies are shared across subdomains. | The configured interval. ExpressionEngine can refresh it when verification is reused. |
+
+Both cookies use the **MFA Session** policy in [Cookie Settings](control-panel/settings/cookie-settings.md).
 
 ## Comment Cookies
 
