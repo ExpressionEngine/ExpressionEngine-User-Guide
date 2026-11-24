@@ -105,4 +105,4 @@ In order to use this titles, you **must** use the channel= parameter in the foll
 
 ### URL title separator
 
-When creating an entry in the PUBLISH page, if you do not manually enter a "URL Title" then the system will automatically create one based on the entry Title. This preference determines whether underscore characters (\_) or dashes (-) should be used when automatically creating the URL Title.
+This preference sets whether ExpressionEngine separates words with underscores (`_`) or dashes (`-`) when generating a URL title from an entry's Title. It applies to new entries and to the [Update URL title button](control-panel/create.md#url-title) and [Update Structure URL button](add-ons/structure/overview.md#updating-a-structure-url) on existing entries.

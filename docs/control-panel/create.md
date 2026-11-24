@@ -31,11 +31,13 @@ TIP: **Tip:** For those times where 'Title' isn't really the appropriate title, 
 
 Here you can define a "human readable" URL title for your entry. URL titles may only contain alpha-numeric characters, dashes and underscores; no spaces or unicode characters. The purpose of a URL Title is to enable your entries to be accessed using a URL such as:
 
-    https://example.com/channel/comments/joes_first_entry/
+    https://example.com/channel/comments/joes-first-entry/
 
 If you do not specify a "URL Title", one will automatically be created for you based upon your entry Title. URL Titles must be unique within a channel, so if an entry with the same title already exists in that channel, then the URL Title will have a number appended to the end to make it unique.
 
-NOTE: **Note:** If you let the system create your URL Title for you, it will convert spaces into underscores by default. For example, if the title of your entry is "Joe's First Entry", it will be converted to "joes_first_entry". If you prefer dashes to be used instead of underscores, you can change this with the **Word Separator for URL Titles** preference under `Admin --> Channel Administration --> Global Channel Preferences`.
+When editing an existing entry, select **Update URL title** next to the editable **URL Title** field to replace its value with one generated from the current Title. Save the entry to apply the change.
+
+Generated URL titles use the [URL title separator](control-panel/settings/urls.md#url-title-separator) in **Settings > URL and Path Settings**.
 
 ### Entry Fields
 
