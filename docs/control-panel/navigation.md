@@ -40,6 +40,18 @@ The collapsed state will persist through control panel page loads and can be tog
 It is also possible to completely toggle the sidebar navigation off. In Jump Menu, type "toggle" and choose "Toggle Sidebar Navigation" - the sidebar will be persistently hidden or shown.
 ![](_images/cp-collapse.gif)
 
+## Control Panel themes
+
+Choose **Contrast** for stronger contrast in Control Panel text and controls and more visible keyboard focus and selections.
+
+1. Open **Jump To…** or press **Command+J** on macOS or **Ctrl+J** on Windows and Linux.
+2. Type `switch theme` and press **Enter**.
+3. Select **Contrast**.
+
+The theme menu highlights the active theme. The Control Panel remembers your selection in the current browser.
+
+![Switch Theme menu with Contrast selected](_images/cp-contrast-theme.jpg)
+
 ## Custom navigation items
 
 It is possible to inject your custom items into sidebar navigation using [Menu Manager](control-panel/settings/menu-manager.md#menu-manager).
