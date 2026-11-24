@@ -77,10 +77,10 @@ Example:
 | Parameter | Type     | Description                                               |
 | --------- | -------- | --------------------------------------------------------- |
 | \$str     | `String` | Input string                                              |
-| \$all     | `Bool`   | Whether to convert unsafe entities as well                |
-| Returns   | `String` | A string with HTML entities converted to ASCII characters |
+| \$all     | `Bool`   | Whether to decode the common named HTML entities handled by this function. |
+| Returns   | `String` | The string with decoded character references. |
 
-This function does the opposite of `ascii_to_entities()`. It turns character entities back into ASCII.
+This function decodes decimal character references to UTF-8, including characters outside the Basic Multilingual Plane. References to invalid Unicode scalar values are left as written. With `$all` enabled, it also decodes `&amp;`, `&lt;`, `&gt;`, `&quot;`, and `&apos;`.
 
 ### `convert_accented_characters($str)`
 

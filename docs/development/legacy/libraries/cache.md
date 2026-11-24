@@ -48,6 +48,8 @@ Namespacing gives you granular control over which items in your cache should be 
 
 NOTE: **Note:** When flushing a namespace, the key must end with the namespace separator (`/`) so the Cache class knows to clear a namespace instead of trying to delete a key with the name of your namespace.
 
+The file cache driver reserves `.` and `..` as path segments and rejects keys containing either as a complete segment. Use named segments such as `/myaddon/entries/239`.
+
 ## Scoping
 
 Items stored in the cache by default are scoped to the site currently saving or retrieving from the cache. This prevents cache keys from colliding when the same keys are used in [multiple sites](msm/overview.md) in the same ExpressionEngine install.
