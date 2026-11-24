@@ -32,23 +32,27 @@ Multi-Factor Authentication can also be set as required for certain [Member Role
 
 Members with a primary role where this option is enabled will be required to use MFA to log in via a front-end login form or when accessing the Control Panel (if allowed access).
 
-If the member has not yet set up their multi-factor authentication, upon login they will be redirected to a page where they can scan QR code using their MFA app and then enter the provided one-time password (OTP) to complete the setup.
+Members who still need to set up MFA are sent to the enrollment page after entering their password. Scan the QR code with an authenticator app, then enter the six-digit code to complete setup. The Control Panel enrollment page and QR code remain available to members who are required to enroll when the site cannot verify its Pro license.
 
 
 ## Setting Up MFA With Front-end Member Forms
 
 Setting up Multi-Factor Authentication on the front-end is handled using a set of system dialogs. These dialogs can be triggered manually using the links provided by the [`{exp:member:mfa_links}` tag](#multi-factor-authentication-links).
 
-The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use a custom template from the [`system_messages` template group](control-panel/template-manager.md#custom-system-messages), it should be named `mfa_template`.
+The dialogs are presented using `Multi-Factor Authentication Template` from System Message Templates. You can also use a custom template from the [`system_messages` template group](control-panel/template-manager.md#custom-system-messages), it should be named `mfa_template`. Include `{content}` in the custom template to render the MFA form and its current fields.
 
 
 ## Resetting MFA
 
-In case when the device that was used to scan QR code for MFA is not available, it is possible to reset multi-factor authentication using the backup code that has been provided together with the QR code. 
+If you lose access to your authenticator, sign in with your password and select **Reset** at the MFA prompt. Enter the backup code you saved during setup. Resetting turns off MFA for your account. Enroll your new device when prompted, or from your profile when Pro settings are available.
+
+An enrolled member can use a backup code in the Control Panel even when the site cannot verify its Pro license.
 
 ## Disabling MFA
 
-MFA can be disabled after the member has logged in and completed second-factor authentication. As additional protection measure, the password is being asked.
+To disable MFA for your own account, sign in and enter a current six-digit code from your authenticator when prompted. In the Control Panel, you may also be asked to confirm your password if your recent authentication has expired. The front-end disable form requires both your password and the code.
+
+If you manage MFA for another member in the Control Panel, use your own credentials when ExpressionEngine asks you to confirm your identity.
 
 ## Multi-Factor Authentication Links
 
