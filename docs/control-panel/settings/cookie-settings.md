@@ -9,6 +9,8 @@
 
 **Control Panel Location: `Settings > Cookie Settings`**
 
-In the Cookie Settings all cookies set by your ExpressionEngine installation are listed. It is possible to set your own cookie title, description and lifetime in seconds.
+Cookie Settings lists the cookie policies registered by your ExpressionEngine installation. You can edit the title, description, and lifetime in seconds for policies that allow those changes.
+
+The **MFA Session** policy is strictly necessary. Its lifetime is read-only and displays the `mfa_session_length` configuration value. A value of `0` means remembered MFA verification is disabled. See [MFA cookies](general/cookies.md#mfa-cookies) for the cookies covered by this policy.
 
 ![pro cookie settings](/_images/pro_cookie_settings.png)
