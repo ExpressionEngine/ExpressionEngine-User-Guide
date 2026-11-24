@@ -53,10 +53,13 @@ To update via the [eecli](cli/intro.md) tool, run:
 
 #### Options
 
-- **rollback**: Rollsback last update
+- **`--rollback`** rolls back an interrupted update when its recovery files are available.
+- **`--complete`** retries final checks and hooks after the new version has been installed.
 - **verbose,v**: Verbose output
 - **force-addon-upgrades**: Automatically runs all addon updaters at end of update (advanced)
 - **y**: Skip all confirmations. (advanced)
+
+See [Troubleshooting Automatic Updates](troubleshooting/general.md#troubleshooting-automatic-updates) for recovery instructions.
 
 ## Updating Manually
 
