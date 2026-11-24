@@ -80,19 +80,21 @@ This error occurs when the process running the updater does not have proper file
 
 ### Cannot rollback a failed upgrade
 
-If an error occurs while ExpressionEngine is updating its files or database, the updater should provide a link to rollback to your previous installation. But in the rare case that doesn't work, here is how you can get back up and running again.
+If an update stops while replacing files or updating the database, follow the rollback link in the updater. On the command line, use the command printed after **To roll back, run** if you see it. You can also start a rollback with the following command while the recovery files are available.
 
-1.  Navigate to `system/user/cache/ee_update/backups/` and check to make sure there are backups in the `system_ee` folders and `themes_ee` folders.
-2.  Delete the contents of `system/ee/` and move the contents of `system_ee` to `system/ee/`.
-3.  Delete the contents of `themes/ee/` and move the contents of `themes_ee` to `themes/ee/`.
-4.  If there is an SQL file located at `system/user/cache/ee_update/database.sql`, import that into your database to rollback database changes. This is only a partial backup to restore what the updater has changed, so do NOT delete the contents of your database first.
-5.  Open `system/user/config/config.php` and set the `is_system_on` config to `y`.
+    php eecli.php update --rollback
 
-At this point, your site should be restored and you should be able to re-enter your control panel.
+If PHP cannot start the next step, the rollback script prints a command to continue. Run the printed command and follow the PowerShell instructions if shown. Keep the updater backups and log until recovery finishes.
 
-If there are no files in your backup directory, it's likely the updater failed before it could make a backup and your files and database are still intact. You likely just need to remove the folder located at `system/ee/updater/` to access your control panel again.
+If automatic rollback cannot finish, check `system/user/cache/ee_update/update.log` to see how far the update progressed. The updater's backups can contain only the files and database changes it reached. If you need to restore manually, retain the recovery files and restore matching files and database from your [pre-update backups](general/database-backup.md).
 
-If you hit an error you cannot resolve there should be a log file located at `system/user/cache/ee_update/update.log` that may contain helpful information to help diagnose the issue.
+### The update did not finish its final steps
+
+If ExpressionEngine reports that the new version was installed but the final steps did not finish, retry those steps with:
+
+    php eecli.php update --complete
+
+If an add-on extension is causing the failure, disable that extension and run the command again. Keep the updater backups and log until the command succeeds. Wait for any update or recovery in progress to finish before starting another update.
 
 ## Blank Pages
 
