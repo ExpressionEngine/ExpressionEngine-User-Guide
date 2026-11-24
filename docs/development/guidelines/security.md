@@ -284,13 +284,7 @@ Security and required preference settings should be stored in the database or `c
 
 ### Use of Settings in Forms
 
-Never send values for preferences or settings in hidden form fields. HTML source is open and readable, so a malicious user could simply copy the HTML or use a browser plugin to alter the form data to something you do not expect or desire. If _absolutely_ required, encode them:
-
-- JavaScript is good against bots but not against serious hackers.
-- Base 64 encoding is easy to break and therefore NOT recommended.
-- If there are a limited number of _possible_ values, you could use `md5()` or `sha1()` to encode the values and check against encoded _possible_ values. This is not bulletproof of course, as the hacker needs only to know what the possible values are to be able to utilize them.
-- PHP has the [OpenSSL library](https://php.net/manual/en/book.openssl.php) and other PHP libraries which have encryption and decryption with a salt.
-- ExpressionEngine has an [Encryption service](development/services/encrypt.md) available to developers that uses OpenSSL.
+Keep preferences and security settings on the server. If a form needs to carry server-generated metadata in a hidden field, use an [authenticated token](development/services/encrypt.md#authenticated-form-data) and verify it on submission. Apply the same validation, permission, and CSRF checks you use for other form submissions.
 
 ### Yes / No Preferences
 

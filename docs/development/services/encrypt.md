@@ -15,32 +15,45 @@ lang: php
 
 [TOC]
 
-The encrypt service provides two-way data encryption as well as signing and verification of signatures. The most common use is to encrypt parameters sent with form data.
+The Encrypt service provides two-way encryption, authenticated tokens, and methods for signing and verifying data.
 
 ## Simple Examples
 
-Encrypting some data:
+### Authenticated form data
 
-    $meta = array(
-      'site_id' => 1,
-      'entry_id' => 12,
-      'author_id' => 23
-      );
-    $var['meta'] = ee('Encrypt')->encrypt(serialize($meta));
+In ExpressionEngine 7.6 and later, use an authenticated token to send server-generated metadata in a hidden field. Choose a purpose that identifies the add-on and form. Use the same purpose and key when creating and reading the token.
 
-Decrypting the same data:
+```php
+$metadata = json_encode(['entry_id' => 12]);
+$token = ee('Encrypt')->encodeAuthenticated($metadata, 'my_addon:edit_entry');
+```
 
-    $meta = ee('Encrypt')->decrypt($_POST['meta']);
-    $meta = unserialize($meta);
+Render the token in the form.
 
-NOTE: **Note:** Use `encode()` and `decode()` if you'd like the data automatically base64 encoded.
+```php
+<input type="hidden" name="meta" value="<?= htmlspecialchars($token, ENT_QUOTES, 'UTF-8') ?>">
+```
 
-To sign data:
+Verify and decode the token on submission.
+
+```php
+$payload = ee('Encrypt')->decodeAuthenticated(
+    ee()->input->post('meta'),
+    'my_addon:edit_entry'
+);
+
+if ($payload === false) {
+    show_error('Reload the form and try again.', 400);
+}
+
+$metadata = json_decode($payload, true);
+```
+
+Continue to validate the submitted data, check the member's permissions, and apply the normal CSRF checks for the form.
+
+### Sign and verify data
 
     $signed = ee('Encrypt')->sign($data);
-
-To verify the data hasn't changed:
-
     $safe = ee('Encrypt')->verifySignature($data, $signed);
 
 ## Encrypt Methods
@@ -88,6 +101,28 @@ Decodes an encoded string by first base64 decoding it, then passing the string o
 | \$string  | `String` | A base64 encoded encrypted string                          |
 | \$key     | `String` | The encryption key, if not defined we'll use a default key |
 | Returns   | `String` | The plaintext string                                       |
+
+### `encodeAuthenticated($string, $purpose, $key = '')`
+
+Encrypts a string, authenticates it for the supplied purpose, and returns a versioned, Base64-encoded token.
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| \$string | `String` | Plaintext to protect. |
+| \$purpose | `String` | Identifier for the context in which this token will be used. |
+| \$key | `String` | Optional encryption key. An empty value uses the default key. |
+| Returns | `String` | The token. |
+
+### `decodeAuthenticated($token, $purpose, $key = '')`
+
+Verifies an authenticated token for the supplied purpose and key before decrypting it.
+
+| Parameter | Type | Description |
+| --- | --- | --- |
+| \$token | `String` | Token from `encodeAuthenticated()`. |
+| \$purpose | `String` | The purpose used to create the token. |
+| \$key | `String` | The same optional key used to create the token. |
+| Returns | `String` or `False` | Decrypted plaintext or `false` if verification or decryption fails. |
 
 ### `sign($data, $key = NULL, $algo = 'md5')`
 

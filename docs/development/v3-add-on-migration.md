@@ -343,13 +343,14 @@ See [CP/Modal Service](development/services/modal.md) for full documentation.
 
 #### External Links
 
-To protect the users control panel URL from ending up in web server referrer logs, use `Cp::masked_url` from the Control Panel Class:
+Mark external Control Panel links with `rel="external"`. ExpressionEngine sets the target to `_blank` and adds `noopener noreferrer`, so the browser opens the link in a new tab or window.
 
-    ee()->cp->masked_url('https://www.google.com');
+```html
+<a href="https://example.com/docs" rel="external">Read the documentation</a>
+```
 
-Will result in:
+Use [`Cp::masked_url()`](development/legacy/libraries/cp.md#masking-the-control-panel-url-in-links) when generating a masked URL to keep the Control Panel URL out of the destination's referrer logs.
 
-    https://example.com?URL=https://www.google.com
 
 #### Internal Links
 
