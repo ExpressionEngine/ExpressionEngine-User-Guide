@@ -8,6 +8,62 @@
 -->
 # ExpressionEngine v7 Change Log
 
+## Version 7.6.0
+(Release: November 24th, 2026)
+
+NOTE: **Important:** This version includes important security updates.
+
+<div class="max-w-7xl mx-autotext-center">
+<div class="space-y-8 sm:space-y-12">
+    <ul role="list" class="mx-auto grid grid-cols-2 gap-x-4 gap-y-1 sm:grid-cols-4 md:gap-x-6 lg:max-w-5xl lg:gap-x-8 lg:gap-y-1 xl:grid-cols-5">
+
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/563996?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Bryan Nielsen</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=bryannielsen" target="_BLANK">@bryannielsen</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/479358?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Josh Conner</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=joshconner" target="_BLANK">@joshconner</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/422821?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Tom Jaeger</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=TomJaeger" target="_BLANK">@TomJaeger</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/23382425?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">Yulya Lebed</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=Yulyaswan" target="_BLANK">@Yulyaswan</a></p></div></div></div></li>
+<li><div class="space-y-4 text-center"><img class="mx-auto h-20 w-20 rounded-full lg:w-24 lg:h-24" src="https://avatars.githubusercontent.com/u/1181219?v=4" /><div class="space-y-2"><div class="text-xs font-medium lg:text-sm"><p class="mb-1">robinsowell</p><p class="text-indigo-600"><a href="https://github.com/ExpressionEngine/ExpressionEngine/commits?author=robinsowell" target="_BLANK">@robinsowell</a></p></div></div></div></li>
+    </ul>
+</div>
+</div>
+
+**Enhancements** 🚀
+
+- Added the Contrast Control Panel theme for more readable text and clearer controls and focus indicators [#5484](https://github.com/ExpressionEngine/ExpressionEngine/pull/5484)
+- Added buttons to regenerate the URL title and Structure URL from the title of an existing entry [#4766](https://github.com/ExpressionEngine/ExpressionEngine/pull/4766)
+- Added support for PHP 8.6 [#5470](https://github.com/ExpressionEngine/ExpressionEngine/pull/5470)
+- Added the `mfa_session_length` configuration setting to control how long multi-factor authentication verification is remembered between logins [#5469](https://github.com/ExpressionEngine/ExpressionEngine/pull/5469)
+- Highlighted the active Control Panel theme in the Jump Menu's theme picker [#5489](https://github.com/ExpressionEngine/ExpressionEngine/pull/5489)
+- Improved the release banner on the Control Panel Overview page with higher-contrast text, clearer keyboard focus, and better spacing on small screens [#5488](https://github.com/ExpressionEngine/ExpressionEngine/pull/5488)
+
+**Bug Fixes** 💃🐛
+
+- Fixed timeouts when loading the Entry Manager author filter on sites with many members [#5475](https://github.com/ExpressionEngine/ExpressionEngine/pull/5475)
+- Fixed unnecessary sign-in prompts when working in multiple Control Panel tabs [#5477](https://github.com/ExpressionEngine/ExpressionEngine/pull/5477)
+- Fixed the Reset MFA and Disable MFA buttons in the default front-end views [#5481](https://github.com/ExpressionEngine/ExpressionEngine/pull/5481)
+- Fixed unsubscribe links in comment notification emails and added a confirmation step [#5474](https://github.com/ExpressionEngine/ExpressionEngine/pull/5474)
+- Improved how external links open from the Control Panel
+- Fixed an error when publishing new entries in channels with conditional fields [#5482](https://github.com/ExpressionEngine/ExpressionEngine/pull/5482)
+- Fixed repeated layout recalculation and loss of input focus in Grid fields [#5463](https://github.com/ExpressionEngine/ExpressionEngine/pull/5463)
+- Fixed Grid tables changing width when dragging rows to reorder them [#5440](https://github.com/ExpressionEngine/ExpressionEngine/pull/5440)
+- Fixed Pages links in Rich Text Editor content displayed through Pro Variables [#5379](https://github.com/ExpressionEngine/ExpressionEngine/pull/5379)
+- Fixed warnings when using cached custom stylesheets with the Rich Text Editor [#5437](https://github.com/ExpressionEngine/ExpressionEngine/pull/5437)
+- Fixed the upload destination list for image-only File fields configured to use all directories [#5455](https://github.com/ExpressionEngine/ExpressionEngine/pull/5455)
+- Improved uploads and file selection with shared upload directories on Multiple Site Manager installations, including compatibility mode [#5459](https://github.com/ExpressionEngine/ExpressionEngine/pull/5459)
+- Fixed misleading upload errors on servers with no PHP memory limit [#5446](https://github.com/ExpressionEngine/ExpressionEngine/pull/5446)
+- Fixed database backups for tables that contain JSON columns [#5436](https://github.com/ExpressionEngine/ExpressionEngine/pull/5436)
+- Fixed template synchronization to preserve content saved in the database when a template file is blank [#5461](https://github.com/ExpressionEngine/ExpressionEngine/pull/5461)
+- Improved file-based template group registration
+- Trimmed extra whitespace from copied field tags [#5458](https://github.com/ExpressionEngine/ExpressionEngine/pull/5458)
+- Fixed PHP notices and deprecation warnings in core and bundled add-ons [#5470](https://github.com/ExpressionEngine/ExpressionEngine/pull/5470)
+- Fixed XML-RPC server compatibility with PHP 8 [#5462](https://github.com/ExpressionEngine/ExpressionEngine/pull/5462)
+
+**Developers** 💻
+
+- Fixed CLI add-on updates that could skip extension migrations or fail to complete [#5468](https://github.com/ExpressionEngine/ExpressionEngine/pull/5468)
+- Improved validation and error reporting for CLI updates and configuration commands [#5473](https://github.com/ExpressionEngine/ExpressionEngine/pull/5473)
+- Fixed CLI commands to return a nonzero exit status after an uncaught PHP error [#5472](https://github.com/ExpressionEngine/ExpressionEngine/pull/5472)
+- Expanded automated regression coverage for PHP compatibility, Grid layout, file uploads, and conditional fields [#5470](https://github.com/ExpressionEngine/ExpressionEngine/pull/5470) [#5463](https://github.com/ExpressionEngine/ExpressionEngine/pull/5463) [#5455](https://github.com/ExpressionEngine/ExpressionEngine/pull/5455) [#5482](https://github.com/ExpressionEngine/ExpressionEngine/pull/5482)
+
 ## Version 7.5.28
 (Release: October 20th, 2026)
 
