@@ -2003,6 +2003,14 @@ Example Usage:
 
 **Also found in CP:** `Settings --> Members`: [Member List - Sort By](control-panel/settings/members.md#sort-by)
 
+## `mfa_session_length`
+
+Set how long ExpressionEngine can reuse a successful multi-factor authentication (MFA) verification on the same browser, hostname, and site. Set a positive integer in seconds. The default is `0`, which disables reuse.
+
+    $config['mfa_session_length'] = 900;
+
+This example allows reuse for 15 minutes from the time the member verifies their code. See [Remembering MFA Verification](member/mfa.md#remembering-mfa-verification) for details on supported session types and when a new code is required.
+
 ## `mime_whitelist_additions`
 
 With an array, add Mime Types to the whitelist.
