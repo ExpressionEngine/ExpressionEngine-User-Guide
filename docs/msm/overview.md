@@ -122,6 +122,8 @@ In the case of `https://example.com/site2/index.php` or `https://site2.example.c
 
 Logging in on any of the URLs would result in cookies that can be read on any subfolder or subdomain of the example.com URL.
 
+[Remembered MFA verification](member/mfa.md#remembering-mfa-verification) is specific to the site and hostname, even when the sites share login cookies.
+
 However, cookies for one domain cannot be set from a different domain. If your sites use different domains, you'll need to use the [multi_login_sites](general/system-configuration-overrides.md) configuration override. Add the following to your `system/user/config/config.php` file, modified according to the domain names used by your sites:
 
     $config['multi_login_sites'] = "https://www.example.com/index.php|https://www.sitetwo.com/index.php";

@@ -81,3 +81,11 @@ Invoke dialog to set up multi-factor authentication, if it's not enabled for mem
 ##### `{disable_mfa_link}`
 
 Invoke dialog to disable multi-factor authentication. Only available is member is logged in and authenticated with MFA.
+
+## Remembering MFA Verification
+
+In ExpressionEngine 7.6 and later, [`mfa_session_length`](general/system-configuration-overrides.md#mfa_session_length) lets members reuse a successful MFA verification on the same browser, hostname, and site. Set the length in seconds in `system/user/config/config.php`. Reuse is disabled when the setting is omitted or set to `0`.
+
+This works with cookie-backed sessions in the Control Panel and on the front end, including a login restored by **Remember Me**. It also works when a member confirms their password to unlock the Control Panel. The verification window starts when the member verifies their MFA code. Activity and subsequent logins within the window do not extend it.
+
+When the window expires, the member can continue using their current session. The next authentication that requires MFA asks for a new code. Signing out revokes the applicable approval. Changing the member's password or MFA settings revokes their remembered approvals.
